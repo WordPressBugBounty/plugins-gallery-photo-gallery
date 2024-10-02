@@ -1,0 +1,862 @@
+/* New Banner | Start */
+div#ays-gpg-new-mega-bundle-dicount-month-main {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main div#ays-gpg-dicount-month a.ays-gpg-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info {
+    background-image: url("../images/ays-gpg-banner-background-30.svg"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: unset;
+    border: none;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays_gpg_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     color: #fff; 
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays_gpg_dicount_month img {
+    width: 80px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    text-align: left;
+}
+
+.ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-boxes {
+    display: flex;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-new-mega-bundle-title {
+    color: #FDFDFD;
+    font-size: 16.8px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-new-mega-bundle-desc {
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-button,
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-gpg-countdown-main-container .ays-gpg-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-gpg-countdown-main-container #ays-gpg-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-gpg-countdown-main-container li,
+#ays-gpg-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-gpg-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+#ays-gpg-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    min-height: 62px;
+    min-width: 62px;
+    border-radius: 4.273px;
+    border: 0.534px solid #F4F4F4;
+    background: #9896ED;
+}
+
+#ays-gpg-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-gpg-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span:after {
+    content: ":";
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span#ays-gpg-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main  #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    border-radius: 6.409px;
+    background: #F66123;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size: 12.818px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 !important;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main button.notice-dismiss:before{
+    color: #fff;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 22px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-new-mega-bundle-guaranteeicon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-one-time-text {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@media all and (max-width: 768px) {
+    div#ays-gpg-new-mega-bundle-dicount-month-main {
+        padding-right: 0;
+        padding-left: 0;        
+    }
+
+    #ays-gpg-countdown-main-container li {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-boxes {
+        flex-direction: column;
+    }
+
+    #ays-gpg-countdown-main-container li span {
+        font-size: 26px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays_gpg_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #ays-gpg-countdown-main-container #ays-gpg-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-gpg-countdown-main-container ul {
+        font-weight: 500;
+    }    
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+        width: 100% !important;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info.notice {
+        background-position: -20px center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .ays-gpg-features-wrap .comparison a.price-buy{
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-gpg-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1680px) and (min-width: 1551px){
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+        width: 29%;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1400px){
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+        width: 31%;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+}
+/* New banner | End */
+
+/* New Mega Bundle Banner gallery by Emma | Start */
+/*
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024 {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024.ays_gpg_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024 div#ays-gpg-dicount-month a.ays-gpg-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024.ays_gpg_dicount_info {
+    background-color: #fff6df;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays_gpg_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays_gpg_dicount_month img {
+    width: 80px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box {
+    font-size:14px;
+    padding: 4px;
+    text-align: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    color: #30499B;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box span{
+    font-size: 10px;
+    color: #30499B;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts a:hover span,
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts a:hover {
+    text-decoration: underline;   
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-new-mega-bundle-limited-text {
+    background-image: url(../images/icons/rectangle-bundle-2024.png);
+    background-size: 100% 100%;
+    width: auto;
+    display: inline-block;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-discount-box-sale-image {
+    background-image: url(../images/30-sale-2024.png);
+    background-size: contain;
+    width: 290px;
+    display: inline-block;
+    height: auto;
+    background-repeat: no-repeat;
+    height: 117px;
+    background-position: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-button,
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 #ays-gpg-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 #ays-gpg-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-gpg-countdown-main-container .ays-gpg-countdown-container {
+    color:#30499B;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-gpg-countdown-main-container #ays-gpg-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+
+#ays-gpg-countdown-main-container li,
+#ays-gpg-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-gpg-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+}
+
+#ays-gpg-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    height: 56px;
+    width: 53px;
+    border-radius: 8px;
+    border: 0.534px solid #F4F4F4;
+    background: #30499B;
+    color: #fff;
+}
+
+#ays-gpg-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-gpg-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box li span:after {
+    content: ":";
+    color: #30499B;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box li span#ays-gpg-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    border-radius: 64px;
+    padding: 12px 32px;
+    background: #30499B;
+    color: #FFF;
+    font-size: 12.818px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 !important;
+}
+
+#ays-gpg-new-mega-bundle-dicount-month-main-2024 .button.ays-button{
+    margin: 0;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024 button.notice-dismiss:before{
+    color: #30499B;
+}
+
+div#ays-gpg-new-mega-bundle-dicount-month-main-2024 button.notice-dismiss:before{
+    color: #30499B;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 19px;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 {
+        padding-right: 0;
+    }
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays_gpg_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    #ays-gpg-countdown-main-container #ays-gpg-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-gpg-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024.ays_gpg_dicount_info.notice {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 #ays-gpg-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .comparison a.price-buy{
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts{
+        height: 64px;
+    }        
+    
+    #ays-gpg-countdown-main-container .ays-gpg-countdown-container #ays-gpg-countdown > ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    #ays-gpg-countdown-main-container li{
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    #ays-gpg-countdown-main-container li span{
+        font-size: 26px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024.ays_gpg_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts {
+        font-size: 15px;
+    }
+
+    #ays-gpg-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 436px){
+    #ays-gpg-new-mega-bundle-dicount-month-main-2024 .ays-gpg-dicount-wrap-box .ays-gpg-dicount-wrap-text-box-texts{
+        height: 110px;
+        margin-bottom: 25px;
+    }
+}
+*/
+/* New Mega Bundle Banner gallery by Emma | End */

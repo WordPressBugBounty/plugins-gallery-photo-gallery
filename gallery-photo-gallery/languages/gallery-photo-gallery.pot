@@ -1,0 +1,2396 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Gallery – Photo Gallery\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-28 10:05+0400\n"
+"PO-Revision-Date: 2018-07-13 11:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"X-Generator: Poedit 3.4.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n_noop:1,2;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/class-gallery-photo-gallery-admin.php:165
+msgid "Select user"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:166
+msgid "Please enter 1 or more characters"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:167
+msgid "Searching..."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:168
+msgid "Just a moment..."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:169
+msgid "Email field is empty"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:170
+msgid "Invalid Email address"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:171
+msgid "Activated"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:172
+#: ../admin/class-gallery-photo-gallery-admin.php:187
+msgid "Error"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:173
+msgid "Can't load resource."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:174
+#: ../admin/class-gallery-photo-gallery-admin.php:186
+msgid "Maybe something went wrong."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:175
+#: ../admin/class-gallery-photo-gallery-admin.php:190
+msgid "Great job"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:176
+#: ../admin/class-gallery-photo-gallery-admin.php:191
+msgid "For more detailed configuration visit"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:177
+msgid "Great!"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:183
+msgid "Copied!"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:184
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:374
+msgid "Click for copy."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:185
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1916
+msgid "Add Gif"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:188
+msgid "Your Gallery is Created!"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:189
+msgid "Copy the generated shortcode and paste it into any post or page to display Gallery."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:192
+msgid "edit gallery page"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:193
+msgid "Done!"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:194
+msgid "Thumbs up, great!"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:201
+msgid "Are you sure you want to go to the next gallery page?"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:202
+msgid "Are you sure you want to go to the previous gallery page?"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:207
+msgid "Clear"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:208
+msgid "Clear color"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:209
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1352
+msgid "Default"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:210
+msgid "Select default color"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:211
+msgid "Select Color"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:212
+msgid "Color value"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:262
+#: ../admin/class-gallery-photo-gallery-admin.php:263
+#: ../includes/class-gallery-photo-gallery-data.php:423
+msgid "Photo Gallery"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:272
+#: ../admin/class-gallery-photo-gallery-admin.php:273
+msgid "All Galleries"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:282
+#: ../admin/class-gallery-photo-gallery-admin.php:283
+msgid "Add new"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:292
+#: ../admin/class-gallery-photo-gallery-admin.php:293
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:12
+msgid "Image Categories"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:304
+#: ../admin/class-gallery-photo-gallery-admin.php:305
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:12
+msgid "Gallery Categories"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:314
+#: ../admin/class-gallery-photo-gallery-admin.php:315
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:81
+msgid "General Settings"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:325
+#: ../admin/class-gallery-photo-gallery-admin.php:326
+msgid "How to use"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:335
+#: ../admin/class-gallery-photo-gallery-admin.php:336
+msgid "Our products"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:345
+#: ../admin/class-gallery-photo-gallery-admin.php:346
+msgid "PRO Features"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:370
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:402
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:56
+msgid "Settings"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:371
+msgid "Demo"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:372
+msgid "Upgrade 30% Sale"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:389
+msgid ""
+"General Information:\n"
+"                    "
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:392
+msgid "Gallery Information"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:394
+msgid "Photo Gallery is a cool responsive image gallery plugin with awesome layout options, stunning gallery and album views, designed with features that allow you not to just show photos in a beautiful way but to deliver the message hidden in them."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:399
+msgid "For more information:"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:401
+msgid "YouTube video tutorials"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:404
+msgid "Documentation"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:407
+msgid "Photo Gallery plugin Premium version"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:503
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:31
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:12
+msgid "Galleries"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:515
+msgid "Image categories"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:527
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:878
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:389
+msgid "Gallery categories"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:608
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:23
+msgid "Gallery Photo Gallery"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:771
+msgid "Support"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:773
+msgid "Docs"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:775
+msgid "Suggest a Feature"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:779
+msgid "If you love our plugin, please do big favor and rate us on"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1015
+msgid "Message Variables"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1016
+msgid "Insert your preferred message variable into the editor by clicking."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1371
+msgid "Quiz Maker"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1372
+msgid "With our Quiz Maker plugin it’s easy to make a quiz in a short time."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1373
+msgid "You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1380
+msgid "Survey Maker"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1381
+msgid "Make amazing online surveys and get real-time feedback quickly and easily."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1382
+msgid "Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1389
+msgid "Poll Maker"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1390
+msgid "Create amazing online polls for your WordPress website super easily."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1391
+msgid "Build up various types of polls in a minute and get instant feedback on any topic or product."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1398
+msgid "Popup Box"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1399
+msgid "Popup everything you want! Create informative and promotional popups all in one plugin."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1400
+msgid "Attract your visitors and convert them into email subscribers and paying customers."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1407
+msgid "Secure Copy Content Protection"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1408
+msgid "Disable the right click, copy paste, content selection and copy shortcut keys on your website."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1409
+msgid "Protect web content from being plagiarized. Prevent plagiarism from your website with this easy to use plugin."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1416
+msgid "Personal Dictionary"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1417
+msgid "Allow your students to create personal dictionary, study and memorize the words."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1418
+msgid "Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1425
+msgid "Chart Builder"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1426
+msgid "Chart Builder plugin allows you to create beautiful charts"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1427
+msgid " and graphs easily and quickly."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1434
+msgid "Easy Form"
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1435
+msgid "Choose the best WordPress form builder plugin. "
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1436
+msgid "Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us."
+msgstr ""
+
+#: ../admin/class-gallery-photo-gallery-admin.php:1616
+#: ../includes/class-gallery-photo-gallery-data.php:255
+msgid "Buy Now"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:91
+msgid "Add new gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:94
+msgid "Edit gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:100
+msgid "User's First Name"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:101
+msgid "User's Last Name"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:102
+msgid "User's Display Name"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:103
+msgid "User's Nickname"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:104
+msgid "User's WordPress profile email"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:105
+msgid "User's Wordpress Roles"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:106
+msgid "User's IP address"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:107
+msgid "User's ID"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:108
+msgid "Gallery ID"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:109
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:422
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:429
+#: ../pb_templates/gallery_photo_gallery_elementor.php:26
+msgid "Gallery Title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:110
+msgid "Gallery Images Count"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:111
+msgid "Gallery Author"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:112
+msgid "Gallery Author Email"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:113
+msgid "Gallery Creation Date"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:114
+msgid "Current Date"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:115
+msgid "Gallery page link"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:116
+msgid "Admin Email"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:117
+msgid "Post Author Nickname"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:118
+msgid "Post Author Email"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:119
+msgid "Post Title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:120
+msgid "Site Title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:121
+msgid "Home page URL"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:323
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:49
+#: ../admin/partials/categories/gallery-photo-gallery-categories-display.php:9
+#: ../admin/partials/features/gallery-photo-gallery-featured-plugins.php:7
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:6
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:49
+#: ../admin/partials/gallery-categories/gallery-photo-gallery-gpg-categories-display.php:9
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:36
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:11
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:47
+msgid "View Documentation"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:337
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2455
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:105
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:105
+msgid "Save and close"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:338
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2456
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:106
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:106
+msgid "Save"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:369
+msgid "Shortcode text for editor"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:373
+msgid "To insert the Gallery into a page, post or text widget, copy shortcode"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:375
+msgid "and paste it at the desired place in the editor."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:399
+msgid "Images"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:405
+msgid "Styles"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:408
+msgid "Lightbox settings"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:411
+msgid "Lightbox effects"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:423
+msgid "In this field is noted the name of the gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:435
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:432
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:438
+msgid "Gallery Description"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:436
+msgid "This section is noted for the description of the gallery. You can use Variables (General Settings) to insert user data here."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:440
+msgid "To see all Message Variables "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:441
+msgid "click here"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:461
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:750
+msgid "Status"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:462
+msgid "Published OR Unpublished. Choose whether the gallery is active or not. If you choose Unpublished option, the gallery won’t be shown anywhere in your website (You don’t need to remove shortcodes)."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:472
+msgid "Published"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:478
+msgid "Unpublished"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:483
+msgid "Add Images"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:484
+msgid "Upload images for your gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:486
+msgid "Add multiple images +"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:488
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:298
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:366
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:251
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:308
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:648
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:782
+msgid "Delete"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:489
+msgid "Select all"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:490
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:547
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:669
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:774
+msgid "It shows the name of the inserted picture"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:491
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:556
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:678
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:783
+msgid "This field shows the alternate text when the picture is not loaded or not found"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:492
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:565
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:687
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:792
+msgid "This field shows the description of the chosen image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:493
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:574
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:696
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:801
+msgid "This section is for the URL address"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:494
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:584
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:706
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:811
+msgid "Select image categories"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:499
+msgid "All"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:500
+msgid "5"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:501
+msgid "10"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:502
+msgid "15"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:503
+msgid "20"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:504
+msgid "25"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:505
+msgid "30"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:507
+msgid "This field is for the creation of pagination"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:510
+msgid "Image pagination"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:513
+msgid "Change the ordering"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:546
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:668
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:773
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1021
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:60
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:60
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:336
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:278
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:743
+msgid "Title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:551
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:673
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:778
+msgid "Image title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:555
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:677
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:782
+msgid "Alt"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:560
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:682
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:787
+msgid "Image alt"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:564
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:686
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:791
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:74
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:74
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:337
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:279
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:746
+msgid "Description"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:569
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:691
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:796
+msgid "Image description"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:573
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:578
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:695
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:700
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:800
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:805
+msgid "URL"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:583
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:705
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:810
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:11
+msgid "Image Category"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:874
+msgid "General options"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:881
+#, php-format
+msgid "Choose the category/categories your gallery belongs to. To create a category, go to the %sCategories%s page."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:906
+msgid "Enable filter by image categories"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:907
+msgid "You can decide whether to show the filter by category of the gallery or not. This option is compatible only with the Grid layout."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:920
+msgid "Categories filter animation"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:921
+msgid "Choose the animation of the images displaying while filtering them by categories."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:936
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1073
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1621
+msgid "Slide Up"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:937
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1074
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1622
+msgid "Slide Down"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:938
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1075
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1623
+msgid "Slide Left"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:939
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1076
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1624
+msgid "Slide Right"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:957
+msgid "Show gallery head"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:958
+msgid "You can decide whether to show the title and description of the gallery or not"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:964
+msgid "Show gallery title "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:967
+msgid "If it is marked it will show the title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:971
+msgid "Show gallery description "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:974
+msgid "If it is marked it will show the description"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:984
+msgid "Thumbnail Size"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:985
+msgid "The size of the image in the thumbnail"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:992
+msgid "Full size"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1012
+msgid "Images order by"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1013
+msgid "This field arranges the images by parameters of title, date, random"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1020
+msgid "No ordering"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1022
+msgid "Date"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1023
+msgid "Random"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1028
+msgid "Ascending"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1029
+msgid "Descending"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1037
+msgid "Images loading"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1038
+msgid "The images are loaded according to two principles: already loaded gallery with images and at first opens gallery after then the images"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1045
+msgid "Global loading "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1049
+msgid "Lazy loading "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1057
+msgid "Images loading effect"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1058
+msgid "Choose Images loading animation"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1092
+msgid "Redirect URL"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1095
+msgid "Specify the opening method of the Image URLs:"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1097
+msgid "Current tab։ Enable this option in order to open the URL in the same tab"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1098
+msgid "New tab։ Enable this option in order to redirect the URL to a new tab"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1107
+msgid "New Tab"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1110
+msgid "Current Tab"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1121
+msgid "Show title on thumbnail"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1122
+msgid "The name of the image is written in the below of it"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1130
+msgid "Show title "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1136
+msgid "Show on"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1137
+msgid "If you choose the case of Thumbnail hover the title will appear when the mouse cursor stops on the image, otherwise the title by default will appear at the bottom of the image."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1143
+msgid "Thumbnail hover "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1144
+msgid "Gallery thumbnail "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1150
+msgid "Image title position"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1151
+msgid "Show title: in the bottom or on top"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1157
+msgid "Bottom"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1158
+msgid "Top"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1163
+msgid "Show with date "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1164
+msgid "If you choose the Show with a date of adding the image to the gallery will appear on the date with the title."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1170
+msgid "Yes"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1171
+msgid "No"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1182
+msgid "Disable lightbox"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1183
+msgid "By checking this option it will disable lightbox on image click"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1196
+msgid "Make a link on the whole image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1197
+msgid "Make a URL redirection while clicking on any spot on the image container. Please note that the option works when the Disable lightbox option is activated."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1210
+msgid "Enable search for image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1211
+msgid "This option is not compatible with the Mosaic layout."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1224
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1232
+msgid "Gallery Width"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1225
+msgid "This field shows the width of the Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1233
+#, no-php-format
+msgid "For 100% leave blank"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1274
+msgid "Responsive Width/Height"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1275
+msgid "Enable the option if you want to assign the values to height and weight by ratio."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1288
+msgid "Height / Width ratio"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1289
+msgid "This ratio indicates the quantitative relation between height and width. For example, if you give 1.2 value to ratio while the width is 300, then the height will be 300x1.2=360."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1302
+msgid "Thumbnails height"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1303
+msgid "The height of the thumbnails of the Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1312
+msgid "For mobile:"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1327
+msgid "For desktop:"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1345
+msgid "Columns count. Default: 3"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1346
+msgid "The counts of the columns of the Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1359
+msgid "Use RTL Direction"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1360
+msgid "Enable Right to Left direction for the text. This option is intended for the Arabic language."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1375
+msgid "Change the author of the current gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1376
+msgid "You can change the author who created the current gallery to your preferred one. You need to write the User ID here. Please note, that in case you write an ID, by which there are no users found, the changes will not be applied and the previous author will remain the same."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1383
+msgid "Select User"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1401
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2397
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2406
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2426
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2435
+#: ../gallery-photo-gallery.php:147
+msgid "Upgrade"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1409
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:240
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:243
+msgid "Pagination"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1410
+msgid "You will be able to choose the way of the pagination. By default it is none, so all the images will loaded in the Front-end."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1417
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2346
+msgid "None"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1420
+msgid "Simple"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1423
+msgid "Load More "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1433
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1447
+msgid "Images per page"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1434
+msgid "Set the exact number of images you want to be displayed on each page"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1448
+msgid "Choose the number of images you want to be displayed at the beginning"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1461
+msgid "Images per load"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1462
+msgid "Choose how many images will be loaded after clicking on the ''Load More'' button"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1540
+msgid "Style options"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1545
+msgid "Gallery view type"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1546
+msgid "This section notes the type of the Gallery that is in what sequence should the pictures be"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1562
+msgid " "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1567
+msgid "This feature available only in PRO version!!!"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1584
+msgid "Images hover effect"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1585
+msgid "Effect intended for hover according to animation"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1592
+msgid "Simple animation "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1596
+msgid "Direction-aware "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1605
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1654
+msgid "Images hover animation"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1606
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1655
+msgid "Hover appearing animation of the images of Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1638
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1672
+msgid "Hover animation preview"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1662
+msgid "Slide"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1663
+msgid "Rotate 3D"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1669
+msgid "Hover this preview block"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1683
+msgid "Images hover animation speed"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1684
+msgid "Specify the animation speed of the image."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1698
+msgid "Image position"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1699
+msgid "The position image of the gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1729
+msgid "Images hover opacity"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1730
+msgid "The transparency degree of the image hover"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1741
+msgid "Hover opacity preview"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1748
+msgid "Images hover color"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1749
+msgid "The color of the image hover"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1762
+msgid "Images hover zoom effect"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1763
+msgid "During image hover, the zoom effect of the image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1770
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1803
+msgid "Yes "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1771
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1804
+msgid "No "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1778
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1811
+msgid "Animation speed"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1779
+msgid "Specify the animation speed of the zoom effect of the image."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1795
+msgid "Images hover scale box shadow effect"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1796
+msgid "During image hover, the scale box shadow effect of the image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1812
+msgid "Specify the animation speed of the scale effect of the image."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1828
+msgid "Choose filter for thumbnail"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1829
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2339
+msgid "The filter property defines visual effects to images of Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1836
+msgid "Default none"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1837
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2347
+msgid "Blur"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1838
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2348
+msgid "Brightness"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1839
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2349
+msgid "Contrast"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1840
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2350
+msgid "Grayscale"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1841
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2351
+msgid "Hue Rotate"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1842
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2352
+msgid "Invert"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1843
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2353
+msgid "Saturate"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1844
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2354
+msgid "Sepia"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1852
+msgid "Loader style"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1904
+msgid "Text"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1913
+msgid "Gif"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1929
+msgid "Width (px)"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1930
+msgid "Custom Gif width in pixels. It accepts only numeric values."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1946
+msgid "Images hover icon"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1947
+msgid "During hover, the icon seen on the image"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2024
+msgid "Select icon for the gallery images"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2031
+msgid "Images hover icon size"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2047
+msgid "Images distance"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2048
+msgid "The distance among images with pixels"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2066
+msgid "Images border"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2103
+msgid "Images border radius"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2104
+msgid "The degree of borders curvature of images"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2122
+msgid "Thumbnail title icon size"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2138
+msgid "Gallery title text color"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2139
+msgid "The color of the Gallery title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2152
+msgid "Gallery description text color"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2153
+msgid "The color of the Gallery description"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2166
+msgid "Background color of the Gallery thumbnail title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2167
+msgid "The color of the background of the Gallery Thumbnail title"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2180
+msgid "Thumbnail title text color"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2181
+msgid "Choose the color of the title text on the thumbnail. Make it transparent if you want."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2194
+msgid "Custom class"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2195
+msgid "Custom HTML class for gallery container. You can use your class for adding your custom styles for gallery container."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2201
+msgid "myClass myAnotherClass..."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2208
+msgid "Custom CSS"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2209
+msgid "You can add your CSS"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2222
+msgid "Reset styles"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2224
+msgid "Reset styles to default values"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2231
+msgid "Reset"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2237
+msgid "Lightbox options"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2242
+msgid "Images counter"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2246
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2262
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2278
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2310
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2364
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2377
+msgid "Enable "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2249
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2265
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2281
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2313
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2367
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2380
+msgid "Disable "
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2258
+msgid "Show caption in lightbox"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2274
+msgid "Images slide show"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2289
+msgid "Slide duration"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2295
+msgid "1 sec = 1000 ms"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2306
+msgid "Hide Progress Line"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2322
+msgid "Progress Line color"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2323
+msgid "The color of the Progress Line"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2338
+msgid "Choose filter for lightbox"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2361
+msgid "Allow key control"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2374
+msgid "Allow Esc key"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2474
+msgid "Previous Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2482
+msgid "Next Gallery"
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2492
+msgid "View your gallery in live preview. In the preview you can’t see Thumbnail size and Image order changes."
+msgstr ""
+
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2492
+msgid "Gallery preview"
+msgstr ""
+
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:13
+msgid "Add new image category"
+msgstr ""
+
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:16
+msgid "Edit image category"
+msgstr ""
+
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:61
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:61
+msgid "Title of the category"
+msgstr ""
+
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:75
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:75
+msgid "Provide more information about the gallery category"
+msgstr ""
+
+#: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:123
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:123
+msgid "Next Category"
+msgstr ""
+
+#: ../admin/partials/categories/gallery-photo-gallery-categories-display.php:20
+#: ../admin/partials/categories/gallery-photo-gallery-categories-display.php:43
+#: ../admin/partials/gallery-categories/gallery-photo-gallery-gpg-categories-display.php:20
+#: ../admin/partials/gallery-categories/gallery-photo-gallery-gpg-categories-display.php:43
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:54
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:77
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:91
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:97
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:31
+msgid "Add New"
+msgstr ""
+
+#: ../admin/partials/categories/gallery-photo-gallery-categories-display.php:30
+#: ../admin/partials/gallery-categories/gallery-photo-gallery-gpg-categories-display.php:30
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:65
+msgid "Search"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-featured-plugins.php:11
+msgid "Please feel free to use our other awesome plugins!"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-featured-plugins.php:14
+msgid "See All Plugins"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:20
+msgid "Personal"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:24
+msgid "Business"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:28
+msgid "Developer"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:35
+msgid "Free"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:42
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:51
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:256
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:262
+msgid "Buy now"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:43
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:52
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:257
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:263
+msgid "(One-time payment)"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:60
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:63
+msgid "Upgrade for"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:64
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:74
+msgid "1 months"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:65
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:75
+msgid "12 months"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:66
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:76
+msgid "Lifetime"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:70
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:73
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:80
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:83
+msgid "Support for"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:84
+msgid "1 site"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:85
+msgid "5 site"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:86
+msgid "Unlimited sites"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:90
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:93
+msgid "Unlimited galleries"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:100
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:103
+msgid "Unlimited items"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:110
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:113
+msgid "30+ awesome views"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:120
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:123
+msgid "20+ Transition effects"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:130
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:133
+msgid "20+ Animation easing effects"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:140
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:143
+msgid "Transition speed (in ms)"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:150
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:153
+msgid "Lightbox overlay settings"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:160
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:163
+msgid "Lightbox live preview"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:170
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:173
+msgid "Share buttons"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:180
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:183
+msgid "Full screen button"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:190
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:193
+msgid "Images actual size button"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:200
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:203
+msgid "Download button"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:210
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:213
+msgid "Mouse wheel"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:220
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:223
+msgid "Thumbnails settings"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:230
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:233
+msgid "Key control"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:296
+msgid "30 day money back guarantee !!!"
+msgstr ""
+
+#: ../admin/partials/features/gallery-photo-gallery-features-display.php:298
+msgid ""
+"We're sure that you'll love our Photo Gallery plugin, but, if for some reason, you're not\n"
+"                        satisfied in the first 30 days of using our product, there is a money-back guarantee and\n"
+"                        we'll issue a refund."
+msgstr ""
+
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:13
+msgid "Add new gallery category"
+msgstr ""
+
+#: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:16
+msgid "Edit gallery category"
+msgstr ""
+
+#: ../admin/partials/gallery-photo-gallery-admin-display.php:85
+msgid "Create Your First Gallery in Under One Minute"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:22
+msgid "How to create a simple gallery in 3 steps with the help of the"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:24
+msgid "plugin."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:31
+msgid "Go to the"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:31
+msgid "page and build your first gallery by clicking on the"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:31
+msgid "button"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:34
+msgid "Fill out the information by adding a title, images and so on."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:37
+msgid "Copy the"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:37
+msgid "shortcode"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:37
+msgid "of the gallery and paste it into any post․"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:42
+msgid "Congrats! You have already created your first gallery."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:50
+msgid "Community"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:59
+msgid "YouTube community"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:60
+msgid "Our YouTube community  guides you to step by step tutorials about our products and not only..."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:62
+msgid "Subscribe"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:69
+msgid "Best Free Support"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:70
+msgid "With the Free version, you get a lifetime usage for the plugin, however, you will get new updates and support for only 1 month."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:72
+msgid "Join"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:79
+msgid "Premium support"
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:80
+msgid "Get 12 months updates and support for the Business package and lifetime updates and support for the Developer package."
+msgstr ""
+
+#: ../admin/partials/how-to-use/gallery-photo-gallery-how-to-use.php:82
+msgid "Contact"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings-actions.php:178
+msgid "Changes saved."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings-actions.php:180
+msgid "Gallery attribute ."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings-actions.php:182
+msgid "Gallery attribute deleted."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:69
+msgid "General"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:72
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:198
+msgid "Shortcodes"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:75
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:430
+msgid "Message variables"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:86
+msgid "Default parameters for gallery"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:91
+msgid "WP Editor height"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:92
+msgid "Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:105
+msgid "Show All images text"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:106
+msgid "Write the text you prefer for the \"All\" category to see all the images on the Front-end."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:119
+msgid "Show gallery button to Admins only"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:120
+msgid "Allow only admins to see the Gallery button within the WP Editor while adding/editing a new post/page."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:134
+msgid "Excerpt words count in list tables"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:139
+msgid "Galleries list table"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:140
+msgid "Determine the length of the galleries name to be shown in the Galleries List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each galleries name in the Galleries page of your dashboard)."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:152
+msgid "Gallery categories list table"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:153
+msgid "Determine the length of the results to be shown in the Gallery categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:165
+msgid "Gallery image categories list table"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:166
+msgid "Determine the length of the results to be shown in the Gallery image categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:180
+msgid "General CSS File"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:185
+msgid "Exclude general CSS file from home page"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:186
+msgid "If the option is enabled, then the gallery general CSS file will not be applied to the home page. Please note, that if you have inserted the gallery on the home page, then the option must be disabled so that the CSS File can normally work for that gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:203
+msgid "Extra shortcodes"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:210
+msgid "Show gallery creation date"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:211
+msgid "You need to insert Your Gallery ID in the shortcode. It will show the creation date of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:228
+msgid "Show current gallery author"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:229
+msgid "You need to insert Your Gallery ID in the shortcode. It will show the current author of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:246
+msgid "Show gallery images count"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:247
+msgid "You need to insert Your Gallery ID in the shortcode. It will show the images count of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:264
+msgid "Show gallery images count by category"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:265
+msgid "You need to insert Your Category ID in the shortcode. It will show the images count of the particular category. If there is no category available/found with that particular Category ID, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:282
+msgid "Show User First Name"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:283
+msgid "Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:300
+msgid "Show User Last Name"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:301
+msgid "Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:318
+msgid "Show User Display name"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:319
+msgid "Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:336
+msgid "Show User Email"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:337
+msgid "Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:354
+msgid "Show User Nickname"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:355
+msgid "Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:372
+msgid "Show User WordPress Roles"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:373
+msgid "Shows user's role(s) when logged-in. In case the user is not logged-in, the field will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:396
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:414
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:747
+msgid "Shortcode"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:397
+msgid "You need to insert Your Gallery Category ID in the shortcode. It will show the category title. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:415
+msgid "You need to insert Your Gallery Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:431
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:437
+msgid "You can copy these variables and paste them in the following options from the gallery settings"
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:449
+msgid "The user's first name that was filled in their WordPress site during registration."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:458
+msgid "The user's last name that was filled in their WordPress site during registration."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:467
+msgid "The user's display name that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:476
+msgid "The user's nickname that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:485
+msgid "The user's email that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:494
+msgid "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:503
+msgid "The user's IP address."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:512
+msgid "The ID of the current user."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:521
+msgid "The ID of the gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:530
+msgid "The title of the gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:539
+msgid "It will show the current gallery images count."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:548
+msgid "It will show the author of the current gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:557
+msgid "Shows the current gallery author's email that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:566
+msgid "The creation date of the current gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:575
+msgid "It will show the current date when loading the gallery."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:584
+msgid "Prints the webpage link where the current gallery is posted."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:593
+msgid "Shows the admin's email that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:602
+msgid "Shows the post author's nickname that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:611
+msgid "Shows the post author's email that was filled in their WordPress profile."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:620
+msgid "The Post title of the current post."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:629
+msgid "The title of the website."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:638
+msgid "The URL of the home page."
+msgstr ""
+
+#: ../admin/partials/settings/gallery-photo-gallery-settings.php:655
+msgid "Save changes"
+msgstr ""
+
+#: ../gallery-photo-gallery.php:141
+#: ../gallery/gallery-photo-gallery-block-new.js:199
+#: ../gallery/gallery-photo-gallery-block.js:199
+#: ../pb_templates/gallery_photo_gallery_elementor.php:9
+#: ../pb_templates/gallery_photo_gallery_wpbvc.php:23
+#: ../pb_templates/gallery_photo_gallery_wpbvc.php:33
+msgid "Gallery - Photo Gallery"
+msgstr ""
+
+#: ../gallery-photo-gallery.php:149
+#: ../includes/class-gallery-photo-gallery-data.php:174
+#: ../includes/class-gallery-photo-gallery-data.php:257
+msgid "One-time payment"
+msgstr ""
+
+#: ../gallery/gallery-photo-gallery-block-new.js:212
+#: ../gallery/gallery-photo-gallery-block.js:212
+msgid "Something goes wrong please reload page"
+msgstr ""
+
+#: ../gallery/gallery-photo-gallery-block-new.js:218
+#: ../gallery/gallery-photo-gallery-block.js:218
+msgid "Loading..."
+msgstr ""
+
+#: ../gallery/gallery-photo-gallery-block-new.js:225
+#: ../gallery/gallery-photo-gallery-block.js:225
+msgid "There are no gallery yet"
+msgstr ""
+
+#: ../gallery/gallery-photo-gallery-block-new.js:232
+#: ../gallery/gallery-photo-gallery-block.js:232
+msgid "-Select Gallery-"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:149
+#: ../includes/class-gallery-photo-gallery-data.php:231
+msgid "Offer ends in:"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:173
+#: ../includes/class-gallery-photo-gallery-data.php:314
+#: ../includes/class-gallery-photo-gallery-data.php:391
+msgid "Buy Now !"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:195
+msgid "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photo Gallery</a></span>"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:206
+msgid "30 Days Money Back Guarantee"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:278
+msgid "Limited Time <span class='ays-gpg-dicount-wrap-color'>20%</span> SALE on <span><a href='https://ays-pro.com/wordpress/photo-gallery' target='_blank' class='ays-gpg-dicount-wrap-color ays-gpg-dicount-wrap-text-decoration' style='display:block;'>Photo Gallery</a></span>"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:281
+msgid "Hurry up! <a href='https://ays-pro.com/wordpress/photo-gallery' target='_blank'>Check it out!</a>"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:343
+msgid ""
+"Limited Time \n"
+"                            <span class='ays-gpg-dicount-wrap-color-helloween' style='color:#b2ff00;'>20%</span> \n"
+"                            <span>\n"
+"                                SALE on\n"
+"                            </span> \n"
+"                            <br>\n"
+"                            <span style='' class='ays-gpg-helloween-bundle'>\n"
+"                                <a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery' target='_blank' class='ays-gpg-dicount-wrap-color-helloween ays-gpg-dicount-wrap-text-decoration-helloween' style='display:block; color:#b2ff00;margin-right:6px;'>\n"
+"                                    Photo Gallery\n"
+"                                </a>\n"
+"                            </span>"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:356
+msgid ""
+"Hurry up! \n"
+"                                                <a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery' target='_blank' style='color:#ffc700;'>\n"
+"                                                    Check it out!\n"
+"                                                </a>"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:422
+#: ../includes/class-gallery-photo-gallery-data.php:482
+msgid "Limited Time"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:422
+msgid "Sale"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:427
+#, no-php-format
+msgid "20% off"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:435
+#: ../includes/class-gallery-photo-gallery-data.php:491
+msgid "Days"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:436
+#: ../includes/class-gallery-photo-gallery-data.php:492
+msgid "Hours"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:437
+#: ../includes/class-gallery-photo-gallery-data.php:493
+msgid "Minutes"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:438
+#: ../includes/class-gallery-photo-gallery-data.php:494
+msgid "Seconds"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:452
+msgid "Get Your Deal"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:460
+#: ../includes/class-gallery-photo-gallery-data.php:516
+msgid "Dismiss ad"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:482
+msgid "20%"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:483
+msgid "Photo Gallery Plugin"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:508
+msgid "BUY NOW!"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:229
+msgid "There are no image categories yet."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:294
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:247
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:646
+msgid "Edit"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:338
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:280
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:751
+msgid "ID"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:452
+msgid "Image category created."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:454
+msgid "Image category saved."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:456
+msgid "Image category deleted."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:11
+msgid "Gallery Category"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:182
+msgid "There are no gallery categories yet."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:394
+msgid "Gallery category created."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:396
+msgid "Gallery category saved."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:398
+msgid "Gallery category deleted."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:11
+msgid "Gallery"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:466
+msgid "There are no galleries yet."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:647
+msgid "Duplicate"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:656
+msgid "Click to copy"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:723
+msgid "unpublished"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:726
+msgid "published"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:744
+msgid "Image"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:745
+msgid "Category"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:748
+msgid "Created"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:749
+msgid "Items"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:780
+msgid "Publish"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:781
+msgid "Unpublish"
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:901
+msgid "Gallery created."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:903
+msgid "Gallery saved."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:905
+msgid "Gallery duplicated."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:907
+msgid "Gallery deleted."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:909
+msgid "Gallery published."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:911
+msgid "Gallery unpublished."
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:913
+msgid "You're not allowed to add gallery for more galleries please checkout to "
+msgstr ""
+
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:913
+msgid "version"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_elementor.php:29
+msgid "Enter the gallery title"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_elementor.php:35
+msgid "Title Alignment"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_elementor.php:48
+msgid "Select Gallery"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_wpbvc.php:25
+msgid "The Best Gallery - Photo Gallery Ever"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_wpbvc.php:26
+msgid "Gallery - Photo Gallery by AYS"
+msgstr ""
+
+#: ../pb_templates/gallery_photo_gallery_wpbvc.php:36
+msgid "Please select your gallery from dropdown"
+msgstr ""
+
+#: ../public/class-gallery-photo-gallery-public.php:961
+msgid "Some of the images haven\\'t been loaded"
+msgstr ""
+
+#: ../public/class-gallery-photo-gallery-public.php:1600
+#: ../public/partials/class-gallery-photo-gallery-extra-shortcode.php:204
+msgid "Unknown"
+msgstr ""
+
+#: ../public/class-gallery-photo-gallery-public.php:1623
+msgid "Gallery link"
+msgstr ""
