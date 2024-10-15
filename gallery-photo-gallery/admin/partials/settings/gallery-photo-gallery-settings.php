@@ -441,6 +441,24 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </div>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="form-group row" style="padding:0px;margin:0;">
+                                <div class="col-sm-12" style="padding:20px;">
+                                    <div class="form-group row">
+                                        <div class="col-sm-4">
+                                            <label for="ays_gallery_general_cat_description">
+                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery General Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="ays_gallery_cat_description" class="ays-text-input" onclick="this.setSelectionRange(0, this.value.length)" readonly="" value='[ays_gallery_general_category_desctription id="Your_Gallery_General_Category_ID"]'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>              
                     </div>
                     <div id="tab3" class="ays-gpg-tab-content <?php echo ($ays_gpg_tab == 'tab3') ? 'ays-gpg-tab-content-active' : ''; ?>">
