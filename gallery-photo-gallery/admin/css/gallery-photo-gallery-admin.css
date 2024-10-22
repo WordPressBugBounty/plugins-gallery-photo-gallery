@@ -3706,6 +3706,7 @@ table#ays-gpg-position-table td:hover{
     border-color: #2275EA;
     border-radius: 8px;
     padding: 5px 27px;
+    color: #fff;
 }
 
 .wrap.ays-gpg-list-table .ays-gpg-add-new-button-new-design:hover {
