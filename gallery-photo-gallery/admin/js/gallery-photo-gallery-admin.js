@@ -1790,13 +1790,7 @@
             }else{
                 $(document).find('.hover_scale_animation_speed').addClass('display_none');                
             }
-        });
-
-        $(document).find('table#ays-gpg-position-table tr td').on('click', function (e) {
-            var val = $(this).data('value');
-            $(document).find('.gpg_position_block #ays-gpg-position-val').val(val);
-            aysCheckGalleryPosition();
-        });
+        });        
 
         $(document).find('.ays-gpg-copy-image').on('click', function(){
             var _this = this;
@@ -1820,32 +1814,46 @@
             $(_this).attr('data-original-title', galleryLangObj.clickForCopy);
             $(_this).attr("data-bs-original-title", galleryLangObj.clickForCopy);
             $(_this).attr("title", galleryLangObj.clickForCopy);
-        });
+        });        
 
-        aysCheckGalleryPosition();
-        function aysCheckGalleryPosition() {
-            var hiddenVal = $(document).find('.gpg_position_block #ays-gpg-position-val').val();
+        // Position tables start
+        $(document).find('table#ays-gpg-position-table tr td, table#ays-gpg-position-table-mobile tr td').on('click', function(e) {
+            var val = $(this).data('value');
+            var flag = $(this).parents('table').data('flag');
 
-            if (hiddenVal == "") { 
-                var $this = $(document).find('table#ays-gpg-position-table tr td[data-value="center-center"');
+            if (flag == 'gpg_image_position') {
+                $(this).parents('.gpg_position_block').find('.ays-gpg-position-val-class').val(val).trigger('change');
             } else {
-                var $this = $(document).find('table#ays-gpg-position-table tr td[data-value=' + hiddenVal + ']');
-            }            
+                $(this).parents('.gpg_position_block').find('.ays-gpg-position-mobile-val-class').val(val).trigger('change');
+            }
+
+            aysGpgImagePosition();
+            
+        });
+        // Position tables end
+
+        aysGpgImagePosition();
+        function aysGpgImagePosition() {
+            var hiddenVal = $(document).find('.gpg_position_block #ays-gpg-position-val').val();
+            var hiddenValMobile = $(document).find('.gpg_position_block #ays-gpg-position-mobile-val').val();
+
+            if (hiddenVal == '') {
+                var $this = $(document).find('table#ays-gpg-position-table tr td[data-value="center-center"]');
+            }else{
+                var $this = $(document).find('table#ays-gpg-position-table tr td[data-value="' + hiddenVal + '"]');
+            }
+
+            if (hiddenValMobile == '') {
+                var $thisMobile = $(document).find('table#ays-gpg-position-table-mobile tr td[data-value="center-center"]');
+            }else{
+                var $thisMobile = $(document).find('table#ays-gpg-position-table-mobile tr td[data-value="' + hiddenValMobile + '"]');
+            }
 
             $(document).find('table#ays-gpg-position-table td').removeAttr('style');
-            $this.css('background-color', '#a2d6e7');
+            $(document).find('table#ays-gpg-position-table-mobile td').removeAttr('style');
+            $this.css('background-color','#3d89e0');
+            $thisMobile.css('background-color','#9964b3');
         }
-
-        // $(document).find('.ays_gpg_view_type_radio').on('click', function() {
-        //     var galleryType = $(this).find('input.ays-view-type').val();
-            
-        //     if( galleryType == 'grid') {
-        //         $(document).find(".ays_gpg_pagination_types").css('display', 'block');
-        //         $(document).find(".ays_gpg_pagination_types").css('display', 'block');
-        //     } else {
-        //         $(document).find(".ays_gpg_pagination_types").css('display', 'none');
-        //     }
-        // });
 
         function submitOnce(subButton){
             var subLoader = subButton.parents('div').find('.ays_gpg_loader_box');
@@ -2083,7 +2091,10 @@
 
             $(document).find('#ays_gpg_hover_animation_speed').val('0.5').change();
             $(document).find('#ays-gpg-position-val').val('center-center').change();
-            aysCheckGalleryPosition();
+            $(document).find('#ays-gpg-position-mobile-val').val('center-center').change();
+            $(document).find('input#enable_gallery_img_position_mobile').prop('checked', false).change();
+            $(document).find('div.ays_gpg_img_position_mobile_container').css('display', 'none').change();
+            aysGpgImagePosition();
 
             $(document).find('#formControlRange').val('0.5').change();
             $(document).find('.gpg_opacity_demo').css('opacity', '0.5');

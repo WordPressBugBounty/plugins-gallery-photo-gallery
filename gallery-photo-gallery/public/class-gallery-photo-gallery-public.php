@@ -1359,6 +1359,16 @@ class Gallery_Photo_Gallery_Public {
 
         $gallery_img_position = str_replace("-"," ", $gallery_img_position);
 
+        // Enable Image Position Mobile
+        $enable_gallery_options_mobile = ( isset($gallery_options["enable_gallery_img_position_mobile"] ) && $gallery_options["enable_gallery_img_position_mobile"] == 'on' ) ? true : false;
+
+        // Image Position Mobile
+        if ( $enable_gallery_options_mobile ) {
+            $gallery_img_position_mobile = ( isset( $gallery_options["gallery_options_mobile"]) && $gallery_options["gallery_options_mobile"] !== '' ) ? str_ireplace( '-', ' ', esc_attr( $gallery_options["gallery_options_mobile"] ) ) : 'center center';
+        } else {
+            $gallery_img_position_mobile = $gallery_img_position;
+        }
+
         $ays_ordering_asc_desc = (isset($gallery_options['ordering_asc_desc']) && $gallery_options['ordering_asc_desc'] != '') ? $gallery_options['ordering_asc_desc'] : 'ascending';
         
         $ays_gpg_filter_by_cat_effect = (!isset($gallery_options['ays_gpg_filter_cat_anim']) || $gallery_options['ays_gpg_filter_cat_anim'] == null) ? "fadeIn" : $gallery_options['ays_gpg_filter_cat_anim'];
@@ -2399,6 +2409,10 @@ class Gallery_Photo_Gallery_Public {
                     div.ays_grid_row div.ays_grid_column_".$id." {
                         height: {$ays_thumb_height_mobile}px;
                         min-height: {$ays_thumb_height_mobile}px;
+                    }
+
+                    div.ays_grid_row div.ays_grid_column_".$id." > img {
+                        object-position: ".$gallery_img_position_mobile." !important;
                     }
                 }
 

@@ -3643,21 +3643,142 @@ a.ays_animation_preview {
     border-radius: unset;
 }
 
-table#ays-gpg-position-table{
+/* Image Position tables styles start */
+.gpg_position_block {
+    position: relative;
+}
+
+table#ays-gpg-position-table,
+table#ays-gpg-position-table-mobile {
     width: 120px;
     border: 1px solid #B8B8B8;
     cursor: pointer;
 }
 
-table#ays-gpg-position-table td{
+table#ays-gpg-position-table td,
+table#ays-gpg-position-table-mobile td {
     border-bottom: 1px solid #B8B8B8;
     border-right: 1px solid #B8B8B8;
+    background-color: #d8e7f9;
     height: 25px;
 }
 
-table#ays-gpg-position-table td:hover{
-    background-color: #46add0;
+table#ays-gpg-position-table td:hover {
+    background-color: #3d89e0;
 }
+
+table#ays-gpg-position-table-mobile td {
+    background-color: #ebe0f0;
+}
+
+table#ays-gpg-position-table-mobile td:hover {
+    background-color: #9964b3;
+}
+/* Image Position tables styles end */
+
+/* Options for desktop and mobile styles start */
+.ays_gpg_pc_and_mobile_container,
+.ays_gpg_pc_and_mobile_box {
+    display: flex;
+}
+
+.ays_gpg_img_position_mobile_container {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.ays_gpg_pc_and_mobile_container_cb {
+    margin-bottom: 10px;
+}
+
+.ays_gpg_pc_and_mobile_container .onoffswitch {
+    width: auto;
+    text-align: center;
+}
+
+.ays_gpg_current_device_name {
+    color: #243975;
+    font-weight: 500;
+    font-size: 13px;
+    transition: 0.3s;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.ays_gpg_pc_and_mobile_container_cb .ays_gpg_current_device_name {
+    display: none;
+    opacity: 1;
+    overflow: visible;
+}
+
+.ays_gpg_current_device_name.show,
+.ays_gpg_option_for_mobile_device.show {
+    opacity: 1;
+    overflow: visible;
+}
+
+.ays_gpg_option_for_mobile_device {
+    transition: 0.3s;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.ays_gpg_option_for_mobile_device.ays_divider_left,
+.ays_gpg_option_for_mobile_device_cb {
+    margin-left: 25px;
+    padding-left: 25px;
+}
+
+.ays_gpg_mobile_settings_container {
+    margin-top: 13px;
+    font-size: 13px;
+    color: gray;
+}
+
+.ays_gpg_mobile_settings_container label {
+    transition: 0.3s;
+}
+
+.ays_gpg_mobile_settings_container label.active {
+    color: #243975
+}
+
+@media screen and (max-width: 1080px) {
+    .ays_gpg_pc_and_mobile_box {
+        flex-wrap: wrap;
+    }
+
+    .ays_gpg_pc_and_mobile_box .ays_gpg_option_for_mobile_device {
+        margin: 10px 0 0;
+        width: 0;
+        height: 0;
+    }
+
+    .ays_gpg_pc_and_mobile_box.ays_gpg_pc_and_mobile_box_input {
+        flex-direction: column;
+
+    }
+
+    .ays_gpg_pc_and_mobile_box.ays_pb_pc_and_mobile_box_input .ays_gpg_option_for_mobile_device_cb.show {
+        padding: 0;
+        border: 0;
+    }
+
+    .ays_gpg_current_device_name.show,
+    .ays_gpg_option_for_mobile_device.show {
+        width: auto;
+        height: auto;
+        padding: 0;
+        border: 0;
+    }
+
+    .ays_gpg_option_for_mobile_device_cb.show {
+        padding-left: 25px;
+        border-left: 1px solid #ccc;
+    }
+
+}
+/*  Options for desktop and mobile styles end */
 
 .ays-gpg-shortcode-container {
     background-color: #f4f5f7;

@@ -229,6 +229,16 @@ $ays_gpg_progress_line_color = isset($gal_lightbox_options['progress_line_color'
 $gallery_img_position = (isset($gal_options['gallery_img_position']) && $gal_options['gallery_img_position'] != 'center-center') ? $gal_options['gallery_img_position'] : 'center-center';
 $gallery_img_position = (isset($gal_options['gallery_img_position_l']) && isset($gal_options['gallery_img_position_r'])) ? $gal_options['gallery_img_position_l'].'-'.$gal_options['gallery_img_position_r'] : $gallery_img_position;
 
+// Enable image position mobile
+$enable_gallery_img_position_mobile = isset($gal_options['enable_gallery_img_position_mobile']) && $gal_options['enable_gallery_img_position_mobile'] == 'on' ? true : false;
+
+// Image position mobile
+if (isset($gal_options['gallery_img_position_mobile'])) {
+    $gallery_img_position_mobile = $gal_options['gallery_img_position_mobile'] !== '' ? stripslashes( esc_attr($gal_options['gallery_img_position_mobile']) ) : 'center-center';
+} else {
+    $gallery_img_position_mobile = $gallery_img_position;
+}
+
 $image_sizes = $this->ays_get_all_image_sizes();
 $image_no_photo = AYS_GPG_ADMIN_URL .'images/no-photo.png';
 
@@ -1701,7 +1711,7 @@ $gpg_accordion_svg_html = '
                         </div>
                     </div>
                     <hr>
-                    <div class="form-group row gpg_position_block">
+                    <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="gallery_img_position">
                                 <?php echo __("Image position", $this->plugin_name);?>
@@ -1710,25 +1720,55 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">
-                            <table id="ays-gpg-position-table">
-                                <tr>
-                                    <td data-value="left-top" data-id='1' title="Left Top"></td>
-                                    <td data-value="top-center"data-id='2' title="Top Center"></td>
-                                    <td data-value="right-top" data-id='3' title="Right Top"></td>
-                                </tr>
-                                <tr>
-                                    <td data-value="left-center" data-id='4' title="Left Center"></td>
-                                    <td id="gpg_position_center" data-value="center-center" data-id='5' title="Center Center"></td>
-                                    <td data-value="right-center" data-id='6' title="Right Center"></td>
-                                </tr>
-                                <tr>
-                                    <td data-value="left-bottom" data-id='7' title="Left Bottom"></td>
-                                    <td data-value="center-bottom" data-id='8' title="Center Bottom"></td>
-                                    <td data-value="right-bottom" data-id='9' title="Right Bottom"></td>
-                                </tr>
-                            </table>
-                            <input type="hidden" name="gallery_img_position" id="ays-gpg-position-val" value="<?php echo $gallery_img_position; ?>" >                    
+                        <div class="gpg_position_block col-sm-9 ays_divider_left ays_toggle_parent">
+                            <div class="ays_gpg_img_position_tables_container" style="display: flex;">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_gallery_img_position_mobile ) ? '' : 'display: none;'; ?> text-align: center; margin-bottom: 10px; max-width: 120px;"><?php echo __( 'Desktop', $this->plugin_name ); ?></div>
+                                    <table id="ays-gpg-position-table" data-flag="gpg_image_position">
+                                        <tr>
+                                            <td data-value="left-top" data-id='1' title="Left Top"></td>
+                                            <td data-value="top-center"data-id='2' title="Top Center"></td>
+                                            <td data-value="right-top" data-id='3' title="Right Top"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-value="left-center" data-id='4' title="Left Center"></td>
+                                            <td id="gpg_position_center" data-value="center-center" data-id='5' title="Center Center"></td>
+                                            <td data-value="right-center" data-id='6' title="Right Center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-value="left-bottom" data-id='7' title="Left Bottom"></td>
+                                            <td data-value="center-bottom" data-id='8' title="Center Bottom"></td>
+                                            <td data-value="right-bottom" data-id='9' title="Right Bottom"></td>
+                                        </tr>
+                                    </table>
+                                    <input type="hidden" name="gallery_img_position" id="ays-gpg-position-val" value="<?php echo $gallery_img_position; ?>" class="ays-gpg-position-val-class">
+                                </div>
+                                <div class="ays_toggle_target ays_divider_left ays_gpg_img_position_mobile_container" style=" <?php echo ( $enable_gallery_img_position_mobile ) ? '' : 'display:none'; ?>">
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 120px;"><?php echo __( 'Mobile', $this->plugin_name ); ?></div>
+                                    <table id="ays-gpg-position-table-mobile" data-flag="gpg_image_position_mobile">
+                                        <tr>
+                                            <td data-value="left-top" data-id='1'></td>
+                                            <td data-value="top-center"data-id='2'></td>
+                                            <td data-value="right-top" data-id='3'></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-value="left-center" data-id='4'></td>
+                                            <td id="pb_position_center" data-value="center-center" data-id='5'></td>
+                                            <td data-value="right-center" data-id='6'></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-value="left-bottom" data-id='7'></td>
+                                            <td data-value="center-bottom" data-id='8'></td>
+                                            <td data-value="right-bottom" data-id='9'></td>
+                                        </tr>
+                                    </table>
+                                    <input type="hidden" name="gallery_img_position_mobile" id="ays-gpg-position-mobile-val" value="<?php echo $gallery_img_position_mobile; ?>" class="ays-gpg-position-mobile-val-class">
+                                </div>
+                            </div>
+                            <div class="ays_gpg_mobile_settings_container">
+                                <input type="checkbox" class="ays_toggle_checkbox ays-gpg-onoffswitch-checkbox" id="enable_gallery_img_position_mobile" name="enable_gallery_img_position_mobile" <?php echo $enable_gallery_img_position_mobile ? 'checked' : ''; ?>>
+                                <label for="enable_gallery_img_position_mobile" class="<?php echo $enable_gallery_img_position_mobile ? 'active' : '' ?>" ><?php echo __( 'Use a different setting for Mobile', $this->plugin_name ) ?></label>
+                            </div>
                         </div>
                     </div>
                     <hr/>
