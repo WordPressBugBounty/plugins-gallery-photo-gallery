@@ -116,6 +116,7 @@ $gallery_message_vars = array(
     '%%admin_email%%'                   => __("Admin Email", $this->plugin_name),
     '%%post_author_nickname%%'          => __("Post Author Nickname", $this->plugin_name),
     '%%post_author_email%%'             => __("Post Author Email", $this->plugin_name),
+    '%%post_author_display_name%%'      => __("Post Author Display Name", $this->plugin_name),
     '%%post_title%%'                    => __("Post Title", $this->plugin_name),
     '%%post_id%%'                       => __("Post ID", $this->plugin_name),
     '%%site_title%%'                    => __("Site Title", $this->plugin_name),
