@@ -1671,6 +1671,7 @@ class Gallery_Photo_Gallery_Public {
 
         $author_id = get_the_author_meta('ID');
         $post_author_nickname = get_the_author_meta( 'nickname', $author_id );
+        $post_author_last_name = get_the_author_meta( 'last_name', $author_id );
         $post_author_email = get_the_author_meta( 'email', $author_id );
         $post_author_display_name = get_the_author_meta( 'display_name', $author_id );
         $post_title = get_the_title();
@@ -1720,6 +1721,7 @@ class Gallery_Photo_Gallery_Public {
             'current_gallery_page_link'     => $gallery_current_page_link_html,
             'admin_email'                   => $super_admin_email,
             'post_author_nickname'          => $post_author_nickname,
+            'post_author_last_name'         => $post_author_last_name,
             'post_author_email'             => $post_author_email,
             'post_author_display_name'      => $post_author_display_name,
             'post_title'                    => $post_title,
