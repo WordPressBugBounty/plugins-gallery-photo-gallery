@@ -62,7 +62,8 @@ class Photo_Gallery_Data {
                 // self::ays_gpg_helloween_message($ays_gpg_ishmar);
                 // self::ays_gpg_black_friday_message($ays_gpg_ishmar);
                 // self::ays_gpg_new_mega_bundle_message_2024( $ays_gpg_ishmar );
-                self::ays_gpg_sale_new_message($ays_gpg_ishmar);
+                // self::ays_gpg_sale_new_message($ays_gpg_ishmar);
+                self::ays_gpg_black_friday_message_2024($ays_gpg_ishmar);
             }
         }
     }    
@@ -179,6 +180,100 @@ class Photo_Gallery_Data {
             $content = implode( '', $content );
             echo html_entity_decode(esc_html( $content ));
         }        
+    }
+
+    // Black Friday 2024
+    public static function ays_gpg_black_friday_message_2024($ishmar){
+        if($ishmar == 0 ){
+            $content = array();
+
+            $content[] = '<div id="ays-gpg-black-friday-bundle-dicount-month-main" class="notice notice-success is-dismissible ays_gpg_dicount_info">';
+                $content[] = '<div id="ays-gpg-dicount-month" class="ays_gpg_dicount_month">';
+
+                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-countdown-box">';
+
+                        $content[] = '<div id="ays-gpg-countdown-main-container">';
+                            $content[] = '<div class="ays-gpg-countdown-container">';
+
+                                $content[] = '<div id="ays-gpg-countdown">';
+
+                                    $content[] = '<div>';
+                                        $content[] = __( "Offer ends in:", AYS_GALLERY_NAME );
+                                    $content[] = '</div>';
+
+                                    $content[] = '<ul>';
+                                        $content[] = '<li><span id="ays-gpg-countdown-days"></span>'. __( "Days", AYS_GALLERY_NAME ) .'</li>';
+                                        $content[] = '<li><span id="ays-gpg-countdown-hours"></span>'. __( "Hours", AYS_GALLERY_NAME ) .'</li>';
+                                        $content[] = '<li><span id="ays-gpg-countdown-minutes"></span>'. __( "Minutes", AYS_GALLERY_NAME ) .'</li>';
+                                        $content[] = '<li><span id="ays-gpg-countdown-seconds"></span>'. __( "Seconds", AYS_GALLERY_NAME ) .'</li>';
+                                    $content[] = '</ul>';
+                                $content[] = '</div>';
+
+                                $content[] = '<div id="ays-gpg-countdown-content" class="emoji">';
+                                    $content[] = '<span></span>';
+                                    $content[] = '<span></span>';
+                                    $content[] = '<span></span>';
+                                    $content[] = '<span></span>';
+                                $content[] = '</div>';
+
+                            $content[] = '</div>';
+                        $content[] = '</div>';
+                            
+                    $content[] = '</div>';
+
+                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-text-box">';
+                        $content[] = '<div>';
+
+                            $content[] = '<span class="ays-gpg-black-friday-bundle-title">';
+                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner' class='ays-gpg-black-friday-bundle-title-link' target='_blank'>Black Friday Sale</a></span>", AYS_GALLERY_NAME );
+                            $content[] = '</span>';
+
+                            $content[] = '</br>';
+
+                            $content[] = '<span class="ays-gpg-black-friday-bundle-desc">';
+                                $content[] = '<a class="ays-gpg-black-friday-bundle-desc" href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner" class="ays-gpg-black-friday-bundle-title-link" target="_blank">';
+                                    $content[] = __( "20% OFF", AYS_GALLERY_NAME );
+                                $content[] = '</a>';
+                            $content[] = '</span>';
+                        $content[] = '</div>';
+
+                        $content[] = '<div style="position: absolute;right: 10px;bottom: 1px;" class="ays-gpg-dismiss-buttons-container-for-form">';
+
+                            $content[] = '<form action="" method="POST">';
+                                $content[] = '<div id="ays-gpg-dismiss-buttons-content">';
+                                if( current_user_can( 'manage_options' ) ){
+                                    $content[] = '<button class="btn btn-link ays-button" name="ays_gpg_sale_btn" style="height: 32px; margin-left: 0;padding-left: 0">'. __( "Dismiss ad", AYS_GALLERY_NAME ) .'</button>';
+                                    $content[] = wp_nonce_field( 'photo-gallery-sale-banner' ,  'photo-gallery-sale-banner' );
+                                }
+                                $content[] = '</div>';
+                            $content[] = '</form>';
+                            
+                        $content[] = '</div>';
+
+                    $content[] = '</div>';
+
+                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-black-friday-bundle-coupon-text-box">';
+                        $content[] = '<div class="ays-gpg-black-friday-bundle-coupon-row">';
+                            $content[] = 'bfdeal20off';
+                        $content[] = '</div>';
+
+                        $content[] = '<div class="ays-gpg-black-friday-bundle-text-row">';
+                            $content[] = __( '20% Extra Discount Coupon', AYS_GALLERY_NAME );
+                        $content[] = '</div>';
+                    $content[] = '</div>';
+
+                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
+                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Get Your Deal', AYS_GALLERY_NAME ) . '</a>';
+                        $content[] = '<span class="ays-gpg-dicount-one-time-text">';
+                            $content[] = __( "One-time payment", AYS_GALLERY_NAME );
+                        $content[] = '</span>';
+                    $content[] = '</div>';
+                $content[] = '</div>';
+            $content[] = '</div>';
+
+            $content = implode( '', $content );
+            echo $content;
+        }
     }
 
     // New Mega Bundle
