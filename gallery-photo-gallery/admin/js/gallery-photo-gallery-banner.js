@@ -10,7 +10,7 @@
 
             // var gpgCountdownEndTime = galleryLangObj.gpgBannerDate;
             // var gpgCountdownEndTime = "DEC 31, 2022 23:59:59";
-            var gpgCountdownEndTime = "NOV 29, 2024 23:59:59";
+            var gpgCountdownEndTime = "DEC 09, 2024 23:59:59";
             var countDown_new = new Date(gpgCountdownEndTime).getTime();
 
             if ( isNaN(countDown_new) || isFinite(countDown_new) == false ) {

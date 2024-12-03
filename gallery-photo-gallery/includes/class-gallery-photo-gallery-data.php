@@ -225,14 +225,14 @@ class Photo_Gallery_Data {
                         $content[] = '<div>';
 
                             $content[] = '<span class="ays-gpg-black-friday-bundle-title">';
-                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner' class='ays-gpg-black-friday-bundle-title-link' target='_blank'>Black Friday Sale</a></span>", AYS_GALLERY_NAME );
+                                $content[] = __( "<span><a href='https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-bundle-sale-banner' class='ays-gpg-black-friday-bundle-title-link' target='_blank'>Black Friday Sale</a></span>", AYS_GALLERY_NAME );
                             $content[] = '</span>';
 
                             $content[] = '</br>';
 
                             $content[] = '<span class="ays-gpg-black-friday-bundle-desc">';
-                                $content[] = '<a class="ays-gpg-black-friday-bundle-desc" href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner" class="ays-gpg-black-friday-bundle-title-link" target="_blank">';
-                                    $content[] = __( "20% OFF", AYS_GALLERY_NAME );
+                                $content[] = '<a class="ays-gpg-black-friday-bundle-desc" href="https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-bundle-sale-banner" class="ays-gpg-black-friday-bundle-title-link" target="_blank">';
+                                    $content[] = __( "50% OFF", AYS_GALLERY_NAME );
                                 $content[] = '</a>';
                             $content[] = '</span>';
                         $content[] = '</div>';
@@ -252,18 +252,16 @@ class Photo_Gallery_Data {
 
                     $content[] = '</div>';
 
-                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-black-friday-bundle-coupon-text-box">';
-                        $content[] = '<div class="ays-gpg-black-friday-bundle-coupon-row">';
-                            $content[] = 'bfdeal20off';
-                        $content[] = '</div>';
-
-                        $content[] = '<div class="ays-gpg-black-friday-bundle-text-row">';
-                            $content[] = __( '20% Extra Discount Coupon', AYS_GALLERY_NAME );
-                        $content[] = '</div>';
+                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-text-box">';
+                        $content[] = '<span class="ays-gpg-black-friday-bundle-title">';
+                            $content[] = '<a class="ays-gpg-black-friday-bundle-title-link" href="https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-bundle-sale-banner" target="_blank">';
+                                $content[] = __( 'Photography Bundle', AYS_GALLERY_NAME );
+                            $content[] = '</a>';
+                        $content[] = '</span>';
                     $content[] = '</div>';
 
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-sale-banner" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Get Your Deal', AYS_GALLERY_NAME ) . '</a>';
+                        $content[] = '<a href="https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-bundle-sale-banner" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Get Your Deal', AYS_GALLERY_NAME ) . '</a>';
                         $content[] = '<span class="ays-gpg-dicount-one-time-text">';
                             $content[] = __( "One-time payment", AYS_GALLERY_NAME );
                         $content[] = '</span>';
