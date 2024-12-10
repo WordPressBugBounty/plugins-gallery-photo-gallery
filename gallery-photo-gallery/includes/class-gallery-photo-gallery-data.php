@@ -62,8 +62,8 @@ class Photo_Gallery_Data {
                 // self::ays_gpg_helloween_message($ays_gpg_ishmar);
                 // self::ays_gpg_black_friday_message($ays_gpg_ishmar);
                 // self::ays_gpg_new_mega_bundle_message_2024( $ays_gpg_ishmar );
-                // self::ays_gpg_sale_new_message($ays_gpg_ishmar);
-                self::ays_gpg_black_friday_message_2024($ays_gpg_ishmar);
+                // self::ays_gpg_black_friday_message_2024($ays_gpg_ishmar);
+                self::ays_gpg_sale_new_message($ays_gpg_ishmar);
             }
         }
     }    
