@@ -9,7 +9,7 @@
                 day     = hour * 24;
 
             // var gpgCountdownEndTime = galleryLangObj.gpgBannerDate;
-            var gpgCountdownEndTime = "DEC 24, 2024 23:59:59";
+            var gpgCountdownEndTime = "JAN 07, 2025 23:59:59";
             var countDown_new = new Date(gpgCountdownEndTime).getTime();
 
             if ( isNaN(countDown_new) || isFinite(countDown_new) == false ) {

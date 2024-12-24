@@ -2144,7 +2144,7 @@
             $(document).find("#tab3").goToNormal();
         });
 
-        $(document).find('.ays-gpg-accordion-arrow-box').on('click', function(e) {
+        $(document).find('.ays-gpg-accordion-container').on('click', function(e) {
             var _this = $(this);
             openGpgCloseAccordion( _this );
         });
