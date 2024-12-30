@@ -129,3 +129,39 @@
         add_action( 'enqueue_block_editor_assets', 'ays_gpg_gutenberg_scripts' );
         add_action( 'init', 'ays_gpg_gutenberg_block_register' );
     }
+
+    function ays_gpg_is_chat_available() {
+
+        // Define the working days and working hours
+        $workingDays = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday');
+        $startHour = 9; // 09:00 AM
+        $endHour = 18;  // 06:00 PM
+
+        // Get the current WordPress time (in server's timezone)
+        $currentTime = current_time('timestamp'); // Server's current time in WordPress timezone
+
+        // Get the server's GMT offset (in hours)
+        $gmtOffset = get_option('gmt_offset'); // e.g., -4 for GMT-4 or +3 for GMT+3
+
+        // Convert the server's time to your desired timezone
+        // Calculate the difference between the server's time and our time
+        $desiredOffset = 4;
+        $offsetDifference = $desiredOffset - $gmtOffset;
+
+        // Adjust the time based on the offset difference
+        $adjustedTime = $currentTime + ($offsetDifference * 3600); // Add or subtract hours
+
+        // Create a DateTime object from the adjusted time
+        $adjustedDateTime = date('Y-m-d H:i:s', $adjustedTime); // Format it in a readable format
+
+        // Get the day of the week and the hour in the adjusted time
+        $dayOfWeek = date('l', strtotime($adjustedDateTime)); // e.g., 'Monday'
+        $hour = (int) date('G', strtotime($adjustedDateTime)); // Get the hour in 24-hour format
+
+        // Check if the current time is within working hours and working days
+        if (in_array($dayOfWeek, $workingDays) && $hour >= $startHour && $hour < $endHour) {
+            return true; // Chat is available
+        } else {
+            return false; // Chat is not available
+        }
+    }

@@ -628,8 +628,13 @@ div.ays-notice-banner {
 }
 
 @media screen and (max-width: 768px) {
+
     .ays-notice-banner .modile-ddmenu-xs {
         display: none;
+    }
+
+    .ays-notice-banner .navigation-bar ul#menu {
+        min-width: revert !important;
     }
 }
 
@@ -780,15 +785,19 @@ div.ays-notice-banner .navigation-bar li a:after {
     .ays-notice-banner .modile-ddmenu-sm {
         display: block;
     }
+
     .ays-notice-banner .modile-ddmenu-md {
         display: none;
     }
+
     div.ays-notice-banner{
         width: 100%;
     }
-    .ays-notice-banner .navigation-bar ul {
+
+    .ays-notice-banner .navigation-bar ul.ddmenu {
         align-items: stretch;
     }
+    
     form.ays-gpg-general-settings-form .vmessage input[type="text"]{
         width: 100%;
     }
