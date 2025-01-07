@@ -101,6 +101,7 @@ $gallery_message_vars = array(
     '%%user_last_name%%'                => __("User's Last Name", $this->plugin_name),
     '%%user_display_name%%'             => __("User's Display Name", $this->plugin_name),
     '%%user_nickname%%'                 => __("User's Nickname", $this->plugin_name),
+    '%%user_website_url%%'              => __("User's Website URL", $this->plugin_name),
     '%%user_wordpress_email%%'          => __("User's WordPress profile email", $this->plugin_name),
     '%%user_wordpress_roles%%'          => __("User's Wordpress Roles", $this->plugin_name),
     '%%user_ip_address%%'               => __("User's IP address", $this->plugin_name),

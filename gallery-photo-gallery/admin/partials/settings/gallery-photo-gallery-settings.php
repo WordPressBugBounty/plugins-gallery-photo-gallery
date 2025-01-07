@@ -514,6 +514,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                 </p>
                                 <p class="vmessage">
                                     <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_website_url%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo __( "The user's website url that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_wordpress_email%%" />
                                     </strong>
                                     <span> - </span>

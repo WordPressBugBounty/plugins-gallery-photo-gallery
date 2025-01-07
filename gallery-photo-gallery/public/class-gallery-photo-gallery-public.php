@@ -1630,12 +1630,15 @@ class Gallery_Photo_Gallery_Public {
         $user_display_name      = '';
         $user_email             = '';
         $user_nickname          = '';
+        $user_website_url       = '';
         $user_wordpress_roles   = '';
         $user_ip_address        = '';
         $user_id = get_current_user_id();
         
         if($user_id != 0){
             $usermeta = get_user_meta( $user_id );
+            echo "<pre>";
+            echo "</pre>";
             if($usermeta !== null){
                 $user_first_name = (isset($usermeta['first_name'][0]) && sanitize_text_field( $usermeta['first_name'][0] != '') ) ? sanitize_text_field( $usermeta['first_name'][0] ) : '';
                 $user_last_name  = (isset($usermeta['last_name'][0]) && sanitize_text_field( $usermeta['last_name'][0] != '') ) ? sanitize_text_field( $usermeta['last_name'][0] ) : '';
@@ -1646,8 +1649,8 @@ class Gallery_Photo_Gallery_Public {
             if ( ! is_null( $current_user_data ) && $current_user_data ) {
                 $user_display_name = ( isset( $current_user_data->data->display_name ) && $current_user_data->data->display_name != '' ) ? sanitize_text_field( $current_user_data->data->display_name ) : "";
                 $user_email = ( isset( $current_user_data->data->user_email ) && $current_user_data->data->user_email != '' ) ? sanitize_text_field( $current_user_data->data->user_email ) : "";
-
                 $user_wordpress_roles = ( isset( $current_user_data->roles ) && ! empty( $current_user_data->roles ) ) ? $current_user_data->roles : "";
+                $user_website_url = ( isset( $current_user_data->user_url ) && ! empty( $current_user_data->user_url ) ) ? $current_user_data->user_url : "";
                 $user_ip_address = $this->ays_gallery_get_user_ip();
 
                 if ( !empty( $user_wordpress_roles ) && $user_wordpress_roles != "" ) {
@@ -1683,6 +1686,14 @@ class Gallery_Photo_Gallery_Public {
         // WP home page url
         $home_main_url = home_url();
         $home_page_url = '<a href="'.$home_main_url.'" target="_blank">'.$home_main_url.'</a>';
+        
+        if ( ! empty( $user_website_url ) ) {
+            $user_website_url = '<a href="'.$user_website_url.'" target="_blank">'.$user_website_url.'</a>';
+        }
+        
+        if ( ! empty( $post_author_website_url ) ) {
+            $post_author_website_url = '<a href="'.$post_author_website_url.'" target="_blank">'.$post_author_website_url.'</a>';
+        }
 
         $ays_protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 
@@ -1709,6 +1720,7 @@ class Gallery_Photo_Gallery_Public {
             'user_last_name'                => $user_last_name,
             'user_display_name'             => $user_display_name,
             'user_nickname'                 => $user_nickname,
+            'user_website_url'              => $user_website_url,
             'user_wordpress_email'          => $user_email,
             'user_wordpress_roles'          => $user_wordpress_roles,
             'user_ip_address'               => $user_ip_address,

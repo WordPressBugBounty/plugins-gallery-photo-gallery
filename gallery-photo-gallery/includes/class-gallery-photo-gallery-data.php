@@ -318,13 +318,13 @@ class Photo_Gallery_Data {
                         $content[] = '<div>';
 
                             $content[] = '<span class="ays-gpg-christmas-top-bundle-title">';
-                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner' class='ays-gpg-christmas-top-bundle-title-link' target='_blank'>Christmas Sale</a></span>", AYS_GALLERY_NAME );
+                                $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner".AYS_GALLERY_VERSION."' class='ays-gpg-christmas-top-bundle-title-link' target='_blank'>Christmas Sale</a></span>", AYS_GALLERY_NAME );
                             $content[] = '</span>';
 
                             $content[] = '</br>';
 
                             $content[] = '<span class="ays-gpg-christmas-top-bundle-desc">';
-                                $content[] = '<a class="ays-gpg-christmas-top-bundle-desc" href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner" class="ays-gpg-christmas-top-bundle-title-link" target="_blank">';
+                                $content[] = '<a class="ays-gpg-christmas-top-bundle-desc" href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner'.AYS_GALLERY_VERSION.'" class="ays-gpg-christmas-top-bundle-title-link" target="_blank">';
                                     $content[] = __( "20% Extra OFF", AYS_GALLERY_NAME );
                                 $content[] = '</a>';
                             $content[] = '</span>';
@@ -356,7 +356,7 @@ class Photo_Gallery_Data {
                     $content[] = '</div>';
 
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Get Your Deal', AYS_GALLERY_NAME ) . '</a>';
+                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=christmas-sale-banner'.AYS_GALLERY_VERSION.'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Get Your Deal', AYS_GALLERY_NAME ) . '</a>';
                         $content[] = '<span class="ays-gpg-dicount-one-time-text">';
                             $content[] = __( "One-time payment", AYS_GALLERY_NAME );
                         $content[] = '</span>';
