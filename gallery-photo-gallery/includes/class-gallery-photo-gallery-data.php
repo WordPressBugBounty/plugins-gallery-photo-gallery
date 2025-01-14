@@ -63,8 +63,8 @@ class Photo_Gallery_Data {
                 // self::ays_gpg_black_friday_message($ays_gpg_ishmar);
                 // self::ays_gpg_new_mega_bundle_message_2024( $ays_gpg_ishmar );
                 // self::ays_gpg_black_friday_message_2024($ays_gpg_ishmar);
-                // self::ays_gpg_sale_new_message($ays_gpg_ishmar);
-                self::ays_gpg_christmas_top_message_2024($ays_gpg_ishmar);
+                // self::ays_gpg_christmas_top_message_2024($ays_gpg_ishmar);
+                self::ays_gpg_sale_new_message($ays_gpg_ishmar);
             }
         }
     }    
@@ -380,7 +380,7 @@ class Photo_Gallery_Data {
                         $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-text-boxes">';
                         $content[] = '<div>';
                             $content[] = '<span class="ays-gpg-new-mega-bundle-title">';
-                                 $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photo Gallery</a></span>", AYS_GALLERY_NAME );
+                                 $content[] = __( "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery". AYS_GALLERY_VERSION ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photo Gallery</a></span>", AYS_GALLERY_NAME );
                             $content[] = '</span>';                                
                         $content[] = '</div>';
                         $content[] = '<div>';
@@ -440,7 +440,7 @@ class Photo_Gallery_Data {
                     $content[] = '</div>';
 
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', AYS_GALLERY_NAME ) . '</a>';
+                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery'. AYS_GALLERY_VERSION .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', AYS_GALLERY_NAME ) . '</a>';
                         $content[] = '<span class="ays-gpg-dicount-one-time-text">';
                             $content[] = __( "One-time payment", AYS_GALLERY_NAME );
                         $content[] = '</span>';
