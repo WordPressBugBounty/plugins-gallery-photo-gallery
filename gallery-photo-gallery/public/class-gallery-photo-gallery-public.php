@@ -1636,9 +1636,7 @@ class Gallery_Photo_Gallery_Public {
         $user_id = get_current_user_id();
         
         if($user_id != 0){
-            $usermeta = get_user_meta( $user_id );
-            echo "<pre>";
-            echo "</pre>";
+            $usermeta = get_user_meta( $user_id );            
             if($usermeta !== null){
                 $user_first_name = (isset($usermeta['first_name'][0]) && sanitize_text_field( $usermeta['first_name'][0] != '') ) ? sanitize_text_field( $usermeta['first_name'][0] ) : '';
                 $user_last_name  = (isset($usermeta['last_name'][0]) && sanitize_text_field( $usermeta['last_name'][0] != '') ) ? sanitize_text_field( $usermeta['last_name'][0] ) : '';
@@ -1665,6 +1663,7 @@ class Gallery_Photo_Gallery_Public {
 
         $current_gallery_author = __( "Unknown", $this->plugin_name );
         $current_gallery_author_email = "";
+        $current_gallery_author_display_name = "";
         $creation_gallery_date = isset($gallery_options['create_date']) && $gallery_options['create_date'] != '' ? date_i18n( get_option( 'date_format' ), strtotime( $gallery_options['create_date'] ) ) : "";
         $current_date = date_i18n( 'M d, Y', current_time('timestamp') );
         $current_gallery_images_count = $images_count;
@@ -1712,38 +1711,40 @@ class Gallery_Photo_Gallery_Public {
             if ( ! is_null( $current_gallery_user_data ) && $current_gallery_user_data ) {
                 $current_gallery_author = ( isset( $current_gallery_user_data->data->display_name ) && $current_gallery_user_data->data->display_name != '' ) ? sanitize_text_field( $current_gallery_user_data->data->display_name ) : "";
                 $current_gallery_author_email = ( isset( $current_gallery_user_data->data->user_email ) && $current_gallery_user_data->data->user_email != '' ) ? sanitize_text_field( $current_gallery_user_data->data->user_email ) : "";
+                $current_gallery_author_display_name = ( isset( $current_gallery_user_data->data->display_name ) && $current_gallery_user_data->data->display_name != '' ) ? sanitize_text_field( $current_gallery_user_data->data->display_name ) : "";
             }
         }
 
         $message_data = array(                    
-            'user_first_name'               => $user_first_name,
-            'user_last_name'                => $user_last_name,
-            'user_display_name'             => $user_display_name,
-            'user_nickname'                 => $user_nickname,
-            'user_website_url'              => $user_website_url,
-            'user_wordpress_email'          => $user_email,
-            'user_wordpress_roles'          => $user_wordpress_roles,
-            'user_ip_address'               => $user_ip_address,
-            'user_id'                       => $user_id,
-            'gallery_id'                    => $id,
-            'current_gallery_images_count'  => $current_gallery_images_count,
-            'current_gallery_author'        => $current_gallery_author,
-            'current_gallery_author_email'  => $current_gallery_author_email,
-            'creation_date'                 => $creation_gallery_date,
-            'current_date'                  => $current_date,
-            'current_gallery_title'         => $current_gallery_title,
-            'current_gallery_page_link'     => $gallery_current_page_link_html,
-            'admin_email'                   => $super_admin_email,
-            'post_author_nickname'          => $post_author_nickname,
-            'post_author_first_name'        => $post_author_first_name,
-            'post_author_last_name'         => $post_author_last_name,
-            'post_author_email'             => $post_author_email,
-            'post_author_display_name'      => $post_author_display_name,
-            'post_author_website_url'       => $post_author_website_url,
-            'post_title'                    => $post_title,
-            'post_id'                       => $current_post_id,
-            'site_title'                    => $get_site_title,
-            'home_page_url'                 => $home_page_url,
+            'user_first_name'                       => $user_first_name,
+            'user_last_name'                        => $user_last_name,
+            'user_display_name'                     => $user_display_name,
+            'user_nickname'                         => $user_nickname,
+            'user_website_url'                      => $user_website_url,
+            'user_wordpress_email'                  => $user_email,
+            'user_wordpress_roles'                  => $user_wordpress_roles,
+            'user_ip_address'                       => $user_ip_address,
+            'user_id'                               => $user_id,
+            'gallery_id'                            => $id,
+            'current_gallery_images_count'          => $current_gallery_images_count,
+            'current_gallery_author'                => $current_gallery_author,
+            'current_gallery_author_email'          => $current_gallery_author_email,
+            'current_gallery_author_display_name'   => $current_gallery_author_display_name,
+            'creation_date'                         => $creation_gallery_date,
+            'current_date'                          => $current_date,
+            'current_gallery_title'                 => $current_gallery_title,
+            'current_gallery_page_link'             => $gallery_current_page_link_html,
+            'admin_email'                           => $super_admin_email,
+            'post_author_nickname'                  => $post_author_nickname,
+            'post_author_first_name'                => $post_author_first_name,
+            'post_author_last_name'                 => $post_author_last_name,
+            'post_author_email'                     => $post_author_email,
+            'post_author_display_name'              => $post_author_display_name,
+            'post_author_website_url'               => $post_author_website_url,
+            'post_title'                            => $post_title,
+            'post_id'                               => $current_post_id,
+            'site_title'                            => $get_site_title,
+            'home_page_url'                         => $home_page_url,
         );
 
         $description = $this->ays_gallery_replace_message_variables($description, $message_data);
