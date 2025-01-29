@@ -271,6 +271,13 @@ $thumbnail_title_color = isset($gal_options['ays_gpg_title_color']) ? esc_attr(s
 //Gallery title color
 $gallery_title_color = isset($gal_options['ays_gallery_title_color']) ? esc_attr(stripslashes($gal_options['ays_gallery_title_color'])) : '#000';
 
+//Enable Gallery title color Mobile
+$gal_options['enable_ays_gallery_title_color_mobile'] = isset( $gal_options['enable_ays_gallery_title_color_mobile'] ) && $gal_options['enable_ays_gallery_title_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_gallery_title_color_mobile = $gal_options['enable_ays_gallery_title_color_mobile'] == 'on' ?  true : false;
+
+//Gallery title color Mobile
+$gallery_title_color_mobile = isset( $gal_options['ays_gallery_title_color_mobile'] ) && $gal_options['ays_gallery_title_color_mobile'] != '' ? esc_attr( $gal_options['ays_gallery_title_color_mobile'] ) : $gallery_title_color;
+
 //Gallery description color
 $gallery_desc_color = isset($gal_options['ays_gallery_desc_color']) ? esc_attr(stripslashes($gal_options['ays_gallery_desc_color'])) : '#000';
 
@@ -2196,8 +2203,22 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">                    
-                            <input id="ays_gallery_title_color" name="ays_gallery_title_color" data-alpha="true" type="text" value="<?php echo $gallery_title_color; ?>" data-default-color="#000">
+                        <div class="col-sm-9 ays_divider_left">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_gallery_title_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', $this->plugin_name) ?></div>
+                                    <input type="text" id="ays_gallery_title_color" name="ays_gallery_title_color" data-alpha="true" value="<?php echo $gallery_title_color; ?>" data-default-color="#000">
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_gallery_title_color_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', $this->plugin_name) ?></div>
+                                    <input type="text" id="ays_gallery_title_color_mobile" name="ays_gallery_title_color_mobile" data-alpha="true" value="<?php echo $gallery_title_color_mobile; ?>" data-default-color="#000">
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gallery_title_color_mobile" name="enable_ays_gallery_title_color_mobile" <?php echo $enable_gallery_title_color_mobile ? 'checked' : '' ?>>
+                                    <label for="enable_ays_gallery_title_color_mobile" ><?php echo __('Use a different setting for Mobile', $this->plugin_name) ?></label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <hr/>

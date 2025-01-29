@@ -39,6 +39,20 @@
             e.preventDefault();
         });
 
+        // Toggle mobile settings start
+        $(document).on('change', '.ays_toggle_mobile_checkbox', function (e) {
+            var state = $(this).prop('checked');
+            let parent = $(this).parents('.ays_toggle_mobile_parent');
+            switch (state) {
+                case true:
+                    parent.find('.ays_toggle_target').show(250);
+                    break;
+                case false:
+                    parent.find('.ays_toggle_target').hide(250);
+                    break;
+            }
+        });
+
         $(document).on('change', '.ays_toggle_checkbox', function (e) {
             let state = $(this).prop('checked');
             let parent = $(this).parents('.ays_toggle_parent');
@@ -146,6 +160,7 @@
 
         $(document).find('.ays_gpg_lightbox_color').wpColorPicker();
         $(document).find('#ays_gallery_title_color').wpColorPicker();
+        $(document).find('#ays_gallery_title_color_mobile').wpColorPicker();
         $(document).find('#ays_gallery_desc_color').wpColorPicker();
         $(document).find('#ays_gpg_thumbnail_title_color').wpColorPicker();
         $(document).find('#ays_gpg_progress_line_color').wpColorPicker();
@@ -2135,6 +2150,9 @@
             $(document).find('input[name="ays_gpg_thumbnail_title_size"]').val('12').change();
 
             $(document).find('#ays_gallery_title_color').val('#000').change();
+            $(document).find('#ays_gallery_title_color_mobile').val('#000').change();
+            $(document).find("#enable_ays_gallery_title_color_mobile").prop('checked', true).change();
+
             $(document).find('#ays_gallery_desc_color').val('#000').change();
             $(document).find('.ays_gpg_lightbox_color').val('rgba(0,0,0,0)').change();
             $(document).find('#ays_gpg_thumbnail_title_color').val('#fff').change();
