@@ -8,8 +8,8 @@
                 hour    = minute * 60,
                 day     = hour * 24;
 
-            var gpgCountdownEndTime = galleryLangObj.gpgBannerDate;
-            // var gpgCountdownEndTime = "JAN 15, 2025 23:59:59";
+            // var gpgCountdownEndTime = galleryLangObj.gpgBannerDate;
+            var gpgCountdownEndTime = "FEB 11, 2025 23:59:59";
             var countDown_new = new Date(gpgCountdownEndTime).getTime();
 
             if ( isNaN(countDown_new) || isFinite(countDown_new) == false ) {

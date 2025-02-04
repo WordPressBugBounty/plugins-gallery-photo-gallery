@@ -83,7 +83,7 @@ div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info {
 #ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
     width: 30%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -286,7 +286,42 @@ div#ays-gpg-new-mega-bundle-dicount-month-main button.notice-dismiss:before{
     line-height: normal;
 }
 
+#ays-gpg-new-mega-bundle-dicount-month-main .ays-gpg-dicount-top-bundle-coupon-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+    background: #FCFAF8;
+    border: 2px dotted #f66123;
+    border-radius: 25px;
+    margin-bottom: 2px;
+    font-weight: 700;
+    color: #f66123;
+}
+
+.ays-gpg-dicount-wrap-box.ays-gpg-dicount-top-bundle-coupon-text-box {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ays-gpg-dicount-top-bundle-text-row {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 @media all and (max-width: 768px) {
+    .ays-gpg-dicount-wrap-box.ays-gpg-dicount-top-bundle-coupon-text-box {
+        display: flex;
+        justify-content: center;
+    }
+
     div#ays-gpg-new-mega-bundle-dicount-month-main {
         padding-right: 0;
         padding-left: 0;        
