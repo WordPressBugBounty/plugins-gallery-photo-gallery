@@ -405,11 +405,14 @@ class Gallery_Photo_Gallery_Admin {
             </p>' .
             '<p>
                 <a href="https://ays-pro.com/wordpress/photo-gallery" target="_blank">' . __( 'Photo Gallery plugin Premium version', $this->plugin_name ) . '</a>
+            </p>' .
+            '<p>
+                <a href="https://ays-demo.com/wordpress-photo-gallery-plugin-pro-demo/" target="_blank">' . __( 'Photo Gallery plugin demo', $this->plugin_name ) . '</a>
             </p>'
         );
     }
 
-    public function add_plugin_row_meta($meta, $file) {
+    public function add_plugin_row_meta( $meta, $file ) {
 
         if ($file == AYS_GPG_BASENAME) {
             $meta[] = '<a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank">' . esc_html__( 'Free Support', $this->plugin_name ) . '</a>';
@@ -471,7 +474,7 @@ class Gallery_Photo_Gallery_Admin {
     }    
 
     public function screen_option_settings() {
-        $this->settings_obj = new Gallery_Settings_Actions($this->plugin_name);
+        $this->settings_obj = new Gallery_Settings_Actions( $this->plugin_name );
     }
 
     public function display_plugin_gallery_settings_page(){
