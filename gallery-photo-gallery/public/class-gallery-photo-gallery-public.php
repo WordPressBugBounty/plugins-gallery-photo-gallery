@@ -1333,7 +1333,18 @@ class Gallery_Photo_Gallery_Public {
             $gallery_title_color_mobile = $gallery_title_color;
         } 
 
+        // Gallery description Color
         $gallery_desc_color = (isset($gallery_options['ays_gallery_desc_color']) && $gallery_options['ays_gallery_desc_color'] != '') ? $gallery_options['ays_gallery_desc_color'] : '#000'; 
+
+        // Enable Gallery description Color Mobile
+        $gallery_options['enable_ays_gallery_desc_color_mobile'] = ( isset( $gallery_options['enable_ays_gallery_desc_color_mobile'] ) && $gallery_options['enable_ays_gallery_desc_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery description Color Mobile
+        if ( $gallery_options['enable_ays_gallery_desc_color_mobile'] ) {
+            $gallery_desc_color_mobile = ( isset( $gallery_options['ays_gallery_desc_color_mobile'] ) && $gallery_options['ays_gallery_desc_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['ays_gallery_desc_color_mobile'] ) ) : $gallery_desc_color;
+        } else {
+            $gallery_desc_color_mobile = $gallery_desc_color;
+        }
         
         $images_b_radius = (!isset($gallery_options['border_radius']) ||
                             $gallery_options['border_radius'] == '' ||
@@ -2449,6 +2460,10 @@ class Gallery_Photo_Gallery_Public {
 
                     .ays_gallery_container_". $id ." .ays_gallery_header h2.ays_gallery_title {
                         color:". $gallery_title_color_mobile ."
+                    }
+
+                    .ays_gallery_container_". $id ." .ays_gallery_header h4.ays_gallery_description {
+                        color:". $gallery_desc_color_mobile ."
                     }
                 }
 
