@@ -165,6 +165,7 @@
         $(document).find('#ays_gallery_desc_color_mobile').wpColorPicker();
         $(document).find('#ays_gpg_thumbnail_title_color').wpColorPicker();
         $(document).find('#ays_gpg_progress_line_color').wpColorPicker();
+        $(document).find('#ays_gpg_progress_line_color_mobile').wpColorPicker();
         $(document).find('.ays_gpg_hover_color').wpColorPicker();
         $(document).find('.ays_gpg_border_color').wpColorPicker();
         $(document).find('.ays_gallery_live_preview').hover(function () {

@@ -216,7 +216,19 @@ class Gallery_Photo_Gallery_Public {
         $ays_gpg_lg_keypress                = (!isset($gal_lightbox_options["lb_keypress"])) ? "true" : $gal_lightbox_options["lb_keypress"];
         $ays_gpg_lg_esckey                  = (!isset($gal_lightbox_options["lb_esckey"])) ? "true" : $gal_lightbox_options["lb_esckey"];
         $ays_gpg_hide_progress_line = (!isset($gal_lightbox_options["hide_progress_line"])) ? "true" : $gal_lightbox_options["hide_progress_line"];
+
+        // Gallery Progress Line Color Mobile
         $ays_gpg_progress_line_color = isset($gal_lightbox_options['progress_line_color']) ? esc_attr(stripslashes($gal_lightbox_options['progress_line_color'])) : '#a90707';
+
+        // Enable Gallery Progress Line Color Mobile
+        $gal_lightbox_options['enable_progress_line_color_mobile'] = ( isset( $gal_lightbox_options['enable_progress_line_color_mobile'] ) && $gal_lightbox_options['enable_progress_line_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery Progress Line Color Mobile
+        if ( $gal_lightbox_options['enable_progress_line_color_mobile'] ) {
+            $ays_gpg_progress_line_color_mobile = ( isset( $gal_lightbox_options['progress_line_color_mobile'] ) && $gal_lightbox_options['progress_line_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gal_lightbox_options['progress_line_color_mobile'] ) ) : $ays_gpg_progress_line_color;
+        } else {
+            $ays_gpg_progress_line_color_mobile = $ays_gpg_progress_line_color;
+        }        
 
         $images_hover_zoom = (!isset($gallery_options['hover_zoom']) ||
                               $gallery_options['hover_zoom'] == '' ||
@@ -721,6 +733,12 @@ class Gallery_Photo_Gallery_Public {
             }
             .ays_gpg_lightbox_".$id." .lg-progress-bar .lg-progress {
                 background-color: ".$ays_gpg_progress_line_color.";
+            }
+
+            @media screen and (max-width: 768px){
+                .ays_gpg_lightbox_".$id." .lg-progress-bar .lg-progress {
+                    background-color: ".$ays_gpg_progress_line_color_mobile.";
+                }
             }
             
         </style>";

@@ -228,8 +228,16 @@ $ays_gpg_show_caption               = (!isset($gal_lightbox_options['lb_show_cap
 $ays_gpg_lg_keypress = (!isset($gal_lightbox_options["lb_keypress"])) ? "true" : $gal_lightbox_options["lb_keypress"];
 $ays_gpg_lg_esckey = (!isset($gal_lightbox_options["lb_esckey"])) ? "true" : $gal_lightbox_options["lb_esckey"];
 $ays_gpg_hide_progress_line = (!isset($gal_lightbox_options["hide_progress_line"])) ? "true" : $gal_lightbox_options["hide_progress_line"];
+
 //Progress Line color
 $ays_gpg_progress_line_color = isset($gal_lightbox_options['progress_line_color']) ? esc_attr(stripslashes($gal_lightbox_options['progress_line_color'])) : '#a90707';
+
+//Enable Gallery Progress Line color Mobile
+$gal_lightbox_options['enable_progress_line_color_mobile'] = isset( $gal_lightbox_options['enable_progress_line_color_mobile'] ) && $gal_lightbox_options['enable_progress_line_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_progress_line_color_mobile = $gal_lightbox_options['enable_progress_line_color_mobile'] == 'on' ?  true : false;
+
+//Gallery Progress Line color Mobile
+$ays_gpg_progress_line_color_mobile = isset( $gal_lightbox_options['progress_line_color_mobile'] ) && $gal_lightbox_options['progress_line_color_mobile'] != '' ? esc_attr( $gal_lightbox_options['progress_line_color_mobile'] ) : $ays_gpg_progress_line_color;
 
 // Gallery image position
 $gallery_img_position = (isset($gal_options['gallery_img_position']) && $gal_options['gallery_img_position'] != 'center-center') ? $gal_options['gallery_img_position'] : 'center-center';
@@ -2430,9 +2438,23 @@ $gpg_accordion_svg_html = '
                                         </a>
                                     </label>
                                 </div>
-                                <div class="col-sm-9">                    
-                                    <input id="ays_gpg_progress_line_color" name="ays_gpg_progress_line_color" data-alpha="true" type="text" value="<?php echo $ays_gpg_progress_line_color; ?>" data-default-color="#a90707">
-                                </div>
+                                <div class="col-sm-9">
+                                    <div class="ays_toggle_mobile_parent">
+                                        <div>
+                                            <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_progress_line_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', $this->plugin_name) ?></div>
+                                            <input type="text" id="ays_gpg_progress_line_color" name="ays_gpg_progress_line_color" data-alpha="true" value="<?php echo $ays_gpg_progress_line_color; ?>" data-default-color="#a90707">
+                                        </div>
+                                        <div class="ays_toggle_target ays_gpg_progress_line_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_progress_line_color_mobile ) ? '' : 'display:none'; ?>">
+                                            <hr>
+                                            <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', $this->plugin_name) ?></div>
+                                            <input type="text" id="ays_gpg_progress_line_color_mobile" name="ays_gpg_progress_line_color_mobile" data-alpha="true" value="<?php echo $ays_gpg_progress_line_color_mobile; ?>" data-default-color="#a90707">
+                                        </div>
+                                        <div class="ays_gpg_mobile_settings_container">
+                                            <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_progress_line_color_mobile" name="enable_ays_gpg_progress_line_color_mobile" <?php echo $enable_ays_gpg_progress_line_color_mobile ? 'checked' : '' ?>>
+                                            <label for="enable_ays_gpg_progress_line_color_mobile" ><?php echo __('Use a different setting for Mobile', $this->plugin_name) ?></label>
+                                        </div>
+                                    </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>

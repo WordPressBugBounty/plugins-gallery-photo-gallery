@@ -227,8 +227,15 @@ class Galleries_List_Table extends WP_List_Table{
                 $ays_gpg_lg_esckey    = (isset($data['ays_gpg_lg_esckey']) && $data['ays_gpg_lg_esckey'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lg_esckey'] )) : '';
 
                 $ays_gpg_hide_progress_line = (isset($data['ays_gpg_hide_progress_line']) && $data['ays_gpg_hide_progress_line'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_hide_progress_line'] )) : '';
-                //Progress Line color 
+
+                //Gallery Progress Line color 
                 $ays_gpg_progress_line_color = (isset($data['ays_gpg_progress_line_color']) && $data['ays_gpg_progress_line_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_progress_line_color'] )) : '#a90707';
+
+                //Enable Gallery Progress Line color Mobile
+                $enable_ays_gpg_progress_line_color_mobile = isset( $data['enable_ays_gpg_progress_line_color_mobile'] ) && $data['enable_ays_gpg_progress_line_color_mobile'] == 'on' ? 'on' : 'off';
+
+                //Gallery Progress Line color Mobile
+                $ays_gpg_progress_line_color_mobile = isset( $data['ays_gpg_progress_line_color_mobile'] ) && $data['ays_gpg_progress_line_color_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_progress_line_color_mobile'] ) : '#a90707';
 
                 $link_on_whole_img       = isset($data['link_on_whole_img']) && $data['link_on_whole_img'] == "on" ? "on" :"off";
 
@@ -319,15 +326,17 @@ class Galleries_List_Table extends WP_List_Table{
                     "gallery_loader_custom_gif_width"       => $gallery_loader_custom_gif_width,
                 );
                 $lightbox_options = array(
-                    "lightbox_counter"          => $ays_lightbox_counter,
-                    "lightbox_autoplay"         => $ays_lightbox_autoplay,
-                    "lb_pause"                  => $ays_lg_pause,
-                    "lb_show_caption"           => $ays_lg_show_caption,
-                    "filter_lightbox_opt"       => $ays_gpg_filter_lightbox_opt,
-                    "lb_keypress"               => $ays_gpg_lg_keypress,
-                    "lb_esckey"                 => $ays_gpg_lg_esckey,
-                    "hide_progress_line"        => $ays_gpg_hide_progress_line,
-                    "progress_line_color"       => $ays_gpg_progress_line_color,
+                    "lightbox_counter"                  => $ays_lightbox_counter,
+                    "lightbox_autoplay"                 => $ays_lightbox_autoplay,
+                    "lb_pause"                          => $ays_lg_pause,
+                    "lb_show_caption"                   => $ays_lg_show_caption,
+                    "filter_lightbox_opt"               => $ays_gpg_filter_lightbox_opt,
+                    "lb_keypress"                       => $ays_gpg_lg_keypress,
+                    "lb_esckey"                         => $ays_gpg_lg_esckey,
+                    "hide_progress_line"                => $ays_gpg_hide_progress_line,
+                    "progress_line_color"               => $ays_gpg_progress_line_color,
+                    "enable_progress_line_color_mobile" => $enable_ays_gpg_progress_line_color_mobile,
+                    "progress_line_color_mobile"        => $ays_gpg_progress_line_color_mobile,
                     
                 );
                 $submit_type = (isset($data['submit_type'])) ?  $data['submit_type'] : '';
