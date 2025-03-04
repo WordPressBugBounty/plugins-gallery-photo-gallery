@@ -8,8 +8,8 @@ class Galleries_List_Table extends WP_List_Table{
         $this->plugin_name = $plugin_name;
         $this->title_length = Gallery_Photo_Gallery_Admin::get_gpg_listtables_title_length('galleries');
         parent::__construct( array(
-            "singular" => __( "Gallery", $this->plugin_name ), //singular name of the listed records
-            "plural"   => __( "Galleries", $this->plugin_name ), //plural name of the listed records
+            "singular" => __( "Gallery", 'gallery-photo-gallery' ), //singular name of the listed records
+            "plural"   => __( "Galleries", 'gallery-photo-gallery' ), //plural name of the listed records
             "ajax"     => false //does this table support ajax?
         ) );
         add_action( "admin_notices", array( $this, "gallery_notices" ) );
@@ -496,7 +496,7 @@ class Galleries_List_Table extends WP_List_Table{
 
     /** Text displayed when no customer data is available */
     public function no_items() {
-        echo __( "There are no galleries yet.", $this->plugin_name );
+        echo __( "There are no galleries yet.", 'gallery-photo-gallery' );
     }
 
     public function duplicate_galleries( $id ){
@@ -676,9 +676,9 @@ class Galleries_List_Table extends WP_List_Table{
         $title = sprintf( '<a href="?page=%s&action=%s&gallery=%d" title="%s">%s</a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ), $q, $restitle);
 
         $actions = array(
-            "edit" => sprintf( "<a href='?page=%s&action=%s&gallery=%d'>". __('Edit', $this->plugin_name) ."</a>", esc_attr( $_REQUEST["page"] ), "edit", absint( $item["id"] ) ),
-            'duplicate' => sprintf( '<a href="?page=%s&action=%s&gallery=%d&_wpnonce=%s">'. __('Duplicate', $this->plugin_name) .'</a>', esc_attr( $_REQUEST['page'] ), 'duplicate', absint( $item['id'] ), $duplicate_nonce ),
-            "delete" => sprintf( "<a href='?page=%s&action=%s&gallery=%s&_wpnonce=%s'>". __('Delete', $this->plugin_name) ."</a>", esc_attr( $_REQUEST["page"] ), "delete", absint( $item["id"] ), $delete_nonce )
+            "edit" => sprintf( "<a href='?page=%s&action=%s&gallery=%d'>". __('Edit', 'gallery-photo-gallery') ."</a>", esc_attr( $_REQUEST["page"] ), "edit", absint( $item["id"] ) ),
+            'duplicate' => sprintf( '<a href="?page=%s&action=%s&gallery=%d&_wpnonce=%s">'. __('Duplicate', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'duplicate', absint( $item['id'] ), $duplicate_nonce ),
+            "delete" => sprintf( "<a href='?page=%s&action=%s&gallery=%s&_wpnonce=%s'>". __('Delete', 'gallery-photo-gallery') ."</a>", esc_attr( $_REQUEST["page"] ), "delete", absint( $item["id"] ), $delete_nonce )
         );
 
         return $title . $this->row_actions( $actions );
@@ -686,7 +686,7 @@ class Galleries_List_Table extends WP_List_Table{
 
     function column_shortcode( $item ) {
         return sprintf('<div class="ays-gpg-shortcode-container">
-                    <div class="ays-gpg-copy-image" data-bs-toggle="tooltip" title="'. esc_html(__('Click to copy',$this->plugin_name)).'">
+                    <div class="ays-gpg-copy-image" data-bs-toggle="tooltip" title="'. esc_html(__('Click to copy','gallery-photo-gallery')).'">
                             <img src="'. esc_url(AYS_GPG_ADMIN_URL) . '/images/icons/copy-image.svg">
                     </div>                                            
                     <input type="text" class="ays-gpg-shortcode-input" readonly value="'. esc_attr('[gallery_p_gallery id="%s"]').'" />
@@ -755,10 +755,10 @@ class Galleries_List_Table extends WP_List_Table{
         $status_val = isset($item['published']) && $item['published'] != "" ? intval($item['published']) : 1; 
         switch ( $status_val ) {
             case 0:
-                $status_text = __('unpublished', $this->plugin_name);
+                $status_text = __('unpublished', 'gallery-photo-gallery');
                 break;
             default:
-                $status_text = __('published', $this->plugin_name);
+                $status_text = __('published', 'gallery-photo-gallery');
                 break;
         }
         $status = ucfirst( $status_text );
@@ -775,15 +775,15 @@ class Galleries_List_Table extends WP_List_Table{
     function get_columns() {
         $columns = array(
             "cb"            => "<input type='checkbox' />",
-            "title"         => __( "Title", $this->plugin_name ),
-            "image"         => __( "Image", $this->plugin_name ),
-            "category_ids"  => __( "Category", $this->plugin_name ),
-            "description"   => __( "Description", $this->plugin_name ),
-            "shortcode"     => __( "Shortcode", $this->plugin_name ),
-            'create_date'   => __( 'Created', $this->plugin_name ),
-            "items"         => __( "Items", $this->plugin_name ),
-            "status"        => __( "Status", $this->plugin_name ),
-            "id"            => __( "ID", $this->plugin_name ),
+            "title"         => __( "Title", 'gallery-photo-gallery' ),
+            "image"         => __( "Image", 'gallery-photo-gallery' ),
+            "category_ids"  => __( "Category", 'gallery-photo-gallery' ),
+            "description"   => __( "Description", 'gallery-photo-gallery' ),
+            "shortcode"     => __( "Shortcode", 'gallery-photo-gallery' ),
+            'create_date'   => __( 'Created', 'gallery-photo-gallery' ),
+            "items"         => __( "Items", 'gallery-photo-gallery' ),
+            "status"        => __( "Status", 'gallery-photo-gallery' ),
+            "id"            => __( "ID", 'gallery-photo-gallery' ),
         );
 
         return $columns;
@@ -812,9 +812,9 @@ class Galleries_List_Table extends WP_List_Table{
      */
     public function get_bulk_actions() {
         $actions = array(
-            'bulk-published'    => __('Publish', $this->plugin_name),
-            'bulk-unpublished'  => __('Unpublish', $this->plugin_name),
-            "bulk-delete"       => __("Delete", $this->plugin_name),
+            'bulk-published'    => __('Publish', 'gallery-photo-gallery'),
+            'bulk-unpublished'  => __('Unpublish', 'gallery-photo-gallery'),
+            "bulk-delete"       => __("Delete", 'gallery-photo-gallery'),
         );
 
         return $actions;
@@ -933,19 +933,19 @@ class Galleries_List_Table extends WP_List_Table{
             return;
 
         if ( "created" == $status )
-            $updated_message = esc_html( __( "Gallery created.", $this->plugin_name ) );
+            $updated_message = esc_html( __( "Gallery created.", 'gallery-photo-gallery' ) );
         elseif ( "updated" == $status )
-            $updated_message = esc_html( __( "Gallery saved.", $this->plugin_name ) );
+            $updated_message = esc_html( __( "Gallery saved.", 'gallery-photo-gallery' ) );
         elseif ( 'duplicated' == $status )
-            $updated_message = esc_html( __( 'Gallery duplicated.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery duplicated.', 'gallery-photo-gallery' ) );
         elseif ( "deleted" == $status )
-            $updated_message = esc_html( __( "Gallery deleted.", $this->plugin_name ) );
+            $updated_message = esc_html( __( "Gallery deleted.", 'gallery-photo-gallery' ) );
         elseif ( 'published' == $status )
-            $updated_message = esc_html( __( 'Gallery published.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery published.', 'gallery-photo-gallery' ) );
         elseif ( 'unpublished' == $status )
-            $updated_message = esc_html( __( 'Gallery unpublished.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery unpublished.', 'gallery-photo-gallery' ) );
         elseif ( "error" == $status )
-            $updated_message = __( "You're not allowed to add gallery for more galleries please checkout to ", $this->plugin_name )."<a href='http://ays-pro.com/wordpress/photo-gallery' target='_blank'>PRO ".__( "version", $this->plugin_name )."</a>.";
+            $updated_message = __( "You're not allowed to add gallery for more galleries please checkout to ", 'gallery-photo-gallery' )."<a href='http://ays-pro.com/wordpress/photo-gallery' target='_blank'>PRO ".__( "version", 'gallery-photo-gallery' )."</a>.";
 
         if ( empty( $updated_message ) )
             return;

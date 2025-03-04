@@ -985,7 +985,7 @@ class Gallery_Photo_Gallery_Public {
                                 $(window).trigger('resize');
                             })
                             .fail( function() {
-                                var errorImage = $('<div><p>".__("Some of the images haven\'t been loaded", $this->plugin_name)."</p></div>');
+                                var errorImage = $('<div><p>".__("Some of the images haven\'t been loaded", 'gallery-photo-gallery')."</p></div>');
                                 $ays_gpg_container_error_message_js
                                 $ays_gpg_container_display_block_js
                                 $ays_gal_loader_none_js
@@ -1701,7 +1701,7 @@ class Gallery_Photo_Gallery_Public {
             $user_id = '';
         }
 
-        $current_gallery_author = __( "Unknown", $this->plugin_name );
+        $current_gallery_author = __( "Unknown", 'gallery-photo-gallery' );
         $current_gallery_author_email = "";
         $current_gallery_author_display_name = "";
         $creation_gallery_date = isset($gallery_options['create_date']) && $gallery_options['create_date'] != '' ? date_i18n( get_option( 'date_format' ), strtotime( $gallery_options['create_date'] ) ) : "";
@@ -1738,7 +1738,7 @@ class Gallery_Photo_Gallery_Public {
 
         $gpg_current_page_link = esc_url( $ays_protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 
-        $gallery_current_page_link_html = "<a href='". esc_sql( $gpg_current_page_link ) ."' target='_blank' class='ays-gpg-curent-page-link-a-tag'>". __( "Gallery link", $this->plugin_name ) ."</a>";
+        $gallery_current_page_link_html = "<a href='". esc_sql( $gpg_current_page_link ) ."' target='_blank' class='ays-gpg-curent-page-link-a-tag'>". __( "Gallery link", 'gallery-photo-gallery' ) ."</a>";
 
         if( !empty($gallery_current_author_data) ){
             if( !is_array($gallery_current_author_data) ){

@@ -8,8 +8,8 @@ class Gallery_Categories_List_Table extends WP_List_Table{
         $this->plugin_name = $plugin_name;
         $this->title_length = Gallery_Photo_Gallery_Admin::get_gpg_listtables_title_length('gallery_categories');
         parent::__construct( array(
-            'singular' => __( 'Gallery Category', $this->plugin_name ), //singular name of the listed records
-            'plural'   => __( 'Gallery Categories', $this->plugin_name ), //plural name of the listed records
+            'singular' => __( 'Gallery Category', 'gallery-photo-gallery' ), //singular name of the listed records
+            'plural'   => __( 'Gallery Categories', 'gallery-photo-gallery' ), //plural name of the listed records
             'ajax'     => false //does this table support ajax?
         ) );
         add_action( 'admin_notices', array( $this, 'gallery_category_notices' ) );
@@ -179,7 +179,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
 
     /** Text displayed when no customer data is available */
     public function no_items() {
-        echo __( 'There are no gallery categories yet.', $this->plugin_name );
+        echo __( 'There are no gallery categories yet.', 'gallery-photo-gallery' );
     }
 
 
@@ -244,11 +244,11 @@ class Gallery_Categories_List_Table extends WP_List_Table{
         $title = sprintf( '<a href="?page=%s&action=%s&gpg_gallery_category=%d" title="%s"><strong>%s</strong></a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ), $t, $restitle );        
 
         $actions = array(
-            'edit' => sprintf( '<a href="?page=%s&action=%s&gpg_gallery_category=%d">'. __('Edit', $this->plugin_name) .'</a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ) ),
+            'edit' => sprintf( '<a href="?page=%s&action=%s&gpg_gallery_category=%d">'. __('Edit', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ) ),
         );
         
         // if(intval($item['id']) !== 1){
-            $actions['delete'] = sprintf( '<a class="ays_confirm_del" data-message="%s" href="?page=%s&action=%s&gpg_gallery_category=%s&_wpnonce=%s">'. __('Delete', $this->plugin_name) .'</a>', $restitle, esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce );
+            $actions['delete'] = sprintf( '<a class="ays_confirm_del" data-message="%s" href="?page=%s&action=%s&gpg_gallery_category=%s&_wpnonce=%s">'. __('Delete', 'gallery-photo-gallery') .'</a>', $restitle, esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce );
         // }
 
         return $title . $this->row_actions( $actions );
@@ -275,9 +275,9 @@ class Gallery_Categories_List_Table extends WP_List_Table{
     function get_columns() {
         $columns = array(
             'cb'            => '<input type="checkbox" />',
-            'title'         => __( 'Title', $this->plugin_name ),
-            'description'   => __( 'Description', $this->plugin_name ),
-            'id'            => __( 'ID', $this->plugin_name ),
+            'title'         => __( 'Title', 'gallery-photo-gallery' ),
+            'description'   => __( 'Description', 'gallery-photo-gallery' ),
+            'id'            => __( 'ID', 'gallery-photo-gallery' ),
         );
 
         return $columns;
@@ -305,7 +305,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
      */
     public function get_bulk_actions() {
         $actions = array(
-            'bulk-delete' => __('Delete', $this->plugin_name)
+            'bulk-delete' => __('Delete', 'gallery-photo-gallery')
         );
 
         return $actions;
@@ -391,11 +391,11 @@ class Gallery_Categories_List_Table extends WP_List_Table{
             return;
 
         if ( 'created' == $status )
-            $updated_message = esc_html( __( 'Gallery category created.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery category created.', 'gallery-photo-gallery' ) );
         elseif ( 'updated' == $status )
-            $updated_message = esc_html( __( 'Gallery category saved.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery category saved.', 'gallery-photo-gallery' ) );
         elseif ( 'deleted' == $status )
-            $updated_message = esc_html( __( 'Gallery category deleted.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery category deleted.', 'gallery-photo-gallery' ) );
 
         if ( empty( $updated_message ) )
             return;

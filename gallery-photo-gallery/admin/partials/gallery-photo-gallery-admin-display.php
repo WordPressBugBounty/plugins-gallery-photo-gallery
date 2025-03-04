@@ -33,7 +33,7 @@
         <div class="ays-gpg-wordpress-user-manual-box">
             <a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", $this->plugin_name); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'gallery-photo-gallery'); ?></span>
             </a>
         </div>
     </div>
@@ -44,14 +44,12 @@
         } else {
             $_COOKIE['ays_gpg_page_tab_free'] = 'tab_0';
         }
-        echo esc_html(get_admin_page_title());        
-        //echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action button-primary ays-gpg-add-new-button ays-gpg-add-new-button-new-design"> %s '  . __('Add New', $this->plugin_name) . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg);
-        
+        echo esc_html(get_admin_page_title());         
         ?>
     </h1>
     <div class="ays-gallery-add-new-button-box">
         <?php            
-            echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action button-primary ays-gpg-add-new-button ays-gpg-add-new-button-new-design"> %s '  . __('Add New', $this->plugin_name) . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg);
+            echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action button-primary ays-gpg-add-new-button ays-gpg-add-new-button-new-design"> %s '  . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg);
         ?>
     </div>
 
@@ -62,7 +60,7 @@
                     <form method="post">
                         <?php
                         $this->gallery_obj->prepare_items();
-                        $search = __( "Search", $this->plugin_name );
+                        $search = __( "Search", 'gallery-photo-gallery' );
                         $this->gallery_obj->search_box($search, $this->plugin_name);
                         $this->gallery_obj->display();
                         ?>
@@ -74,7 +72,7 @@
     </div>
     <div class="ays-gallery-add-new-button-box">
         <?php
-            echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', $this->plugin_name) . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg);
+            echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg);
         ?>
     </div>
 
@@ -82,19 +80,19 @@
     <?php if($gallery_max_id <= 3): ?>
         <div class="ays-gpg-create-gallery-video-box" style="margin: 80px auto 30px;">
             <div class="ays-gpg-create-gallery-title">
-                <h4><?php echo __( "Create Your First Gallery in Under One Minute", $this->plugin_name ); ?></h4>
+                <h4><?php echo __( "Create Your First Gallery in Under One Minute", 'gallery-photo-gallery' ); ?></h4>
             </div>
             <div class="ays-gpg-create-gallery-youtube-video">                
                 <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/bRrrBEQVZk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <div class="ays-gpg-create-gallery-youtube-video-button-box">
-                <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', $this->plugin_name) . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
+                <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
             </div>
         </div>
     <?php else: ?>
         <div class="ays-gpg-create-gallery-video-box" style="margin: auto;">
             <div class="ays-gpg-create-gallery-youtube-video-button-box">
-                <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', $this->plugin_name) . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
+                <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
             </div>
             <div class="ays-gpg-create-gallery-youtube-video">
                 <?php echo $youtube_icon_svg; ?>

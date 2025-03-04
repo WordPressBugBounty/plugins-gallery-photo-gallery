@@ -6,7 +6,7 @@ class Widget_GPG_Custom_Elementor_Thing extends Widget_Base {
         return 'gallery-photo-gallery';
     }
     public function get_title() {
-        return __( 'Gallery - Photo Gallery', 'elementor-custom-element' );
+        return __( 'Gallery - Photo Gallery', 'gallery-photo-gallery' );
     }
     public function get_icon() {
         // Icon name from the Elementor font file, as per http://dtbaker.net/web-development/creating-your-own-custom-elementor-widgets/
@@ -16,23 +16,23 @@ class Widget_GPG_Custom_Elementor_Thing extends Widget_Base {
         $this->start_controls_section(
             'section_my_custom_gpg',
             array(
-                'label' => esc_html__( 'Gallery - Photo Gallery', 'elementor' ),
+                'label' => esc_html__( 'Gallery - Photo Gallery', 'gallery-photo-gallery' ),
             )
         );
 
         $this->add_control(
             'gallery_title',
             array(
-                'label' => __( 'Gallery Title', 'elementor-custom-element' ),
+                'label' => __( 'Gallery Title', 'gallery-photo-gallery' ),
                 'type' => Controls_Manager::TEXT,
                 'default' => '',
-                'title' => __( 'Enter the gallery title', 'elementor-custom-element' ),
+                'title' => __( 'Enter the gallery title', 'gallery-photo-gallery' ),
             )
         );
         $this->add_control(
             'gallery_title_alignment',
             array(
-                'label' => __( 'Title Alignment', 'elementor-custom-element' ),
+                'label' => __( 'Title Alignment', 'gallery-photo-gallery' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'left',
                 'options' => array(
@@ -45,7 +45,7 @@ class Widget_GPG_Custom_Elementor_Thing extends Widget_Base {
         $this->add_control(
             'gallery_selector',
             array(
-                'label' => __( 'Select Gallery', 'elementor-custom-element' ),
+                'label' => __( 'Select Gallery', 'gallery-photo-gallery' ),
                 'type' => Controls_Manager::SELECT,
                 'default' => $this->get_default_gallery(),
                 'options' => $this->get_active_galleries()

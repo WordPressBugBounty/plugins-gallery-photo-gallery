@@ -162,54 +162,54 @@ class Gallery_Photo_Gallery_Admin {
 
         wp_localize_script($this->plugin_name, 'gallery_ajax', array(
             'ajax_url'           => admin_url('admin-ajax.php'),            
-            'selectUser'         => __( 'Select user', $this->plugin_name),
-            'pleaseEnterMore'    => __( "Please enter 1 or more characters", $this->plugin_name ),
-            'searching'          => __( "Searching...", $this->plugin_name ),
-            'loader_message'     => __('Just a moment...', $this->plugin_name),            
-            "emptyEmailError"    => __( 'Email field is empty', $this->plugin_name),
-            "invalidEmailError"  => __( 'Invalid Email address', $this->plugin_name),           
-            'activated'          => __( "Activated", $this->plugin_name ),
-            'errorMsg'           => __( "Error", $this->plugin_name ),
-            'loadResource'       => __( "Can't load resource.", $this->plugin_name ),
-            'somethingWentWrong' => __( "Maybe something went wrong.", $this->plugin_name ),
-            'greateJob'          => __( 'Great job', $this->plugin_name),
-            'formMoreDetailed'   => __( 'For more detailed configuration visit', $this->plugin_name),
-            'greate'             => __( 'Great!', $this->plugin_name),
+            'selectUser'         => __( 'Select user', 'gallery-photo-gallery'),
+            'pleaseEnterMore'    => __( "Please enter 1 or more characters", 'gallery-photo-gallery' ),
+            'searching'          => __( "Searching...", 'gallery-photo-gallery' ),
+            'loader_message'     => __('Just a moment...', 'gallery-photo-gallery'),            
+            "emptyEmailError"    => __( 'Email field is empty', 'gallery-photo-gallery'),
+            "invalidEmailError"  => __( 'Invalid Email address', 'gallery-photo-gallery'),           
+            'activated'          => __( "Activated", 'gallery-photo-gallery' ),
+            'errorMsg'           => __( "Error", 'gallery-photo-gallery' ),
+            'loadResource'       => __( "Can't load resource.", 'gallery-photo-gallery' ),
+            'somethingWentWrong' => __( "Maybe something went wrong.", 'gallery-photo-gallery' ),
+            'greateJob'          => __( 'Great job', 'gallery-photo-gallery'),
+            'formMoreDetailed'   => __( 'For more detailed configuration visit', 'gallery-photo-gallery'),
+            'greate'             => __( 'Great!', 'gallery-photo-gallery'),
         ));
 
         $gpg_banner_date = $this->ays_gpg_update_banner_time();
         wp_localize_script( $this->plugin_name, 'galleryLangObj', array(
             'gpgBannerDate'             => $gpg_banner_date,
-            'copied'                    => __( 'Copied!', $this->plugin_name),
-            'clickForCopy'              => __( 'Click for copy.', $this->plugin_name),
-            'addGif'                    => __( 'Add Gif', $this->plugin_name),
-            'somethingWentWrong'        => __( "Maybe something went wrong.", $this->plugin_name ),
-            'errorMsg'                  => __( "Error", $this->plugin_name ),
-            'youCanUseThisShortcodeTop' => __( 'Your Gallery is Created!', $this->plugin_name),
-            'youCanUseThisShortcodeBtm' => __( 'Copy the generated shortcode and paste it into any post or page to display Gallery.', $this->plugin_name),
-            'greateJob'                 => __( 'Great job', $this->plugin_name),
-            'formMoreDetailed'          => __( 'For more detailed configuration visit', $this->plugin_name),
-            'editGalleryPage'           => __( 'edit gallery page', $this->plugin_name),
-            'greate'                    => __( 'Done!', $this->plugin_name),
-            'thumbsUpGreat'             => __( 'Thumbs up, great!', $this->plugin_name),
+            'copied'                    => __( 'Copied!', 'gallery-photo-gallery'),
+            'clickForCopy'              => __( 'Click for copy.', 'gallery-photo-gallery'),
+            'addGif'                    => __( 'Add Gif', 'gallery-photo-gallery'),
+            'somethingWentWrong'        => __( "Maybe something went wrong.", 'gallery-photo-gallery' ),
+            'errorMsg'                  => __( "Error", 'gallery-photo-gallery' ),
+            'youCanUseThisShortcodeTop' => __( 'Your Gallery is Created!', 'gallery-photo-gallery'),
+            'youCanUseThisShortcodeBtm' => __( 'Copy the generated shortcode and paste it into any post or page to display Gallery.', 'gallery-photo-gallery'),
+            'greateJob'                 => __( 'Great job', 'gallery-photo-gallery'),
+            'formMoreDetailed'          => __( 'For more detailed configuration visit', 'gallery-photo-gallery'),
+            'editGalleryPage'           => __( 'edit gallery page', 'gallery-photo-gallery'),
+            'greate'                    => __( 'Done!', 'gallery-photo-gallery'),
+            'thumbsUpGreat'             => __( 'Thumbs up, great!', 'gallery-photo-gallery'),
 
         ) );
         
         $cats = $this->ays_get_gallery_image_categories();
         wp_localize_script($this->plugin_name,  'ays_gpg_admin', array(
             'categories' => $cats,
-            'nextGalleryPage' => __( 'Are you sure you want to go to the next gallery page?', $this->plugin_name),
-            'prevGalleryPage' => __( 'Are you sure you want to go to the previous gallery page?', $this->plugin_name),
+            'nextGalleryPage' => __( 'Are you sure you want to go to the next gallery page?', 'gallery-photo-gallery'),
+            'prevGalleryPage' => __( 'Are you sure you want to go to the previous gallery page?', 'gallery-photo-gallery'),
         ));
         wp_enqueue_script( $this->plugin_name.'-wp-color-picker-alpha', plugin_dir_url( __FILE__ ) . 'js/wp-color-picker-alpha.min.js',array( 'wp-color-picker' ),$this->version, true );
 
         $color_picker_strings = array(
-            'clear'            => __( 'Clear', $this->plugin_name ),
-            'clearAriaLabel'   => __( 'Clear color', $this->plugin_name ),
-            'defaultString'    => __( 'Default', $this->plugin_name ),
-            'defaultAriaLabel' => __( 'Select default color', $this->plugin_name ),
-            'pick'             => __( 'Select Color', $this->plugin_name ),
-            'defaultLabel'     => __( 'Color value', $this->plugin_name ),
+            'clear'            => __( 'Clear', 'gallery-photo-gallery' ),
+            'clearAriaLabel'   => __( 'Clear color', 'gallery-photo-gallery' ),
+            'defaultString'    => __( 'Default', 'gallery-photo-gallery' ),
+            'defaultAriaLabel' => __( 'Select default color', 'gallery-photo-gallery' ),
+            'pick'             => __( 'Select Color', 'gallery-photo-gallery' ),
+            'defaultLabel'     => __( 'Color value', 'gallery-photo-gallery' ),
         );
         wp_localize_script( $this->plugin_name.'-wp-color-picker-alpha', 'wpColorPickerL10n', $color_picker_strings );
 	}
@@ -259,8 +259,8 @@ class Gallery_Photo_Gallery_Admin {
     public function add_plugin_admin_menu() {
         
         $hook_gallery = add_menu_page( 
-            __('Photo Gallery', $this->plugin_name), 
-            __('Photo Gallery', $this->plugin_name), 
+            __('Photo Gallery', 'gallery-photo-gallery'), 
+            __('Photo Gallery', 'gallery-photo-gallery'), 
             'manage_options', 
             $this->plugin_name, 
             array($this, 'display_plugin_setup_page'), AYS_GPG_ADMIN_URL . 'images/icons/icon-gpg-128x128.svg', 6);
@@ -269,8 +269,8 @@ class Gallery_Photo_Gallery_Admin {
         
         $hook_gallery = add_submenu_page(
             $this->plugin_name,
-            __('All Galleries', $this->plugin_name),
-            __('All Galleries', $this->plugin_name),
+            __('All Galleries', 'gallery-photo-gallery'),
+            __('All Galleries', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name,
             array($this, 'display_plugin_setup_page')
@@ -279,8 +279,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_add_new = add_submenu_page(
             $this->plugin_name,
-            __('Add new', $this->plugin_name),
-            __('Add new', $this->plugin_name),
+            __('Add new', 'gallery-photo-gallery'),
+            __('Add new', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-add-new',
             array($this, 'display_plugin_add_new_gallery_page')
@@ -289,8 +289,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_image_categories = add_submenu_page(
             $this->plugin_name,
-            __('Image Categories', $this->plugin_name),
-            __('Image Categories', $this->plugin_name),
+            __('Image Categories', 'gallery-photo-gallery'),
+            __('Image Categories', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-categories',
             array($this, 'display_plugin_gpg_categories_page')
@@ -301,8 +301,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_gallery_categories = add_submenu_page(
             $this->plugin_name,
-            __('Gallery Categories', $this->plugin_name),
-            __('Gallery Categories', $this->plugin_name),
+            __('Gallery Categories', 'gallery-photo-gallery'),
+            __('Gallery Categories', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-gpg-categories',
             array($this, 'display_plugin_gallery_categories_page')
@@ -311,8 +311,8 @@ class Gallery_Photo_Gallery_Admin {
         add_action( "load-$hook_gallery_categories", array( $this, 'add_tabs' ));
 
         $hook_settings = add_submenu_page( $this->plugin_name,
-            __('General Settings', $this->plugin_name),
-            __('General Settings', $this->plugin_name),
+            __('General Settings', 'gallery-photo-gallery'),
+            __('General Settings', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-settings',
             array($this, 'display_plugin_gallery_settings_page') 
@@ -322,8 +322,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_howtouse = add_submenu_page(
             $this->plugin_name,
-            __('How to use', $this->plugin_name),
-            __('How to use', $this->plugin_name),
+            __('How to use', 'gallery-photo-gallery'),
+            __('How to use', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-dashboard',
             array($this, 'display_plugin_how_to_use_page')
@@ -332,8 +332,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_ourproducts = add_submenu_page(
             $this->plugin_name,
-            __('Our products', $this->plugin_name),
-            __('Our products', $this->plugin_name),
+            __('Our products', 'gallery-photo-gallery'),
+            __('Our products', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-featured-plugins',
             array($this, 'display_plugin_gpg_featured_plugins_page')
@@ -342,8 +342,8 @@ class Gallery_Photo_Gallery_Admin {
 
         $hook_profeatures = add_submenu_page(
             $this->plugin_name,
-            __('PRO Features', $this->plugin_name),
-            __('PRO Features', $this->plugin_name),
+            __('PRO Features', 'gallery-photo-gallery'),
+            __('PRO Features', 'gallery-photo-gallery'),
             'manage_options',
             $this->plugin_name . '-pro-features',
             array($this, 'display_plugin_gpg_features_page')
@@ -367,9 +367,9 @@ class Gallery_Photo_Gallery_Admin {
         $gallery_ajax_deactivate_plugin_nonce = wp_create_nonce( 'gallery-ajax-deactivate-plugin-nonce' );
 
         $settings_link = array(
-            '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', $this->plugin_name) . '</a>',
-            '<a href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank">' . __('Demo', $this->plugin_name) . '</a>',
-            '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=buy-now-gallery" target="_blank" class="ays-admin-plugins-upgrade-link" style="font-weight:bold;">' . __('Upgrade 30% Sale', $this->plugin_name) . '</a>
+            '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_name ) . '">' . __('Settings', 'gallery-photo-gallery') . '</a>',
+            '<a href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank">' . __('Demo', 'gallery-photo-gallery') . '</a>',
+            '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=buy-now-gallery" target="_blank" class="ays-admin-plugins-upgrade-link" style="font-weight:bold;">' . __('Upgrade 30% Sale', 'gallery-photo-gallery') . '</a>
             <input type="hidden" id="ays_gpg_ajax_deactivate_plugin_nonce" name="ays_gpg_ajax_deactivate_plugin_nonce" value="' . $gallery_ajax_deactivate_plugin_nonce .'">',
         );
         return array_merge(  $settings_link, $links );
@@ -387,27 +387,27 @@ class Gallery_Photo_Gallery_Admin {
             array(
                 'id'      => 'gpg_help_tab',
                 'title'   => __( 'General Information:
-                    '),
+                    ', 'gallery-photo-gallery'),
                 'content' =>
-                    '<h2>' . __( 'Gallery Information', $this->plugin_name) . '</h2>' .
+                    '<h2>' . __( 'Gallery Information', 'gallery-photo-gallery') . '</h2>' .
                     '<p>' .
-                        __( 'Photo Gallery is a cool responsive image gallery plugin with awesome layout options, stunning gallery and album views, designed with features that allow you not to just show photos in a beautiful way but to deliver the message hidden in them.',  $this->plugin_name ).'</p>'
+                        __( 'Photo Gallery is a cool responsive image gallery plugin with awesome layout options, stunning gallery and album views, designed with features that allow you not to just show photos in a beautiful way but to deliver the message hidden in them.',  'gallery-photo-gallery' ).'</p>'
             )
         );
     
         $screen->set_help_sidebar(
-            '<p><strong>' . __( 'For more information:', $this->plugin_name) . '</strong></p>' .
+            '<p><strong>' . __( 'For more information:', 'gallery-photo-gallery') . '</strong></p>' .
             '<p>
-                <a href="https://www.youtube.com/watch?v=4-TU48pc0R4" target="_blank">' . __( 'YouTube video tutorials' , $this->plugin_name ) . '</a>
+                <a href="https://www.youtube.com/watch?v=4-TU48pc0R4" target="_blank">' . __( 'YouTube video tutorials' , 'gallery-photo-gallery' ) . '</a>
             </p>' .
             '<p>
-                <a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank">' . __( 'Documentation', $this->plugin_name ) . '</a>
+                <a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank">' . __( 'Documentation', 'gallery-photo-gallery' ) . '</a>
             </p>' .
             '<p>
-                <a href="https://ays-pro.com/wordpress/photo-gallery" target="_blank">' . __( 'Photo Gallery plugin Premium version', $this->plugin_name ) . '</a>
+                <a href="https://ays-pro.com/wordpress/photo-gallery" target="_blank">' . __( 'Photo Gallery plugin Premium version', 'gallery-photo-gallery' ) . '</a>
             </p>' .
             '<p>
-                <a href="https://ays-demo.com/wordpress-photo-gallery-plugin-pro-demo/" target="_blank">' . __( 'Photo Gallery plugin demo', $this->plugin_name ) . '</a>
+                <a href="https://ays-demo.com/wordpress-photo-gallery-plugin-pro-demo/" target="_blank">' . __( 'Photo Gallery plugin demo', 'gallery-photo-gallery' ) . '</a>
             </p>'
         );
     }
@@ -415,7 +415,7 @@ class Gallery_Photo_Gallery_Admin {
     public function add_plugin_row_meta( $meta, $file ) {
 
         if ($file == AYS_GPG_BASENAME) {
-            $meta[] = '<a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank">' . esc_html__( 'Free Support', $this->plugin_name ) . '</a>';
+            $meta[] = '<a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank">' . esc_html__( 'Free Support', 'gallery-photo-gallery' ) . '</a>';
         }
 
         return $meta;
@@ -503,7 +503,7 @@ class Gallery_Photo_Gallery_Admin {
     public function screen_option_gallery() {
         $option = 'per_page';
         $args   = [
-            'label'   => __('Galleries', $this->plugin_name),
+            'label'   => __('Galleries', 'gallery-photo-gallery'),
             'default' => 20,
             'option'  => 'galleries_per_page'
         ];
@@ -515,7 +515,7 @@ class Gallery_Photo_Gallery_Admin {
     public function screen_option_gallery_cats() {
         $option = 'per_page';
         $args   = array(
-            'label'   => __('Image categories', $this->plugin_name),
+            'label'   => __('Image categories', 'gallery-photo-gallery'),
             'default' => 5,
             'option'  => 'gallery_categories_per_page',
         );
@@ -527,7 +527,7 @@ class Gallery_Photo_Gallery_Admin {
     public function screen_option_gallery_categories() {
         $option = 'per_page';
         $args   = array(
-            'label'   => __('Gallery categories', $this->plugin_name),
+            'label'   => __('Gallery categories', 'gallery-photo-gallery'),
             'default' => 5,
             'option'  => 'gallery_gpg_categories_per_page',
         );
@@ -608,7 +608,7 @@ class Gallery_Photo_Gallery_Admin {
         ?>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
-                <title><?php echo __( 'Gallery Photo Gallery', $this->plugin_name ); ?></title>
+                <title><?php echo __( 'Gallery Photo Gallery', 'gallery-photo-gallery' ); ?></title>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
                 <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/mctabs.js"></script>
@@ -771,15 +771,15 @@ class Gallery_Photo_Gallery_Admin {
             if(false !== strpos( sanitize_text_field( $_REQUEST['page'] ), $this->plugin_name)){
                 ?>
                 <div class="ays-gpg-footer-support-box">
-                    <span class="ays-gpg-footer-link-row"><a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Support", $this->plugin_name); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Support", 'gallery-photo-gallery'); ?></a></span>
                     <span class="ays-gpg-footer-slash-row">/</span>
-                    <span class="ays-gpg-footer-link-row"><a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank"><?php echo __( "Docs", $this->plugin_name); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank"><?php echo __( "Docs", 'gallery-photo-gallery'); ?></a></span>
                     <span class="ays-gpg-footer-slash-row">/</span>
-                    <span class="ays-gpg-footer-link-row"><a href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", $this->plugin_name); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", 'gallery-photo-gallery'); ?></a></span>
                 </div>
                 <p style="font-size:13px;text-align:center;font-style:italic;">
                     <span style="margin-left:0px;margin-right:10px;" class="ays_heart_beat"><i class="far fa-heart animated"></i></span>
-                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", $this->plugin_name); ?></span> 
+                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", 'gallery-photo-gallery'); ?></span> 
                     <a target="_blank" href='https://wordpress.org/support/plugin/gallery-photo-gallery/reviews/'>WordPress.org</a>
                     <a target="_blank" class="ays-rated-link" href='https://wordpress.org/support/plugin/gallery-photo-gallery/reviews/'>
                         <span class="ays-dashicons ays-dashicons-star-empty"></span>
@@ -1015,8 +1015,8 @@ class Gallery_Photo_Gallery_Admin {
                     $content[] = '<i class="ays_fa ays_fa_link"></i>';
                 $content[] = '</div>';
                 $content[] = '<div>';
-                    $content[] = '<span>'. __("Message Variables" , $this->plugin_name) .'</span>';
-                    $content[] = '<a class="ays_help" data-toggle="tooltip" data-html="true" title="'. __("Insert your preferred message variable into the editor by clicking." , $this->plugin_name) .'">';
+                    $content[] = '<span>'. __("Message Variables" , 'gallery-photo-gallery') .'</span>';
+                    $content[] = '<a class="ays_help" data-toggle="tooltip" data-html="true" title="'. __("Insert your preferred message variable into the editor by clicking." , 'gallery-photo-gallery') .'">';
                         $content[] = '<i class="fas fa-info-circle"></i>';
                     $content[] = '</a>';
                 $content[] = '</div>';
@@ -1183,7 +1183,7 @@ class Gallery_Photo_Gallery_Admin {
 
         // Check for permissions.
         if ( ! current_user_can( 'activate_plugins' ) ) {
-            wp_send_json_error( esc_html__( 'Plugin activation is disabled for you on this site.', $this->plugin_name ) );
+            wp_send_json_error( esc_html__( 'Plugin activation is disabled for you on this site.', 'gallery-photo-gallery' ) );
         }
 
         $type = 'addon';
@@ -1199,18 +1199,18 @@ class Gallery_Photo_Gallery_Admin {
 
             if ( ! is_wp_error( $activate ) ) {
                 if ( $type === 'plugin' ) {
-                    wp_send_json_success( esc_html__( 'Plugin activated.', $this->plugin_name ) );
+                    wp_send_json_success( esc_html__( 'Plugin activated.', 'gallery-photo-gallery' ) );
                 } else {
-                        ( esc_html__( 'Addon activated.', $this->plugin_name ) );
+                        ( esc_html__( 'Addon activated.', 'gallery-photo-gallery' ) );
                 }
             }
         }
 
         if ( $type === 'plugin' ) {
-            wp_send_json_error( esc_html__( 'Could not activate the plugin. Please activate it on the Plugins page.', $this->plugin_name ) );
+            wp_send_json_error( esc_html__( 'Could not activate the plugin. Please activate it on the Plugins page.', 'gallery-photo-gallery' ) );
         }
 
-        wp_send_json_error( esc_html__( 'Could not activate the addon. Please activate it on the Plugins page.', $this->plugin_name ) );
+        wp_send_json_error( esc_html__( 'Could not activate the addon. Please activate it on the Plugins page.', 'gallery-photo-gallery' ) );
     }
 
     /**
@@ -1224,7 +1224,7 @@ class Gallery_Photo_Gallery_Admin {
         // Run a security check.
         check_ajax_referer( $this->plugin_name . '-install-plugin-nonce', sanitize_key( $_REQUEST['_ajax_nonce'] ) );
 
-        $generic_error = esc_html__( 'There was an error while performing your request.', $this->plugin_name );
+        $generic_error = esc_html__( 'There was an error while performing your request.', 'gallery-photo-gallery' );
         $type          = ! empty( $_POST['type'] ) ? sanitize_key( $_POST['type'] ) : '';
 
         // Check if new installations are allowed.
@@ -1233,7 +1233,7 @@ class Gallery_Photo_Gallery_Admin {
         }
 
         $error = $type === 'plugin'
-            ? esc_html__( 'Could not install the plugin. Please download and install it manually.', $this->plugin_name )
+            ? esc_html__( 'Could not install the plugin. Please download and install it manually.', 'gallery-photo-gallery' )
             : "";
 
         $plugin_url = ! empty( $_POST['plugin'] ) ? esc_url_raw( wp_unslash( $_POST['plugin'] ) ) : '';
@@ -1305,7 +1305,7 @@ class Gallery_Photo_Gallery_Admin {
 
         // Check for permissions.
         if ( ! current_user_can( 'activate_plugins' ) ) {
-            $result['msg'] = $type === 'plugin' ? esc_html__( 'Plugin installed.', $this->plugin_name ) : "";
+            $result['msg'] = $type === 'plugin' ? esc_html__( 'Plugin installed.', 'gallery-photo-gallery' ) : "";
 
             wp_send_json_success( $result );
         }
@@ -1317,7 +1317,7 @@ class Gallery_Photo_Gallery_Admin {
         if ( ! is_wp_error( $activated ) ) {
 
             $result['is_activated'] = true;
-            $result['msg']          = $type === 'plugin' ? esc_html__( 'Plugin installed and activated.', $this->plugin_name ) : esc_html__( 'Addon installed and activated.', $this->plugin_name );
+            $result['msg']          = $type === 'plugin' ? esc_html__( 'Plugin installed and activated.', 'gallery-photo-gallery' ) : esc_html__( 'Addon installed and activated.', 'gallery-photo-gallery' );
 
             wp_send_json_success( $result );
         }
@@ -1371,72 +1371,72 @@ class Gallery_Photo_Gallery_Admin {
         $plugins_array = array(
            'quiz-maker/quiz-maker.php'        => array(
                 'icon'        => $images_url . 'quiz-128x128.png',
-                'name'        => __( 'Quiz Maker', $this->plugin_name ),
-                'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', $this->plugin_name ),
-                'desc_hidden' => __( 'You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors.', $this->plugin_name ),
+                'name'        => __( 'Quiz Maker', 'gallery-photo-gallery' ),
+                'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'You to add images to your quiz, order unlimited questions. Also you can style your quiz to satisfy your visitors.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/quiz-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/quiz-maker/',
                 'url'         => $plugin_url_arr['quiz-maker'],
             ),
             'survey-maker/survey-maker.php'        => array(
                 'icon'        => $images_url . 'survey-128x128.png',
-                'name'        => __( 'Survey Maker', $this->plugin_name ),
-                'desc'        => __( 'Make amazing online surveys and get real-time feedback quickly and easily.', $this->plugin_name ),
-                'desc_hidden' => __( 'Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs.', $this->plugin_name ),
+                'name'        => __( 'Survey Maker', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Make amazing online surveys and get real-time feedback quickly and easily.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Learn what your website visitors want, need, and expect with the help of Survey Maker. Build surveys without limiting your needs.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/survey-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/survey-maker',
                 'url'         => $plugin_url_arr['survey-maker'],
             ),
             'poll-maker/poll-maker-ays.php'        => array(
                 'icon'        => $images_url . 'poll-128x128.png',
-                'name'        => __( 'Poll Maker', $this->plugin_name ),
-                'desc'        => __( 'Create amazing online polls for your WordPress website super easily.', $this->plugin_name ),
-                'desc_hidden' => __( 'Build up various types of polls in a minute and get instant feedback on any topic or product.', $this->plugin_name ),
+                'name'        => __( 'Poll Maker', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Create amazing online polls for your WordPress website super easily.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Build up various types of polls in a minute and get instant feedback on any topic or product.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/poll-maker/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/poll-maker/',
                 'url'         => $plugin_url_arr['poll-maker'],
             ),
             'ays-popup-box/ays-pb.php'        => array(
                 'icon'        => $images_url . 'popup-128x128.png',
-                'name'        => __( 'Popup Box', $this->plugin_name ),
-                'desc'        => __( 'Popup everything you want! Create informative and promotional popups all in one plugin.', $this->plugin_name ),
-                'desc_hidden' => __( 'Attract your visitors and convert them into email subscribers and paying customers.', $this->plugin_name ),
+                'name'        => __( 'Popup Box', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Popup everything you want! Create informative and promotional popups all in one plugin.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Attract your visitors and convert them into email subscribers and paying customers.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/ays-popup-box/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/popup-box/',
                 'url'         => $plugin_url_arr['ays-popup-box'],
             ),
             'secure-copy-content-protection/secure-copy-content-protection.php'        => array(
                 'icon'        => $images_url . 'sccp-128x128.png',
-                'name'        => __( 'Secure Copy Content Protection', $this->plugin_name ),
-                'desc'        => __( 'Disable the right click, copy paste, content selection and copy shortcut keys on your website.', $this->plugin_name ),
-                'desc_hidden' => __( 'Protect web content from being plagiarized. Prevent plagiarism from your website with this easy to use plugin.', $this->plugin_name ),
+                'name'        => __( 'Secure Copy Content Protection', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Disable the right click, copy paste, content selection and copy shortcut keys on your website.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Protect web content from being plagiarized. Prevent plagiarism from your website with this easy to use plugin.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/secure-copy-content-protection/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/secure-copy-content-protection/',
                 'url'         => $plugin_url_arr['secure-copy-content-protection'],
             ),
             'personal-dictionary/personal-dictionary.php'        => array(
                 'icon'        => $images_url . 'pd-logo-128x128.png',
-                'name'        => __( 'Personal Dictionary', $this->plugin_name ),
-                'desc'        => __( 'Allow your students to create personal dictionary, study and memorize the words.', $this->plugin_name ),
-                'desc_hidden' => __( 'Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible.', $this->plugin_name ),
+                'name'        => __( 'Personal Dictionary', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Allow your students to create personal dictionary, study and memorize the words.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Allow your users to create their own digital dictionaries and learn new words and terms as fastest as possible.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/personal-dictionary/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/personal-dictionary/',
                 'url'         => $plugin_url_arr['personal-dictionary'],
             ),
             'chart-builder/chart-builder.php'        => array(
                 'icon'        => $images_url . 'chartify-150x150.png',
-                'name'        => __( 'Chart Builder', $this->plugin_name ),
-                'desc'        => __( 'Chart Builder plugin allows you to create beautiful charts', $this->plugin_name ),
-                'desc_hidden' => __( ' and graphs easily and quickly.', $this->plugin_name ),
+                'name'        => __( 'Chart Builder', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Chart Builder plugin allows you to create beautiful charts', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( ' and graphs easily and quickly.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/chart-builder/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/chart-builder/',
                 'url'         => $plugin_url_arr['chart-builder'],
             ),
             'easy-form/easy-form.php'        => array(
                 'icon'        => $images_url . 'easyform-150x150.png',
-                'name'        => __( 'Easy Form', 'chart-builder' ),
-                'desc'        => __( 'Choose the best WordPress form builder plugin. ', 'chart-builder' ),
-                'desc_hidden' => __( 'Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us.', 'chart-builder' ),
+                'name'        => __( 'Easy Form', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Choose the best WordPress form builder plugin. ', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'Create contact forms, payment forms, surveys, and many more custom forms. Build forms easily with us.', 'gallery-photo-gallery' ),
                 'wporg'       => 'https://wordpress.org/plugins/easy-form/',
                 'buy_now'     => 'https://ays-pro.com/wordpress/easy-form',
                 'url'         => $plugin_url_arr['easy-form'],
@@ -1520,18 +1520,18 @@ class Gallery_Photo_Gallery_Admin {
             if ( is_plugin_active( $plugin ) ) {
                 // Status text/status.
                 $plugin_data['status_class'] = 'status-active';
-                $plugin_data['status_text']  = esc_html__( 'Active', $this->plugin_name );
+                $plugin_data['status_text']  = esc_html__( 'Active', 'gallery-photo-gallery' );
                 // Button text/status.
                 $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-gpg-card__btn-info disabled';
-                $plugin_data['action_text']  = esc_html__( 'Activated', $this->plugin_name );
+                $plugin_data['action_text']  = esc_html__( 'Activated', 'gallery-photo-gallery' );
                 $plugin_data['plugin_src']   = esc_attr( $plugin );
             } else {
                 // Status text/status.
                 $plugin_data['status_class'] = 'status-installed';
-                $plugin_data['status_text']  = esc_html__( 'Inactive', $this->plugin_name );
+                $plugin_data['status_text']  = esc_html__( 'Inactive', 'gallery-photo-gallery' );
                 // Button text/status.
                 $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-gpg-card__btn-info';
-                $plugin_data['action_text']  = esc_html__( 'Activate', $this->plugin_name );
+                $plugin_data['action_text']  = esc_html__( 'Activate', 'gallery-photo-gallery' );
                 $plugin_data['plugin_src']   = esc_attr( $plugin );
             }
         } else {
@@ -1542,10 +1542,10 @@ class Gallery_Photo_Gallery_Admin {
             if ( isset( $details['act'] ) && 'go-to-url' === $details['act'] ) {
                 $plugin_data['status_class'] = 'status-go-to-url';
             }
-            $plugin_data['status_text'] = esc_html__( 'Not Installed', $this->plugin_name );
+            $plugin_data['status_text'] = esc_html__( 'Not Installed', 'gallery-photo-gallery' );
             // Button text/status.
             $plugin_data['action_class'] = $plugin_data['status_class'] . ' ays-gpg-card__btn-info';
-            $plugin_data['action_text']  = esc_html__( 'Install Plugin', $this->plugin_name );
+            $plugin_data['action_text']  = esc_html__( 'Install Plugin', 'gallery-photo-gallery' );
             $plugin_data['plugin_src']   = esc_url( $details['url'] );
         }
 
@@ -1611,12 +1611,12 @@ class Gallery_Photo_Gallery_Admin {
                         }
                         elseif ( $plugin_not_activated ) {
                             $content .= '<a href="'. esc_url( $details['wporg'] ) .'" target="_blank" rel="noopener noreferrer">
-                                '. esc_html_e( 'WordPress.org', $this->plugin_name ) .'
+                                '. esc_html_e( 'WordPress.org', 'gallery-photo-gallery' ) .'
                                 <span aria-hidden="true" class="dashicons dashicons-external"></span>
                             </a>';
                         }
             $content .='
-                        <a target="_blank" href="'. esc_url( $plugin_data['details']['buy_now'] ) .'" class="ays-gpg-card__btn-primary">'. __('Buy Now', $this->plugin_name) .'</a>
+                        <a target="_blank" href="'. esc_url( $plugin_data['details']['buy_now'] ) .'" class="ays-gpg-card__btn-primary">'. __('Buy Now', 'gallery-photo-gallery') .'</a>
                     </div>
                 </div>';
         }

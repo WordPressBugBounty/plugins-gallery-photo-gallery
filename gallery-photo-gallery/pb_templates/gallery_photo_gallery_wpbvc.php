@@ -20,20 +20,20 @@ if( class_exists( 'WPBakeryShortCode' ) ) {
             // Map the block with vc_map()
             vc_map(
                 array(
-                    'name' => __('Gallery - Photo Gallery', 'text-domain'),
+                    'name' => __('Gallery - Photo Gallery', 'gallery-photo-gallery'),
                     'base' => 'vc_galleryphotogallery',
-                    'description' => __('The Best Gallery - Photo Gallery Ever', 'text-domain'),
-                    'category' => __('Gallery - Photo Gallery by AYS', 'text-domain'),
+                    'description' => __('The Best Gallery - Photo Gallery Ever', 'gallery-photo-gallery'),
+                    'category' => __('Gallery - Photo Gallery by AYS', 'gallery-photo-gallery'),
                     'icon' => AYS_GPG_ADMIN_URL . '/images/gall_icon.png',
                     'params' => array(
                         array(
                             'type' => 'dropdown',
                             'holder' => 'div',
                             'class' => 'gallery_vc_select',
-                            'heading' => __( 'Gallery - Photo Gallery', 'text-domain' ),
+                            'heading' => __( 'Gallery - Photo Gallery', 'gallery-photo-gallery' ),
                             'param_name' => 'gallery',
                             'value' => $this->get_active_galleries(),
-                            'description' => __( 'Please select your gallery from dropdown', 'text-domain' ),
+                            'description' => __( 'Please select your gallery from dropdown', 'gallery-photo-gallery' ),
                             'admin_label' => true,
                             'group' => 'Gallery - Photo Gallery'
                         )

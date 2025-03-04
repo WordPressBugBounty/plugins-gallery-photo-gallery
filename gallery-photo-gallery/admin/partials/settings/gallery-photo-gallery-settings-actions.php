@@ -175,11 +175,11 @@ class Gallery_Settings_Actions {
             return;
 
         if ( 'saved' == $status )
-            $updated_message = esc_html( __( 'Changes saved.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Changes saved.', 'gallery-photo-gallery' ) );
         elseif ( 'updated' == $status )
-            $updated_message = esc_html( __( 'Gallery attribute .', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery attribute .', 'gallery-photo-gallery' ) );
         elseif ( 'deleted' == $status )
-            $updated_message = esc_html( __( 'Gallery attribute deleted.', $this->plugin_name ) );
+            $updated_message = esc_html( __( 'Gallery attribute deleted.', 'gallery-photo-gallery' ) );
 
         if ( empty( $updated_message ) )
             return;

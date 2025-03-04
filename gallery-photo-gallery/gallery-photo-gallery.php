@@ -15,8 +15,8 @@ ob_start();
  * @wordpress-plugin
  * Plugin Name:       Gallery - Photo Gallery
  * Plugin URI:        https://ays-pro.com/wordpress/photo-gallery
- * Description:       If you want to be different and represent your photos in a cool way, then our Photo Gallery plugin is perfect for you.
- * Version:           6.0.6
+ * Description:       Gallery – Photo Gallery is an easy-to-use plugin for creating and displaying photo galleries. It lets you customize the layout and style to showcase your pictures beautifully.
+ * Version:           6.0.7
  * Author:            Photo Gallery Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -54,8 +54,8 @@ if( ! defined( 'AYS_GPG_BASENAME' ) )
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'AYS_GALLERY_VERSION', '6.0.6' );
-define( 'AYS_GALLERY_NAME_VERSION', '6.0.6' );
+define( 'AYS_GALLERY_VERSION', '6.0.7' );
+define( 'AYS_GALLERY_NAME_VERSION', '6.0.7' );
 define( 'AYS_GALLERY_NAME', 'gallery-photo-gallery' );
 
 /**
@@ -139,43 +139,43 @@ function general_gpg_admin_notice(){
                         <div class="ays-gpg-logo-container-upgrade">
                             <div class="ays-gpg-logo-container">
                                 <a href="https://ays-pro.com/wordpress/photo-gallery" target="_blank" style="box-shadow: none;">
-                                    <img  class="gpg-logo" src="<?php echo esc_attr(AYS_GPG_ADMIN_URL) . '/images/gallery.png'; ?>" alt="<?php echo __( "Gallery - Photo Gallery", AYS_GALLERY_NAME ); ?>" title="<?php echo __( "Gallery - Photo Gallery", AYS_GALLERY_NAME ); ?>"/>
+                                    <img  class="gpg-logo" src="<?php echo esc_attr(AYS_GPG_ADMIN_URL) . '/images/gallery.png'; ?>" alt="<?php echo __( "Gallery - Photo Gallery", 'gallery-photo-gallery' ); ?>" title="<?php echo __( "Gallery - Photo Gallery", 'gallery-photo-gallery' ); ?>"/>
                                 </a>
                             </div>
                             <div class="ays-gpg-upgrade-container">
                                 <a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=top-menu-gallery" target="_blank">                                    
                                     <img src="<?php echo esc_attr(AYS_GPG_ADMIN_URL) . '/images/icons/lightning-hover.svg'; ?>" >
-                                    <span><?php echo __( "Upgrade", AYS_GALLERY_NAME ); ?></span>
+                                    <span><?php echo __( "Upgrade", 'gallery-photo-gallery' ); ?></span>
                                 </a>
-                                <span class="ays-gpg-logo-container-one-time-text"><?php echo __( "One-time payment", 'photo-gallery' ); ?></span>
+                                <span class="ays-gpg-logo-container-one-time-text"><?php echo __( "One-time payment", 'gallery-photo-gallery' ); ?></span>
                             </div>
                         </div>
                         <ul id="menu">                            
-                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", AYS_GALLERY_NAME ); ?></a></li>
-                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", AYS_GALLERY_NAME ); ?></a></li>
-                            <li class="modile-ddmenu-xs make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Make a Suggestion", AYS_GALLERY_NAME ); ?></a></li>
+                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", 'gallery-photo-gallery' ); ?></a></li>
+                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", 'gallery-photo-gallery' ); ?></a></li>
+                            <li class="modile-ddmenu-xs make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Make a Suggestion", 'gallery-photo-gallery' ); ?></a></li>
                             <?php if ( $is_chat_available ) : ?>
-                            <li class="modile-ddmenu-xs"><a class="ays-btn" href="https://ays-pro.com/onlinesupport/" target="_blank"><?php echo __( "Live Chat", AYS_GALLERY_NAME ); ?></a></li>
+                            <li class="modile-ddmenu-xs"><a class="ays-btn" href="https://ays-pro.com/onlinesupport/" target="_blank"><?php echo __( "Live Chat", 'gallery-photo-gallery' ); ?></a></li>
                             <?php endif; ?>
-                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", AYS_GALLERY_NAME ); ?></a></li>
+                            <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", 'gallery-photo-gallery' ); ?></a></li>
                             <li class="modile-ddmenu-md">
                                 <a class="toggle_ddmenu" href="javascript:void(0);"><i class="fa ays_fa_ellipsis_h"></i></a>
                                 <ul class="ddmenu" data-expanded="false">                                
-                                    <li><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", AYS_GALLERY_NAME ); ?></a></li>
-                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", AYS_GALLERY_NAME ); ?></a></li>
-                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", AYS_GALLERY_NAME ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", 'gallery-photo-gallery' ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", 'gallery-photo-gallery' ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", 'gallery-photo-gallery' ); ?></a></li>
                                 </ul>
                             </li>
                             <li class="modile-ddmenu-sm">
                                 <a class="toggle_ddmenu" href="javascript:void(0);"><i class="fa ays_fa_ellipsis_h"></i></a>
                                 <ul class="ddmenu" data-expanded="false">
-                                    <li><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", AYS_GALLERY_NAME ); ?></a></li>
-                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", AYS_GALLERY_NAME ); ?></a></li>
-                                    <li class="make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Make a Suggestion", AYS_GALLERY_NAME ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo __( "Demo", 'gallery-photo-gallery' ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Free Support", 'gallery-photo-gallery' ); ?></a></li>
+                                    <li class="make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Make a Suggestion", 'gallery-photo-gallery' ); ?></a></li>
                                     <?php if ( $is_chat_available ) : ?>
-                                    <li><a class="ays-btn" href="https://ays-pro.com/onlinesupport/" target="_blank"><?php echo __( "Live Chat", AYS_GALLERY_NAME ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://ays-pro.com/onlinesupport/" target="_blank"><?php echo __( "Live Chat", 'gallery-photo-gallery' ); ?></a></li>
                                     <?php endif; ?>
-                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", AYS_GALLERY_NAME ); ?></a></li>
+                                    <li><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Contact us", 'gallery-photo-gallery' ); ?></a></li>
                                 </ul>
                             </li>
                         </ul>

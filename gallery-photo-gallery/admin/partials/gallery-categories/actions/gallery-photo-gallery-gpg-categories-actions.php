@@ -10,10 +10,10 @@
     );
     switch( $action ) {
         case 'add':
-            $heading = __('Add new gallery category', $this->plugin_name);
+            $heading = __('Add new gallery category', 'gallery-photo-gallery');
             break;
         case 'edit':
-            $heading = __('Edit gallery category', $this->plugin_name);
+            $heading = __('Edit gallery category', 'gallery-photo-gallery');
             $gallery_category = $this->gallery_cats_obj->get_gpg_gallery_category( $id );
             break;
     }
@@ -46,7 +46,7 @@
         <div class="ays-gpg-wordpress-user-manual-box">
             <a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", $this->plugin_name); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'gallery-photo-gallery'); ?></span>
             </a>
         </div>
     </div>
@@ -57,8 +57,8 @@
             <div class="form-group row">
                 <div class="col-sm-2">
                     <label for='ays-title'>
-                        <?php echo __('Title', $this->plugin_name); ?>
-                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Title of the category',$this->plugin_name)?>">
+                        <?php echo __('Title', 'gallery-photo-gallery'); ?>
+                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Title of the category','gallery-photo-gallery')?>">
                             <i class="ays_fa ays_fa_info_circle"></i>
                         </a>
                     </label>
@@ -71,8 +71,8 @@
             <hr/>
             <div class='ays-field'>
                 <label for='ays-description'>
-                    <?php echo __('Description', $this->plugin_name); ?>
-                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Provide more information about the gallery category',$this->plugin_name)?>">
+                    <?php echo __('Description', 'gallery-photo-gallery'); ?>
+                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Provide more information about the gallery category','gallery-photo-gallery')?>">
                         <i class="ays_fa ays_fa_info_circle"></i>
                     </a>
                 </label>
@@ -102,8 +102,8 @@
                     );
 
                     $other_attributes = array( 'id' => 'ays-button' );
-                    submit_button( __( 'Save and close', $this->plugin_name ), 'primary ays-gpg-save-comp', 'ays_submit', true, $other_attributes );
-                    submit_button(__('Save', $this->plugin_name), 'ays-gpg-save-comp', 'ays_apply', false, $save_attributes);
+                    submit_button( __( 'Save and close', 'gallery-photo-gallery' ), 'primary ays-gpg-save-comp', 'ays_submit', true, $other_attributes );
+                    submit_button(__('Save', 'gallery-photo-gallery'), 'ays-gpg-save-comp', 'ays_apply', false, $save_attributes);
                     echo $loader_iamge;
                             
                     $buttons_html = '</div>';
@@ -120,7 +120,7 @@
                             'id' => 'ays-gallery-next-button',
                             'href' => sprintf( '?page=%s&action=%s&gpg_gallery_category=%d', esc_attr( $_REQUEST['page'] ), 'edit', absint( $next_gallery_cat_id ) )
                         );
-                        submit_button(__('Next Category', $this->plugin_name), 'button button-primary ays-button ays-gallery-loader-banner', 'ays_gallery_next_button', false, $other_attributes);
+                        submit_button(__('Next Category', 'gallery-photo-gallery'), 'button button-primary ays-button ays-gallery-loader-banner', 'ays_gallery_next_button', false, $other_attributes);
                     }
                 ?>
                 </div>

@@ -44,7 +44,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
         <div class="ays-gpg-wordpress-user-manual-box">
             <a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank" style="text-decoration: none;font-size: 13px;">
                 <i class="ays_fa ays_fa_file_text"></i>
-                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", $this->plugin_name); ?></span>
+                <span style="margin-left: 3px;text-decoration: underline;"><?php echo __("View Documentation", 'gallery-photo-gallery'); ?></span>
             </a>
         </div>
     </div>
@@ -53,7 +53,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
             <input type="hidden" name="ays_gpg_tab" value="<?php echo esc_attr($ays_gpg_tab); ?>">
             <h1 class="wp-heading-inline">
 				<?php
-				echo __('Settings', $this->plugin_name);
+				echo __('Settings', 'gallery-photo-gallery');
 				?>
             </h1>
 			<?php
@@ -66,30 +66,30 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                 <div>
                     <div class="nav-tab-wrapper" style="position:sticky; top:35px;">
                         <a href="#tab1" data-tab="tab1" class="nav-tab <?php echo ($ays_gpg_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">
-							<?php echo __("General", $this->plugin_name); ?>
+							<?php echo __("General", 'gallery-photo-gallery'); ?>
                         </a>
                         <a href="#tab2" data-tab="tab2" class="nav-tab <?php echo ($ays_gpg_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Shortcodes", $this->plugin_name);?>
+                            <?php echo __("Shortcodes", 'gallery-photo-gallery');?>
                         </a>
                         <a href="#tab3" data-tab="tab3" class="nav-tab <?php echo ($ays_gpg_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
-                            <?php echo __("Message variables", $this->plugin_name);?>
+                            <?php echo __("Message variables", 'gallery-photo-gallery');?>
                         </a>
                     </div>
                 </div>
                 <div class="ays-gpg-tabs-wrapper">
                     <div id="tab1" class="ays-gpg-tab-content <?php echo ($ays_gpg_tab == 'tab1') ? 'ays-gpg-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('General Settings',$this->plugin_name)?></p>
+                        <p class="ays-subtitle"><?php echo __('General Settings','gallery-photo-gallery')?></p>
                         <hr/>                        
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;"><i class="fa ays_fa_question_circle"></i></strong>
-                                <h5><?php echo __('Default parameters for gallery',$this->plugin_name)?></h5>
+                                <h5><?php echo __('Default parameters for gallery','gallery-photo-gallery')?></h5>
                             </legend>
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_gpg_wp_editor_height">
-                                        <?php echo __( "WP Editor height", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard.',$this->plugin_name); ?>">
+                                        <?php echo __( "WP Editor height", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Give the default value to the height of the WP Editor. It will apply to all WP Editors within the plugin on the dashboard.','gallery-photo-gallery'); ?>">
                                             <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -102,8 +102,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_gpg_all_images_text">
-                                        <?php echo __( "Show All images text", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title='<?php echo __('Write the text you prefer for the "All" category to see all the images on the Front-end.',$this->plugin_name); ?>'>
+                                        <?php echo __( "Show All images text", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title='<?php echo __('Write the text you prefer for the "All" category to see all the images on the Front-end.','gallery-photo-gallery'); ?>'>
                                             <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -116,8 +116,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_show_gpg_button_to_admin_only">
-                                        <?php echo __( "Show gallery button to Admins only", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Allow only admins to see the Gallery button within the WP Editor while adding/editing a new post/page.',$this->plugin_name); ?>">
+                                        <?php echo __( "Show gallery button to Admins only", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Allow only admins to see the Gallery button within the WP Editor while adding/editing a new post/page.','gallery-photo-gallery'); ?>">
                                             <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -131,13 +131,13 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;"><i class="fa fa-align-left"></i></strong>
-                                <h5><?php echo __('Excerpt words count in list tables',$this->plugin_name)?></h5>
+                                <h5><?php echo __('Excerpt words count in list tables','gallery-photo-gallery')?></h5>
                             </legend>
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_galleries_title_length">
-                                        <?php echo __( "Galleries list table", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the galleries name to be shown in the Galleries List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each galleries name in the Galleries page of your dashboard).', $this->plugin_name); ?>">
+                                        <?php echo __( "Galleries list table", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the galleries name to be shown in the Galleries List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each galleries name in the Galleries page of your dashboard).', 'gallery-photo-gallery'); ?>">
                                             <i class="fa fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -149,8 +149,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_gpg_categories_title_length">
-                                        <?php echo __( "Gallery categories list table", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the results to be shown in the Gallery categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard.', $this->plugin_name); ?>">
+                                        <?php echo __( "Gallery categories list table", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the results to be shown in the Gallery categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard.', 'gallery-photo-gallery'); ?>">
                                             <i class="fa fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -162,8 +162,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_gpg_image_categories_title_length">
-                                        <?php echo __( "Gallery image categories list table", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the results to be shown in the Gallery image categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard.', $this->plugin_name); ?>">
+                                        <?php echo __( "Gallery image categories list table", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Determine the length of the results to be shown in the Gallery image categories List Table by putting your preferred count of words in the following field. (For example: if you put 10,  you will see the first 10 words of each result in the Question categories page of your dashboard.', 'gallery-photo-gallery'); ?>">
                                             <i class="fa fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -177,13 +177,13 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;"><i class="fa ays_fa_file_code"></i></strong>
-                                <h5><?php echo __('General CSS File',$this->plugin_name); ?></h5>
+                                <h5><?php echo __('General CSS File','gallery-photo-gallery'); ?></h5>
                             </legend>
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_gpg_exclude_general_css">
-                                        <?php echo __( "Exclude general CSS file from home page", $this->plugin_name ); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('If the option is enabled, then the gallery general CSS file will not be applied to the home page. Please note, that if you have inserted the gallery on the home page, then the option must be disabled so that the CSS File can normally work for that gallery.',$this->plugin_name); ?>">
+                                        <?php echo __( "Exclude general CSS file from home page", 'gallery-photo-gallery' ); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('If the option is enabled, then the gallery general CSS file will not be applied to the home page. Please note, that if you have inserted the gallery on the home page, then the option must be disabled so that the CSS File can normally work for that gallery.','gallery-photo-gallery'); ?>">
                                             <i class="fa fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -195,20 +195,20 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                         </fieldset>                                                       
                     </div>
                     <div id="tab2" class="ays-gpg-tab-content <?php echo ($ays_gpg_tab == 'tab2') ? 'ays-gpg-tab-content-active' : ''; ?>">
-                        <p class="ays-subtitle"><?php echo __('Shortcodes',$this->plugin_name)?></p>
+                        <p class="ays-subtitle"><?php echo __('Shortcodes','gallery-photo-gallery')?></p>
                         <hr/>
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;">[ ]</strong>
-                                <h5><?php echo __('Extra shortcodes',$this->plugin_name); ?></h5>
+                                <h5><?php echo __('Extra shortcodes','gallery-photo-gallery'); ?></h5>
                             </legend>
                             <div class="form-group row" style="padding:0px;margin:0;">
                                 <div class="col-sm-12" style="padding:20px;">
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gpg_creation_date">
-                                                <?php echo __( "Show gallery creation date", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the creation date of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show gallery creation date", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the creation date of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -225,8 +225,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gpg_current_author">
-                                                <?php echo __( "Show current gallery author", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the current author of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show current gallery author", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the current author of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -243,8 +243,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_images_count">
-                                                <?php echo __( "Show gallery images count", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the images count of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show gallery images count", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Gallery ID in the shortcode. It will show the images count of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -261,8 +261,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_category_images_count">
-                                                <?php echo __( "Show gallery images count by category", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Category ID in the shortcode. It will show the images count of the particular category. If there is no category available/found with that particular Category ID, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show gallery images count by category", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("You need to insert Your Category ID in the shortcode. It will show the images count of the particular category. If there is no category available/found with that particular Category ID, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -279,8 +279,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_first_name">
-                                                <?php echo __( "Show User First Name", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show User First Name", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's First Name. If the user is not logged-in, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -297,8 +297,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_last_name">
-                                                <?php echo __( "Show User Last Name", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show User Last Name", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Last Name. If the user is not logged-in, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -315,8 +315,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_display_name">
-                                                <?php echo __( "Show User Display name", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show User Display name", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Display name. If the user is not logged-in, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -333,8 +333,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_email">
-                                                <?php echo __( "Show User Email", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show User Email", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Email. If the user is not logged-in, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -351,8 +351,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_nickname">
-                                                <?php echo __( "Show User Nickname", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty.",$this->plugin_name) ); ?>">
+                                                <?php echo __( "Show User Nickname", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows the logged-in user's Nickname. If the user is not logged-in, the shortcode will be empty.",'gallery-photo-gallery') ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -369,8 +369,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_user_wordpress_roles">
-                                                <?php echo __( "Show User WordPress Roles", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", $this->plugin_name ) ); ?>">
+                                                <?php echo __( "Show User WordPress Roles", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr( __("Shows user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'gallery-photo-gallery' ) ); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -386,15 +386,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                         <fieldset>
                             <legend>
                                 <strong style="font-size:30px;">[ ]</strong>
-                                <h5><?php echo __('Gallery categories',$this->plugin_name); ?></h5>
+                                <h5><?php echo __('Gallery categories','gallery-photo-gallery'); ?></h5>
                             </legend>
                             <div class="form-group row" style="padding:0px;margin:0;">
                                 <div class="col-sm-12" style="padding:20px;">
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_cat_title">
-                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery image Category ID in the shortcode. It will show the category title. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                <?php echo __( "Shortcode", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery image Category ID in the shortcode. It will show the category title. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.','gallery-photo-gallery'); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -411,8 +411,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_cat_description">
-                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery image Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                <?php echo __( "Shortcode", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery image Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.','gallery-photo-gallery'); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -429,8 +429,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_general_cat_title">
-                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery General Category ID in the shortcode. It will show the category title. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                <?php echo __( "Shortcode", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery General Category ID in the shortcode. It will show the category title. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.','gallery-photo-gallery'); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -447,8 +447,8 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label for="ays_gallery_general_cat_description">
-                                                <?php echo __( "Shortcode", $this->plugin_name ); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery General Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.',$this->plugin_name); ?>">
+                                                <?php echo __( "Shortcode", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __('You need to insert Your Gallery General Category ID in the shortcode. It will show the category description. If there is no gallery category available/unavailable with that particular Gallery Category ID, the shortcode will stay empty.','gallery-photo-gallery'); ?>">
                                                     <i class="fa fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -463,15 +463,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                     </div>
                     <div id="tab3" class="ays-gpg-tab-content <?php echo ($ays_gpg_tab == 'tab3') ? 'ays-gpg-tab-content-active' : ''; ?>">
                         <p class="ays-subtitle">
-                            <?php echo __('Message variables',$this->plugin_name)?>
-                            <a class="ays_help" data-toggle="tooltip" data-html="true" title="<p style='margin-bottom:3px;'><?php echo __( 'You can copy these variables and paste them in the following options from the gallery settings', $this->plugin_name ); ?>:</p>
-                                <p style='padding-left:10px;margin:0;'>- <?php echo __( 'Gallery Description', $this->plugin_name ); ?></p>">
+                            <?php echo __('Message variables','gallery-photo-gallery')?>
+                            <a class="ays_help" data-toggle="tooltip" data-html="true" title="<p style='margin-bottom:3px;'><?php echo __( 'You can copy these variables and paste them in the following options from the gallery settings', 'gallery-photo-gallery' ); ?>:</p>
+                                <p style='padding-left:10px;margin:0;'>- <?php echo __( 'Gallery Description', 'gallery-photo-gallery' ); ?></p>">
                                 <i class="fa fa-info-circle"></i>
                             </a>
                         </p>
                         <blockquote>
-                            <p><?php echo __( "You can copy these variables and paste them in the following options from the gallery settings", $this->plugin_name ); ?>:</p>
-                            <p style="text-indent:10px;margin:0;">- <?php echo __( "Gallery Description", $this->plugin_name ); ?></p>                            
+                            <p><?php echo __( "You can copy these variables and paste them in the following options from the gallery settings", 'gallery-photo-gallery' ); ?>:</p>
+                            <p style="text-indent:10px;margin:0;">- <?php echo __( "Gallery Description", 'gallery-photo-gallery' ); ?></p>                            
                         </blockquote>
                         <hr>
                         <div class="form-group row">
@@ -482,7 +482,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's first name that was filled in their WordPress site during registration.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's first name that was filled in their WordPress site during registration.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -491,7 +491,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's last name that was filled in their WordPress site during registration.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's last name that was filled in their WordPress site during registration.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>  
                                 <p class="vmessage">
@@ -500,7 +500,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's display name that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's display name that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -509,7 +509,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's nickname that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's nickname that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -518,7 +518,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's website url that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's website url that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -527,7 +527,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's email that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's email that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -536,7 +536,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's role(s) when logged-in. In case the user is not logged-in, the field will be empty.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -545,7 +545,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The user's IP address.", $this->plugin_name); ?>
+                                        <?php echo __( "The user's IP address.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -554,7 +554,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The ID of the current user.", $this->plugin_name); ?>
+                                        <?php echo __( "The ID of the current user.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -563,7 +563,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The ID of the gallery.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "The ID of the gallery.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -572,7 +572,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The title of the gallery.", $this->plugin_name); ?>
+                                        <?php echo __( "The title of the gallery.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -581,7 +581,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current gallery images count.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "It will show the current gallery images count.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -590,7 +590,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the author of the current gallery.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "It will show the author of the current gallery.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -599,7 +599,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Shows the current gallery author's email that was filled in their WordPress profile.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "Shows the current gallery author's email that was filled in their WordPress profile.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -608,7 +608,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "Shows the current gallery author's Display name that was filled in their WordPress profile.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "Shows the current gallery author's Display name that was filled in their WordPress profile.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -617,7 +617,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The creation date of the current gallery.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "The creation date of the current gallery.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -626,7 +626,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "It will show the current date when loading the gallery.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "It will show the current date when loading the gallery.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -635,7 +635,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "Prints the webpage link where the current gallery is posted.", $this->plugin_name); ?>
+                                        <?php echo __( "Prints the webpage link where the current gallery is posted.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -644,7 +644,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "Shows the admin's email that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "Shows the admin's email that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -653,7 +653,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "Shows the post author's nickname that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "Shows the post author's nickname that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -662,7 +662,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "Shows the post author's email that was filled in their WordPress profile.", $this->plugin_name); ?>
+                                        <?php echo __( "Shows the post author's email that was filled in their WordPress profile.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -671,7 +671,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The Display name of the author of the post.", $this->plugin_name); ?>
+                                        <?php echo __( "The Display name of the author of the post.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -680,7 +680,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The First name of the author of the post.", $this->plugin_name); ?>
+                                        <?php echo __( "The First name of the author of the post.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -689,7 +689,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The Last name of the author of the post.", $this->plugin_name); ?>
+                                        <?php echo __( "The Last name of the author of the post.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -698,7 +698,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The website url of the author of the post.", $this->plugin_name); ?>
+                                        <?php echo __( "The website url of the author of the post.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -707,7 +707,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The Post title of the current post.", $this->plugin_name); ?>
+                                        <?php echo __( "The Post title of the current post.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -716,7 +716,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo esc_attr( __( "The ID of the current post.", $this->plugin_name) ); ?>
+                                        <?php echo esc_attr( __( "The ID of the current post.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -725,7 +725,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The title of the website.", $this->plugin_name); ?>
+                                        <?php echo __( "The title of the website.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -734,7 +734,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The URL of the home page.", $this->plugin_name); ?>
+                                        <?php echo __( "The URL of the home page.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                             </div>
@@ -751,7 +751,7 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                 'data-toggle' => 'tooltip',
                 'data-delay'=> '{"show":"1000"}'
             );
-			submit_button(__('Save changes', $this->plugin_name), 'primary ays-button ays-gpg-save-comp', 'ays_submit', true, $save_bottom_attributes);
+			submit_button(__('Save changes', 'gallery-photo-gallery'), 'primary ays-button ays-gpg-save-comp', 'ays_submit', true, $save_bottom_attributes);
             echo $loader_iamge;
 			?>
         </form>

@@ -201,7 +201,7 @@ class Ays_Gallery_Extra_Shortcodes_Public
         }
 
         if(isset($author['name']) && $author['name'] == "Unknown"){
-            $author['name'] = __( "Unknown", $this->plugin_name );
+            $author['name'] = __( "Unknown", 'gallery-photo-gallery' );
         }
 
         $gallery_author = (isset($author['name']) && $author['name'] != '') ? sanitize_text_field( $author['name'] ) : "";
