@@ -118,7 +118,11 @@ class Galleries_List_Table extends WP_List_Table{
                 
                 $image_categories       = (isset($data['ays_gallery_category']) && $data['ays_gallery_category'] != '') ? sanitize_text_field( implode('***', $data['ays_gallery_category']) ) : '';
                 $view_type              = isset($data['ays-view-type']) && $data['ays-view-type'] != '' ? sanitize_text_field( $data['ays-view-type'] ) : '';
-                $columns_count          = (isset($data['ays-columns-count']) && $data['ays-columns-count'] != '') ? absint( intval( $data['ays-columns-count'] ) ) : '';
+
+                $columns_count          = (isset($data['ays-columns-count']) && $data['ays-columns-count'] != '') ? absint( intval( $data['ays-columns-count'] ) ) : 3;
+
+                $columns_count_mobile   = (isset($data['ays-columns-count-mobile']) && $data['ays-columns-count-mobile'] != '') ? absint( intval( $data['ays-columns-count-mobile'] ) ) : 1;
+
                 $images_distance        = (isset($data['ays-gpg-images-distance']) && $data['ays-gpg-images-distance'] != '') ? absint( intval( $data['ays-gpg-images-distance'] ) ) : '5';
                 $hover_effect           = (isset($data['ays_hover_simple']) && $data['ays_hover_simple'] != '') ? sanitize_text_field( $data['ays_hover_simple'] ) : '';
                 $img_load_effect        = (isset($data['ays_img_load_effect']) && $data['ays_img_load_effect'] != '') ? sanitize_text_field( $data['ays_img_load_effect'] ) : '';
@@ -261,6 +265,7 @@ class Galleries_List_Table extends WP_List_Table{
                 }
                 $options = array(
                     'columns_count'                         => $columns_count,
+                    'columns_count_mobile'                  => $columns_count_mobile,
                     'view_type'                             => $view_type,
                     'border_radius'                         => $ays_images_b_radius,
                     'admin_pagination'                      => $ays_admin_pagination,

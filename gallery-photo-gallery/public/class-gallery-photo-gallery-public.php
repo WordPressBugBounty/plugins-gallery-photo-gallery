@@ -258,6 +258,7 @@ class Gallery_Photo_Gallery_Public {
          * Gallery image settings
          */
         $columns            = (!isset($gallery_options['columns_count'])) ? 3 : $gallery_options['columns_count'];
+        $columns_mobile     = (!isset($gallery_options['columns_count_mobile'])) ? 1 : $gallery_options['columns_count_mobile'];
         $view               = $gallery_options['view_type'];
         $images             = explode( "***", $gallery["images"]        );
         $image_titles       = explode( "***", $gallery["images_titles"] );
@@ -267,6 +268,9 @@ class Gallery_Photo_Gallery_Public {
         // $images_categories  = explode( "***", $gallery["categories_id"] );
         if($columns == null || $columns == 0){
             $columns = 3;
+        }
+        if($columns_mobile == null || $columns_mobile == 0){
+            $columns_mobile = 1;
         }
         if($images_hover_zoom == "yes"){
             $hover_zoom_In = "$(this).find('img').css({'transform': 'scale(1.15)', 'transition': '.5s ease-in-out', 'transition-duration':'". $hover_zoom_animation_speed ."s'});";
@@ -284,18 +288,21 @@ class Gallery_Photo_Gallery_Public {
                 $gallery_lightbox_selector = "ays_grid_column_".$id;
 
                 $column_width = 100 / $columns;
+                $column_width_mobile = 100 / $columns_mobile;
                 break;
             case 'mosaic':                        
                 $gallery_item_class = ".ays_gallery_container_".$id." .ays_mosaic_column_item_".$id;
                 $gallery_view_selector = "#ays_mosaic_".$id;
                 $gallery_lightbox_selector = "ays_mosaic_column_item_".$id;
                 $column_width = 100 / $columns;
+                $column_width_mobile = 100 / $columns_mobile;
                 break;
             case 'masonry':                        
                 $gallery_item_class = ".ays_gallery_container_".$id." .ays_masonry_item_".$id;
                 $gallery_view_selector = "#ays_masonry_grid_".$id;
                 $gallery_lightbox_selector = "ays_masonry_item_".$id;
                 $column_width = 100 / $columns;
+                $column_width_mobile = 100 / $columns_mobile;
                 break;
             default:
                 $gallery_item_class = ".ays_gallery_container_".$id." div.ays_grid_column_".$id;
@@ -303,6 +310,7 @@ class Gallery_Photo_Gallery_Public {
                 $gallery_lightbox_selector = "ays_grid_column_".$id;
 
                 $column_width = 100 / $columns;
+                $column_width_mobile = 100 / $columns_mobile;
                 break;
         }
         $hover_effect__simple_js = "";
@@ -1436,6 +1444,7 @@ class Gallery_Photo_Gallery_Public {
         $lightbox_color_rgba = $this->hex2rgba($lightbox_color, 0.5);
         
         $columns            = (!isset($gallery_options['columns_count'])) ? 3 : $gallery_options['columns_count'];
+        $columns_mobile     = (!isset($gallery_options['columns_count_mobile'])) ? 1 : $gallery_options['columns_count_mobile'];
         $view               = $gallery_options['view_type'];
         $images             = explode( "***", $gallery["images"]        );
         $image_titles       = explode( "***", $gallery["images_titles"] );
@@ -1448,7 +1457,7 @@ class Gallery_Photo_Gallery_Public {
 
         $disable_lightbox = (isset($gallery_options['enable_light_box']) && $gallery_options['enable_light_box'] == "off" || $gallery_options['enable_light_box'] == "") ? true : false;
 
-      $link_on_whole_img = (isset($gallery_options['link_on_whole_img']) && $gallery_options['link_on_whole_img'] == "on") ? true : false;
+        $link_on_whole_img = (isset($gallery_options['link_on_whole_img']) && $gallery_options['link_on_whole_img'] == "on") ? true : false;
 
         $gallery_options['enable_search_img'] = isset($gallery_options['enable_search_img']) ? $gallery_options['enable_search_img'] : "off";
 
@@ -1458,30 +1467,38 @@ class Gallery_Photo_Gallery_Public {
         if($columns == null || $columns == 0){
             $columns = 3;
         }
+
+        if($columns_mobile == null || $columns_mobile == 0){
+            $columns_mobile = 1;
+        }
         switch($view){
             case 'grid':
                 $gallery_item_class = ".ays_gallery_container_".$id." div.ays_grid_column_".$id;
                 $gallery_view_selector = "#ays_grid_row_".$id;
                 $gallery_lightbox_selector = "ays_grid_column_".$id;
                 $column_width = (100 / $columns);
+                $column_width_mobile = (100 / $columns_mobile);
                 break;
             case 'mosaic':
                 $gallery_item_class = ".ays_gallery_container_".$id." .ays_mosaic_column_item_".$id;
                 $gallery_view_selector = "#ays_mosaic_".$id;
                 $gallery_lightbox_selector = "ays_mosaic_column_item_".$id;
                 $column_width = 100 / $columns;
+                $column_width_mobile = (100 / $columns_mobile);
                 break;
             case 'masonry':
                 $gallery_item_class = ".ays_gallery_container_".$id." .ays_masonry_item_".$id;
                 $gallery_view_selector = "#ays_masonry_grid_".$id;
                 $gallery_lightbox_selector = "ays_masonry_item_".$id;
                 $column_width = 100 / $columns;
+                $column_width_mobile = (100 / $columns_mobile);
                 break;
             default:
                 $gallery_item_class = ".ays_gallery_container_".$id." div.ays_grid_column_".$id;
                 $gallery_view_selector = "#ays_grid_row_".$id;
                 $gallery_lightbox_selector = "ays_grid_column_".$id;
                 $column_width = 100 / $columns;
+                $column_width_mobile = (100 / $columns_mobile);
                 break;
         }
         if($gallery["images_dates"] == '' || $gallery["images_dates"] == null){
@@ -2467,6 +2484,15 @@ class Gallery_Photo_Gallery_Public {
                 }
 
                 @media screen and (max-width: 768px){
+                    .ays_grid_column_".$id.":nth-child(".$columns_mobile."n) {
+                        margin-right: 0px !important;
+                    }
+                    .ays_grid_column_".$id.".ays_count_views {
+                        width: calc(".($column_width_mobile)."% - ".($images_distance)."px) !important;
+                    }
+                    .ays_masonry_item_".$id."{
+                        width: calc(".($column_width_mobile - 0.001)."% - ".($images_distance)."px) !important;
+                    }
                     div.ays_grid_row div.ays_grid_column_".$id." {
                         height: {$ays_thumb_height_mobile}px;
                         min-height: {$ays_thumb_height_mobile}px;

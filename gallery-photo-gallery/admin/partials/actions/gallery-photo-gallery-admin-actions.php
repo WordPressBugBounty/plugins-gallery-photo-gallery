@@ -1345,31 +1345,38 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">                   
+                        <div class="col-sm-9 ays_divider_left">
                             <div class="form-group row">
-                                <div class="col-sm-3">
-                                    <label for="ays_thumb_height_mobile">
-                                        <?php echo __("For mobile:", 'gallery-photo-gallery');?>
+                                <div class="col-sm-2">
+                                    <label for="ays_thumb_height_desktop">
+                                        <?php echo __("On desktop", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __("Specify the thumbnails height of the gallery for desktop devices.", 'gallery-photo-gallery');?>">
+                                           <i class="fas fa-info-circle"></i>
+                                        </a>
                                     </label>
-                                </div>                        
-                                <div class="col-sm-9 ays_gpg_display_flex_width">
+                                </div>
+                                <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
                                     <div>
-                                       <input type="number" id="ays_thumb_height_mobile" name="ays-thumb-height-mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_thumb_height_mobile; ?>"/>
+                                       <input type="number" id="ays_thumb_height_desktop" name="ays-thumb-height-desktop" class="ays-text-input ays-text-input-short" value="<?php echo $ays_thumb_height_desktop; ?>"/>
                                     </div>
                                     <div class="ays_gpg_dropdown_max_width">
                                         <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
                                     </div>
                                 </div>
                             </div>
+                            <hr>
                             <div class="form-group row">
-                                <div class="col-sm-3">
-                                    <label for="ays_thumb_height_desktop">
-                                        <?php echo __("For desktop:", 'gallery-photo-gallery');?>
+                                <div class="col-sm-2">
+                                    <label for="ays_thumb_height_mobile">
+                                        <?php echo __("On mobile", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __("Specify the thumbnails height of the gallery for mobile devices.", 'gallery-photo-gallery');?>">
+                                           <i class="fas fa-info-circle"></i>
+                                        </a>
                                     </label>
-                                </div>
-                                <div class="col-sm-9 ays_gpg_display_flex_width">
+                                </div>                        
+                                <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
                                     <div>
-                                       <input type="number" id="ays_thumb_height_desktop" name="ays-thumb-height-desktop" class="ays-text-input ays-text-input-short" value="<?php echo $ays_thumb_height_desktop; ?>"/>
+                                       <input type="number" id="ays_thumb_height_mobile" name="ays-thumb-height-mobile" class="ays-text-input ays-text-input-short" value="<?php echo $ays_thumb_height_mobile; ?>"/>
                                     </div>
                                     <div class="ays_gpg_dropdown_max_width">
                                         <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -1382,14 +1389,40 @@ $gpg_accordion_svg_html = '
                     <div id="ays-columns-count" class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_columns_count">
-                                <?php echo __("Columns count. Default: 3", 'gallery-photo-gallery');?>
+                                <?php echo __("Columns count", 'gallery-photo-gallery');?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo __("The counts of the columns of the Gallery", 'gallery-photo-gallery');?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <input type="number" id="ays_columns_count" name="ays-columns-count" class="ays-text-input ays-text-input-short" placeholder="<?php echo __("Default", 'gallery-photo-gallery');?>: 3" value="<?php echo isset($gal_options['columns_count']) ? $gal_options['columns_count'] : 3; ?>"/>
+                            <div class="form-group row">
+                                <div class="col-sm-2">
+                                    <label for="ays_columns_count">
+                                        <?php echo __("On desktop", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __("Specify the columns count of the gallery for desktop devices.", 'gallery-photo-gallery');?>">
+                                           <i class="fas fa-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>
+                                <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
+                                    <input type="number" id="ays_columns_count" name="ays-columns-count" class="ays-text-input ays-text-input-short" placeholder="<?php echo __("Default", 'gallery-photo-gallery');?>: 3" value="<?php echo isset($gal_options['columns_count']) ? $gal_options['columns_count'] : 3; ?>"/>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-sm-2">
+                                    <label for="ays_thumb_height_mobile">
+                                        <?php echo __("On mobile", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __("Specify the columns count of the gallery for mobile devices.", 'gallery-photo-gallery');?>">
+                                           <i class="fas fa-info-circle"></i>
+                                        </a>
+                                    </label>
+                                </div>                        
+                                <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
+                                    <input type="number" id="ays_columns_count_mobile" name="ays-columns-count-mobile" class="ays-text-input ays-text-input-short" placeholder="<?php echo __("Default", 'gallery-photo-gallery');?>: 1" value="<?php echo isset($gal_options['columns_count_mobile']) ? $gal_options['columns_count_mobile'] : 1; ?>"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <hr style="display: <?php echo $gal_options['view_type'] == 'mosaic' ? 'none' : 'block'; ?>;">
