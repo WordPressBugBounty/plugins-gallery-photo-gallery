@@ -2127,7 +2127,10 @@
             $(document).find('.hover_scale_animation_speed').addClass('display_none');
 
             $(document).find('#gallery_img_hover_simple').val('fadeIn').change();
+
             $(document).find('#ays_gpg_filter_thubnail').val('none').change();
+            $(document).find('#ays_gpg_filter_thubnail_mobile').val('none').change();
+            $(document).find("#enable_ays_gpg_filter_thubnail_opt_mobile").prop('checked', true).change();
 
             $(document).find('.ays-remove-gallery-loader-custom-gif').trigger('click');
             $(document).find('#ays_gallery_loader_custom_gif_width').val('100').change();

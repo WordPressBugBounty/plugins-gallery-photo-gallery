@@ -2278,7 +2278,20 @@ class Gallery_Photo_Gallery_Public {
         $hover_animation_speed = (isset($gallery_options['hover_animation_speed']) && $gallery_options['hover_animation_speed'] !== '') ? abs($gallery_options['hover_animation_speed']) : 0.5;
 
         $filter_thubnail = (isset($gallery_options['filter_thubnail']) && $gallery_options['filter_thubnail'] == "on") ? true : false;
-        $filter_thubnail_opt = (isset($gallery_options['filter_thubnail_opt'])) ? $gallery_options['filter_thubnail_opt'] : 'none';
+
+        // Filter for thumbnail
+        $filter_thubnail_opt = ( isset( $gallery_options['filter_thubnail_opt'] ) ) ? $gallery_options['filter_thubnail_opt'] : 'none';
+
+        // Enable Filter for thumbnail Mobile
+        $gallery_options['enable_filter_thubnail_opt_mobile'] = ( isset( $gallery_options['enable_filter_thubnail_opt_mobile'] ) && $gallery_options['enable_filter_thubnail_opt_mobile'] == 'off' ) ? false : true;
+
+        // Filter for thumbnail Mobile
+        if ( $gallery_options['enable_filter_thubnail_opt_mobile'] ) {
+            $filter_thubnail_opt_mobile = ( isset( $gallery_options['filter_thubnail_opt_mobile' ] ) && $gallery_options['filter_thubnail_opt_mobile' ] != '' ) ?  sanitize_text_field( $gallery_options['filter_thubnail_opt_mobile' ] ) : $filter_thubnail_opt;
+        } else {
+            $filter_thubnail_opt_mobile = $filter_thubnail_opt;
+        }
+
         $filter_lightbox_opt = (isset($gal_lightbox_options['filter_lightbox_opt'])) ? $gal_lightbox_options['filter_lightbox_opt'] : 'none';        
 
         switch ($filter_thubnail_opt) {
@@ -2308,6 +2321,36 @@ class Gallery_Photo_Gallery_Public {
                 break;                
             default:
                 $gpg_filter_image = 'none';
+                    break;
+        }      
+
+        switch ( $filter_thubnail_opt_mobile ) {
+            case 'blur':
+                $gpg_filter_image_mobile = 'blur(3px)';
+                break;
+            case 'brightness':
+                $gpg_filter_image_mobile = 'brightness(200%)';
+                break;
+            case 'contrast':
+                $gpg_filter_image_mobile = 'contrast(200%)';
+                break;
+            case 'grayscale':
+                $gpg_filter_image_mobile = 'grayscale(100%)';
+                break;
+            case 'hue_rotate':
+                $gpg_filter_image_mobile = 'hue-rotate(90deg)';
+                break;
+            case 'invert':
+                $gpg_filter_image_mobile = 'invert(100%)';
+                break;
+            case 'saturate':
+                $gpg_filter_image_mobile = 'saturate(8)';
+                break;
+            case 'sepia':
+                $gpg_filter_image_mobile = 'sepia(100%)';
+                break;                
+            default:
+                $gpg_filter_image_mobile = 'none';
                     break;
         }
 
@@ -2484,6 +2527,11 @@ class Gallery_Photo_Gallery_Public {
                 }
 
                 @media screen and (max-width: 768px){
+                    .ays_gallery_body_". $id ." .ays_gallery_image, .ays_masonry_grid-item img, 
+                    .ays_mosaic_column_item_". $id ." img, 
+                    .ays_masonry_item_". $id ." img{
+                        filter: ". $gpg_filter_image_mobile .";
+                    }
                     .ays_grid_column_".$id.":nth-child(".$columns_mobile."n) {
                         margin-right: 0px !important;
                     }

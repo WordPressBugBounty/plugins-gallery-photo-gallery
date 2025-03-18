@@ -53,6 +53,8 @@ $g_options = array(
     "enable_light_box"      => "off",
     "ays_filter_cat"        => "off",
     "filter_thubnail_opt"   => "none",
+    "enable_filter_thubnail_opt_mobile" => "none",
+    "filter_thubnail_opt_mobile" => "on",
     "ordering_asc_desc"     => "ascending",
     "custom_class"          => "",
     "link_on_whole_img"     => "off",
@@ -235,6 +237,16 @@ $ays_gpg_progress_line_color = isset($gal_lightbox_options['progress_line_color'
 //Enable Gallery Progress Line color Mobile
 $gal_lightbox_options['enable_progress_line_color_mobile'] = isset( $gal_lightbox_options['enable_progress_line_color_mobile'] ) && $gal_lightbox_options['enable_progress_line_color_mobile'] == 'off' ? 'off' : 'on';
 $enable_ays_gpg_progress_line_color_mobile = $gal_lightbox_options['enable_progress_line_color_mobile'] == 'on' ?  true : false;
+
+// Filter for thumbnail
+$filter_thubnail_opt = ( isset( $gal_options['filter_thubnail_opt'] ) && $gal_options['filter_thubnail_opt'] != "" ) ? esc_attr( $gal_options['filter_thubnail_opt'] ) : "none";
+
+// Enable Filter for thumbnail Mobile
+$gal_options['enable_filter_thubnail_opt_mobile'] = isset($gal_options['enable_filter_thubnail_opt_mobile']) && $gal_options['enable_filter_thubnail_opt_mobile'] == 'off' ? 'off' : 'on';
+$enable_filter_thubnail_opt_mobile = $gal_options['enable_filter_thubnail_opt_mobile'] == 'on' ?  true : false;
+
+// Filter for thumbnail Mobile
+$filter_thubnail_opt_mobile = isset( $gal_options['filter_thubnail_opt_mobile'] ) && $gal_options['filter_thubnail_opt_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['filter_thubnail_opt_mobile'] ) ) : $filter_thubnail_opt;
 
 //Gallery Progress Line color Mobile
 $ays_gpg_progress_line_color_mobile = isset( $gal_lightbox_options['progress_line_color_mobile'] ) && $gal_lightbox_options['progress_line_color_mobile'] != '' ? esc_attr( $gal_lightbox_options['progress_line_color_mobile'] ) : $ays_gpg_progress_line_color;
@@ -1945,18 +1957,42 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <select id="ays_gpg_filter_thubnail" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt">
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "none") ? "selected" : ""; ?> value="none"><?php echo __("Default none", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "blur") ? "selected" : ""; ?> value="blur"><?php echo __("Blur", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "brightness") ? "selected" : ""; ?> value="brightness"><?php echo __("Brightness", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "contrast") ? "selected" : ""; ?> value="contrast"><?php echo __("Contrast", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "grayscale") ? "selected" : ""; ?> value="grayscale"><?php echo __("Grayscale", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "hue_rotate") ? "selected" : ""; ?> value="hue_rotate"><?php echo __("Hue Rotate", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "invert") ? "selected" : ""; ?> value="invert"><?php echo __("Invert", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "saturate") ? "selected" : ""; ?> value="saturate"><?php echo __("Saturate", 'gallery-photo-gallery');?></option>
-                                <option <?php echo (isset($gal_options['filter_thubnail_opt']) && $gal_options['filter_thubnail_opt'] == "sepia") ? "selected" : ""; ?> value="sepia"><?php echo __("Sepia", 'gallery-photo-gallery');?></option>
-                            </select>
-                        </div>
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_filter_thubnail_opt_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'gallery-photo-gallery') ?></div>
+                                    <select id="ays_gpg_filter_thubnail" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt">
+                                        <option <?php echo $filter_thubnail_opt == "none" ? "selected" : ""; ?> value="none"><?php echo __("Default none", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "blur" ? "selected" : ""; ?> value="blur"><?php echo __("Blur", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo __("Brightness", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo __("Contrast", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo __("Grayscale", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo __("Hue Rotate", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "invert" ? "selected" : ""; ?> value="invert"><?php echo __("Invert", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo __("Saturate", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo __("Sepia", 'gallery-photo-gallery');?></option>
+                                    </select>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_filter_thubnail_opt_mobile_container" style=" <?php echo ( $enable_filter_thubnail_opt_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <select id="ays_gpg_filter_thubnail_mobile" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt_mobile">
+                                        <option <?php echo $filter_thubnail_opt_mobile == "none" ? "selected" : ""; ?> value="none"><?php echo __("Default none", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "blur" ? "selected" : ""; ?> value="blur"><?php echo __("Blur", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo __("Brightness", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo __("Contrast", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo __("Grayscale", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo __("Hue Rotate", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "invert" ? "selected" : ""; ?> value="invert"><?php echo __("Invert", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo __("Saturate", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo $filter_thubnail_opt_mobile == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo __("Sepia", 'gallery-photo-gallery');?></option>
+                                    </select>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_filter_thubnail_opt_mobile" name="enable_ays_gpg_filter_thubnail_opt_mobile" <?php echo $enable_filter_thubnail_opt_mobile ? 'checked' : '' ?>>
+                                    <label for="enable_ays_gpg_filter_thubnail_opt_mobile" ><?php echo __('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">

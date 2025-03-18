@@ -194,7 +194,16 @@ class Galleries_List_Table extends WP_List_Table{
                 $enable_light_box       = isset($data['av_light_box']) && $data['av_light_box'] == "on" ? "on" :"off";
                 $enable_search_img      = isset($data['gpg_search_img']) && $data['gpg_search_img'] == "on" ? "on" :"off";
                 $ays_filter_cat         = isset($data['ays_filter_cat']) && $data['ays_filter_cat'] == "on" ? "on" :"off";
-                $ays_gpg_filter_thubnail_opt = isset($data['ays_gpg_filter_thubnail_opt']) ? $data['ays_gpg_filter_thubnail_opt'] : "";
+
+                // Filter for thumbnail
+                $ays_gpg_filter_thubnail_opt = isset( $data['ays_gpg_filter_thubnail_opt'] ) ? $data['ays_gpg_filter_thubnail_opt'] : "";
+
+                // Enable Filter for thumbnail Mobile
+                $enable_ays_gpg_filter_thubnail_opt_mobile = isset( $data['enable_ays_gpg_filter_thubnail_opt_mobile'] ) && $data['enable_ays_gpg_filter_thubnail_opt_mobile'] == 'on' ? 'on' : 'off';
+
+                // Filter for thumbnail Mobile
+                $ays_gpg_filter_thubnail_opt_mobile = isset( $data['ays_gpg_filter_thubnail_opt_mobile'] ) && $data['ays_gpg_filter_thubnail_opt_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_filter_thubnail_opt_mobile'] ) : "";
+
                 $ays_gpg_filter_lightbox_opt = isset($data['ays_gpg_filter_lightbox_opt']) ? $data['ays_gpg_filter_lightbox_opt'] : "";
                 $custom_class = (isset($data['ays_custom_class']) && $data['ays_custom_class'] != "") ? esc_attr( sanitize_text_field( $data['ays_custom_class'] ) ) : '';
 
@@ -310,6 +319,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "enable_search_img"                     => $enable_search_img,
                     "ays_filter_cat"                        => $ays_filter_cat,
                     "filter_thubnail_opt"                   => $ays_gpg_filter_thubnail_opt,
+                    "enable_filter_thubnail_opt_mobile"     => $enable_ays_gpg_filter_thubnail_opt_mobile,
+                    "filter_thubnail_opt_mobile"            => $ays_gpg_filter_thubnail_opt_mobile,
                     "ordering_asc_desc"                     => $ays_gpg_ordering_asc_desc,
                     "custom_class"                          => $custom_class,
                     "resp_width"                            => $gpg_resp_width,
