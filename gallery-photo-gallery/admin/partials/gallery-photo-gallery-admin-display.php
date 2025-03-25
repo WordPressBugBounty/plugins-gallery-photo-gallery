@@ -23,8 +23,8 @@
 
     $gallery_max_id = Gallery_Photo_Gallery_Admin::get_gallery_max_id('gallery');
 
-    $plus_icon_svg = "<span class=''><img src='". AYS_GPG_ADMIN_URL ."/images/icons/plus=icon.svg'></span>";
-    $youtube_icon_svg = "<span class=''><img src='". AYS_GPG_ADMIN_URL ."/images/icons/youtube-video-icon.svg'></span>";
+    $plus_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/images/icons/plus-icon.svg'></span>";
+    $youtube_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/images/icons/youtube-video-icon.svg'></span>";
 ?>
 
 <!-- This file should primarily consist of HTML with a little bit of PHP. -->

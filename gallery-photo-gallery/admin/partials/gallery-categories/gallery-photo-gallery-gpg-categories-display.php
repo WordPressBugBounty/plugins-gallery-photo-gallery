@@ -1,5 +1,5 @@
 <?php
-    $plus_icon_svg = "<span class=''><img src='". AYS_GPG_ADMIN_URL ."/images/icons/plus=icon.svg'></span>";
+    $plus_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/images/icons/plus-icon.svg'></span>";
 ?>
 <div class="wrap ays-gpg-list-table">
     <div class="ays-gpg-heading-box">
