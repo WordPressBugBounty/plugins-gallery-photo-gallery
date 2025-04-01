@@ -3382,16 +3382,8 @@ a.ays-gallery-image-list-table-link-column {
     word-break: break-word;
 }
 
-.ays-gallery-subtitle-main-box .ays-subtitle .ays-subtitle-inner-galleries-page{
-    padding: 10px 20px;
-    border: 1px solid #959595;
-    text-align: center;
-    border-radius: 35px;
-    cursor: pointer;
-}
-
-.ays-gallery-subtitle-main-box .ays-subtitle .ays-subtitle-inner-galleries-page:hover{
-    background-color: lightgray;
+.ays-gallery-open-gpgs-list > img {
+    margin-left: 20px;
 }
 
 .ays-gallery-gpgs-data{
@@ -3446,6 +3438,7 @@ a.ays-gallery-image-list-table-link-column {
 }
 
 .ays-gallery-open-gpgs-list{
+    display: flex;
     cursor: pointer;
 }
 

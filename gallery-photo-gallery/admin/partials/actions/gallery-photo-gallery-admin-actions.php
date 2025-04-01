@@ -403,17 +403,17 @@ $gpg_accordion_svg_html = '
             <p class="ays-subtitle">                
                 <?php if(isset($id) && count($get_all_galleries) > 1):?>
                     <span class="ays-subtitle-inner-galleries-page ays-gallery-open-gpgs-list">
-                        <i class="ays_fa ays_fa_arrow_down" style="font-size: 15px;"></i>   
                         <strong class="ays_gallery_title_in_top"><?php echo esc_attr( stripslashes( $gallery["title"] ) ); ?></strong>
+                        <img src="<?php echo esc_url( AYS_GPG_ADMIN_URL ).'/images/icons/list-icon.svg'; ?>">
                     </span>
-                <?php endif; ?>               
+                <?php endif; ?>
             </p>
             <?php if(isset($id) && count($get_all_galleries) > 1):?>
                 <div class="ays-gallery-gpgs-data">
                     <?php $var_counter = 0; foreach($get_all_galleries as $var => $var_name): if( intval($var_name['id']) == $id ){continue;} $var_counter++; ?>
                         <?php ?>
                         <label class="ays-gallery-message-vars-each-data-label">
-                            <input type="radio" class="ays-gallery-gpgs-each-data-checker" hidden id="ays_gallery_message_var_count_<?php echo $var_counter?>" name="ays_gallery_message_var_count">
+                            <input type="radio" class="ays-gallery-gpgs-each-data-checker" hidden id="ays_gallery_message_var_count_<?php echo $var_counter; ?>" name="ays_gallery_message_var_count">
                             <div class="ays-gallery-gpgs-each-data">
                                 <input type="hidden" class="ays-gallery-gpgs-each-var" value="<?php echo $var; ?>">
                                 <a href="?page=gallery-photo-gallery&action=edit&gallery=<?php echo $var_name['id']?>" target="_blank" class="ays-gallery-go-to-gpgs"><span><?php echo stripslashes(esc_attr($var_name['title'])); ?></span></a>
@@ -1486,6 +1486,17 @@ $gpg_accordion_svg_html = '
                                             <div class="ays-gpg-new-upgrade-button"><?php echo __("Upgrade", 'gallery-photo-gallery'); ?></div>
                                         </div>
                                     </a>
+                                    <div class="ays-gpg-center-big-main-button-box ays-gpg-new-big-button-flex">
+                                        <div class="ays-gpg-center-big-upgrade-button-box">
+                                            <a href="https://ays-pro.com/wordpress/photo-gallery/" target="_blank" class="ays-gpg-new-upgrade-button-link">
+                                                <div class="ays-gpg-center-new-big-upgrade-button">
+                                                    <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_locked_24x24.svg'?>" class="ays-gpg-new-button-img-hide">
+                                                    <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_unlocked_24x24.svg'?>" class="ays-gpg-new-upgrade-button-hover">  
+                                                    <?php echo __("Upgrade", 'gallery-photo-gallery'); ?>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>                
                             <div class="form-group row" style="padding-top:15px;">
@@ -2176,13 +2187,13 @@ $gpg_accordion_svg_html = '
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
-                            <label>
+                            <label for="ays-gpg-hover-icon-size">
                                 <?php echo __("Images hover icon size", 'gallery-photo-gallery');?>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
                             <div>
-                                <input name="ays-gpg-hover-icon-size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_hover_icon_size; ?>">
+                                <input name="ays-gpg-hover-icon-size" id="ays-gpg-hover-icon-size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_hover_icon_size; ?>">
                             </div>
                             <div class="ays_gpg_dropdown_max_width">
                                 <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -2192,7 +2203,7 @@ $gpg_accordion_svg_html = '
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
-                            <label>
+                            <label for="ays-gpg-images-distance">
                                 <?php echo __("Images distance", 'gallery-photo-gallery');?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo __("The distance among images with pixels", 'gallery-photo-gallery');?>">
                                    <i class="fas fa-info-circle"></i>
@@ -2201,7 +2212,7 @@ $gpg_accordion_svg_html = '
                         </div>
                         <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
                             <div>
-                                <input name="ays-gpg-images-distance" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $images_distance; ?>">
+                                <input name="ays-gpg-images-distance" id="ays-gpg-images-distance" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $images_distance; ?>">
                             </div>
                             <div class="ays_gpg_dropdown_max_width">
                                 <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -2212,7 +2223,10 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_gpg_images_border">
-                                <?php echo __("Images border", 'gallery-photo-gallery');?>
+                                <?php echo __("Images border", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo __("The distance among images with pixels", 'gallery-photo-gallery'); ?>">
+                                   <i class="fas fa-info-circle"></i>
+                                </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
@@ -2248,7 +2262,7 @@ $gpg_accordion_svg_html = '
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
-                            <label>
+                            <label for="ays-gpg-images-border-radius">
                                 <?php echo __("Images border radius", 'gallery-photo-gallery');?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo __("The degree of borders curvature of images", 'gallery-photo-gallery');?>">
                                    <i class="fas fa-info-circle"></i>
@@ -2257,7 +2271,7 @@ $gpg_accordion_svg_html = '
                         </div>                
                         <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
                             <div>
-                                <input name="ays-gpg-images-border-radius" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_border_radius ?>">
+                                <input name="ays-gpg-images-border-radius" id="ays-gpg-images-border-radius" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_border_radius ?>">
                             </div>
                             <div class="ays_gpg_dropdown_max_width">
                                 <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -2267,13 +2281,13 @@ $gpg_accordion_svg_html = '
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
-                            <label>
+                            <label for="ays_gpg_thumbnail_title_size">
                                 <?php echo __("Thumbnail title icon size", 'gallery-photo-gallery');?>
                             </label>
                         </div>               
                         <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
                             <div>
-                                <input name="ays_gpg_thumbnail_title_size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_thumbnail_title_size; ?>">
+                                <input name="ays_gpg_thumbnail_title_size" id="ays_gpg_thumbnail_title_size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_thumbnail_title_size; ?>">
                             </div>
                             <div class="ays_gpg_dropdown_max_width">
                                 <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -2470,13 +2484,13 @@ $gpg_accordion_svg_html = '
                         <div class="col-sm-8 ays_hidden">
                             <div class="form-group row">
                                 <div class="col-sm-3">
-                                    <label>
+                                    <label for="ays_gpg_lightbox_pause">
                                         <?php echo __("Slide duration", 'gallery-photo-gallery');?>
                                     </label>
                                 </div>                        
                                 <div class="col-sm-9 ays_gpg_display_flex_width">
                                     <div>
-                                       <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
+                                       <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" id="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
                                         <span class="ays_gpg_image_hover_icon_text"><?php echo __("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
                                     </div>
                                     <div class="ays_gpg_dropdown_max_width">

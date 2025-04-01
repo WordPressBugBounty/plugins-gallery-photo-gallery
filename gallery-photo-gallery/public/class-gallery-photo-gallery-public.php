@@ -1408,11 +1408,11 @@ class Gallery_Photo_Gallery_Public {
         $gallery_img_position = str_replace("-"," ", $gallery_img_position);
 
         // Enable Image Position Mobile
-        $enable_gallery_options_mobile = ( isset($gallery_options["enable_gallery_img_position_mobile"] ) && $gallery_options["enable_gallery_img_position_mobile"] == 'on' ) ? true : false;
+        $enable_gallery_img_position_mobile = ( isset($gallery_options["enable_gallery_img_position_mobile"] ) && $gallery_options["enable_gallery_img_position_mobile"] == 'on' ) ? true : false;
 
         // Image Position Mobile
-        if ( $enable_gallery_options_mobile ) {
-            $gallery_img_position_mobile = ( isset( $gallery_options["gallery_options_mobile"]) && $gallery_options["gallery_options_mobile"] !== '' ) ? str_ireplace( '-', ' ', esc_attr( $gallery_options["gallery_options_mobile"] ) ) : 'center center';
+        if ( $enable_gallery_img_position_mobile ) {
+            $gallery_img_position_mobile = ( isset( $gallery_options["gallery_img_position_mobile"]) && $gallery_options["gallery_img_position_mobile"] !== '' ) ? str_ireplace( '-', ' ', esc_attr( $gallery_options["gallery_img_position_mobile"] ) ) : $gallery_img_position;
         } else {
             $gallery_img_position_mobile = $gallery_img_position;
         }
