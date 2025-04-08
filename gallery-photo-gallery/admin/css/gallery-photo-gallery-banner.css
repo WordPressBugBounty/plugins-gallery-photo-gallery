@@ -1,5 +1,5 @@
 /* New Banner | Start */
-
+/*
 div#ays-gpg-new-mega-bundle-dicount-month-main {
     border: 0;
     background: #FFF;
@@ -447,12 +447,12 @@ div#ays-gpg-new-mega-bundle-dicount-month-main button.notice-dismiss:before{
         width: 35%;
     }
 }
-
+*/
 /* New banner | End */
 
-/* 2024 | Christmas top banner | Start */
-/*
-div#ays-gpg-christmas-top-bundle-dicount-month-main {
+/* New Mega Bundle 2025 Banner SCCP | Start */
+
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main {
     border: 0;
     background: #FFF;
     border-radius: 20px;
@@ -460,18 +460,19 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main {
     position: relative;
     z-index: 1;
     min-height: 80px;
+    background-color: #6998DD;
 }
-div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info button {
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main.ays_gpg_dicount_info button {
     display: flex;
     align-items: center;
 }
 
-div#ays-gpg-christmas-top-bundle-dicount-month-main div#ays-gpg-dicount-month a.ays-gpg-sale-banner-link:focus {
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main div#ays-gpg-dicount-month a.ays-gpg-sale-banner-link:focus {
     outline: none;
     box-shadow: 0;
 }
 
-div#ays-gpg-christmas-top-bundle-dicount-month-main .btn-link {
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main .btn-link {
     font-weight: 400;
     color: #007bff;
     background-color: transparent;
@@ -491,55 +492,46 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main .btn-link {
     border-radius: .25rem
 }
 
-div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
-    background-image: url("../images/ays-gpg-popup-banner-christmas-bg-image.svg"); 
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #F6ECE3;
-}
-
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays_gpg_dicount_month {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays_gpg_dicount_month {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #A42F29; 
+     color: #fff; 
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays_gpg_dicount_month img {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays_gpg_dicount_month img {
     width: 80px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-sale-banner-link {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-sale-banner-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box {
     font-size:14px;
     padding:12px;
     text-align: center;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
     text-align: left;
     width: 30%;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start; 
-    text-align: center; 
+    justify-content: space-between;
+    align-items: center;  
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
     width: 30%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-button-box {
     width: 20%;
     display: flex;
     justify-content: center;
@@ -547,88 +539,60 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
     flex-direction: column;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-christmas-top-bundle-title {
-    display: inline-block;
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-new-mega-bundle-2025-title {
     color: #FDFDFD;
+    font-size: 16.8px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-christmas-top-bundle-title .ays-gpg-christmas-top-bundle-title-link {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.13em;
-    color: #A42F29;
-}
-
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-christmas-top-bundle-desc {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-new-mega-bundle-2025-title-icon-row {
     display: inline-block;
+}
+
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box .ays-gpg-new-mega-bundle-2025-desc {
+    display: inline-block;
+    color: #FFF;
+    font-size: 16px;
     font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
+    font-weight: 400;
     line-height: normal;
-    text-align: center;
-    letter-spacing: 0.13em;
-    color: #A42F29;
-    text-transform: uppercase;
+    margin-top: 10px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-coupon-row {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    font-size: 22px;
-    background: #FCFAF8;
-    border: 2px dotted #A42F29;
-    border-radius: 25px;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-text-row {
-    font-weight: 500;
-}
-
-
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box strong {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box strong {
     font-size: 17px;
     font-weight: bold;
     letter-spacing: 0.80px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-color {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-color {
     color: #971821;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-text-decoration {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-text-decoration {
     text-decoration: underline;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
     width: 30%;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-button,
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box .ays-button,
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
     align-items: center;
     font-weight: 500;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
     background: #971821;
     border-color: #fff;
     display: flex;
@@ -639,28 +603,29 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
     border-radius: 5px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button:hover {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button:hover {
     background: #7d161d;
     border-color: #971821;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content{
+#ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-gpg-dismiss-buttons-content{
     display: flex;
     justify-content: center;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button{
+#ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button{
     margin: 0 !important;
     font-size: 13px;
     font-size: 13px;
-    color: #A42F29;
+    color: #ffffff;
+
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
     width: 19%;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-buy-now-opacity-button {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-buy-now-opacity-button {
     padding: 40px 15px;
     display: flex;
     justify-content: center;
@@ -671,7 +636,6 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
 #ays-gpg-countdown-main-container .ays-gpg-countdown-container {
     margin: 0 auto;
     text-align: center;
-    font-weight: 500;
 }
 
 #ays-gpg-countdown-main-container #ays-gpg-countdown-headline {
@@ -679,6 +643,7 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
     letter-spacing: .125rem;
     text-transform: uppercase;
     font-weight: bolder;
+
     font-size: 18px;
     font-weight: 400;
     margin: 0;
@@ -695,20 +660,19 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
     font-size: 14px;
     list-style-type: none;
     padding: 14px;
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 #ays-gpg-countdown-main-container li span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
-    min-height: 50px;
-    min-width: 50px;
-    background: #FFFFFF;
-    border: 1px solid #A42F29;
-    border-radius: 4px;
-    box-shadow: 0px 1px 1px #A42F29;
+    font-size: 40px;
+    min-height: 62px;
+    min-width: 62px;
+    border-radius: 4.273px;
+    background: transparent;
+    border: unset;
 }
 
 #ays-gpg-countdown-main-container .emoji {
@@ -721,76 +685,94 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info {
     padding: 0 .5rem;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box li {
     position: relative;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span:after {
-    content: ":";
-    color: #A42F29;
-    position: absolute;
-    top: 10px;
-    right: -5px;
-    font-size: 40px;
-
-}
-
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span#ays-gpg-countdown-seconds:after {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box li span#ays-gpg-countdown-seconds:after {
     content: unset;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main  #ays-button-top-buy-now {
+#ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now {
     display: flex;
     align-items: center;
+    border-radius: 6.409px;
+    background: #F56123;
     padding: 12px 32px;
     color: #FFF;
-    font-size: 15px;
+    font-size:15px;
     font-style: normal;
     line-height: normal;
     margin: 0 !important;
-    background: #A42F29;
-    border: 1px solid #A42F29;
-    box-shadow: 0px 0px 4px #A42F29;
-    border-radius: 4px;
-    transition: all 0.3s;
+    border-color: #F56123;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main  #ays-button-top-buy-now:hover {
-    background-color: #FF7F66;
-    border: 1px solid #fff;
+#ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now:hover {
+    background: #FF8653;
+    border-color: #FF8653;
 }
 
-div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before{
-    color: #A42F29;
+#ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now:active {
+    background: #BD4B1C;
+    border-color: #BD4B1C;
+}
+
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main button.notice-dismiss:before {
+    color: #fff;
     content: "\f00d";
     font-family: fontawesome;
     font-size: 22px;
+    transition: all 0.2s ease-out;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-guaranteeicon {
+div#ays-gpg-new-mega-bundle-2025-dicount-month-main button.notice-dismiss:hover:before {
+    color: #EDC9B8;
+}
+
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-new-mega-bundle-2025-guaranteeicon {
     width: 30px;
     margin-right: 5px;
 }
 
-#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-one-time-text {
-    color: #A42F29;
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-one-time-text {
+    color: #FFF;
     font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-top-bundle-coupon-text-box span {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    width: 130px;
+    height: 27px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-top-bundle-coupon-text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-top-bundle-coupon-text-box strong {
+    font-size: 16px;
+}
 
 @media all and (max-width: 768px) {
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-coupon-row {
-        max-width: 50%;
-        margin: 0 auto;
-    }
-
-    div#ays-gpg-christmas-top-bundle-dicount-month-main {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main {
         padding-right: 0;
     }
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays_gpg_dicount_month{
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays_gpg_dicount_month{
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -800,7 +782,7 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
         padding: 10px 0;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box {
         width: 100% !important;
         text-align: center;
     }
@@ -824,64 +806,65 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
         padding: 10px;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-mobile-image-display-none {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-new-mega-bundle-2025-mobile-image-display-none {
         display: none !important;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-christmas-top-bundle-mobile-image-display-block {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-new-mega-bundle-2025-mobile-image-display-block {
         display: block !important;
         margin-top: 5px;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
         width: 100% !important;
         text-align: center;
         flex-direction: column;
         margin-top: 20px;
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box li span:after {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box li span:after {
         top: unset;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    #ays-gpg-christmas-top-bundle-dicount-month-main .ays-button{
+    #ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-button{
         margin: 0 auto !important;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info.notice {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main.ays_gpg_dicount_info.notice {
         background-position: bottom right;
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 10px;
+        border-radius: 32px;
     }
 
-    #ays-gpg-christmas-top-bundle-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button {
+    #ays-gpg-new-mega-bundle-2025-dicount-month-main #ays-gpg-dismiss-buttons-content .ays-button {
         padding-left: unset !important;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-buy-now-button-box {
         justify-content: center;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box .ays-buy-now-button {
         font-size: 14px;
         padding: 5px 10px;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-buy-now-opacity-button {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-buy-now-opacity-button {
         display: none;
     }
 
-    #ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dismiss-buttons-container-for-form{
+    #ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dismiss-buttons-container-for-form{
         position: static !important;
     }
 
@@ -896,13 +879,13 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
 }
 
 @media screen and (max-width: 1305px) and (min-width: 768px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main.ays_gpg_dicount_info.notice {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main.ays_gpg_dicount_info.notice {
         background-position: bottom right;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box strong {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box strong {
         font-size: 15px;
     }
 
@@ -910,37 +893,37 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
         font-size: 11px;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-opacity-box {
         display: none;
     }
 }
 
 @media screen and (max-width: 1680px) and (min-width: 1551px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
         width: 29%;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
         width: 30%;
     }
 }
 
 @media screen and (max-width: 1550px) and (min-width: 1400px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
         width: 31%;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
         width: 35%;
     }
 }
 
 @media screen and (max-width: 1400px) and (min-width: 1200px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
         width: 35%;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
         width: 40%;
     }
 
@@ -952,11 +935,11 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
 }
 
 @media screen and (max-width: 1200px) and (min-width: 769px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-countdown-box {
         width: 45%;
     }
 
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
+    div#ays-gpg-new-mega-bundle-2025-dicount-month-main .ays-gpg-dicount-wrap-box.ays-gpg-dicount-wrap-text-box {
         width: 35%;
     }
 
@@ -966,12 +949,5 @@ div#ays-gpg-christmas-top-bundle-dicount-month-main button.notice-dismiss:before
         min-width: 50px;
     }
 }
+/* New Mega Bundle 2025 Banner Sccp | End */
 
-@media screen and (max-width: 1200px) and (max-width: 1200px){
-    div#ays-gpg-christmas-top-bundle-dicount-month-main .ays_gpg_dicount_month {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-}
-*/
-/* 2024 | Christmas top banner | End */
