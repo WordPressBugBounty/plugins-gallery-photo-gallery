@@ -3,8 +3,8 @@ Contributors: ays-pro
 Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
-Tested up to: 6.7.2
-Stable tag: 6.1.2
+Tested up to: 6.8
+Stable tag: 6.1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -226,6 +226,12 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.1.3 =
+* Added: Auto-generate custom post for immediate gallery preview on front-end
+* Added: Preview link on the Galleries List Table
+* Added: Preview Gallery button on the Preview Popup of the created gallery
+* Tested: Compatible up to 6.8
 
 = 6.1.2 =
 * Improved: Some styles on the admin dashboard

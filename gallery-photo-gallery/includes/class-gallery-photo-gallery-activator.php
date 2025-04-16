@@ -1,6 +1,6 @@
 <?php
 global $ays_gallery_db_version;
-$ays_gallery_db_version = '3.4.0';
+$ays_gallery_db_version = '3.4.1';
 /**
  * Fired during plugin activation
  *
@@ -60,6 +60,7 @@ class Gallery_Photo_Gallery_Activator {
                   `published` TINYINT(1) UNSIGNED NOT NULL DEFAULT 1,
                   `options` TEXT NOT NULL,
                   `lightbox_options` TEXT NOT NULL,
+                  `custom_post_id` INT(16) UNSIGNED DEFAULT NULL,
                   `custom_css` TEXT NOT NULL,
                   `images_dates` TEXT NOT NULL,
                   PRIMARY KEY (`id`)

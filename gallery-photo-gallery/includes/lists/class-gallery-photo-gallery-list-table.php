@@ -381,6 +381,15 @@ class Galleries_List_Table extends WP_List_Table{
                     );
                     $inserted_id = $wpdb->insert_id;
                     $message = "created";
+
+                    $post_type_args = array(
+                        'gallery_id'    => $inserted_id,
+                        'author_id'     => !empty($gpg_create_author) ? $gpg_create_author : get_current_user_id(),
+                        'gallery_title'    => $title,
+                    );
+                
+                    $custom_post_id = Gallery_Custom_Post_Type::ays_gallery_add_custom_post($post_type_args);
+
                 }else{
                     $gallery_result = $wpdb->update(
                         $gallery_table,
@@ -412,6 +421,19 @@ class Galleries_List_Table extends WP_List_Table{
 
                 if($message == 'created'){
                     setcookie('ays_gallery_created_new', $inserted_id, time() + 3600, '/');
+
+                    if(!empty($custom_post_id)){
+                        $custom_post_url = array(
+                            'post_type' => 'ays-gallery',
+                            'p' => $custom_post_id,
+                            'preview' => 'true',
+                        );
+                        $custom_post_url_ready = http_build_query($custom_post_url);
+                        $ready_url = get_home_url();
+                        $ready_url .= '/?' . $custom_post_url_ready;
+                        setcookie('ays_gallery_created_new_'.$inserted_id.'_post_id', $ready_url, time() + 3600, '/');
+                    }
+
                 }
 
                 $ays_gpg_tab = isset($data['ays_gpg_settings_tab']) ? $data['ays_gpg_settings_tab'] : 'tab1';
@@ -424,7 +446,7 @@ class Galleries_List_Table extends WP_List_Table{
                         if($id == null){
                            $url = esc_url_raw( add_query_arg( array(
                                "action"                => "edit",
-                               "gallery"               => $wpdb->insert_id,
+                               "gallery"               => $inserted_id,
                                "ays_gpg_settings_tab"  => $ays_gpg_tab,
                                "status"                => $message
                            ) ) );
@@ -571,8 +593,20 @@ class Galleries_List_Table extends WP_List_Table{
                 '%s'
             )
         );
+
+        $gallery_id = $wpdb->insert_id;
+
         if( $result >= 0 ){
             $message = "duplicated";
+
+            $post_type_args = array(
+                'gallery_id'    => $gallery_id,
+                'author_id'     => !empty($user->ID) ? $user->ID : $user_id,
+                'gallery_title' => "Copy - ".sanitize_text_field($gallery['title']),
+            );
+            
+            $custom_post_id = Gallery_Custom_Post_Type::ays_gallery_add_custom_post($post_type_args);
+
             $url = esc_url_raw( remove_query_arg(array('action', 'question')  ) ) . '&status=' . $message;
             wp_redirect( $url );
         }
@@ -684,6 +718,8 @@ class Galleries_List_Table extends WP_List_Table{
         $duplicate_nonce = wp_create_nonce( $this->plugin_name . "-duplicate-gallery" );
         $gallery_title = esc_attr(stripcslashes($item['title']));
 
+        $custom_post_id = isset($item['custom_post_id']) && $item['custom_post_id'] != 0 && $item['custom_post_id'] != '' ? esc_attr(intval($item['custom_post_id'])) : 0;
+
         $q = esc_attr($gallery_title);
         $gallery_title_length = intval( $this->title_length );
 
@@ -695,7 +731,17 @@ class Galleries_List_Table extends WP_List_Table{
             "edit" => sprintf( "<a href='?page=%s&action=%s&gallery=%d'>". __('Edit', 'gallery-photo-gallery') ."</a>", esc_attr( $_REQUEST["page"] ), "edit", absint( $item["id"] ) ),
             'duplicate' => sprintf( '<a href="?page=%s&action=%s&gallery=%d&_wpnonce=%s">'. __('Duplicate', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'duplicate', absint( $item['id'] ), $duplicate_nonce ),
             "delete" => sprintf( "<a href='?page=%s&action=%s&gallery=%s&_wpnonce=%s'>". __('Delete', 'gallery-photo-gallery') ."</a>", esc_attr( $_REQUEST["page"] ), "delete", absint( $item["id"] ), $delete_nonce )
-        );
+        );        
+
+        $actions['edit'] = sprintf( '<a href="?page=%s&action=%s&gallery=%d">'. esc_html__('Edit', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ) );
+
+        $actions['duplicate'] = sprintf( '<a href="?page=%s&action=%s&gallery=%d&_wpnonce=%s">'. __('Duplicate', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'duplicate', absint( $item['id'] ), $duplicate_nonce );        
+
+        if($custom_post_id > 0){
+            $actions['custom_posts'] = sprintf( '<a href="%s" target="_blank">'. esc_html__('Preview', "gallery-photo-gallery") .'</a>', esc_url( add_query_arg( 'preview', 'true', get_permalink($custom_post_id) ) ));
+        }
+
+        $actions['delete'] = sprintf( "<a href='?page=%s&action=%s&gallery=%s&_wpnonce=%s'>". __('Delete', 'gallery-photo-gallery') ."</a>", esc_attr( $_REQUEST["page"] ), "delete", absint( $item["id"] ), $delete_nonce );
 
         return $title . $this->row_actions( $actions );
     }

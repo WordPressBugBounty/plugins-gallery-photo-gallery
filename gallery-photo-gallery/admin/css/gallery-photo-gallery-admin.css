@@ -5322,6 +5322,87 @@ p.ays-subtitle.ays-gpg-subtitle {
 
 /* Our products (new design) END */
 
+/* Preview Popup new design | Start */
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup {
+    padding: 27px 10px;
+    border-radius: 10px;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-title {
+    color: #000;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup #swal2-content {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .ays-gpg-preview-popup-cancel-button.swal2-styled.swal2-cancel {
+    background-color: #fff;
+    color: #007DCB;
+    padding: 0;
+    border: 1px solid #007DCB;
+    border-radius: 6px;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .ays-gpg-preview-popup-cancel-button.swal2-styled.swal2-cancel a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: .625em .75em;
+    text-decoration: none;
+    color: #007DCB;
+    min-width: 152px;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .ays-gallery-swal2-created-row {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .ays-gallery-swal2-content-text-row {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #6F6F6F;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup #ays-gpg-create-new {
+    border: 1px solid #000000;
+    border-radius: 6px;
+    color: #000000;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-styled.swal2-confirm {
+    min-width: 152px;
+    background-color: #007DCB;
+    border-radius: 6px;
+    border: 1px solid transparent;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-styled.swal2-confirm:hover {
+    background-color: #29A6F4;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-close:hover {
+    color: #979797;
+}
+
+body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-actions {
+    flex-direction: row-reverse;
+}
+
+/* Preview Popup new design | End */
+
+
 @media only screen and (max-width: 768px) {
     div.ays-gpg-sm-guarantee-container-sg {
         width: 100%;
