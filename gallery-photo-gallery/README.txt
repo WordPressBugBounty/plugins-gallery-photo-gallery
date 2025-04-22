@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 6.8
-Stable tag: 6.1.3
+Stable tag: 6.1.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -128,7 +128,8 @@ Don't forget, in case of any problems or upcoming questions feel free to contact
 **Other plugins from Ays Pro Team**
 
 * [Quiz Maker](https://wordpress.org/plugins/quiz-maker/) for creating advanced quizzes and exams easily and quickly.
-* [Survey Maker](https://wordpress.org/plugins/survey-maker/) for collecting data and analyze it.  
+* [Survey Maker](https://wordpress.org/plugins/survey-maker/) for collecting data and analyze it.
+* [Fox LMS](https://wordpress.org/plugins/fox-lms/) to easily build and sell online courses with quizzes, certificates all in one place.
 * [Poll Maker](https://wordpress.org/plugins/poll-maker/) for creating powerful and interactive polls. 
 * [Popup Box](https://wordpress.org/plugins/ays-popup-box/), an easy way to create eye-catching and engaging popups. 
 * [Secure Copy Content Protection](https://wordpress.org/plugins/secure-copy-content-protection/) to protect web content from being plagiarized.
@@ -226,6 +227,11 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.1.4 =
+* Improved: Some styles on the admin dashboard
+* Fixed: CSS conflict with the HTML5 Video Player plugin
+* Fixed: CSS conflict with the Panorama Viewer plugin
 
 = 6.1.3 =
 * Added: Auto-generate custom post for immediate gallery preview on front-end

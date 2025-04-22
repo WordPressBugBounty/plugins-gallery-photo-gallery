@@ -218,6 +218,32 @@ class Gallery_Photo_Gallery_Admin {
         wp_localize_script( $this->plugin_name.'-wp-color-picker-alpha', 'wpColorPickerL10n', $color_picker_strings );
 	}
 
+    /**
+     * De-register JavaScript files for the admin area.
+     *
+     * @since    1.0.0
+     */
+    public function disable_scripts($hook_suffix) {
+        if (false !== strpos($hook_suffix, $this->plugin_name)) {
+            if (is_plugin_active('ai-engine/ai-engine.php')) {
+                wp_deregister_script('mwai');
+                wp_deregister_script('mwai-vendor');
+                wp_dequeue_script('mwai');
+                wp_dequeue_script('mwai-vendor');
+            }
+
+            if (is_plugin_active('html5-video-player/html5-video-player.php')) {
+                wp_dequeue_style('h5vp-admin');
+                wp_dequeue_style('fs_common');
+            }
+
+            if (is_plugin_active('panorama/panorama.php')) {
+                wp_dequeue_style('bppiv_admin_custom_css');
+                wp_dequeue_style('bppiv-custom-style');
+            }
+        }
+    }
+
     function codemirror_enqueue_scripts($hook) {
         if (false === strpos($hook, $this->plugin_name)){
             return;

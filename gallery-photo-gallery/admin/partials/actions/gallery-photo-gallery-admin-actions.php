@@ -975,7 +975,7 @@ $gpg_accordion_svg_html = '
                                         </a>
                                     </label>
                                 </div>
-                                <div class="col-sm-8">
+                                <div class="col-sm-8 ays_divider_left">
                                     <select id="ays_filter_cat_animation" class="ays-text-input ays-text-input-short" name="ays_filter_cat_animation">
                                         <optgroup label="Fading Entrances">
                                             <option <?php echo 'fadeIn' == $ays_gpg_filter_cat_anim ? 'selected' : ''; ?> value="fadeIn">Fade In</option>
@@ -1181,7 +1181,7 @@ $gpg_accordion_svg_html = '
                                 <div class="col-sm-3">
                                     <label class="ays_gpg_image_hover_icon"><?php echo __( "Show title ", 'gallery-photo-gallery'); ?><input type="checkbox" id="show_title" class="" name="ays_gpg_show_title" <?php echo ($gal_options['show_title'] == "on") ? "checked" : ""; ?>/></label>
                                 </div>
-                                <div class="col-sm-9 show_with_date">
+                                <div class="col-sm-9 show_with_date ays_divider_left">
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label >
@@ -1191,7 +1191,7 @@ $gpg_accordion_svg_html = '
                                                 </a>
                                             </label>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-8 ays_divider_left">
                                             <label class="ays_gpg_image_hover_icon"><?php echo __( "Thumbnail hover ", 'gallery-photo-gallery'); ?><input type="radio" class="ays_gpg_show_title_on" name="ays_gpg_show_title_on" <?php echo ($show_thumb_title_on == "image_hover") ? "checked" : ""; ?> value="image_hover"/></label>
                                             <label class="ays_gpg_image_hover_icon"><?php echo __( "Gallery thumbnail ", 'gallery-photo-gallery'); ?><input type="radio" class="ays_gpg_show_title_on" name="ays_gpg_show_title_on" <?php echo ($show_thumb_title_on == "gallery_image") ? "checked" : ""; ?> value="gallery_image"/></label>
                                         </div>                                
@@ -1205,7 +1205,7 @@ $gpg_accordion_svg_html = '
                                                 </a>
                                             </label>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-8 ays_divider_left">
                                             <label class="ays_gpg_image_hover_icon"><?php echo __("Bottom", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="image_title_position" <?php echo ($thumb_title_position == "bottom") ? "checked" : ""; ?> value="bottom"/></label>
                                             <label class="ays_gpg_image_hover_icon"><?php echo __("Top", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_top" name="image_title_position" <?php echo ($thumb_title_position == "top") ? "checked" : ""; ?> value="top"/></label>
                                         </div>
@@ -1218,7 +1218,7 @@ $gpg_accordion_svg_html = '
                                                     </a>
                                             </label>
                                         </div>    
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-8 ays_divider_left">
                                             <label class="ays_gpg_image_hover_icon"><?php echo __("Yes", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "on") ? "checked" : ""; ?> value="on"/></label>
                                             <label class="ays_gpg_image_hover_icon"><?php echo __("No", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "") ? "checked" : ""; ?> value=""/></label>
                                         </div>
@@ -1738,7 +1738,7 @@ $gpg_accordion_svg_html = '
                                     </optgroup>
                                 </select>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-2 ays_divider_left">
                                 <div class="gpg_animation_demo">
                                     <div class="gpg_animation_demo_text ">
                                         <?php echo __("Hover animation preview", 'gallery-photo-gallery');?>
@@ -1873,7 +1873,7 @@ $gpg_accordion_svg_html = '
                                 <input class="gpg_opacity_demo_val form-control-range" id="formControlRange" name="ays-gpg-image-hover-opacity" type="range" min="0" max="1" step="0.01" value="<?php echo isset($gal_options['hover_opacity']) ? $gal_options['hover_opacity'] : '0.5'; ?>">
                             </div>                    
                         </div>
-                        <div class="col-sm-6">                    
+                        <div class="col-sm-6 ays_divider_left">                    
                             <div class="gpg_opacity_demo"><?php echo __("Hover opacity preview", 'gallery-photo-gallery');?></div>
                         </div>
                     </div>
@@ -1918,7 +1918,7 @@ $gpg_accordion_svg_html = '
                                         </span>
                                     </label>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-10 ays_divider_left">
                                     <input id="ays_gpg_hover_zoom_animation_speed" type="number" class="ays-text-input ays-text-input-short" name="gpg_hover_zoom_animation_speed" value="<?php echo $hover_zoom_animation_speed; ?>" step="0.1">
                                 </div>
                             </div>
@@ -1951,7 +1951,7 @@ $gpg_accordion_svg_html = '
                                         </span>
                                     </label>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-sm-10 ays_divider_left">
                                     <input id="ays_gpg_hover_scale_animation_speed" type="number" class="ays-text-input ays-text-input-short" name="gpg_hover_scale_animation_speed" value="<?php echo $hover_scale_animation_speed; ?>" step="0.1">
                                 </div>
                             </div>
@@ -2481,14 +2481,14 @@ $gpg_accordion_svg_html = '
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lightbox_autoplay" <?php echo ($ays_gpg_lightbox_autoplay == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
-                        <div class="col-sm-8 ays_hidden">
+                        <div class="col-sm-8 ays_hidden ays_divider_left">
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label for="ays_gpg_lightbox_pause">
                                         <?php echo __("Slide duration", 'gallery-photo-gallery');?>
                                     </label>
                                 </div>                        
-                                <div class="col-sm-9 ays_gpg_display_flex_width">
+                                <div class="col-sm-9 ays_gpg_display_flex_width ays_divider_left">
                                     <div>
                                        <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" id="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
                                         <span class="ays_gpg_image_hover_icon_text"><?php echo __("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
@@ -2505,7 +2505,7 @@ $gpg_accordion_svg_html = '
                                         <?php echo __("Hide Progress Line", 'gallery-photo-gallery');?>
                                     </label>
                                 </div>                        
-                                <div class="col-sm-9">                            
+                                <div class="col-sm-9 ays_divider_left">                            
                                     <label class="ays_gpg_image_hover_icon"><?php echo __("Enable ", 'gallery-photo-gallery');?>
                                         <input type="radio" class="" name="ays_gpg_hide_progress_line" <?php echo ($ays_gpg_hide_progress_line == "true") ? "checked" : ""; ?> value="true"/>
                                     </label>
@@ -2524,7 +2524,7 @@ $gpg_accordion_svg_html = '
                                         </a>
                                     </label>
                                 </div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9 ays_divider_left">
                                     <div class="ays_toggle_mobile_parent">
                                         <div>
                                             <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_progress_line_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'gallery-photo-gallery') ?></div>
@@ -2581,12 +2581,12 @@ $gpg_accordion_svg_html = '
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lg_keypress" <?php echo ($ays_gpg_lg_keypress == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
-                        <div class="col-sm-8 ays_hidden">
+                        <div class="col-sm-8 ays_hidden ays_divider_left">
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label><?php echo __("Allow Esc key", 'gallery-photo-gallery');?></label>
                                 </div>
-                                <div class="col-sm-9">
+                                <div class="col-sm-9 ays_divider_left">
                                     <label class="ays_gpg_image_hover_icon"><?php echo __("Enable ", 'gallery-photo-gallery');?>
                                         <input type="radio" class="" name="ays_gpg_lg_esckey" <?php echo ($ays_gpg_lg_esckey == "true") ? "checked" : ""; ?> value="true"/>
                                     </label>

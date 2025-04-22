@@ -377,7 +377,7 @@ class Photo_Gallery_Data {
         if($ishmar == 0 ){
             $content = array();
 
-            $gpg_cta_button_link = esc_url( 'https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gpg' . AYS_GALLERY_VERSION );
+            $gpg_cta_button_link = esc_url( 'https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=photography-bundle-2025-sale-banner-' . AYS_GALLERY_VERSION );
 
             $content[] = '<div id="ays-gpg-new-mega-bundle-2025-dicount-month-main" class="notice notice-success is-dismissible ays_gpg_dicount_info">';
                 $content[] = '<div id="ays-gpg-dicount-month" class="ays_gpg_dicount_month">';
@@ -386,7 +386,7 @@ class Photo_Gallery_Data {
                         $content[] = '<div>';
 
                             $content[] = '<span class="ays-gpg-new-mega-bundle-2025-title">';
-                                $content[] = __( "<span><a href='". $gpg_cta_button_link ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photo Gallery</a></span>", 'gallery-photo-gallery' );
+                                $content[] = __( "<span><a href='". $gpg_cta_button_link ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photography Bundle</a></span>", 'gallery-photo-gallery' );
                             $content[] = '</span>';
 
                             $content[] = '</br>';
@@ -397,7 +397,7 @@ class Photo_Gallery_Data {
                         $content[] = '</div>';
 
                         $content[] = '<div>';
-                                $content[] = '<img class="ays-gpg-new-mega-bundle-guaranteeicon" src="' . AYS_GPG_ADMIN_URL . '/images/ays-gpg-new-bundle-2025-discount.svg" style="width: 80px;">';
+                                $content[] = '<img class="ays-gpg-new-mega-bundle-guaranteeicon" src="' . AYS_GPG_ADMIN_URL . '/images/ays-gpg-mega-bundle-2025-discount.svg" style="width: 80px;">';
                         $content[] = '</div>';
 
                         $content[] = '<div style="position: absolute;right: 10px;bottom: 1px;" class="ays-gpg-dismiss-buttons-container-for-form">';
@@ -442,10 +442,10 @@ class Photo_Gallery_Data {
                             
                     $content[] = '</div>';
 
-                    $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-top-bundle-coupon-text-box">';
+                    /*$content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-top-bundle-coupon-text-box">';
                             $content[] = '<span>freetopro10off</span>';
                             $content[] = '<strong>10% extra coupon</strong>';
-                    $content[] = '</div>';
+                    $content[] = '</div>';*/
 
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
                         $content[] = '<a href="'. $gpg_cta_button_link .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', 'gallery-photo-gallery' ) . '</a>';
