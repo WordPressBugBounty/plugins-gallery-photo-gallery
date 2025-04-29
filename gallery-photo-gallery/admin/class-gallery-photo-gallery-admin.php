@@ -1371,6 +1371,7 @@ class Gallery_Photo_Gallery_Admin {
         $images_url = AYS_GPG_ADMIN_URL . '/images/icons/';
 
         $plugin_slug = array(
+            'fox-lms',
             'quiz-maker',
             'survey-maker',
             'poll-maker',
@@ -1399,7 +1400,16 @@ class Gallery_Photo_Gallery_Admin {
         }
 
         $plugins_array = array(
-           'quiz-maker/quiz-maker.php'        => array(
+            'fox-lms/fox-lms.php'        => array(
+                'icon'        => $images_url . 'icon-fox-lms-128x128.png',
+                'name'        => __( 'Fox LMS', 'gallery-photo-gallery' ),
+                'desc'        => __( 'Build and manage online courses directly on your WordPress site.', 'gallery-photo-gallery' ),
+                'desc_hidden' => __( 'With the FoxLMS plugin, you can create, sell, and organize courses, lessons, and quizzes, transforming your website into a dynamic e-learning platform.', 'gallery-photo-gallery' ),
+                'wporg'       => 'https://wordpress.org/plugins/fox-lms/',
+                'buy_now'     => 'https://foxlms.com/pricing/?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=fox-lms-our-products-page',
+                'url'         => $plugin_url_arr['fox-lms'],
+            ),
+            'quiz-maker/quiz-maker.php'        => array(
                 'icon'        => $images_url . 'quiz-128x128.png',
                 'name'        => __( 'Quiz Maker', 'gallery-photo-gallery' ),
                 'desc'        => __( 'With our Quiz Maker plugin it’s easy to make a quiz in a short time.', 'gallery-photo-gallery' ),
@@ -1651,8 +1661,8 @@ class Gallery_Photo_Gallery_Admin {
                 </div>';
         }
         $install_plugin_nonce = wp_create_nonce( $this->plugin_name . '-install-plugin-nonce' );
-        $content.= '<input type="hidden" id="ays_gpg_ajax_install_plugin_nonce" name="ays_gpg_ajax_install_plugin_nonce" value="'. $install_plugin_nonce .'">';
-        $content.= '</div>';
+        $content .= '<input type="hidden" id="ays_gpg_ajax_install_plugin_nonce" name="ays_gpg_ajax_install_plugin_nonce" value="'. $install_plugin_nonce .'">';
+        $content .= '</div>';
 
         echo $content;
     }

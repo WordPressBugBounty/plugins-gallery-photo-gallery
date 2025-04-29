@@ -654,7 +654,7 @@ div.ays-notice-banner {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     align-content: stretch;
     padding: 0;
     margin: 0 20px 0 0;
@@ -770,18 +770,24 @@ div.ays-notice-banner .navigation-bar li a:after {
     padding-left: 20px;
 }
 
-@media screen and (min-width: 1080px){
+@media screen and (min-width: 1080px) and (max-width: 1280px) {
+    .ays-notice-banner .modile-ddmenu-lg.modile-ddmenu-lg-custom {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1080px) {
     .ays-notice-banner .modile-ddmenu-lg {
         display: block;
     }
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1080px) {
     .ays-notice-banner .modile-ddmenu-md {
         display: block;
     }
 }
-@media screen and (max-width: 768px){    
+@media screen and (max-width: 768px) {    
     .ays-notice-banner .modile-ddmenu-sm {
         display: block;
     }
@@ -790,7 +796,7 @@ div.ays-notice-banner .navigation-bar li a:after {
         display: none;
     }
 
-    div.ays-notice-banner{
+    div.ays-notice-banner {
         width: 100%;
     }
 
@@ -798,7 +804,7 @@ div.ays-notice-banner .navigation-bar li a:after {
         align-items: stretch;
     }
     
-    form.ays-gpg-general-settings-form .vmessage input[type="text"]{
+    form.ays-gpg-general-settings-form .vmessage input[type="text"] {
         width: 100%;
     }
 }
@@ -3030,6 +3036,7 @@ a.ays-gallery-image-list-table-link-column {
     border-radius: 2px;
     transition: background-color 0.3s ease-in-out, text-decoration 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .ays-gpg-card__btn-primary {
