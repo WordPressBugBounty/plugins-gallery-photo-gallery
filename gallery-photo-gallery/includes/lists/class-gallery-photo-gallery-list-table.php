@@ -212,7 +212,10 @@ class Galleries_List_Table extends WP_List_Table{
                 $gpg_resp_width            = isset($data['gpg_resp_width']) && $data['gpg_resp_width'] == "on" ? "on" :"off";
                 $gpg_height_width_ratios   = isset($data['gpg_height_width_ratio']) && !empty($data['gpg_height_width_ratio']) ? wp_unslash(sanitize_text_field($data['gpg_height_width_ratio'])) : 1;
                 $gpg_height_width_ratio = floatval($gpg_height_width_ratios) < 0.1 ? 1 : $gpg_height_width_ratios;
-                $gpg_enable_rtl            = (isset($data['ays_galery_enable_rtl_direction']) && $data['ays_galery_enable_rtl_direction'] == "on") ? "on" :"off";
+
+                $gpg_enable_rtl = (isset($data['ays_galery_enable_rtl_direction']) && $data['ays_galery_enable_rtl_direction'] == "on") ? "on" :"off";
+
+                $gpg_enable_rtl_mobile = (isset($data['ays_galery_enable_rtl_direction_mobile']) && $data['ays_galery_enable_rtl_direction_mobile'] == "on") ? "on" :"off";
 
                 //Gallery title color 
                 $ays_gallery_title_color = (isset($data['ays_gallery_title_color']) && $data['ays_gallery_title_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gallery_title_color'] )) : '#000';
@@ -326,6 +329,7 @@ class Galleries_List_Table extends WP_List_Table{
                     "resp_width"                            => $gpg_resp_width,
                     "height_width_ratio"                    => $gpg_height_width_ratio,
                     "enable_rtl_direction"                  => $gpg_enable_rtl,
+                    "enable_rtl_direction_mobile"           => $gpg_enable_rtl_mobile,
                     "ays_gallery_title_color"               => $ays_gallery_title_color,
                     "enable_ays_gallery_title_color_mobile" => $enable_ays_gallery_title_color_mobile,
                     "ays_gallery_title_color_mobile"        => $ays_gallery_title_color_mobile,

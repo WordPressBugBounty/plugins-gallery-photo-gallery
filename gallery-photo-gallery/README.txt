@@ -3,8 +3,8 @@ Contributors: ays-pro
 Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
-Tested up to: 6.8
-Stable tag: 6.1.5
+Tested up to: 6.8.1
+Stable tag: 6.1.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -227,6 +227,10 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.1.6 =
+* Added: Suboption to customize mobile settings for the RTL direction option
+* Tested: Compatible up to 6.8.1
 
 = 6.1.5 =
 * Added: [Fox LMS](https://wordpress.org/plugins/fox-lms) Plugin to the Our Products page

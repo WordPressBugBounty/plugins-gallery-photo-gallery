@@ -281,6 +281,13 @@ $responsive_width = (!isset($gal_options['resp_width'])) ? 'on' : $gal_options['
 
 $enable_rtl_direction = (isset($gal_options['enable_rtl_direction']) && $gal_options['enable_rtl_direction'] == 'on') ? $gal_options['enable_rtl_direction'] : 'off';
 
+// Enable RTL Direction mobile
+if ( isset($gal_options['enable_rtl_direction_mobile']) ) {
+    $enable_rtl_direction_mobile = $gal_options['enable_rtl_direction_mobile'] == 'on' ? 'on' : 'off';
+} else {
+    $enable_rtl_direction_mobile = $enable_rtl_direction;
+}
+
 $loading_type = (isset($gal_options['images_loading']) && $gal_options['images_loading'] != '') ? $gal_options['images_loading'] : "all_loaded"; 
 
 $redirect_type = (isset($gal_options['redirect_url_tab']) && $gal_options['redirect_url_tab'] != '') ? $gal_options['redirect_url_tab'] : "_blank"; 
@@ -1447,11 +1454,22 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">
-                            <input type="checkbox" class="ays-enable-timerl" id="ays_galery_enable_rtl_direction"
-                                name="ays_galery_enable_rtl_direction"
-                                value="on" <?php echo ($enable_rtl_direction == 'on') ? 'checked' : '';?>/>
-                        </div>
+                        <div class="col-sm-9 ays_divider_left ays_gpg_pc_and_mobile_container">
+                            <div class="ays_gpg_pc_and_mobile_container ays_gpg_pc_and_mobile_container_cb">
+                                <div class="ays_gpg_option_for_desktop">
+                                    <span class="ays_gpg_current_device_name" style="<?php echo ($enable_rtl_direction == 'on' || $enable_rtl_direction_mobile == 'on') ? 'display: block' : '' ?>"><?php echo __('PC', 'gallery-photo-gallery') ?></span>
+                                    <p class="onoffswitch">
+                                        <input type="checkbox" id="ays_galery_enable_rtl_direction" class="ays-gpg-onoffswitch-checkbox" name="ays_galery_enable_rtl_direction" value="on" <?php echo ( $enable_rtl_direction == 'on' ) ? 'checked' : ''; ?> />
+                                    </p>
+                                </div>
+                                <div class="ays_gpg_option_for_mobile_device ays_gpg_option_for_mobile_device_cb ays_divider_left <?php echo ($enable_rtl_direction == 'on' || $enable_rtl_direction_mobile == 'on') ? 'show' : '' ?>">
+                                    <span class="ays_gpg_current_device_name" style="<?php echo ($enable_rtl_direction == 'on' || $enable_rtl_direction_mobile == 'on') ? 'display: block' : '' ?>"><?php echo __('Mobile', 'gallery-photo-gallery') ?></span>
+                                    <p class="onoffswitch" style="margin:0;">
+                                        <input type="checkbox" name="ays_galery_enable_rtl_direction_mobile" class="ays-gpg-onoffswitch-checkbox" id="ays_galery_enable_rtl_direction_mobile" <?php echo ( $enable_rtl_direction_mobile == 'on' ) ? 'checked' : ''; ?> />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                        
                     </div> <!-- Use RTL direction -->
                     <hr/>
                     <div class="form-group row">

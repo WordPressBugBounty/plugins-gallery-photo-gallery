@@ -2214,6 +2214,49 @@
             }
         }
 
+        // Toggle mobile settings start
+        $(document).find('.ays_gpg_different_settings_for_mobile').on('change', toggleMobileSettings);
+        $(document).find('.ays_gpg_option_for_desktop, .ays_gpg_option_for_mobile_device_cb').on('click', toggleMobileSettingsCb);
+        // Toggle mobile settings end
+
+        function toggleMobileSettings() {
+            var optionDiv = $(this).parents('.ays_gpg_pc_and_mobile_container');
+            var deviceNames = optionDiv.find('.ays_gpg_current_device_name');
+            var mobileOptionDiv = optionDiv.find('.ays_gpg_option_for_mobile_device');
+            var cbLabel = optionDiv.find('.ays_gpg_mobile_settings_container label');
+
+            if ($(this).prop('checked')) {
+                deviceNames.addClass('show');
+                mobileOptionDiv.addClass('show');
+                cbLabel.addClass('active');
+            } else {
+                deviceNames.removeClass('show');
+                mobileOptionDiv.removeClass('show');
+                cbLabel.removeClass('active');
+            }
+        }
+
+        function toggleMobileSettingsCb() {
+            var mainContainer = $(this).parent();
+            var desktopContainer = mainContainer.find('.ays_gpg_option_for_desktop');
+            var mobileContainer = mainContainer.find('.ays_gpg_option_for_mobile_device');
+            var desktopCb = desktopContainer.find('.ays-gpg-onoffswitch-checkbox');
+            var mobileDeviceCb = mobileContainer.find('.ays-gpg-onoffswitch-checkbox');
+            var deviceNames = mainContainer.find('.ays_gpg_current_device_name');
+
+            if (desktopCb.is(':checked')) {
+                if (!mobileContainer.hasClass('show')) {
+                    mobileContainer.addClass('show');
+                    mobileDeviceCb.prop('checked', true);
+                    deviceNames.show().fadeIn('300');
+                }
+            } else {
+                if (!mobileDeviceCb.is(':checked')) {
+                    mobileContainer.removeClass('show');
+                    deviceNames.hide().fadeOut('300');
+                }
+            }
+        }
 
 })( jQuery );
 

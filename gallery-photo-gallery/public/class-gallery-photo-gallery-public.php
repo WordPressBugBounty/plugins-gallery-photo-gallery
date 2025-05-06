@@ -2401,8 +2401,15 @@ class Gallery_Photo_Gallery_Public {
             $ays_thumb_height_mobile = "";
             $ays_thumb_height_desktop = "";
         }
+
         $gallery_options['enable_rtl_direction']  = (isset($gallery_options['enable_rtl_direction']) && $gallery_options['enable_rtl_direction'] == 'on' ) ? $gallery_options['enable_rtl_direction'] : 'off';
         $enable_rtl_direction  = (isset($gallery_options['enable_rtl_direction']) && $gallery_options['enable_rtl_direction'] == 'on' ) ? true : false;
+      
+        if ( isset( $gallery_options['enable_rtl_direction_mobile'] ) ) {
+            $enable_rtl_direction_mobile  = ( isset( $gallery_options['enable_rtl_direction_mobile'] ) && $gallery_options['enable_rtl_direction_mobile'] == 'on' ) ? true : false;
+        } else {
+            $enable_rtl_direction_mobile = $enable_rtl_direction;
+        }
 
         $rtl_style = '';
         $search_img = '';
@@ -2417,6 +2424,18 @@ class Gallery_Photo_Gallery_Public {
         }else{
             $rtl_style  = '';
             $search_img = '';
+        }
+
+        if($enable_rtl_direction_mobile){
+            $rtl_style_mobile = '
+                text-align: right;
+                direction: rtl;
+            ';            
+        }else{
+            $rtl_style_mobile = '
+                text-align: left;
+                direction: ltr;
+            ';
         }
 
         $date_on = '';
@@ -2527,6 +2546,9 @@ class Gallery_Photo_Gallery_Public {
                 }
 
                 @media screen and (max-width: 768px){
+                    .ays_gallery_container_".$id." {
+                        ".$rtl_style_mobile.";
+                    }
                     .ays_gallery_body_". $id ." .ays_gallery_image, .ays_masonry_grid-item img, 
                     .ays_mosaic_column_item_". $id ." img, 
                     .ays_masonry_item_". $id ." img{
