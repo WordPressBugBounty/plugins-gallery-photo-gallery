@@ -2729,7 +2729,7 @@ $gpg_accordion_svg_html = '
         </div>
 		        
         <button type="button" class="ays_gallery_live_preview" data-container="body" data-toggle="popover" data-placement="top" data-content="<?php echo __("View your gallery in live preview. In the preview you can’t see Thumbnail size and Image order changes.", 'gallery-photo-gallery');?>" data-original-title="<?php echo __("Gallery preview", 'gallery-photo-gallery');?>"><i class="fas fa-search-plus"></i></button>    
-        <button class="ays_gallery_live_save" type="submit" name="ays-apply"><i class="far fa-save" gpg_submit_name="ays-apply"></i></button>
+        <button class="ays_gallery_live_save" type="submit" name="ays-apply" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-original-title="<?php echo __("Save", 'gallery-photo-gallery');?>"><i class="far fa-save" gpg_submit_name="ays-apply"></i></button>
         <input type="hidden" id="ays_gpg_admin_url" value="<?php echo AYS_GPG_ADMIN_URL; ?>"/>
     </form>
     </div>

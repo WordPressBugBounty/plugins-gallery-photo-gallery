@@ -16,7 +16,7 @@ ob_start();
  * Plugin Name:       Gallery - Photo Gallery
  * Plugin URI:        https://ays-pro.com/wordpress/photo-gallery
  * Description:       Gallery – Photo Gallery is an easy-to-use plugin for creating and displaying photo galleries. It lets you customize the layout and style to showcase your pictures beautifully.
- * Version:           6.1.6
+ * Version:           6.1.7
  * Author:            Photo Gallery Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -54,8 +54,8 @@ if( ! defined( 'AYS_GPG_BASENAME' ) )
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'AYS_GALLERY_VERSION', '6.1.6' );
-define( 'AYS_GALLERY_NAME_VERSION', '6.1.6' );
+define( 'AYS_GALLERY_VERSION', '6.1.7' );
+define( 'AYS_GALLERY_NAME_VERSION', '6.1.7' );
 define( 'AYS_GALLERY_NAME', 'gallery-photo-gallery' );
 
 /**
@@ -149,12 +149,19 @@ function general_gpg_admin_notice(){
                                 </a>
                                 <span class="ays-gpg-logo-container-one-time-text"><?php echo __( "One-time payment", 'gallery-photo-gallery' ); ?></span>
                             </div>
+                            <div class="ays-gpg-coupon-container">
+                                <div class="ays-gpg-coupon-box ays-gpg-copy-element-box-parent">
+                                    <!-- <img src="<?php echo esc_attr(AYS_GPG_ADMIN_URL . '/images/icons/receipt-solid.svg'); ?>" class="ays-quiz-svg-light-hover"> -->
+                                    <span onClick="selectAndCopyElementContents(this)" class="ays-gpg-copy-element-box" data-toggle="tooltip" title="<?php echo esc_html__( "Click for copy", 'gallery-photo-gallery' ); ?>"><?php echo esc_html__( "spring2025", 'gallery-photo-gallery' ); ?></span>
+                                </div>
+                                <span class="ays-gpg-logo-container-one-time-text"><?php echo esc_html__( "Extra 20% Coupon", 'gallery-photo-gallery' ); ?></span>
+                            </div>
                         </div>
                         <ul id="menu">
                             <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-pro.com/wordpress/photo-gallery/?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=gpg-top-banner-pricing-link" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
                             <li class="modile-ddmenu-lg modile-ddmenu-lg-custom"><a class="ays-btn" href="https://ays-demo.com/wordpress-photo-gallery-plugin-free-demo/" target="_blank"><?php echo esc_html__( "Demo", 'gallery-photo-gallery' ); ?></a></li>
                             <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo esc_html__( "Free Support", 'gallery-photo-gallery' ); ?></a></li>
-                            <li class="modile-ddmenu-xs make_a_suggestion"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo esc_html__( "Make a Suggestion", 'gallery-photo-gallery' ); ?></a></li>
+                            <li class="modile-ddmenu-lg make_a_suggestion modile-ddmenu-lg-custom"><a class="ays-btn" href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo esc_html__( "Make a Suggestion", 'gallery-photo-gallery' ); ?></a></li>
                             <?php if ( $is_chat_available ) : ?>
                             <li class="modile-ddmenu-xs"><a class="ays-btn" href="https://ays-pro.com/onlinesupport/" target="_blank"><?php echo esc_html__( "Live Chat", 'gallery-photo-gallery' ); ?></a></li>
                             <?php endif; ?>

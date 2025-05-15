@@ -173,6 +173,11 @@
         }, function () {
             $('.ays_gallery_live_preview').popover('hide');
         });
+        $(document).find('.ays_gallery_live_save').hover(function () {
+            $('.ays_gallery_live_save').popover('show');
+        }, function () {
+            $('.ays_gallery_live_save').popover('hide');
+        });
 		let current_fs, next_fs, previous_fs; //fieldsets
 		let left, opacity, scale; //fieldset properties which we will animate
 		let animating; //flag to prevent quick multi-click glitches
@@ -2383,4 +2388,32 @@ function aysGallerystripHTML( dirtyString ) {
     container.appendChild(text);
 
     return container.innerHTML; // innerHTML will be a xss safe string
+}
+
+function selectAndCopyElementContents(el) {
+    if (window.getSelection && document.createRange) {
+        var _this = jQuery(document).find('.ays-gpg-copy-element-box');
+
+        var text      = el.textContent;
+        var textField = document.createElement('textarea');
+
+        textField.innerText = text;
+        document.body.appendChild(textField);
+        textField.select();
+        document.execCommand('copy');
+        textField.remove();
+
+        var selection = window.getSelection();
+        selection.setBaseAndExtent(el,0,el,1);
+
+        _this.attr( "data-original-title", galleryLangObj.copied );
+        _this.attr( "title", galleryLangObj.copied );
+
+        _this.tooltip("show");
+
+    } else if (document.selection && document.body.createTextRange) {
+        var textRange = document.body.createTextRange();
+        textRange.moveToElementText(el);
+        textRange.select();
+    }
 }

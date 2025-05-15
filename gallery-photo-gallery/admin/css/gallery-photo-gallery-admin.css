@@ -564,7 +564,7 @@ div.ays-notice-banner {
 }
 
 .ays-notice-banner .ays-gpg-logo-container img {
-    width: 80px;
+    width: 60px;
     height: 100%;
     object-fit: contain;
 }
@@ -577,7 +577,7 @@ div.ays-notice-banner {
 .ays-gpg-upgrade-container a {
     display: flex;
     align-items: center;
-    border: 1px solid #099472;
+    border: 2px solid #099472;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -654,7 +654,7 @@ div.ays-notice-banner {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: stretch;
     align-content: stretch;
     padding: 0;
     margin: 0 20px 0 0;
@@ -770,7 +770,7 @@ div.ays-notice-banner .navigation-bar li a:after {
     padding-left: 20px;
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1280px) {
+@media screen and (min-width: 1080px) and (max-width: 1340px) {
     .ays-notice-banner .modile-ddmenu-lg.modile-ddmenu-lg-custom {
         display: none;
     }
@@ -1334,6 +1334,10 @@ ul.ays_accordion.ays_accordion_active {
     text-align: center;
     z-index: 999;
     outline: none !important;
+}
+
+.ays_gallery_live_save > i {
+    background-color: #f1f1f1;
 }
 
 .ays_gallery_live_preview:active,
@@ -5434,5 +5438,72 @@ body[class~="toplevel_page_gallery-photo-gallery"] .swal2-popup .swal2-actions {
 
     div.comparison {
         padding: 0;
+    }
+}
+
+/* Gallery Top Banner Coupon Button | Start */
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box {
+    display: flex;
+    align-items: center;
+    border: 2px dashed #000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    /*color: #0B328E;*/
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #000;
+    background-color: #f9dc6c;
+    cursor: pointer;
+}
+
+.ays-gpg-logo-container-upgrade span.ays-gpg-logo-container-one-time-text{
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ays-gpg-coupon-container {
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box span {
+    margin-left: 5px;
+}
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box img {
+    width: 10px;
+}
+
+.ays-coupon-container .ays-gpg-coupon-box img {
+    width: 8px;
+}
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box:hover {
+    color: #000;
+    background-color: #f1c51b;
+}
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box:focus {
+    box-shadow: unset;
+}
+
+.ays-gpg-coupon-container .ays-gpg-coupon-box:hover .ays-gpg-svg-light-hover{
+    display: flex;
+}
+/* Gallery Top Banner Coupon Button | End */
+
+@media screen and (max-width: 400px) {
+    .ays-notice-banner #navigation-container{
+        padding: 20px 0;
+    }
+    .ays-gpg-upgrade-container{
+        min-width: 105px;
     }
 }
