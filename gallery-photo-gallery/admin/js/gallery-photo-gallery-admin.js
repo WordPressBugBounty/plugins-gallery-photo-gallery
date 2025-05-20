@@ -1899,12 +1899,16 @@
 
             var $this = $(this);
             var thisParent  = $this.parents("#ays-gpg-dismiss-buttons-content");
-            // var thisParent  = $this.parents("#ays-gpg-dismiss-buttons-content-black-friday");
+                        
             var mainParent  = $this.parents("div.ays_gpg_dicount_info");
             var closeButton = mainParent.find("button.notice-dismiss");
 
             var attr_plugin = $this.attr('data-plugin');
             var wp_nonce    = thisParent.find('#photo-gallery-sale-banner').val();
+
+            if(typeof wp_nonce == 'undefined'){
+                wp_nonce    = $(document).find('#photo-gallery-sale-banner').val();
+            }
 
             var data = {
                 action: 'ays_gpg_dismiss_button',

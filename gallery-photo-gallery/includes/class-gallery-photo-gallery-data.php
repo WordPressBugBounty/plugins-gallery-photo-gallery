@@ -64,8 +64,8 @@ class Photo_Gallery_Data {
                 // self::ays_gpg_new_mega_bundle_message_2024( $ays_gpg_ishmar );
                 // self::ays_gpg_black_friday_message_2024($ays_gpg_ishmar);
                 // self::ays_gpg_christmas_top_message_2024($ays_gpg_ishmar);
-                // self::ays_gpg_sale_new_message($ays_gpg_ishmar);
-                self::ays_gpg_new_banner_message_2025($ays_gpg_ishmar);
+                // self::ays_gpg_new_banner_message_2025($ays_gpg_ishmar);
+                self::ays_gpg_sale_new_message($ays_gpg_ishmar);
             }
         }
     }    
@@ -466,17 +466,19 @@ class Photo_Gallery_Data {
         if($ishmar == 0 ){
             $content = array();
 
+            $gpg_cta_button_link = esc_url( 'https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=photography-bundle-2025-sale-banner-' . AYS_GALLERY_VERSION );
+
             $content[] = '<div id="ays-gpg-new-mega-bundle-dicount-month-main" class="notice notice-success is-dismissible ays_gpg_dicount_info">';
                 $content[] = '<div id="ays-gpg-dicount-month" class="ays_gpg_dicount_month">';
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-text-box">';
                         $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-text-boxes">';
                         $content[] = '<div>';
                             $content[] = '<span class="ays-gpg-new-mega-bundle-title">';
-                                 $content[] = "<span><a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gpg". AYS_GALLERY_VERSION ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photo Gallery</a></span>";
+                                 $content[] = "<span><a href='". $gpg_cta_button_link ."' target='_blank' style='color:#ffffff; text-decoration: underline;'>Photography Bundle</a></span>";
                             $content[] = '</span>';                                
                         $content[] = '</div>';
                         $content[] = '<div>';
-                            $content[] = '<img src="' . AYS_GPG_ADMIN_URL . '/images/ays-gpg-banner-sale-30.svg" style="width: 70px;">';
+                            $content[] = '<img src="' . AYS_GPG_ADMIN_URL . '/images/ays-gpg-banner-sale-50.svg" style="width: 70px;">';
                         $content[] = '</div>';
                         
                         $content[] = '</div>'; 
@@ -507,9 +509,9 @@ class Photo_Gallery_Data {
 
                                 $content[] = '<div id="ays-gpg-countdown">';
 
-                                    $content[] = '<div>';
-                                        $content[] = __( "Offer ends in:", 'gallery-photo-gallery' );
-                                    $content[] = '</div>';
+                                    // $content[] = '<div>';
+                                    //     $content[] = __( "Offer ends in:", 'gallery-photo-gallery' );
+                                    // $content[] = '</div>';
 
                                     $content[] = '<ul>';
                                         $content[] = '<li><span id="ays-gpg-countdown-days"></span>days</li>';
@@ -532,7 +534,7 @@ class Photo_Gallery_Data {
                     $content[] = '</div>';                    
 
                     $content[] = '<div class="ays-gpg-dicount-wrap-box ays-gpg-dicount-wrap-button-box">';
-                        $content[] = '<a href="https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gpg'. AYS_GALLERY_VERSION .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', 'gallery-photo-gallery' ) . '</a>';
+                        $content[] = '<a href="'. $gpg_cta_button_link .'" class="button button-primary ays-button" id="ays-button-top-buy-now" target="_blank">' . __( 'Buy Now', 'gallery-photo-gallery' ) . '</a>';
                         $content[] = '<span class="ays-gpg-dicount-one-time-text">';
                             $content[] = __( "One-time payment", 'gallery-photo-gallery' );
                         $content[] = '</span>';

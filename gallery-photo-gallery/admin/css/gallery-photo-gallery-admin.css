@@ -628,7 +628,7 @@ div.ays-notice-banner {
 }
 
 @media screen and (max-width: 768px) {
-
+    div#ays-gpg-new-mega-bundle-dicount-month-main.ays_gpg_dicount_info, 
     .ays-notice-banner .modile-ddmenu-xs {
         display: none;
     }
