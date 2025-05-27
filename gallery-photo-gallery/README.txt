@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 6.8.1
-Stable tag: 6.1.8
+Stable tag: 6.1.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -227,6 +227,12 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.1.9 ( May 27, 2025 ) =
+* Added: Suboption to customize mobile settings for the Thumbnail title text color option
+* Fixed: Conflict with Pixel Ebook Store theme
+* Fixed: Conflict with Interactive Education theme
+* Fixed: JS problem on the admin dashboard
 
 = 6.1.8 ( May 20, 2025 ) =
 * Improved: Some changes on the admin dashboard

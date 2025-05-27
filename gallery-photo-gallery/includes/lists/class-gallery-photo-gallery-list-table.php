@@ -235,8 +235,14 @@ class Galleries_List_Table extends WP_List_Table{
                 //Gallery description color Mobile
                 $ays_gallery_desc_color_mobile = isset( $data['ays_gallery_desc_color_mobile'] ) && $data['ays_gallery_desc_color_mobile'] != '' ? sanitize_text_field( $data['ays_gallery_desc_color_mobile'] ) : '#000';
 
-                //Thubnail title color 
-                $ays_gpg_title_color = (isset($data['ays_gpg_thumbnail_title_color']) && $data['ays_gpg_thumbnail_title_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_thumbnail_title_color'] )) : '#ffffff';
+                //Thumbnail title color 
+                $ays_gpg_title_color = (isset($data['ays_gpg_thumbnail_title_color']) && $data['ays_gpg_thumbnail_title_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_thumbnail_title_color'] )) : '#fff';
+
+                //Enable Thumbnail title color Mobile
+                $enable_ays_gpg_title_color_mobile = isset( $data['enable_ays_gpg_thumbnail_title_color_mobile'] ) && $data['enable_ays_gpg_thumbnail_title_color_mobile'] == 'on' ? 'on' : 'off';
+
+                //Thumbnail title color Mobile
+                $ays_gpg_title_color_mobile = isset( $data['ays_gpg_thumbnail_title_color_mobile'] ) && $data['ays_gpg_thumbnail_title_color_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_thumbnail_title_color_mobile'] ) : '#fff';
                
                 $ays_gpg_filter_cat_anim = (isset($data['ays_filter_cat_animation']) && $data['ays_filter_cat_animation'] != '') ? sanitize_text_field( $data['ays_filter_cat_animation'] ) : 'fadeIn';
                 $ays_gpg_lg_keypress    = (isset($data['ays_gpg_lg_keypress']) && $data['ays_gpg_lg_keypress'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lg_keypress'] )) : '';
@@ -337,6 +343,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "enable_ays_gallery_desc_color_mobile"  => $enable_ays_gallery_desc_color_mobile,
                     "ays_gallery_desc_color_mobile"         => $ays_gallery_desc_color_mobile,
                     "ays_gpg_title_color"                   => $ays_gpg_title_color,
+                    "enable_ays_gpg_title_color_mobile"     => $enable_ays_gpg_title_color_mobile,
+                    "ays_gpg_title_color_mobile"            => $ays_gpg_title_color_mobile,
                     "ays_gpg_filter_cat_anim"               => $ays_gpg_filter_cat_anim,
                     "link_on_whole_img"                     => $link_on_whole_img,
                     "create_date"                           => $gpg_create_date,

@@ -292,8 +292,15 @@ $loading_type = (isset($gal_options['images_loading']) && $gal_options['images_l
 
 $redirect_type = (isset($gal_options['redirect_url_tab']) && $gal_options['redirect_url_tab'] != '') ? $gal_options['redirect_url_tab'] : "_blank"; 
 
-//thumbnail title color
-$thumbnail_title_color = isset($gal_options['ays_gpg_title_color']) ? esc_attr(stripslashes($gal_options['ays_gpg_title_color'])) : '#ffffff';
+//Thumbnail title color
+$thumbnail_title_color = isset($gal_options['ays_gpg_title_color']) ? esc_attr(stripslashes($gal_options['ays_gpg_title_color'])) : '#fff';
+
+//Enable thumbnail title color Mobile
+$gal_options['enable_ays_gpg_title_color_mobile'] = isset( $gal_options['enable_ays_gpg_title_color_mobile'] ) && $gal_options['enable_ays_gpg_title_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_thumbnail_title_color_mobile = $gal_options['enable_ays_gpg_title_color_mobile'] == 'on' ?  true : false;
+
+//Thumbnail title color Mobile
+$thumbnail_title_color_mobile = isset( $gal_options['ays_gpg_title_color_mobile'] ) && $gal_options['ays_gpg_title_color_mobile'] != '' ? esc_attr( $gal_options['ays_gpg_title_color_mobile'] ) : $thumbnail_title_color;
 
 //Gallery title color
 $gallery_title_color = isset($gal_options['ays_gallery_title_color']) ? esc_attr(stripslashes($gal_options['ays_gallery_title_color'])) : '#000';
@@ -2393,8 +2400,22 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <input id="ays_gpg_thumbnail_title_color" name="ays_gpg_thumbnail_title_color" data-alpha="true" type="text" value="<?php echo $thumbnail_title_color; ?>" data-default-color="#ffffff">
-                        </div>
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_thumbnail_title_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('PC', 'gallery-photo-gallery') ?></div>
+                                    <input id="ays_gpg_thumbnail_title_color" name="ays_gpg_thumbnail_title_color" data-alpha="true" type="text" value="<?php echo $thumbnail_title_color; ?>" data-default-color="#ffffff">
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_desc_color_mobile_container" style=" <?php echo ( $enable_thumbnail_title_color_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo __('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <input id="ays_gpg_thumbnail_title_color_mobile" name="ays_gpg_thumbnail_title_color_mobile" data-alpha="true" type="text" value="<?php echo $thumbnail_title_color_mobile; ?>" data-default-color="#ffffff">
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_thumbnail_title_color_mobile" name="enable_ays_gpg_thumbnail_title_color_mobile" <?php echo $enable_thumbnail_title_color_mobile ? 'checked' : '' ?>>
+                                    <label for="enable_ays_gpg_thumbnail_title_color_mobile" ><?php echo __('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">

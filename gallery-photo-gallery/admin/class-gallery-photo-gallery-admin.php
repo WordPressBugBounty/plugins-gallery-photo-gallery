@@ -126,7 +126,7 @@ class Gallery_Photo_Gallery_Admin {
 
         if (false !== strpos($hook_suffix, "plugins.php")){
 
-            wp_enqueue_script( $this->plugin_name . "sweetalert-js", plugin_dir_url( __FILE__ ) . 'js/gallery-photo-gallery-sweetalert2.all.min.js', array( 'jquery' ), $this->version, true );
+            wp_enqueue_script( $this->plugin_name . "sweetalert-js", plugin_dir_url( __FILE__ ) . 'js/sweetalert2.all.min.js', array( 'jquery' ), $this->version, true );
 
             wp_enqueue_script( $this->plugin_name . '-adminjs', plugin_dir_url( __FILE__ ) . 'js/admin.js', array( 'jquery' ), $this->version, true );
             wp_localize_script($this->plugin_name . '-adminjs',  'ays_gpg_admin_ajax', array('ajax_url' => admin_url('admin-ajax.php')));
@@ -247,6 +247,13 @@ class Gallery_Photo_Gallery_Admin {
                 wp_deregister_script('wp_social_select2_js');
                 wp_dequeue_script('wp_social_select2_js');
             }
+
+            // Theme | Pixel Ebook Store
+            wp_dequeue_style('pixel-ebook-store-free-demo-content-style');
+
+            // Theme | Interactive Education
+            wp_dequeue_style('interactive-education-free-demo-content-style');
+
         }
     }
 

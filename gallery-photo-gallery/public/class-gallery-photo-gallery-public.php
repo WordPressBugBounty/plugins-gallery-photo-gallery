@@ -1344,8 +1344,17 @@ class Gallery_Photo_Gallery_Public {
         $ays_thumb_height_mobile  = (!isset($gallery_options['thumb_height_mobile'])) ? "170" : $gallery_options['thumb_height_mobile'];
         $ays_thumb_height_desktop  = (!isset($gallery_options['thumb_height_desktop'])) ? "260" : $gallery_options['thumb_height_desktop'];
 
-        $thumnail_title_color = (isset($gallery_options['ays_gpg_title_color']) && $gallery_options['ays_gpg_title_color'] != '') ? $gallery_options['ays_gpg_title_color'] : '#ffffff'; 
+        $thumbnail_title_color = (isset($gallery_options['ays_gpg_title_color']) && $gallery_options['ays_gpg_title_color'] != '') ? $gallery_options['ays_gpg_title_color'] : '#ffffff'; 
 
+        // Enable Gallery title Color Mobile
+        $gallery_options['enable_ays_gpg_title_color_mobile'] = ( isset( $gallery_options['enable_ays_gpg_title_color_mobile'] ) && $gallery_options['enable_ays_gpg_title_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery title Color Mobile
+        if ( $gallery_options['enable_ays_gpg_title_color_mobile'] ) {
+            $thumbnail_title_color_mobile = ( isset( $gallery_options['ays_gpg_title_color_mobile'] ) && $gallery_options['ays_gpg_title_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['ays_gpg_title_color_mobile'] ) ) : $thumbnail_title_color;
+        } else {
+            $thumbnail_title_color_mobile = $thumbnail_title_color;
+        }
 
         $gallery_title_color = (isset($gallery_options['ays_gallery_title_color']) && $gallery_options['ays_gallery_title_color'] != '') ? $gallery_options['ays_gallery_title_color'] : '#000';
 
@@ -2484,7 +2493,7 @@ class Gallery_Photo_Gallery_Public {
 
                 .ays_image_title>span {
                     font-size:".$thumbnail_title_size."px;
-                    color:".$thumnail_title_color."
+                    color:".$thumbnail_title_color."
                 }
 
                 .ays_masonry_item_".$id." a, .ays_masonry_item_".$id.":hover,
@@ -2546,6 +2555,9 @@ class Gallery_Photo_Gallery_Public {
                 }
 
                 @media screen and (max-width: 768px){
+                    .ays_image_title > span {
+                        color:". $thumbnail_title_color_mobile ."
+                    }
                     .ays_gallery_container_".$id." {
                         ".$rtl_style_mobile.";
                     }
