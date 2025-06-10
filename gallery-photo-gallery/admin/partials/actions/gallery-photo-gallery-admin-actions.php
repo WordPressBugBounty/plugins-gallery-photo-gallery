@@ -2032,8 +2032,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Loader style", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose your desired loader icon that will appear while the Gallery is loading.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Loader style", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose your desired loader icon that will appear while the Gallery is loading.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
