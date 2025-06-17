@@ -131,7 +131,16 @@ class Galleries_List_Table extends WP_List_Table{
                 $hover_icon             = (isset($data['ays-gpg-image-hover-icon']) && $data['ays-gpg-image-hover-icon'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-icon'] ) : '';
                 $image_sizes            = (isset($data['ays_image_sizes']) && $data['ays_image_sizes'] != '') ? sanitize_text_field( $data['ays_image_sizes'] ) : '';
                 $custom_css             = isset($data['gallery_custom_css']) && $data['gallery_custom_css'] != '' ? stripslashes( esc_attr( sanitize_text_field( $data['gallery_custom_css'] ) ) ) : '';
-                $lightbox_color         = (isset($data['ays-gpg-lightbox-color']) && $data['ays-gpg-lightbox-color'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-lightbox-color'] )) : '';
+
+                //Thumbnail title bg color 
+                $lightbox_color         = (isset($data['ays-gpg-lightbox-color']) && $data['ays-gpg-lightbox-color'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-lightbox-color'] )) : '';                
+
+                //Enable Thumbnail title bg color Mobile
+                $enable_lightbox_color_mobile = isset( $data['enable-ays-gpg-lightbox-color-mobile'] ) && $data['enable-ays-gpg-lightbox-color-mobile'] == 'on' ? 'on' : 'off';
+
+                //Thumbnail title bg color Mobile
+                $lightbox_color_mobile = isset( $data['ays-gpg-lightbox-color-mobile'] ) && $data['ays-gpg-lightbox-color-mobile'] != '' ? sanitize_text_field( $data['ays-gpg-lightbox-color-mobile'] ) : '';
+
                 $images_orderby         = (isset($data['ays_images_ordering']) && $data['ays_images_ordering'] != '') ? wp_unslash(sanitize_text_field( $data['ays_images_ordering'] )) : '';
                 $show_title             =  wp_unslash(sanitize_text_field( isset($data['ays_gpg_show_title']) ? $data['ays_gpg_show_title'] : '' ));
                 $show_title_on          = (isset($data['ays_gpg_show_title_on']) && $data['ays_gpg_show_title_on'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_show_title_on'] )) : '';
@@ -309,6 +318,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "hover_color"                           => $hover_color,
                     "image_sizes"                           => $image_sizes,
                     "lightbox_color"                        => $lightbox_color,
+                    "enable_lightbox_color_mobile"          => $enable_lightbox_color_mobile,
+                    "lightbox_color_mobile"                 => $lightbox_color_mobile,
                     "images_orderby"                        => $images_orderby,
                     "hover_icon"                            => $hover_icon,
                     "show_title"                            => $show_title,

@@ -1314,7 +1314,20 @@ class Gallery_Photo_Gallery_Public {
         $custom_css = ($gallery['custom_css'] == '' || $gallery['custom_css'] === false) ? '' : $gallery["custom_css"];
         $hover_opacity = ($gallery_options['hover_opacity'] == '' || $gallery_options['hover_opacity'] === false) ? '0.5' : $gallery_options['hover_opacity'];
         $image_sizes = ($gallery_options['image_sizes'] == '' || $gallery_options['image_sizes'] === false) ? 'full_size' : $gallery_options['image_sizes'];
+
+        // Gallery Thumbnail title bg Color
         $lightbox_color = ($gallery_options['lightbox_color'] == '' || $gallery_options['lightbox_color'] === false) ? '#27AE60' : $gallery_options['lightbox_color'];
+
+        // Enable Gallery Thumbnail title bg Color Mobile
+        $gallery_options['enable_lightbox_color_mobile'] = ( isset( $gallery_options['enable_lightbox_color_mobile'] ) && $gallery_options['enable_lightbox_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery Thumbnail title bg Color Mobile
+        if ( $gallery_options['enable_lightbox_color_mobile'] ) {
+            $lightbox_color_mobile = ( isset( $gallery_options['lightbox_color_mobile'] ) && $gallery_options['lightbox_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['lightbox_color_mobile'] ) ) : $lightbox_color;
+        } else {
+            $lightbox_color_mobile = $lightbox_color;
+        }
+
         $images_orderby = ($gallery_options['images_orderby'] == '' || $gallery_options['images_orderby'] === false) ? 'noordering' : $gallery_options['images_orderby'];
         $ays_hover_icon = ($gallery_options['hover_icon'] == '' || $gallery_options['hover_icon'] == false) ? 'search_plus' : $gallery_options['hover_icon'];
         $show_title = ($gallery_options['show_title'] == '' || $gallery_options['show_title'] == false) ? '' : $gallery_options['show_title'];
@@ -1451,6 +1464,7 @@ class Gallery_Photo_Gallery_Public {
         $show_gal_desc = (!isset($gallery_options['show_gal_desc'])) ? 'on' : $gallery_options['show_gal_desc'];
 
         $lightbox_color_rgba = $this->hex2rgba($lightbox_color, 0.5);
+        $lightbox_color_mobile_rgba = $this->hex2rgba($lightbox_color_mobile, 0.5);
         
         $columns            = (!isset($gallery_options['columns_count'])) ? 3 : $gallery_options['columns_count'];
         $columns_mobile     = (!isset($gallery_options['columns_count_mobile'])) ? 1 : $gallery_options['columns_count_mobile'];
@@ -2554,6 +2568,15 @@ class Gallery_Photo_Gallery_Public {
                     $show_images_with_border
                 }
 
+                div.ays_masonry_grid div.ays_masonry_item_".$id." .ays_image_title,
+                div.mosaic_".$id." .ays_image_title,
+                div.ays_grid_row div.ays_grid_column_".$id." .ays_image_title                
+                {
+                    background-color: ".$lightbox_color.";
+                    background-color: ".$lightbox_color_rgba.";
+                    z-index: 999999;
+                }
+
                 @media screen and (max-width: 768px){
                     .ays_image_title > span {
                         color:". $thumbnail_title_color_mobile ."
@@ -2590,6 +2613,15 @@ class Gallery_Photo_Gallery_Public {
 
                     .ays_gallery_container_". $id ." .ays_gallery_header h4.ays_gallery_description {
                         color:". $gallery_desc_color_mobile ."
+                    }
+
+                    div.ays_masonry_grid div.ays_masonry_item_".$id." .ays_image_title,
+                    div.mosaic_".$id." .ays_image_title,
+                    div.ays_grid_row div.ays_grid_column_".$id." .ays_image_title                
+                    {
+                        background-color: ".$lightbox_color_mobile.";
+                        background-color: ".$lightbox_color_mobile_rgba.";
+                        z-index: 999999;
                     }
                 }
 
@@ -2685,16 +2717,7 @@ class Gallery_Photo_Gallery_Public {
                     height: 100%;
                     position: absolute;
                     top: 0;
-                }
-                
-                div.ays_masonry_grid div.ays_masonry_item_".$id." .ays_image_title,
-                div.mosaic_".$id." .ays_image_title,
-                div.ays_grid_row div.ays_grid_column_".$id." .ays_image_title                
-                {
-                    background-color: ".$lightbox_color.";
-                    background-color: ".$lightbox_color_rgba.";
-                    z-index: 999999;
-                }
+                }                
 
                 .ays_gallery_search_img{
                     ".$search_img.";

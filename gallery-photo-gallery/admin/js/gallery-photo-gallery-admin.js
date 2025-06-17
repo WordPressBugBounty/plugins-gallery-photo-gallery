@@ -158,7 +158,8 @@
             $(document).find('.ays_gpg_menu_left').attr('data-scroll', scroll);
         });
 
-        $(document).find('.ays_gpg_lightbox_color').wpColorPicker();
+        $(document).find('#ays-gpg-lightbox-color').wpColorPicker();
+        $(document).find('#ays-gpg-lightbox-color-mobile').wpColorPicker();
         $(document).find('#ays_gallery_title_color').wpColorPicker();
         $(document).find('#ays_gallery_title_color_mobile').wpColorPicker();
         $(document).find('#ays_gallery_desc_color').wpColorPicker();
@@ -2190,7 +2191,9 @@
             $(document).find('#ays_gallery_desc_color_mobile').val('#000').change();
             $(document).find("#enable_ays_gallery_desc_color_mobile").prop('checked', true).change();
 
-            $(document).find('.ays_gpg_lightbox_color').val('rgba(0,0,0,0)').change();
+            $(document).find('#ays-gpg-lightbox-color').val('rgba(0,0,0,0)').change();
+            $(document).find('#ays-gpg-lightbox-color-mobile').val('rgba(0,0,0,0)').change();
+            $(document).find("#enable-ays-gpg-lightbox-color-mobile").prop('checked', true).change();
 
             $(document).find('#ays_gpg_thumbnail_title_color').val('#fff').change();
             $(document).find('#ays_gpg_thumbnail_title_color_mobile').val('#fff').change();

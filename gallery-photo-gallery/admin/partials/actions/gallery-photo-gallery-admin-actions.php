@@ -292,6 +292,16 @@ $loading_type = (isset($gal_options['images_loading']) && $gal_options['images_l
 
 $redirect_type = (isset($gal_options['redirect_url_tab']) && $gal_options['redirect_url_tab'] != '') ? $gal_options['redirect_url_tab'] : "_blank"; 
 
+//Thumbnail title Background color
+$thumbnail_title_bg_color = isset($gal_options['lightbox_color']) ? esc_attr(stripslashes($gal_options['lightbox_color'])) : 'rgba(0,0,0,0)';
+
+//Enable thumbnail title Background color Mobile
+$gal_options['enable_lightbox_color_mobile'] = isset( $gal_options['enable_lightbox_color_mobile'] ) && $gal_options['enable_lightbox_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_thumbnail_title_bg_color_mobile = $gal_options['enable_lightbox_color_mobile'] == 'on' ?  true : false;
+
+//Thumbnail title Background color Mobile
+$thumbnail_title_bg_color_mobile = isset( $gal_options['lightbox_color_mobile'] ) && $gal_options['lightbox_color_mobile'] != '' ? esc_attr( $gal_options['lightbox_color_mobile'] ) : $thumbnail_title_bg_color;
+
 //Thumbnail title color
 $thumbnail_title_color = isset($gal_options['ays_gpg_title_color']) ? esc_attr(stripslashes($gal_options['ays_gpg_title_color'])) : '#fff';
 
@@ -2393,7 +2403,21 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <input name="ays-gpg-lightbox-color" class="ays_gpg_lightbox_color" data-alpha="true" type="text" value="<?php echo isset($gal_options['lightbox_color']) ? esc_attr(stripslashes($gal_options['lightbox_color'])) : 'rgba(0,0,0,0)'; ?>" data-default-color="rgba(0,0,0,0)">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_thumbnail_title_bg_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <input name="ays-gpg-lightbox-color" id="ays-gpg-lightbox-color" class="ays_gpg_lightbox_color" data-alpha="true" type="text" value="<?php echo $thumbnail_title_bg_color; ?>" data-default-color="rgba(0,0,0,0)">
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_desc_color_mobile_container" style=" <?php echo ( $enable_thumbnail_title_bg_color_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <input name="ays-gpg-lightbox-color-mobile" id="ays-gpg-lightbox-color-mobile" class="ays_gpg_lightbox_color_mobile" data-alpha="true" type="text" value="<?php echo $thumbnail_title_bg_color_mobile; ?>" data-default-color="rgba(0,0,0,0)">
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable-ays-gpg-lightbox-color-mobile" name="enable-ays-gpg-lightbox-color-mobile" <?php echo $enable_thumbnail_title_bg_color_mobile ? 'checked' : '' ?>>
+                                    <label for="enable-ays-gpg-lightbox-color-mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                     <hr/>
