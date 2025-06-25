@@ -611,17 +611,23 @@
         $(document).find('#gallery_img_hover_dir_aware').on('change', function(){
             if($(this).find("option:selected").val() == "rotate3d"){
                 $(document).find('input[name="ays-gpg-images-border-radius"]').val(0);
+                $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').val(0);
                 $(document).find('input[name="ays-gpg-images-border-radius"]').prop('disabled', true);
+                $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').prop('disabled', true);
             }else{
                 $(document).find('input[name="ays-gpg-images-border-radius"]').prop('disabled', false);
+                $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').prop('disabled', false);
             }
         });
         
         if( $(document).find(".ays_hover_effect_radio:checked").val() == "dir_aware" && $(document).find('#gallery_img_hover_dir_aware option:selected').val() == "rotate3d" ){
             $(document).find('input[name="ays-gpg-images-border-radius"]').val(0);
+            $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').val(0);
             $(document).find('input[name="ays-gpg-images-border-radius"]').prop('disabled', true);
+            $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').prop('disabled', true);
         }else{
             $(document).find('input[name="ays-gpg-images-border-radius"]').prop('disabled', false);
+            $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').prop('disabled', false);
         }        
         
 		$(document).on('click', '.ays_bulk_del_images', function(e){
@@ -2181,6 +2187,9 @@
             $(document).find('.ays_gpg_border_color').val('#000').change();
 
             $(document).find('input[name="ays-gpg-images-border-radius"]').val('0').change();
+            $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').val('0').change();
+            $(document).find('input[name="enable-ays-gpg-images-border-radius-mobile"]').prop('checked', true).change();
+
             $(document).find('input[name="ays_gpg_thumbnail_title_size"]').val('12').change();
 
             $(document).find('#ays_gallery_title_color').val('#000').change();

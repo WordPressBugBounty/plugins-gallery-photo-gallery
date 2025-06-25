@@ -157,7 +157,16 @@ class Galleries_List_Table extends WP_List_Table{
                 //Hover scale animation speed
                 $hover_scale_animation_speed = (isset($data['gpg_hover_scale_animation_speed']) && $data['gpg_hover_scale_animation_speed'] !== '') ? abs($data['gpg_hover_scale_animation_speed']) : 1;
                 $ays_gpg_hover_scale    = wp_unslash(sanitize_text_field( isset($data['ays_gpg_hover_scale']) ? $data['ays_gpg_hover_scale'] : 'no' ));
+
+                // Images Border radius
                 $ays_images_b_radius    = (isset($data['ays-gpg-images-border-radius']) && $data['ays-gpg-images-border-radius'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-images-border-radius'] )) : '';
+               
+                // Enable Images Border radius Mobile
+                $enable_ays_images_b_radius_mobile = isset( $data['enable_ays_gpg_images_border_radius_mobile'] ) && $data['enable_ays_gpg_images_border_radius_mobile'] == 'on' ? 'on' : 'off';
+
+                // Images Border radius Mobile
+                $ays_images_b_radius_mobile = isset( $data['ays-gpg-images-border-radius-mobile'] ) && $data['ays-gpg-images-border-radius-mobile'] != '' ? sanitize_text_field( $data['ays-gpg-images-border-radius-mobile'] ) : "";
+
                 $ays_hover_icon_size    = (isset($data['ays-gpg-hover-icon-size']) && $data['ays-gpg-hover-icon-size'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-hover-icon-size'] )) : '';
                 $ays_gpg_thumbnail_title_size = (isset($data['ays_gpg_thumbnail_title_size']) && $data['ays_gpg_thumbnail_title_size'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_thumbnail_title_size'] )) : '';
                 $ays_gpg_loader         = (isset($data['ays_gpg_loader']) && $data['ays_gpg_loader'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_loader'] )) : '';
@@ -295,6 +304,8 @@ class Galleries_List_Table extends WP_List_Table{
                     'columns_count_mobile'                  => $columns_count_mobile,
                     'view_type'                             => $view_type,
                     'border_radius'                         => $ays_images_b_radius,
+                    'enable_border_radius_mobile'           => $enable_ays_images_b_radius_mobile,
+                    'border_radius_mobile'                  => $ays_images_b_radius_mobile,
                     'admin_pagination'                      => $ays_admin_pagination,
                     'hover_zoom'                            => $ays_gpg_hover_zoom,
                     'hover_zoom_animation_speed'            => $hover_zoom_animation_speed,

@@ -23,6 +23,8 @@ $g_options = array(
     'columns_count'         => '3',
     'view_type'             => 'grid',
     "border_radius"         => "0",
+    "enable_border_radius_mobile" => "on",
+    "border_radius_mobile"  => "0",
     "admin_pagination"      => "all",
     "hover_zoom"            => "no",
     "show_gal_title"        => "on",
@@ -211,12 +213,21 @@ $gallery_loader_text_value = (isset($gal_options['gallery_loader_text_value']) &
 // Gallery loader custom gif value
 $gallery_loader_custom_gif = (isset($gal_options['gallery_loader_custom_gif']) && $gal_options['gallery_loader_custom_gif'] != '') ? stripslashes(esc_url($gal_options['gallery_loader_custom_gif'])) : '';
 
-//  Gallery loader custom gif width
+// Gallery loader custom gif width
 $gallery_loader_custom_gif_width = (isset($gal_options['gallery_loader_custom_gif_width']) && $gal_options['gallery_loader_custom_gif_width'] != '') ? absint( intval( $gal_options['gallery_loader_custom_gif_width'] ) ) : 100;
 
 $ays_gpg_view_type = (!isset($gal_options['view_type']) || $gal_options['view_type'] == "") ? "grid" : $gal_options['view_type'];
 
+// Gallery Border radius
 $ays_gpg_border_radius = !isset($gal_options['border_radius']) || $gal_options['border_radius'] == "" ? "0" : ($gal_options['border_radius']);
+
+// Enable Gallery Border radius Mobile
+$gal_options['enable_border_radius_mobile'] = isset($gal_options['enable_border_radius_mobile']) && $gal_options['enable_border_radius_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_border_radius_mobile = $gal_options['enable_border_radius_mobile'] == 'on' ?  true : false;
+
+// Gallery Border radius Mobile
+$ays_gpg_border_radius_mobile = isset( $gal_options['border_radius_mobile'] ) && $gal_options['border_radius_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['border_radius_mobile'] ) ) : $ays_gpg_border_radius;
+
 $ays_gpg_hover_icon_size = !isset($gal_options['hover_icon_size']) ? "20" : ($gal_options['hover_icon_size']);
 $ays_gpg_thumbnail_title_size = !isset($gal_options['thumbnail_title_size']) ? "12" : ($gal_options['thumbnail_title_size']);
 $ays_thumb_height_mobile = !isset($gal_options['thumb_height_mobile']) ? "170" : ($gal_options['thumb_height_mobile']);
@@ -2307,15 +2318,38 @@ $gpg_accordion_svg_html = '
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
-                        </div>                
-                        <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
-                            <div>
-                                <input name="ays-gpg-images-border-radius" id="ays-gpg-images-border-radius" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_border_radius ?>">
-                            </div>
-                            <div class="ays_gpg_dropdown_max_width">
-                                <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
-                            </div>
                         </div>
+                        <div class="col-sm-9 ays_divider_left">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_gpg_border_radius_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <div>
+                                            <input name="ays-gpg-images-border-radius" id="ays-gpg-images-border-radius" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_border_radius; ?>">
+                                        </div>
+                                        <div class="ays_gpg_dropdown_max_width">
+                                            <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_border_radius_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <div>
+                                            <input name="ays-gpg-images-border-radius-mobile" id="ays-gpg-images-border-radius-mobile" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_border_radius_mobile; ?>">
+                                        </div>
+                                        <div class="ays_gpg_dropdown_max_width">
+                                            <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable-ays-gpg-images-border-radius-mobile" name="enable_ays_gpg_images_border_radius_mobile" <?php echo $enable_ays_gpg_border_radius_mobile ? 'checked' : '' ?> >
+                                    <label for="enable-ays-gpg-images-border-radius-mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">
