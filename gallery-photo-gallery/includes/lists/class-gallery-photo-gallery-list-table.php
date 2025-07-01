@@ -221,8 +221,16 @@ class Galleries_List_Table extends WP_List_Table{
 
                 // Filter for thumbnail Mobile
                 $ays_gpg_filter_thubnail_opt_mobile = isset( $data['ays_gpg_filter_thubnail_opt_mobile'] ) && $data['ays_gpg_filter_thubnail_opt_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_filter_thubnail_opt_mobile'] ) : "";
+                
+                // Filter for lightbox Mobile
+                $ays_gpg_filter_lightbox_opt = isset( $data['ays_gpg_filter_lightbox_opt'] ) && $data['ays_gpg_filter_lightbox_opt'] != '' ? sanitize_text_field( $data['ays_gpg_filter_lightbox_opt'] ) : "";
 
-                $ays_gpg_filter_lightbox_opt = isset($data['ays_gpg_filter_lightbox_opt']) ? $data['ays_gpg_filter_lightbox_opt'] : "";
+                // Enable Filter for lightbox Mobile
+                $enable_ays_gpg_filter_lightbox_opt_mobile = isset( $data['enable_ays_gpg_filter_lightbox_opt_mobile'] ) && $data['enable_ays_gpg_filter_lightbox_opt_mobile'] == 'on' ? 'on' : 'off';
+
+                // Filter for lightbox Mobile
+                $ays_gpg_filter_lightbox_opt_mobile = isset( $data['ays_gpg_filter_lightbox_opt_mobile'] ) && $data['ays_gpg_filter_lightbox_opt_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_filter_lightbox_opt_mobile'] ) : "";
+
                 $custom_class = (isset($data['ays_custom_class']) && $data['ays_custom_class'] != "") ? esc_attr( sanitize_text_field( $data['ays_custom_class'] ) ) : '';
 
                 $ays_gpg_ordering_asc_desc = (isset($data['ays_gpg_ordering_asc_desc']) && $data['ays_gpg_ordering_asc_desc'] != '') ? $data['ays_gpg_ordering_asc_desc'] : "ascending";
@@ -381,6 +389,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "lb_pause"                          => $ays_lg_pause,
                     "lb_show_caption"                   => $ays_lg_show_caption,
                     "filter_lightbox_opt"               => $ays_gpg_filter_lightbox_opt,
+                    "enable_filter_lightbox_opt_mobile" => $enable_ays_gpg_filter_lightbox_opt_mobile,
+                    "filter_lightbox_opt_mobile"        => $ays_gpg_filter_lightbox_opt_mobile,
                     "lb_keypress"                       => $ays_gpg_lg_keypress,
                     "lb_esckey"                         => $ays_gpg_lg_esckey,
                     "hide_progress_line"                => $ays_gpg_hide_progress_line,
