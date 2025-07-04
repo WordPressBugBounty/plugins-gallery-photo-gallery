@@ -265,7 +265,7 @@ $filter_thubnail_opt_mobile = isset( $gal_options['filter_thubnail_opt_mobile'] 
 $filter_lightbox_opt = ( isset( $gal_lightbox_options['filter_lightbox_opt'] ) && $gal_lightbox_options['filter_lightbox_opt'] != "" ) ? esc_attr( $gal_lightbox_options['filter_lightbox_opt'] ) : "none";
 
 // Enable Filter for lightbox Mobile
-$gal_options['enable_filter_lightbox_opt_mobile'] = isset($gal_lightbox_options['enable_filter_lightbox_opt_mobile']) && $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] == 'off' ? 'off' : 'on';
+$gal_lightbox_options['enable_filter_lightbox_opt_mobile'] = isset($gal_lightbox_options['enable_filter_lightbox_opt_mobile']) && $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] == 'off' ? 'off' : 'on';
 $enable_filter_lightbox_opt_mobile = $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] == 'on' ?  true : false;
 
 // Filter for lightbox Mobile
@@ -708,13 +708,13 @@ $gpg_accordion_svg_html = '
         </ul>
             <?php
                 else:
-                    $images = explode( "***", $gallery["images"] );
-                    $images_titles = explode( "***", $gallery["images_titles"] );
+                    $images              = explode( "***", $gallery["images"] );
+                    $images_titles       = explode( "***", $gallery["images_titles"] );
                     $images_descriptions = explode( "***", $gallery["images_descs"] );
-                    $images_alts = explode( "***", $gallery["images_alts"] );
-                    $images_urls = explode( "***", $gallery["images_urls"] );
-                    $images_dates = explode( "***", $gallery["images_dates"] );
-                    $gal_cat_ids = isset($gallery['categories_id']) && $gallery['categories_id'] != '' ? explode( "***", $gallery["categories_id"] ) : array();
+                    $images_alts         = explode( "***", $gallery["images_alts"] );
+                    $images_urls         = explode( "***", $gallery["images_urls"] );
+                    $images_dates        = explode( "***", $gallery["images_dates"] );
+                    $gal_cat_ids  = isset($gallery['categories_id']) && $gallery['categories_id'] != '' ? explode( "***", $gallery["categories_id"] ) : array();
                     if($admin_pagination != "all"){
                         $pages = intval(ceil(count($images)/$admin_pagination));
                         $qanak = 0;
@@ -1656,9 +1656,9 @@ $gpg_accordion_svg_html = '
                 "view_22"   => "view_22.png",
                 "view_23"   => "view_23.png",
                 "view_24"   => "view_24.png",
-                "fb_view_1"   => "fb_view_1.PNG",
-                "fb_view_2"   => "fb_view_2.PNG",
-                "fb_view_3"   => "fb_view_3.PNG"
+                "fb_view_1" => "fb_view_1.PNG",
+                "fb_view_2" => "fb_view_2.PNG",
+                "fb_view_3" => "fb_view_3.PNG"
             );
 
             $view_type_urls = array(
@@ -1686,9 +1686,9 @@ $gpg_accordion_svg_html = '
                 "view_22"   => "photo-gallery-view-22",
                 "view_23"   => "photo-gallery-view-23",
                 "view_24"   => "photo-gallery-view-24",
-                "fb_view_1"   => "photo-gallery-view-25",
-                "fb_view_2"   => "photo-gallery-view-26",
-                "fb_view_3"   => "photo-gallery-view-27"
+                "fb_view_1" => "photo-gallery-view-25",
+                "fb_view_2" => "photo-gallery-view-26",
+                "fb_view_3" => "photo-gallery-view-27"
             );
         ?>
         <div id="tab3" class="ays-gallery-tab-content <?php echo ($ays_gpg_tab == 'tab3') ? 'ays-gallery-tab-content-active' : ''; ?>">            
@@ -1773,11 +1773,11 @@ $gpg_accordion_svg_html = '
                             <div class="col-sm-3 ays_divider_left">
                                 <select id="gallery_img_hover_simple" class="ays-text-input ays-text-input-short" name="ays_hover_simple">
                                     <optgroup label="Fading Entrances">
-                                        <option <?php echo 'fadeIn' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeIn">Fade In</option>
-                                        <option <?php echo 'fadeInDown' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInDown">Fade In Down</option>
-                                        <option <?php echo 'fadeInLeft' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInLeft">Fade In Left</option>
+                                        <option <?php echo 'fadeIn'      == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeIn">Fade In</option>
+                                        <option <?php echo 'fadeInDown'  == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInDown">Fade In Down</option>
+                                        <option <?php echo 'fadeInLeft'  == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInLeft">Fade In Left</option>
                                         <option <?php echo 'fadeInRight' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInRight">Fade In Right</option>
-                                        <option <?php echo 'fadeInUp' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInUp">Fade In Up</option>
+                                        <option <?php echo 'fadeInUp'    == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInUp">Fade In Up</option>
                                     </optgroup>
                                     <optgroup label="Sliding Entrances">
                                         <option <?php echo ($gal_options['hover_effect'] == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery');?></option>

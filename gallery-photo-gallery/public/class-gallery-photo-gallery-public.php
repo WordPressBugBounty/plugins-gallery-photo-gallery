@@ -2327,11 +2327,11 @@ class Gallery_Photo_Gallery_Public {
             $filter_thubnail_opt_mobile = $filter_thubnail_opt;
         }
 
-        // Enable Filter for lightbox Mobile
+        // Enable Filter for lightbox
         $filter_lightbox_opt = (isset($gal_lightbox_options['filter_lightbox_opt'])) ? $gal_lightbox_options['filter_lightbox_opt'] : 'none';
 
         // Enable Filter for lightbox Mobile
-        $gallery_options['enable_filter_lightbox_opt_mobile'] = ( isset( $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] ) && $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] == 'off' ) ? false : true;
+        $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] = ( isset( $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] ) && $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] == 'off' ) ? false : true;
 
         // Filter for lightbox Mobile
         if ( $gal_lightbox_options['enable_filter_lightbox_opt_mobile'] ) {
