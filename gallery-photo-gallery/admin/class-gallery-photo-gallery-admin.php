@@ -75,12 +75,12 @@ class Gallery_Photo_Gallery_Admin {
 	public function enqueue_styles($hook_suffix) {
         
 	    wp_enqueue_style( $this->plugin_name . '-admin', plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), $this->version, 'all' );
-		wp_enqueue_style( 'wp-color-picker' );
-        
-        wp_enqueue_style( $this->plugin_name . "-banner", plugin_dir_url( __FILE__ ) . 'css/gallery-photo-gallery-banner.css', array(), $this->version, 'all' );
+		wp_enqueue_style( 'wp-color-picker' );        
 
         if(false === strpos($hook_suffix, $this->plugin_name))
             return;
+
+        wp_enqueue_style( $this->plugin_name . "-banner", plugin_dir_url( __FILE__ ) . 'css/gallery-photo-gallery-banner.css', array(), $this->version, 'all' );
 
 		/**
 		 * This function is provided for demonstration purposes only.

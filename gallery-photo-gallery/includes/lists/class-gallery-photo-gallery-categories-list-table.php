@@ -414,7 +414,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
             return;
 
         ?>
-            <div class="notice notice-success is-dismissible">
+            <div class="ays-gpg-admin-notice notice notice-success is-dismissible">
                 <p> <?php echo $updated_message; ?> </p>
             </div>
         <?php
