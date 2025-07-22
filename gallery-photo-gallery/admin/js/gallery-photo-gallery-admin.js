@@ -2142,6 +2142,9 @@
             $(document).find('.ays_effect_dir_aware').hide(150);
 
             $(document).find('#ays_gpg_hover_animation_speed').val('0.5').change();
+            $(document).find('#ays_gpg_hover_animation_speed_mobile').val('0.5').change();
+            $(document).find("#enable_ays_gpg_hover_animation_speed_mobile").prop('checked', true).change();            
+
             $(document).find('#ays-gpg-position-val').val('center-center').change();
             $(document).find('#ays-gpg-position-mobile-val').val('center-center').change();
             $(document).find('input#enable_gallery_img_position_mobile').prop('checked', false).change();

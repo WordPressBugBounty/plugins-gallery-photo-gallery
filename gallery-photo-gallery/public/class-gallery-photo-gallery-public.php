@@ -2309,8 +2309,18 @@ class Gallery_Photo_Gallery_Public {
         //Hover scale animation Speed
         $hover_scale_animation_speed = (isset($gallery_options['hover_scale_animation_speed']) && $gallery_options['hover_scale_animation_speed'] !== '') ? abs($gallery_options['hover_scale_animation_speed']) : 1;
 
-        //Hover animation Speed        
-        $hover_animation_speed = (isset($gallery_options['hover_animation_speed']) && $gallery_options['hover_animation_speed'] !== '') ? abs($gallery_options['hover_animation_speed']) : 0.5;
+        // Hover animation Speed        
+        $hover_animation_speed = (isset($gallery_options['hover_animation_speed']) && $gallery_options['hover_animation_speed'] !== '') ? abs( $gallery_options['hover_animation_speed'] ) : 0.5;
+
+        // Enable Hover animation Speed Mobile
+        $gallery_options['enable_hover_animation_speed_mobile'] = ( isset( $gallery_options['enable_hover_animation_speed_mobile'] ) && $gallery_options['enable_hover_animation_speed_mobile'] == 'off' ) ? false : true;
+
+        // Hover animation Speed Mobile
+        if ( $gallery_options['enable_hover_animation_speed_mobile'] ) {
+            $hover_animation_speed_mobile = ( isset( $gallery_options['hover_animation_speed_mobile' ] ) && $gallery_options['hover_animation_speed_mobile' ] != '' ) ?  abs( $gallery_options['hover_animation_speed_mobile' ] ) : $hover_animation_speed;
+        } else {
+            $hover_animation_speed_mobile = $hover_animation_speed;
+        }
 
         $filter_thubnail = (isset($gallery_options['filter_thubnail']) && $gallery_options['filter_thubnail'] == "on") ? true : false;
 
@@ -2780,6 +2790,12 @@ class Gallery_Photo_Gallery_Public {
                     div.ays_grid_row div.ays_grid_column_".$id." {
                         border-radius: ". $images_b_radius_mobile ."px;
                         transition: transform 1s;
+                    }
+
+                    div.ays_masonry_item_".$id." div.ays_hover_mask,
+                    div.mosaic_".$id." div.ays_mosaic_column_item_".$id." div.ays_hover_mask,
+                    div.ays_grid_row div.ays_grid_column_".$id." div.ays_hover_mask {
+                        animation-duration: ".$hover_animation_speed_mobile."s !important;
                     }
 
                     .ays_gpg_lightbox_".$id." .lg-image, .ays_gpg_lightbox_".$id." .lg-thumb-item img{

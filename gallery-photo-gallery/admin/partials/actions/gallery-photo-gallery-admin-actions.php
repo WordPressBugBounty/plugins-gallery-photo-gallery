@@ -178,8 +178,15 @@ $ays_hover_zoom = (!isset($gal_options['hover_zoom']) ||
 //Hover zoom animation Speed
 $hover_zoom_animation_speed = (isset($gal_options['hover_zoom_animation_speed']) && $gal_options['hover_zoom_animation_speed'] !== '') ? abs($gal_options['hover_zoom_animation_speed']) : 0.5;
 
-//Hover animation Speed
+// Hover animation Speed
 $hover_animation_speed = (isset($gal_options['hover_animation_speed']) && $gal_options['hover_animation_speed'] !== '') ? abs($gal_options['hover_animation_speed']) : 0.5;
+
+// Enable Hover animation Speed Mobile
+$gal_options['enable_hover_animation_speed_mobile'] = isset($gal_options['enable_hover_animation_speed_mobile']) && $gal_options['enable_hover_animation_speed_mobile'] == 'off' ? 'off' : 'on';
+$enable_hover_animation_speed_mobile = $gal_options['enable_hover_animation_speed_mobile'] == 'on' ?  true : false;
+
+// Hover animation Speed Mobile
+$hover_animation_speed_mobile = isset( $gal_options['hover_animation_speed_mobile'] ) && $gal_options['hover_animation_speed_mobile'] != '' ? abs( $gal_options['hover_animation_speed_mobile'] ) : $hover_animation_speed;
 
 //Hover scale animation Speed
 $hover_scale_animation_speed = (isset($gal_options['hover_scale_animation_speed']) && $gal_options['hover_scale_animation_speed'] !== '') ? abs($gal_options['hover_scale_animation_speed']) : 1;
@@ -1850,7 +1857,25 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <input id="ays_gpg_hover_animation_speed" type="number" class="ays-text-input ays-text-input-short" name="ays_gpg_hover_animation_speed" value="<?php echo $hover_animation_speed; ?>" step="0.1">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_hover_animation_speed_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <input id="ays_gpg_hover_animation_speed" type="number" class="ays-text-input ays-text-input-short" name="ays_gpg_hover_animation_speed" value="<?php echo $hover_animation_speed; ?>" step="0.1">
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_hover_animation_speed_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <input id="ays_gpg_hover_animation_speed_mobile" type="number" class="ays-text-input ays-text-input-short" name="ays_gpg_hover_animation_speed_mobile" value="<?php echo $hover_animation_speed_mobile; ?>" step="0.1">
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_hover_animation_speed_mobile" name="enable_ays_gpg_hover_animation_speed_mobile" <?php echo $enable_hover_animation_speed_mobile ? 'checked' : '' ?> >
+                                    <label for="enable_ays_gpg_hover_animation_speed_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                     <hr>

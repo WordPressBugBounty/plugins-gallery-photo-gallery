@@ -152,8 +152,16 @@ class Galleries_List_Table extends WP_List_Table{
                 $ays_gpg_hover_zoom     = (isset($data['ays_gpg_hover_zoom']) && $data['ays_gpg_hover_zoom'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_hover_zoom'] )) : '';
                 //Hover zoom animation speed
                 $hover_zoom_animation_speed = (isset($data['gpg_hover_zoom_animation_speed']) && $data['gpg_hover_zoom_animation_speed'] !== '') ? abs($data['gpg_hover_zoom_animation_speed']) : 0.5;
-                //Hover animation speed
-                $hover_animation_speed = (isset($data['ays_gpg_hover_animation_speed']) && $data['ays_gpg_hover_animation_speed'] !== '') ? abs($data['ays_gpg_hover_animation_speed']) : 0.5;
+
+                // Hover animation speed
+                $hover_animation_speed = (isset($data['ays_gpg_hover_animation_speed']) && $data['ays_gpg_hover_animation_speed'] !== '') ? abs( $data['ays_gpg_hover_animation_speed'] ) : 0.5;
+
+                // Enable Hover animation speed Mobile
+                $enable_hover_animation_speed_mobile = isset( $data['enable_ays_gpg_hover_animation_speed_mobile'] ) && $data['enable_ays_gpg_hover_animation_speed_mobile'] == 'on' ? 'on' : 'off';
+
+                // Hover animation speed Mobile
+                $hover_animation_speed_mobile = isset( $data['ays_gpg_hover_animation_speed_mobile'] ) && $data['ays_gpg_hover_animation_speed_mobile'] != '' ? abs( $data['ays_gpg_hover_animation_speed_mobile'] ) : "";
+
                 //Hover scale animation speed
                 $hover_scale_animation_speed = (isset($data['gpg_hover_scale_animation_speed']) && $data['gpg_hover_scale_animation_speed'] !== '') ? abs($data['gpg_hover_scale_animation_speed']) : 1;
                 $ays_gpg_hover_scale    = wp_unslash(sanitize_text_field( isset($data['ays_gpg_hover_scale']) ? $data['ays_gpg_hover_scale'] : 'no' ));
@@ -318,6 +326,8 @@ class Galleries_List_Table extends WP_List_Table{
                     'hover_zoom'                            => $ays_gpg_hover_zoom,
                     'hover_zoom_animation_speed'            => $hover_zoom_animation_speed,
                     'hover_animation_speed'                 => $hover_animation_speed,
+                    'enable_hover_animation_speed_mobile'   => $enable_hover_animation_speed_mobile,
+                    'hover_animation_speed_mobile'          => $hover_animation_speed_mobile,
                     'hover_scale_animation_speed'           => $hover_scale_animation_speed,
                     'hover_scale'                           => $ays_gpg_hover_scale,
                     'show_gal_title'                        => $ays_show_gal_title,
