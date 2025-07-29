@@ -309,6 +309,7 @@ $gpg_height_width_ratio = isset($gal_options['height_width_ratio']) ? $gal_optio
 
 $responsive_width = (!isset($gal_options['resp_width'])) ? 'on' : $gal_options['resp_width'];
 
+// Enable RTL Direction
 $enable_rtl_direction = (isset($gal_options['enable_rtl_direction']) && $gal_options['enable_rtl_direction'] == 'on') ? $gal_options['enable_rtl_direction'] : 'off';
 
 // Enable RTL Direction mobile
@@ -316,6 +317,16 @@ if ( isset($gal_options['enable_rtl_direction_mobile']) ) {
     $enable_rtl_direction_mobile = $gal_options['enable_rtl_direction_mobile'] == 'on' ? 'on' : 'off';
 } else {
     $enable_rtl_direction_mobile = $enable_rtl_direction;
+}
+
+// Enable search image
+$enable_search_img = ( isset( $gal_options['enable_search_img'] ) && $gal_options['enable_search_img'] == 'on' ) ? $gal_options['enable_search_img'] : 'off';
+
+// Enable search image mobile
+if ( isset( $gal_options['enable_search_img_mobile'] ) ) {
+    $enable_search_img_mobile = $gal_options['enable_search_img_mobile'] == 'on' ? 'on' : 'off';
+} else {
+    $enable_search_img_mobile = $enable_search_img;
 }
 
 $loading_type = (isset($gal_options['images_loading']) && $gal_options['images_loading'] != '') ? $gal_options['images_loading'] : "all_loaded"; 
@@ -1317,9 +1328,22 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">
-                            <input type="checkbox" id="gpg_search_img" class="" name="gpg_search_img" <?php echo (isset($gal_options['enable_search_img']) && $gal_options['enable_search_img'] == "on") ? "checked" : ""; ?> />
-                        </div>
+                        <div class="col-sm-9 ays_divider_left ays_gpg_pc_and_mobile_container">
+                            <div class="ays_gpg_pc_and_mobile_container ays_gpg_pc_and_mobile_container_cb">
+                                <div class="ays_gpg_option_for_desktop">
+                                    <span class="ays_gpg_current_device_name" style="<?php echo ($enable_search_img == 'on' || $enable_search_img_mobile == 'on') ? 'display: block' : '' ?>"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></span>
+                                    <p class="onoffswitch">                                        
+                                        <input type="checkbox" id="gpg_search_img" class="ays-gpg-onoffswitch-checkbox" name="gpg_search_img" value="on" <?php echo ( $enable_search_img == 'on' ) ? 'checked' : ''; ?> />
+                                    </p>
+                                </div>
+                                <div class="ays_gpg_option_for_mobile_device ays_gpg_option_for_mobile_device_cb ays_divider_left <?php echo ($enable_search_img == 'on' || $enable_search_img_mobile == 'on') ? 'show' : '' ?>">
+                                    <span class="ays_gpg_current_device_name" style="<?php echo ($enable_search_img == 'on' || $enable_search_img_mobile == 'on') ? 'display: block' : '' ?>"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></span>
+                                    <p class="onoffswitch" style="margin:0;">
+                                        <input type="checkbox" id="gpg_search_img_mobile" class="ays-gpg-onoffswitch-checkbox" name="gpg_search_img_mobile" value="on" <?php echo ( $enable_search_img_mobile == 'on' ) ? 'checked' : ''; ?> />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">

@@ -2069,7 +2069,7 @@
         // Check new added Gallery start
         var createdNewGallery = aysGalleryGetCookie('ays_gallery_created_new');
 
-        if(createdNewGallery && createdNewGallery > 1){
+        if(createdNewGallery && createdNewGallery >= 1){
             var url = new URL(window.location.href);
 
             var getCustomPostId = aysGalleryGetCookie('ays_gallery_created_new_'+createdNewGallery+'_post_id');

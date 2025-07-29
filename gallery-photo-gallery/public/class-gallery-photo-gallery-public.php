@@ -241,9 +241,15 @@ class Gallery_Photo_Gallery_Public {
 
         $gallery_options['enable_search_img'] = isset($gallery_options['enable_search_img']) ? $gallery_options['enable_search_img'] : "off";
 
-        $disable_lightbox = (isset($gallery_options['enable_light_box']) && $gallery_options['enable_light_box'] == "off" || $gallery_options['enable_light_box'] == "") ? true : false;
-        $enable_search_img = ($gallery_options['enable_search_img'] != "off") ? true : false;
+        $enable_search_img  = (isset($gallery_options['enable_search_img']) && $gallery_options['enable_search_img'] == 'on' ) ? true : false;
 
+        if ( isset( $gallery_options['enable_search_img_mobile'] ) ) {
+            $enable_search_img_mobile  = ( isset( $gallery_options['enable_search_img_mobile'] ) && $gallery_options['enable_search_img_mobile'] == 'on' ) ? true : false;
+        } else {
+            $enable_search_img_mobile = $enable_search_img;
+        }
+
+        $disable_lightbox = (isset($gallery_options['enable_light_box']) && $gallery_options['enable_light_box'] == "off" || $gallery_options['enable_light_box'] == "") ? true : false;
         $hover_effect = (!isset($gallery_options['hover_effect']) || $gallery_options['hover_effect'] == null) ? "fadeIn" : $gallery_options['hover_effect'];
         $img_load_effect = (!isset($gallery_options['img_load_effect']) || $gallery_options['img_load_effect'] == null) ? "fadeIn" : $gallery_options['img_load_effect'];
 
@@ -1494,9 +1500,16 @@ class Gallery_Photo_Gallery_Public {
 
         $link_on_whole_img = (isset($gallery_options['link_on_whole_img']) && $gallery_options['link_on_whole_img'] == "on") ? true : false;
 
-        $gallery_options['enable_search_img'] = isset($gallery_options['enable_search_img']) ? $gallery_options['enable_search_img'] : "off";
+        $gallery_options['enable_search_img'] = isset($gallery_options['enable_search_img']) ? $gallery_options['enable_search_img'] : "off";        
 
-        $enable_search_img = ($gallery_options['enable_search_img'] != "off") ? true : false;
+        $enable_search_img  = (isset($gallery_options['enable_search_img']) && $gallery_options['enable_search_img'] == 'on' ) ? true : false;
+
+        if ( isset( $gallery_options['enable_search_img_mobile'] ) ) {
+            $enable_search_img_mobile  = ( isset( $gallery_options['enable_search_img_mobile'] ) && $gallery_options['enable_search_img_mobile'] == 'on' ) ? true : false;
+        } else {
+            $enable_search_img_mobile = $enable_search_img;
+        }
+
         $ays_width = $width == 0 ? '100%' : $width.'px'; 
 
         if($columns == null || $columns == 0){
@@ -1698,10 +1711,14 @@ class Gallery_Photo_Gallery_Public {
             $show_gallery_filter_cat = "";
             $ayg_gpg_cat_anim = "";
         }
+        
+        $search_img_display = $enable_search_img ? 'display:flex;' : 'display:none;';
+        $search_img_display_mobile = $enable_search_img_mobile ? 'display:flex;' : 'display:none;';
 
-        if ($enable_search_img && $view != 'mosaic') {
+        if ( $view != 'mosaic' ) {
             $show_search_img = "<div class='ays_gallery_search_img'>
-                                    <label>Search
+                                    <label>
+                                        <span>Search</span>
                                         <input type='text' class='inp_search_img' id='inp_search_img_".$id."' placeholder='by title, description'>
                                     </label>
                                 </div>";            
@@ -2735,7 +2752,8 @@ class Gallery_Photo_Gallery_Public {
                 }                
 
                 .ays_gallery_search_img{
-                    ".$search_img.";
+                    ". $search_img_display ."
+                    ". $search_img .";
                 }
 
                 @media screen and (max-width: 768px){
@@ -2800,6 +2818,10 @@ class Gallery_Photo_Gallery_Public {
 
                     .ays_gpg_lightbox_".$id." .lg-image, .ays_gpg_lightbox_".$id." .lg-thumb-item img{
                         filter: ". $gpg_filter_lightbox_image_mobile .";
+                    }
+
+                    .ays_gallery_search_img{
+                        ". $search_img_display_mobile ."
                     }
                 }
 

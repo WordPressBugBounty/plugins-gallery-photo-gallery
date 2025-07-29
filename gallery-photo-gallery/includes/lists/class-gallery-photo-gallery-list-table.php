@@ -218,7 +218,11 @@ class Galleries_List_Table extends WP_List_Table{
                 $hover_dir_aware        = (isset($data['ays_hover_dir_aware']) && $data['ays_hover_dir_aware'] != '') ? sanitize_text_field( $data['ays_hover_dir_aware'] ) : '';
 
                 $enable_light_box       = isset($data['av_light_box']) && $data['av_light_box'] == "on" ? "on" :"off";
+
                 $enable_search_img      = isset($data['gpg_search_img']) && $data['gpg_search_img'] == "on" ? "on" :"off";
+
+                $enable_search_img_mobile = (isset($data['gpg_search_img_mobile']) && $data['gpg_search_img_mobile'] == "on") ? "on" :"off";
+
                 $ays_filter_cat         = isset($data['ays_filter_cat']) && $data['ays_filter_cat'] == "on" ? "on" :"off";
 
                 // Filter for thumbnail
@@ -366,6 +370,7 @@ class Galleries_List_Table extends WP_List_Table{
                     "thumb_height_desktop"                  => $thumb_height_desktop,
                     "enable_light_box"                      => $enable_light_box,
                     "enable_search_img"                     => $enable_search_img,
+                    "enable_search_img_mobile"              => $enable_search_img_mobile,
                     "ays_filter_cat"                        => $ays_filter_cat,
                     "filter_thubnail_opt"                   => $ays_gpg_filter_thubnail_opt,
                     "enable_filter_thubnail_opt_mobile"     => $enable_ays_gpg_filter_thubnail_opt_mobile,
