@@ -212,8 +212,17 @@ class Galleries_List_Table extends WP_List_Table{
                 // Image Position Mobile
                 $gallery_img_position_mobile = (isset($data['gallery_img_position_mobile']) && $data['gallery_img_position_mobile'] != "") ? stripslashes( sanitize_text_field($data['gallery_img_position_mobile']) ) : 'center center';
             
+                // Show gallery head
                 $ays_show_gal_title     = (isset($data['ays_gpg_title_show']) && $data['ays_gpg_title_show'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_title_show'] )) : '';
                 $ays_show_gal_desc      = (isset($data['ays_gpg_desc_show']) && $data['ays_gpg_desc_show'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_desc_show'] )) : '';
+
+                // Enable Show gallery head Mobile
+                $enable_ays_show_gal_head_mobile = isset( $data['enable_show_gal_head_mobile'] ) && $data['enable_show_gal_head_mobile'] == 'on' ? 'on' : 'off';
+
+                // Show gallery head Mobile                
+                $ays_show_gal_title_mobile = isset( $data['ays_gpg_title_show_mobile'] ) && $data['ays_gpg_title_show_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_title_show_mobile'] ) : "";
+                $ays_show_gal_desc_mobile = isset( $data['ays_gpg_desc_show_mobile'] ) && $data['ays_gpg_desc_show_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_desc_show_mobile'] ) : "";
+
                 $images_hover_effect    = (isset($data['ays_images_hover_effect']) && $data['ays_images_hover_effect'] != '') ? sanitize_text_field( $data['ays_images_hover_effect'] ) : '';
                 $hover_dir_aware        = (isset($data['ays_hover_dir_aware']) && $data['ays_hover_dir_aware'] != '') ? sanitize_text_field( $data['ays_hover_dir_aware'] ) : '';
 
@@ -335,7 +344,10 @@ class Galleries_List_Table extends WP_List_Table{
                     'hover_scale_animation_speed'           => $hover_scale_animation_speed,
                     'hover_scale'                           => $ays_gpg_hover_scale,
                     'show_gal_title'                        => $ays_show_gal_title,
+                    'show_gal_title_mobile'                 => $ays_show_gal_title_mobile,
                     'show_gal_desc'                         => $ays_show_gal_desc,
+                    'show_gal_desc_mobile'                  => $ays_show_gal_desc_mobile,
+                    'enable_show_gpg_head_mobile'           => $enable_ays_show_gal_head_mobile,
                     "images_hover_effect"                   => $images_hover_effect,
                     "hover_dir_aware"                       => $hover_dir_aware,
                     "images_border"                         => $ays_images_border,

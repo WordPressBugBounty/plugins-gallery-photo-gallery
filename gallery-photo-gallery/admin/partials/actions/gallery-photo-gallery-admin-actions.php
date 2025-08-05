@@ -28,7 +28,10 @@ $g_options = array(
     "admin_pagination"      => "all",
     "hover_zoom"            => "no",
     "show_gal_title"        => "on",
+    "show_gal_title_mobile" => "on",
     "show_gal_desc"         => "on",
+    "show_gal_desc_mobile"  => "on",
+    "enable_show_gal_head_mobile" => "on",
     "images_hover_effect"   => "simple",
     "hover_dir_aware"       => "slide",
     "images_border"         => "",
@@ -165,8 +168,17 @@ $this_site_path = trim(get_site_url(), "https:");
 $gal_options            = json_decode($gallery['options'], true);
 $gal_lightbox_options   = json_decode($gallery['lightbox_options'], true);
 
+// Show Gallery head
 $show_gal_title = (!isset($gal_options['show_gal_title'])) ? 'on' : $gal_options['show_gal_title'];
 $show_gal_desc = (!isset($gal_options['show_gal_desc'])) ? 'on' : $gal_options['show_gal_desc'];
+
+// Enable Show Gallery head Mobile
+$gal_options['enable_show_gpg_head_mobile'] = isset($gal_options['enable_show_gpg_head_mobile']) && $gal_options['enable_show_gpg_head_mobile'] == 'off' ? 'off' : 'on';
+$enable_show_gal_head_mobile = $gal_options['enable_show_gpg_head_mobile'] == 'on' ?  true : false;
+
+// Show Gallery head Mobile
+$show_gal_title_mobile = isset( $gal_options['show_gal_title_mobile'] ) ? $gal_options['show_gal_title_mobile'] : $show_gal_title;
+$show_gal_desc_mobile = isset( $gal_options['show_gal_desc_mobile'] ) ? $gal_options['show_gal_desc_mobile'] : $show_gal_desc;
 
 $admin_pagination = (!isset($gal_options['admin_pagination']) ||
                      $gal_options['admin_pagination'] == null ||
@@ -1075,21 +1087,54 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-9 ays_divider_left">
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title ", 'gallery-photo-gallery');?>
-                                <input type="checkbox" class="" name="ays_gpg_title_show" <?php
-                                   echo ($show_gal_title == "on") ? "checked" : ""; ?>/>
-                                <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the title", 'gallery-photo-gallery');?>">
-                                   <i class="fas fa-info-circle"></i>
-                                </a>
-                            </label>
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description ", 'gallery-photo-gallery');?>
-                                <input type="checkbox" class="" name="ays_gpg_desc_show" <?php
-                                   echo ($show_gal_desc == "on") ? "checked" : ""; ?>/>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the description", 'gallery-photo-gallery');?>">
-                                   <i class="fas fa-info-circle"></i>
-                                </a>
-                            </label>
+
+                        <div class="col-sm-9 ays_divider_left show_gallery_head">
+
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_show_gal_head_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 600px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title ", 'gallery-photo-gallery');?>
+                                            <input type="checkbox" class="" name="ays_gpg_title_show" <?php
+                                               echo ($show_gal_title == "on") ? "checked" : ""; ?>/>
+                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the title", 'gallery-photo-gallery');?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description ", 'gallery-photo-gallery');?>
+                                            <input type="checkbox" class="" name="ays_gpg_desc_show" <?php
+                                               echo ($show_gal_desc == "on") ? "checked" : ""; ?>/>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the description", 'gallery-photo-gallery');?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_show_gal_head_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 600px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title mobile", 'gallery-photo-gallery');?>
+                                            <input type="checkbox" class="" name="ays_gpg_title_show_mobile" <?php
+                                               echo ( $show_gal_title_mobile == "on" ) ? "checked" : ""; ?>/>
+                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile title", 'gallery-photo-gallery');?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description mobile", 'gallery-photo-gallery');?>
+                                            <input type="checkbox" class="" name="ays_gpg_desc_show_mobile" <?php
+                                               echo ( $show_gal_desc_mobile == "on" ) ? "checked" : ""; ?>/>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile description", 'gallery-photo-gallery');?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_show_gal_head_mobile" name="enable_show_gal_head_mobile" <?php echo $enable_show_gal_head_mobile ? 'checked' : '' ?> >
+                                    <label for="enable_show_gal_head_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                     <hr/>

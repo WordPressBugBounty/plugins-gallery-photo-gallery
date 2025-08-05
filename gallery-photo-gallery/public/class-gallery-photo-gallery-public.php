@@ -1478,8 +1478,21 @@ class Gallery_Photo_Gallery_Public {
         
         $show_filter_cat = (!isset($gallery_options['ays_filter_cat'])) ? 'off' : $gallery_options['ays_filter_cat'];
 
+        // Show Gallery head
         $show_gal_title = (!isset($gallery_options['show_gal_title'])) ? 'on' : $gallery_options['show_gal_title'];
         $show_gal_desc = (!isset($gallery_options['show_gal_desc'])) ? 'on' : $gallery_options['show_gal_desc'];
+
+        // Enable Show Gallery head Mobile
+        $gallery_options['enable_show_gpg_head_mobile'] = isset($gallery_options['enable_show_gpg_head_mobile']) && $gallery_options['enable_show_gpg_head_mobile'] == 'off' ? 'off' : 'on';
+        $enable_show_gal_head_mobile = ( isset($gallery_options["enable_show_gpg_head_mobile"] ) && $gallery_options["enable_show_gpg_head_mobile"] == 'on' ) ? true : false;
+        // Show Gallery head Mobile
+        if ( $enable_show_gal_head_mobile ) {
+            $show_gal_title_mobile = ( isset( $gallery_options["show_gal_title_mobile"]) && $gallery_options["show_gal_title_mobile"] !== '' ) ? esc_attr( $gallery_options["show_gal_title_mobile"] ) : '';
+            $show_gal_desc_mobile = ( isset( $gallery_options["show_gal_desc_mobile"]) && $gallery_options["show_gal_desc_mobile"] !== '' ) ? esc_attr( $gallery_options["show_gal_desc_mobile"] ) : '';
+        } else {
+            $show_gal_title_mobile = $show_gal_title;
+            $show_gal_desc_mobile = $show_gal_desc;
+        }        
 
         $lightbox_color_rgba = $this->hex2rgba($lightbox_color, 0.5);
         $lightbox_color_mobile_rgba = $this->hex2rgba($lightbox_color_mobile, 0.5);
@@ -1863,11 +1876,26 @@ class Gallery_Photo_Gallery_Public {
         }else{
             $show_gallery_title = "";
         }
+        
+        if($show_gal_title_mobile == "on"){
+            $show_gallery_title_mobile = "<h2 class='ays_gallery_title'>" . stripslashes($title) . "</h2>";
+        }else{
+            $show_gallery_title_mobile = "";
+        }
+
+
         if($show_gal_desc == "on"){
             $show_gallery_desc = "<h4 class='ays_gallery_description'>" . stripslashes($description) . "</h4>";
         }else{
             $show_gallery_desc = "";
         }
+
+        if($show_gal_desc_mobile == "on"){
+            $show_gallery_desc_mobile = "<h4 class='ays_gallery_description'>" . stripslashes($description) . "</h4>";
+        }else{
+            $show_gallery_desc_mobile = "";
+        }
+
         if($show_gal_title != "on" && $show_gal_desc != "on"){
             $show_gallery_head = "";
         }else{
@@ -1876,12 +1904,22 @@ class Gallery_Photo_Gallery_Public {
                                     $show_gallery_desc
                                 </div>";
         }
+
+        if($show_gal_title_mobile != "on" && $show_gal_desc_mobile != "on"){
+            $show_gallery_head_mobile = "";
+        }else{
+            $show_gallery_head_mobile = "<div class='ays_gallery_header ays_gallery_header_mobile'>
+                                    $show_gallery_title_mobile
+                                    $show_gallery_desc_mobile
+                                </div>";
+        }
+
         if($ays_images_border === "on"){
             $show_images_with_border = "border: ".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color.";";
         }else{
             $show_images_with_border = "border: none";
         }
-        $gallery_view = "<div class='ays_gallery_container_".$id."' style='width: ".$ays_width."'>".$show_gallery_head.
+        $gallery_view = "<div class='ays_gallery_container_".$id."' style='width: ".$ays_width."'>".$show_gallery_head.$show_gallery_head_mobile.
             $show_gallery_filter_cat.$show_search_img;
         
         switch( $view ){
@@ -2755,10 +2793,18 @@ class Gallery_Photo_Gallery_Public {
                     ". $search_img_display ."
                     ". $search_img .";
                 }
-
+                .ays_gallery_header.ays_gallery_header_mobile{
+                    display:none;        
+                }
                 @media screen and (max-width: 768px){
                     .ays_image_title > span {
                         color:". $thumbnail_title_color_mobile ."
+                    }
+                    .ays_gallery_header.ays_gallery_header_mobile{
+                        display:block;
+                    }
+                    .ays_gallery_header:not(.ays_gallery_header_mobile){
+                        display:none;
                     }
                     .ays_gallery_container_".$id." {
                         ".$rtl_style_mobile.";

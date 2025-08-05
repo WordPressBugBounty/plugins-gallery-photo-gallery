@@ -1092,6 +1092,10 @@ div.gpg_animation_demo_dAware:hover > div.ays_hover_mask {
     background-color: white;
     border-radius: 4px;
 }
+.show_gallery_head .ays_gpg_image_hover_icon {
+    min-width: 305px;
+    justify-content: center;
+}
 
 .ays_gpg_loader_custom_gif, .ays_gpg_loader_text {
     display: flex;
