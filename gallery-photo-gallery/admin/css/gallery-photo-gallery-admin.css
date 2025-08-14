@@ -3612,6 +3612,7 @@ a.ays_animation_preview {
 
 .ays_gpg_display_flex_width {
     display: flex !important;
+    flex-wrap: wrap;
 }
 
 .ays_gpg_dropdown_max_width {

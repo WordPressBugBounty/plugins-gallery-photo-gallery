@@ -126,8 +126,17 @@ class Galleries_List_Table extends WP_List_Table{
                 $images_distance        = (isset($data['ays-gpg-images-distance']) && $data['ays-gpg-images-distance'] != '') ? absint( intval( $data['ays-gpg-images-distance'] ) ) : '5';
                 $hover_effect           = (isset($data['ays_hover_simple']) && $data['ays_hover_simple'] != '') ? sanitize_text_field( $data['ays_hover_simple'] ) : '';
                 $img_load_effect        = (isset($data['ays_img_load_effect']) && $data['ays_img_load_effect'] != '') ? sanitize_text_field( $data['ays_img_load_effect'] ) : '';
-                $hover_opacity          = (isset($data['ays-gpg-image-hover-opacity']) && $data['ays-gpg-image-hover-opacity'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-opacity'] ) : '';
-                $hover_color            = (isset($data['ays-gpg-hover-color']) && $data['ays-gpg-hover-color'] != '') ? sanitize_text_field( $data['ays-gpg-hover-color'] ) : '';
+                $hover_opacity          = (isset($data['ays-gpg-image-hover-opacity']) && $data['ays-gpg-image-hover-opacity'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-opacity'] ) : '';                
+
+                //Gallery hover color 
+                $hover_color = (isset($data['ays-gpg-hover-color']) && $data['ays-gpg-hover-color'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-hover-color'] )) : '#000';
+
+                //Enable Gallery hover color Mobile
+                $enable_hover_color_mobile = isset( $data['enable_gpg_hover_color_mobile'] ) && $data['enable_gpg_hover_color_mobile'] == 'on' ? 'on' : 'off';
+
+                //Gallery hover color Mobile
+                $hover_color_mobile = isset( $data['ays-gpg-hover-color-mobile'] ) && $data['ays-gpg-hover-color-mobile'] != '' ? sanitize_text_field( $data['ays-gpg-hover-color-mobile'] ) : '#000';
+
                 $hover_icon             = (isset($data['ays-gpg-image-hover-icon']) && $data['ays-gpg-image-hover-icon'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-icon'] ) : '';
                 $image_sizes            = (isset($data['ays_image_sizes']) && $data['ays_image_sizes'] != '') ? sanitize_text_field( $data['ays_image_sizes'] ) : '';
                 $custom_css             = isset($data['gallery_custom_css']) && $data['gallery_custom_css'] != '' ? stripslashes( esc_attr( sanitize_text_field( $data['gallery_custom_css'] ) ) ) : '';
@@ -361,6 +370,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "gallery_img_position_mobile"           => $gallery_img_position_mobile,
                     "hover_opacity"                         => $hover_opacity,
                     "hover_color"                           => $hover_color,
+                    "enable_hover_color_mobile"             => $enable_hover_color_mobile,
+                    "hover_color_mobile"                    => $hover_color_mobile,
                     "image_sizes"                           => $image_sizes,
                     "lightbox_color"                        => $lightbox_color,
                     "enable_lightbox_color_mobile"          => $enable_lightbox_color_mobile,

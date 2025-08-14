@@ -375,6 +375,16 @@ $enable_gallery_title_color_mobile = $gal_options['enable_ays_gallery_title_colo
 //Gallery title color Mobile
 $gallery_title_color_mobile = isset( $gal_options['ays_gallery_title_color_mobile'] ) && $gal_options['ays_gallery_title_color_mobile'] != '' ? esc_attr( $gal_options['ays_gallery_title_color_mobile'] ) : $gallery_title_color;
 
+//Gallery hover color
+$gallery_hover_color = isset($gal_options['hover_color']) ? esc_attr(stripslashes($gal_options['hover_color'])) : '#000';
+
+//Enable Gallery hover color Mobile
+$gal_options['enable_hover_color_mobile'] = isset( $gal_options['enable_hover_color_mobile'] ) && $gal_options['enable_hover_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_gallery_hover_color_mobile = $gal_options['enable_hover_color_mobile'] == 'on' ?  true : false;
+
+//Gallery hover color Mobile
+$gallery_hover_color_mobile = isset( $gal_options['hover_color_mobile'] ) && $gal_options['hover_color_mobile'] != '' ? esc_attr( $gal_options['hover_color_mobile'] ) : $gallery_hover_color;
+
 //Gallery description color
 $gallery_desc_color = isset($gal_options['ays_gallery_desc_color']) ? esc_attr(stripslashes($gal_options['ays_gallery_desc_color'])) : '#000';
 
@@ -2037,8 +2047,23 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
+
                         <div class="col-sm-9 ays_divider_left">
-                            <input name="ays-gpg-hover-color" class="ays_gpg_hover_color" data-alpha="true" type="text" value="<?php echo isset($gal_options['hover_color']) ? esc_attr(stripslashes($gal_options['hover_color'])) : '#000000'; ?>" data-default-color="#000000">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_gallery_hover_color_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <input id="ays-gpg-hover-color" name="ays-gpg-hover-color" class="ays_gpg_hover_color" data-alpha="true" type="text" value="<?php echo $gallery_hover_color; ?>" data-default-color="#000">
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_gallery_hover_color_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <input id="ays-gpg-hover-color-mobile" name="ays-gpg-hover-color-mobile" class="ays_gpg_hover_color" data-alpha="true" type="text" value="<?php echo $gallery_hover_color_mobile; ?>" data-default-color="#000">
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_gpg_hover_color_mobile" name="enable_gpg_hover_color_mobile" <?php echo $enable_gallery_hover_color_mobile ? 'checked' : '' ?>>
+                                    <label for="enable_gpg_hover_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                     <hr/>

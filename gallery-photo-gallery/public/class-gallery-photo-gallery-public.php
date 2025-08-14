@@ -2357,7 +2357,18 @@ class Gallery_Photo_Gallery_Public {
             $title_pos_bottom = 'bottom: 0;';
         }
 
-        $hover_color = (isset($gallery_options['hover_color']) && $gallery_options['hover_color'] !== null) ? $gallery_options['hover_color'] : '#000000';
+        // Enable Gallery hover Color
+        $hover_color = (isset($gallery_options['hover_color']) && $gallery_options['hover_color'] !== null) ? $gallery_options['hover_color'] : '#000';        
+
+        // Enable Gallery hover Color Mobile
+        $gallery_options['enable_hover_color_mobile'] = ( isset( $gallery_options['enable_hover_color_mobile'] ) && $gallery_options['enable_hover_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery hover Color Mobile
+        if ( $gallery_options['enable_hover_color_mobile'] ) {
+            $hover_color_mobile = ( isset( $gallery_options['hover_color_mobile'] ) && $gallery_options['hover_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['hover_color_mobile'] ) ) : $hover_color;
+        } else {
+            $hover_color_mobile = $hover_color;
+        }
 
         $hover_scale = (isset($gallery_options['hover_scale']) && $gallery_options['hover_scale'] !== null) ? $gallery_options['hover_scale'] : 'no';
 
@@ -2859,6 +2870,7 @@ class Gallery_Photo_Gallery_Public {
                     div.ays_masonry_item_".$id." div.ays_hover_mask,
                     div.mosaic_".$id." div.ays_mosaic_column_item_".$id." div.ays_hover_mask,
                     div.ays_grid_row div.ays_grid_column_".$id." div.ays_hover_mask {
+                        background: ". $this->hex2rgba( $hover_color_mobile, $hover_opacity ) .";
                         animation-duration: ".$hover_animation_speed_mobile."s !important;
                     }
 

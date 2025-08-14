@@ -168,7 +168,8 @@
         $(document).find('#ays_gpg_thumbnail_title_color_mobile').wpColorPicker();
         $(document).find('#ays_gpg_progress_line_color').wpColorPicker();
         $(document).find('#ays_gpg_progress_line_color_mobile').wpColorPicker();
-        $(document).find('.ays_gpg_hover_color').wpColorPicker();
+        $(document).find('#ays-gpg-hover-color').wpColorPicker();
+        $(document).find('#ays-gpg-hover-color-mobile').wpColorPicker();
         $(document).find('.ays_gpg_border_color').wpColorPicker();
         $(document).find('.ays_gallery_live_preview').hover(function () {
             $('.ays_gallery_live_preview').popover('show');
@@ -2154,7 +2155,9 @@
             $(document).find('#formControlRange').val('0.5').change();
             $(document).find('.gpg_opacity_demo').css('opacity', '0.5');
 
-            $(document).find('.ays_gpg_hover_color').val('#000').change();
+            $(document).find('#ays-gpg-hover-color').val('#000').change();
+            $(document).find('#ays-gpg-hover-color-mobile').val('#000').change();
+            $(document).find("#enable_gpg_hover_color_mobile").prop('checked', true).change();
 
             $(document).find('label.ays_gpg_hover_zoom > input').prop('checked' , false).change();
             $(document).find('label.ays_gpg_hover_zoom > input[value="no"]').prop('checked' , true).change();
