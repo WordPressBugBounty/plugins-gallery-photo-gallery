@@ -2289,6 +2289,21 @@
             }
         }
 
+        // Replace image to YouTube embed video
+        $(document).on('click', '.ays-gpg-youtube-placeholder', function() {
+            var videoId = $(this).data('video-id');
+            var iframe = $('<iframe>', {
+                src: 'https://www.youtube.com/embed/' + videoId + '?autoplay=1',
+                class: '',
+                width: 560,
+                height: 315,
+                frameborder: 0,
+                allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
+                allowfullscreen: true,
+            });
+            $(this).replaceWith(iframe);
+        });
+
 })( jQuery );
 
 function ays_getDirectionKey(ev, obj) {

@@ -77,19 +77,24 @@
     </div>
 
 
-    <?php if($gallery_max_id <= 3): ?>
+    <?php if ( $gallery_max_id <= 3 ) : ?>
         <div class="ays-gpg-create-gallery-video-box" style="margin: 80px auto 30px;">
             <div class="ays-gpg-create-gallery-title">
                 <h4><?php echo __( "Create Your First Gallery in Under One Minute", 'gallery-photo-gallery' ); ?></h4>
             </div>
-            <div class="ays-gpg-create-gallery-youtube-video">                
-                <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/bRrrBEQVZk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="ays-gpg-create-gallery-youtube-video">
+                <div class="ays-gpg-youtube-placeholder" data-video-id="bRrrBEQVZk8">
+                    <img src="<?php echo esc_url( AYS_GPG_ADMIN_URL .'/images/create-gallery-on-wordpress.webp' ); ?>" loading="lazy" width="560" height="315">
+                </div>
             </div>
+            <div class="ays_gpg_small_hint_text_for_message_variables" style="text-align: center;">
+                <?php echo esc_html__( 'Please note that this video will disappear once you created 4 galleries.', 'gallery-photo-gallery' ); ?>
+            </div>            
             <div class="ays-gpg-create-gallery-youtube-video-button-box">
                 <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
             </div>
         </div>
-    <?php else: ?>
+    <?php else : ?>
         <div class="ays-gpg-create-gallery-video-box" style="margin: auto;">
             <div class="ays-gpg-create-gallery-youtube-video-button-box">
                 <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
