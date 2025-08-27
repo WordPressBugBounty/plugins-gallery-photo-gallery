@@ -413,14 +413,14 @@
         
         $(document).on('click', '#ays_gpg_images_border', function(e){
             if($(document).find('#ays_gpg_images_border').prop('checked')){
-                $(document).find('.ays_gpg_border_options').css('display', "inline-flex");
+                $(document).find('.ays_gpg_border_options').css('display', "block");
             }else{
                 $(document).find('.ays_gpg_border_options').css('display', "none");
             }
         });
         
         if($(document).find('#ays_gpg_images_border').prop('checked')){
-            $(document).find('.ays_gpg_border_options').css('display', "inline-flex");
+            $(document).find('.ays_gpg_border_options').css('display', "block");
         }else{
             $(document).find('.ays_gpg_border_options').css('display', "none");
         }

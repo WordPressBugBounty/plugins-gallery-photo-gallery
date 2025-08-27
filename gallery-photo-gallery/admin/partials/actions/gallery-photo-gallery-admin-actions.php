@@ -2412,30 +2412,63 @@ $gpg_accordion_svg_html = '
                         </div>
                         <div class="col-sm-9 ays_divider_left">
                             <input id="ays_gpg_images_border" name="ays_gpg_images_border" class="" type="checkbox" <?php echo ($ays_images_border == 'on') ? 'checked' : ''; ?>>
-                            <div class="ays_gpg_border_options">
-                                <div class="ays_gpg_border_options_div ays_gpg_display_flex_width">
-                                    <div>
-                                       <input type="number" class="ays_gpg_images_border_width" style="width: 50px;" min="0" max="10" maxlength="2" name="ays_gpg_images_border_width" value="<?php echo $ays_images_border_width; ?>" onkeypress="if(this.value.length==2) return false;">
+
+                            <div class="form-group ays_gpg_border_options">
+                                <div class="form-group row ays_gpg_border_options_div ays_gpg_display_flex_width ays_gpg_display_flex_width">
+                                    <div class="col-sm-2">
+                                        <label for="ays_gpg_images_border_width">
+                                            <?php echo esc_html__("Images border width", 'gallery-photo-gallery'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Images border width in pixels. It accepts only numeric values.", 'gallery-photo-gallery'); ?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
                                     </div>
-                                    <div class="ays_gpg_dropdown_max_width">
-                                        <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
+                                    <div class="col-sm-10 ays_divider_left ays_gpg_display_flex_width">
+                                        <div>
+                                           <input type="number" id="ays_gpg_images_border_width" class="ays_gpg_images_border_width" style="width: 200px;" min="0" max="10" maxlength="2" name="ays_gpg_images_border_width" value="<?php echo $ays_images_border_width; ?>" onkeypress="if(this.value.length==2) return false;">
+                                        </div>
+                                        <div class="ays_gpg_dropdown_max_width">
+                                            <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
+                                        </div>                            
                                     </div>                            
                                 </div>
-                                <div class="ays_gpg_border_options_div gpg_images_border_style">
-                                    <select name="ays_gpg_images_border_style">
-                                    <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
-                                    <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
-                                    <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
-                                    <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
-                                    <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
-                                    <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
-                                    <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
-                                    <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
-                                    <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
-                                </select>
+                                <hr>
+                                <div class="form-group row ays_gpg_border_options_div gpg_images_border_style ays_gpg_display_flex_width">
+                                    <div class="col-sm-2">
+                                        <label for="ays_gpg_images_border_style">
+                                            <?php echo esc_html__("Images border style", 'gallery-photo-gallery'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify images border style.", 'gallery-photo-gallery'); ?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10 ays_divider_left">
+                                        <select id="ays_gpg_images_border_style" name="ays_gpg_images_border_style">
+                                            <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
+                                            <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
+                                            <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
+                                            <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
+                                            <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
+                                            <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
+                                            <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
+                                            <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
+                                            <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
+                                    </select>
+                                    </div>
                                 </div>
-                                <div class="ays_gpg_border_options_div">
-                                    <input name="ays_gpg_border_color" class="ays_gpg_border_color" type="text" data-alpha="true" value="<?php echo $ays_images_border_color; ?>" data-default-color="#000000">
+                                <hr>
+                                <div class="form-group row ays_gpg_border_options_div ays_gpg_display_flex_width">
+                                    <div class="col-sm-2">
+                                        <label for="ays_gpg_border_color">
+                                            <?php echo esc_html__("Images border color", 'gallery-photo-gallery'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify images border color.", 'gallery-photo-gallery'); ?>">
+                                               <i class="fas fa-info-circle"></i>
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-10 ays_divider_left">
+                                        <input id="ays_gpg_border_color" name="ays_gpg_border_color" class="ays_gpg_border_color" type="text" data-alpha="true" value="<?php echo $ays_images_border_color; ?>" data-default-color="#000000">
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -519,8 +519,7 @@ svg.ays-move-images{
 }
 
 .ays_gpg_border_options {
-    display: inline-block;
-    padding-left: 20px;
+    padding-top: 20px;
 }
 .ays_gpg_border_options > * {
     margin-right: 15px;

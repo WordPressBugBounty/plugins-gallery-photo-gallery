@@ -16,7 +16,7 @@ ob_start();
  * Plugin Name:       Gallery - Photo Gallery
  * Plugin URI:        https://ays-pro.com/wordpress/photo-gallery
  * Description:       Gallery – Photo Gallery is an easy-to-use plugin for creating and displaying photo galleries. It lets you customize the layout and style to showcase your pictures beautifully.
- * Version:           6.3.3
+ * Version:           6.3.4
  * Author:            Photo Gallery Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -54,8 +54,8 @@ if( ! defined( 'AYS_GPG_BASENAME' ) )
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'AYS_GALLERY_VERSION', '6.3.3' );
-define( 'AYS_GALLERY_NAME_VERSION', '6.3.3' );
+define( 'AYS_GALLERY_VERSION', '6.3.4' );
+define( 'AYS_GALLERY_NAME_VERSION', '6.3.4' );
 define( 'AYS_GALLERY_NAME', 'gallery-photo-gallery' );
 
 /**
@@ -148,13 +148,7 @@ function general_gpg_admin_notice(){
                                     <span><?php echo __( "Upgrade", 'gallery-photo-gallery' ); ?></span>
                                 </a>
                                 <span class="ays-gpg-logo-container-one-time-text"><?php echo __( "One-time payment", 'gallery-photo-gallery' ); ?></span>
-                            </div>
-                            <div class="ays-gpg-coupon-container">
-                                <div class="ays-gpg-coupon-box ays-gpg-copy-element-box-parent">
-                                    <span onClick="selectAndCopyElementContents(this)" class="ays-gpg-copy-element-box" data-toggle="tooltip" title="<?php echo esc_html__( "Click for copy", 'gallery-photo-gallery' ); ?>"><?php echo esc_html__( "summer2025", 'gallery-photo-gallery' ); ?></span>
-                                </div>
-                                <span class="ays-gpg-logo-container-one-time-text"><?php echo esc_html__( "Extra 20% Coupon", 'gallery-photo-gallery' ); ?></span>
-                            </div>
+                            </div>                            
                         </div>
                         <ul id="menu">
                             <li class="modile-ddmenu-lg"><a class="ays-btn" href="https://ays-pro.com/wordpress/photo-gallery/?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=gpg-top-banner-pricing-link-<?php echo esc_attr( AYS_GALLERY_VERSION ); ?>" target="_blank"><?php echo esc_html__( "Pricing", 'secure-copy-content-protection' ); ?></a></li>
