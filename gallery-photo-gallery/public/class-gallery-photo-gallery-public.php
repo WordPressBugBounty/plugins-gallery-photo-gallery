@@ -193,8 +193,20 @@ class Gallery_Photo_Gallery_Public {
         $ays_images_border = (!isset($gallery_options['images_border']) ||
                             $gallery_options['images_border'] == false) ? '' : $gallery_options['images_border'];
 
+        // Enable Gallery Border width
         $ays_images_border_width    = (!isset($gallery_options['images_border_width']) ||
                                         $gallery_options['images_border_width'] == false) ? '1' : $gallery_options['images_border_width'];
+
+        // Enable Gallery Border width Mobile
+        $gallery_options['enable_images_border_width_mobile'] = ( isset( $gallery_options['enable_images_border_width_mobile'] ) && $gallery_options['enable_images_border_width_mobile'] == 'off') ? false : true;
+        
+        // Gallery Border width Mobile
+        if ( $gallery_options['enable_images_border_width_mobile'] ) {
+            $ays_images_border_width_mobile = ( isset( $gallery_options['images_border_width_mobile'] ) && $gallery_options['images_border_width_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['images_border_width_mobile'] ) ) : $ays_images_border_width;
+        } else {
+            $ays_images_border_width_mobile = $ays_images_border_width;
+        }
+
         $ays_images_border_style    = (!isset($gallery_options['images_border_style']) ||
                                         $gallery_options['images_border_style'] == false) ? 'solid' : $gallery_options['images_border_style'];
         $ays_images_border_color    = (!isset($gallery_options['images_border_color']) ||
@@ -758,12 +770,21 @@ class Gallery_Photo_Gallery_Public {
         </style>";
         if($ays_images_border === "on"){
             $show_images_with_border = "border: ".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color.";";
+
+            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style." ".$ays_images_border_color." !important;";
+
             $show_mosaic_border_js = "setTimeout(function(){
                                 $(document).find('.ays_gallery_container_".$id." .mosaic_".$id." .ays_mosaic_column_item_".$id."').css('border', '".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color."');
                             }, 500);";
+
+            $show_mosaic_border_js_mobile = "setTimeout(function(){
+                                $(document).find('.ays_gallery_container_".$id." .mosaic_".$id." .ays_mosaic_column_item_".$id."').css('border', '".$ays_images_border_width_mobile."px ".$ays_images_border_style." ".$ays_images_border_color."');
+                            }, 500);";
         }else{
             $show_images_with_border = "border: none";
+            $show_images_with_border_mobile = "border: none";
             $show_mosaic_border_js = "";
+            $show_mosaic_border_js_mobile = "";
         }
         $custom_class = isset($gallery_options['custom_class']) && $gallery_options['custom_class'] != "" ? $gallery_options['custom_class'] : "";
         $gallery_view .= "<div class='ays_gallery_body_".$id." ".$custom_class."'>";
@@ -995,7 +1016,12 @@ class Gallery_Photo_Gallery_Public {
                                 ays_gallery_containers.css({
                                    position: 'static'
                                 });
-                                $show_mosaic_border_js
+                                if (window.matchMedia('(max-width: 768px)').matches) {
+                                    $show_mosaic_border_js_mobile;
+                                    console.log('bobol');
+                                }else{
+                                    $show_mosaic_border_js;
+                                }
                                 $(window).trigger('resize');
                             })
                             .fail( function() {
@@ -1424,8 +1450,17 @@ class Gallery_Photo_Gallery_Public {
         $ays_images_border = (!isset($gallery_options['images_border']) ||
                             $gallery_options['images_border'] == false) ? '' : $gallery_options['images_border'];
 
+        // Enable Gallery Border width
         $ays_images_border_width    = (!isset($gallery_options['images_border_width']) ||
-                                        $gallery_options['images_border_width'] == false) ? '1' : $gallery_options['images_border_width'];
+                                        $gallery_options['images_border_width'] == false) ? '1' : $gallery_options['images_border_width'];        
+        
+        // Gallery Border width Mobile
+        if ( $gallery_options['enable_images_border_width_mobile'] ) {
+            $ays_images_border_width_mobile = ( isset( $gallery_options['images_border_width_mobile'] ) && $gallery_options['images_border_width_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['images_border_width_mobile'] ) ) : $ays_images_border_width;
+        } else {
+            $ays_images_border_width_mobile = $ays_images_border_width;
+        }
+
         $ays_images_border_style    = (!isset($gallery_options['images_border_style']) ||
                                         $gallery_options['images_border_style'] == false) ? 'solid' : $gallery_options['images_border_style'];
         $ays_images_border_color    = (!isset($gallery_options['images_border_color']) ||
@@ -1916,8 +1951,10 @@ class Gallery_Photo_Gallery_Public {
 
         if($ays_images_border === "on"){
             $show_images_with_border = "border: ".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color.";";
+            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style." ".$ays_images_border_color." !important;";
         }else{
             $show_images_with_border = "border: none";
+            $show_images_with_border_mobile = "border: none";
         }
         $gallery_view = "<div class='ays_gallery_container_".$id."' style='width: ".$ays_width."'>".$show_gallery_head.$show_gallery_head_mobile.
             $show_gallery_filter_cat.$show_search_img;
@@ -2880,6 +2917,11 @@ class Gallery_Photo_Gallery_Public {
 
                     .ays_gallery_search_img{
                         ". $search_img_display_mobile ."
+                    }
+
+                    div.ays_masonry_grid div.ays_masonry_item_".$id.",
+                    div.ays_grid_row div.ays_grid_column_".$id." {
+                        ". $show_images_with_border_mobile ."
                     }
                 }
 

@@ -2188,7 +2188,11 @@
 
             $(document).find('#ays_gpg_images_border').prop('checked' , false).change();
             $(document).find('.ays_gpg_border_options').css('display', "none");
-            $(document).find('input.ays_gpg_images_border_width').val('1').change();
+
+            $(document).find('#ays_gpg_images_border_width').val('1').change();
+            $(document).find('#ays_gpg_images_border_width_mobile').val('1').change();
+            $(document).find("#enable_ays_gpg_images_border_width_mobile").prop('checked', true).change();
+
             $(document).find('select[name="ays_gpg_images_border_style"]').val('solid').change();
             $(document).find('.ays_gpg_border_color').val('#000').change();
 

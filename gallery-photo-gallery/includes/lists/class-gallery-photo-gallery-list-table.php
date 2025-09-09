@@ -202,7 +202,16 @@ class Galleries_List_Table extends WP_List_Table{
                 $gallery_loader_custom_gif_width = (isset($data['ays_gallery_loader_custom_gif_width']) && sanitize_text_field( $data['ays_gallery_loader_custom_gif_width'] ) != '') ? absint( intval( $data['ays_gallery_loader_custom_gif_width'] ) ) : 100;
                 
                 $ays_images_border      = wp_unslash(sanitize_text_field( isset($data['ays_gpg_images_border']) ? $data['ays_gpg_images_border'] : '' ));
+
+                // Images Border width Mobile
                 $ays_images_b_width     = (isset($data['ays_gpg_images_border_width']) && $data['ays_gpg_images_border_width'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_images_border_width'] )) : '';
+
+                // Enable Images Border width Mobile
+                $enable_ays_images_b_width_mobile = isset( $data['enable_ays_gpg_images_border_width_mobile'] ) && $data['enable_ays_gpg_images_border_width_mobile'] == 'on' ? 'on' : 'off';
+
+                // Images Border width Mobile
+                $ays_images_b_width_mobile = isset( $data['ays_gpg_images_border_width_mobile'] ) && $data['ays_gpg_images_border_width_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_images_border_width_mobile'] ) : "";
+
                 $ays_images_b_style     = (isset($data['ays_gpg_images_border_style']) && $data['ays_gpg_images_border_style'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_images_border_style'] )) : '';
                 $ays_images_b_color     = (isset($data['ays_gpg_border_color']) && $data['ays_gpg_border_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_border_color'] )) : '';
                 $thumb_height_mobile    = wp_unslash(sanitize_text_field( isset($data['ays-thumb-height-mobile']) ? $data['ays-thumb-height-mobile'] : '' ));
@@ -361,6 +370,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "hover_dir_aware"                       => $hover_dir_aware,
                     "images_border"                         => $ays_images_border,
                     "images_border_width"                   => $ays_images_b_width,
+                    "enable_images_border_width_mobile"     => $enable_ays_images_b_width_mobile,
+                    "images_border_width_mobile"            => $ays_images_b_width_mobile,
                     "images_border_style"                   => $ays_images_b_style,
                     "images_border_color"                   => $ays_images_b_color,
                     "hover_effect"                          => $hover_effect,
