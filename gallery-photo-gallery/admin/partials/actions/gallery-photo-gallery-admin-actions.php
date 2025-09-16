@@ -230,7 +230,16 @@ $enable_ays_images_border_width_mobile = $gal_options['enable_images_border_widt
 // Gallery Border width Mobile
 $ays_images_border_width_mobile = isset( $gal_options['images_border_width_mobile'] ) && $gal_options['images_border_width_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['images_border_width_mobile'] ) ) : $ays_images_border_width;
 
+// Gallery Images Border style
 $ays_images_border_style    = (!isset($gal_options['images_border_style'])) ? 'solid' : $gal_options['images_border_style'];
+
+// Enable Gallery Images Border style Mobile
+$gal_options['enable_images_border_style_mobile'] = isset($gal_options['enable_images_border_style_mobile']) && $gal_options['enable_images_border_style_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_images_border_style_mobile = $gal_options['enable_images_border_style_mobile'] == 'on' ?  true : false;
+
+// Gallery Images Border style Mobile
+$ays_images_border_style_mobile = isset( $gal_options['images_border_style_mobile'] ) && $gal_options['images_border_style_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['images_border_style_mobile'] ) ) : $ays_images_border_style;
+
 $ays_images_border_color    = (!isset($gal_options['images_border_color'])) ? '#000000' : esc_attr(stripslashes( $gal_options['images_border_color'] ));
 $ays_gallery_loader  = (!isset($gal_options['gallery_loader'])) ? "flower" : $gal_options['gallery_loader'];
 
@@ -2476,17 +2485,41 @@ $gpg_accordion_svg_html = '
                                         </label>
                                     </div>
                                     <div class="col-sm-10 ays_divider_left">
-                                        <select id="ays_gpg_images_border_style" name="ays_gpg_images_border_style">
-                                            <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
-                                            <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
-                                            <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
-                                            <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
-                                            <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
-                                            <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
-                                            <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
-                                            <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
-                                            <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
-                                    </select>
+                                        <div class="ays_toggle_mobile_parent">
+                                            <div>
+                                                <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_images_border_style_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                                <select id="ays_gpg_images_border_style" name="ays_gpg_images_border_style">
+                                                    <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
+                                                    <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
+                                                    <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
+                                                    <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
+                                                    <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
+                                                    <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
+                                                    <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
+                                                    <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
+                                                    <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
+                                                </select>
+                                            </div>
+                                            <div class="ays_toggle_target ays_images_border_style_mobile_container" style=" <?php echo ( $enable_ays_images_border_style_mobile ) ? '' : 'display:none'; ?>">
+                                                <hr>
+                                                <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                                <select id="ays_gpg_images_border_style_mobile" name="ays_gpg_images_border_style_mobile">
+                                                    <option value="solid" <?php echo $ays_images_border_style_mobile == "solid" ? 'selected' : ''; ?>>Solid</option>
+                                                    <option value="dashed" <?php echo $ays_images_border_style_mobile == "dashed" ? 'selected' : ''; ?>>Dashed</option>
+                                                    <option value="dotted" <?php echo $ays_images_border_style_mobile == "dotted" ? 'selected' : ''; ?>>Dotted</option>
+                                                    <option value="double" <?php echo $ays_images_border_style_mobile == "double" ? 'selected' : ''; ?>>Double</option>
+                                                    <option value="groove" <?php echo $ays_images_border_style_mobile == "groove" ? 'selected' : ''; ?>>Groove</option>
+                                                    <option value="ridge" <?php echo $ays_images_border_style_mobile == "ridge" ? 'selected' : ''; ?>>Ridge</option>
+                                                    <option value="inset" <?php echo $ays_images_border_style_mobile == "inset" ? 'selected' : ''; ?>>Inset</option>
+                                                    <option value="outset" <?php echo $ays_images_border_style_mobile == "outset" ? 'selected' : ''; ?>>Outset</option>
+                                                    <option value="none" <?php echo $ays_images_border_style_mobile == "none" ? 'selected' : ''; ?>>None</option>
+                                                </select>
+                                            </div>
+                                            <div class="ays_gpg_mobile_settings_container">
+                                                <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_images_border_style_mobile" name="enable_ays_gpg_images_border_style_mobile" <?php echo $enable_ays_images_border_style_mobile ? 'checked' : '' ?>>
+                                                <label for="enable_ays_gpg_images_border_style_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                                 <hr>

@@ -2193,7 +2193,10 @@
             $(document).find('#ays_gpg_images_border_width_mobile').val('1').change();
             $(document).find("#enable_ays_gpg_images_border_width_mobile").prop('checked', true).change();
 
-            $(document).find('select[name="ays_gpg_images_border_style"]').val('solid').change();
+            $(document).find('#ays_gpg_images_border_style').val('solid').change();
+            $(document).find('#ays_gpg_images_border_style_mobile').val('solid').change();
+            $(document).find("#enable_ays_gpg_images_border_style_mobile").prop('checked', true).change();
+
             $(document).find('.ays_gpg_border_color').val('#000').change();
 
             $(document).find('input[name="ays-gpg-images-border-radius"]').val('0').change();
