@@ -221,8 +221,19 @@ class Gallery_Photo_Gallery_Public {
             $ays_images_border_style_mobile = $ays_images_border_style;
         }
 
+         // Gallery Border color
         $ays_images_border_color    = (!isset($gallery_options['images_border_color']) ||
-                                        $gallery_options['images_border_color'] == false) ? '#000000' : $gallery_options['images_border_color'];
+                                        $gallery_options['images_border_color'] == false) ? '#000' : $gallery_options['images_border_color'];
+
+         // Enable Gallery Border color Mobile
+        $gallery_options['enable_images_border_color_mobile'] = ( isset( $gallery_options['enable_images_border_color_mobile'] ) && $gallery_options['enable_images_border_color_mobile'] == 'off') ? false : true;
+        
+        // Gallery Border color Mobile
+        if ( $gallery_options['enable_images_border_color_mobile'] ) {
+            $ays_images_border_color_mobile = ( isset( $gallery_options['images_border_color_mobile'] ) && $gallery_options['images_border_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['images_border_color_mobile'] ) ) : $ays_images_border_color;
+        } else {
+            $ays_images_border_color_mobile = $ays_images_border_color;
+        }
 
         $ays_images_hover_effect = (!isset($gallery_options['images_hover_effect']) || 
                                     $gallery_options['images_hover_effect'] == '' ||
@@ -783,14 +794,14 @@ class Gallery_Photo_Gallery_Public {
         if($ays_images_border === "on"){
             $show_images_with_border = "border: ".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color.";";
 
-            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color." !important;";
+            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color_mobile." !important;";
 
             $show_mosaic_border_js = "setTimeout(function(){
                                 $(document).find('.ays_gallery_container_".$id." .mosaic_".$id." .ays_mosaic_column_item_".$id."').css('border', '".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color."');
                             }, 500);";
 
             $show_mosaic_border_js_mobile = "setTimeout(function(){
-                                $(document).find('.ays_gallery_container_".$id." .mosaic_".$id." .ays_mosaic_column_item_".$id."').css('border', '".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color."');
+                                $(document).find('.ays_gallery_container_".$id." .mosaic_".$id." .ays_mosaic_column_item_".$id."').css('border', '".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color_mobile."');
                             }, 500);";
         }else{
             $show_images_with_border = "border: none";
@@ -1484,7 +1495,14 @@ class Gallery_Photo_Gallery_Public {
         }
 
         $ays_images_border_color    = (!isset($gallery_options['images_border_color']) ||
-                                        $gallery_options['images_border_color'] == false) ? '#000000' : $gallery_options['images_border_color'];
+                                        $gallery_options['images_border_color'] == false) ? '#000' : $gallery_options['images_border_color'];
+
+        // Gallery Border style Mobile
+        if ( $gallery_options['enable_images_border_color_mobile'] ) {
+            $ays_images_border_color_mobile = ( isset( $gallery_options['images_border_color_mobile'] ) && $gallery_options['images_border_color_mobile'] != '' ) ?  stripslashes( esc_attr( $gallery_options['images_border_color_mobile'] ) ) : $ays_images_border_color;
+        } else {
+            $ays_images_border_color_mobile = $ays_images_border_color;
+        }
         
         $ays_gpg_lightbox_counter = (!isset($gal_lightbox_options['lightbox_counter']) ||
                                     $gal_lightbox_options['lightbox_counter'] == false) ? "true" : $gal_lightbox_options['lightbox_counter'];
@@ -1971,7 +1989,7 @@ class Gallery_Photo_Gallery_Public {
 
         if($ays_images_border === "on"){
             $show_images_with_border = "border: ".$ays_images_border_width."px ".$ays_images_border_style." ".$ays_images_border_color.";";
-            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color." !important;";
+            $show_images_with_border_mobile = "border: ".$ays_images_border_width_mobile."px ".$ays_images_border_style_mobile." ".$ays_images_border_color_mobile." !important;";
         }else{
             $show_images_with_border = "border: none";
             $show_images_with_border_mobile = "border: none";

@@ -221,7 +221,15 @@ class Galleries_List_Table extends WP_List_Table{
                 // Images Border style Mobile
                 $ays_images_b_style_mobile = isset( $data['ays_gpg_images_border_style_mobile'] ) && $data['ays_gpg_images_border_style_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_images_border_style_mobile'] ) : "";
 
+                //Images Border color
                 $ays_images_b_color     = (isset($data['ays_gpg_border_color']) && $data['ays_gpg_border_color'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_border_color'] )) : '';
+
+                //Enable Images Border color Mobile
+                $enable_ays_images_b_color_mobile = isset( $data['enable_ays_gpg_border_color_mobile'] ) && $data['enable_ays_gpg_border_color_mobile'] == 'on' ? 'on' : 'off';
+
+                //Images Border color Mobile
+                $ays_images_b_color_mobile = isset( $data['ays_gpg_border_color_mobile'] ) && $data['ays_gpg_border_color_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_border_color_mobile'] ) : '#000';
+
                 $thumb_height_mobile    = wp_unslash(sanitize_text_field( isset($data['ays-thumb-height-mobile']) ? $data['ays-thumb-height-mobile'] : '' ));
                 $thumb_height_desktop   = wp_unslash(sanitize_text_field( isset($data['ays-thumb-height-desktop']) ? $data['ays-thumb-height-desktop'] : '' ));
             
@@ -384,6 +392,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "enable_images_border_style_mobile"     => $enable_ays_images_b_style_mobile,
                     "images_border_style_mobile"            => $ays_images_b_style_mobile,
                     "images_border_color"                   => $ays_images_b_color,
+                    "enable_images_border_color_mobile"     => $enable_ays_images_b_color_mobile,
+                    "images_border_color_mobile"            => $ays_images_b_color_mobile,
                     "hover_effect"                          => $hover_effect,
                     "img_load_effect"                       => $img_load_effect,
                     "gallery_img_position"                  => $gallery_img_position,

@@ -37,7 +37,9 @@ $g_options = array(
     "images_border"         => "",
     "images_border_width"   => "1",
     "images_border_style"   => "solid",
-    "images_border_color"   => "#000000",
+    "images_border_color"   => "#000",
+    "enable_images_border_color_mobile"   => "on",
+    "images_border_color_mobile"   => "#000",
     "hover_effect"          => "fadeIn",
     "hover_opacity"         => "0.5",
     "image_sizes"           => "full_size",
@@ -240,7 +242,16 @@ $enable_ays_images_border_style_mobile = $gal_options['enable_images_border_styl
 // Gallery Images Border style Mobile
 $ays_images_border_style_mobile = isset( $gal_options['images_border_style_mobile'] ) && $gal_options['images_border_style_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['images_border_style_mobile'] ) ) : $ays_images_border_style;
 
-$ays_images_border_color    = (!isset($gal_options['images_border_color'])) ? '#000000' : esc_attr(stripslashes( $gal_options['images_border_color'] ));
+//Gallery border color 
+$ays_images_border_color    = (!isset($gal_options['images_border_color'])) ? '#000' : esc_attr(stripslashes( $gal_options['images_border_color'] ));
+
+//Enable Gallery border color Mobile
+$gal_options['enable_images_border_color_mobile'] = isset( $gal_options['enable_images_border_color_mobile'] ) && $gal_options['enable_images_border_color_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_images_border_color_mobile = $gal_options['enable_images_border_color_mobile'] == 'on' ?  true : false;
+
+//Gallery border color Mobile
+$ays_images_border_color_mobile = isset( $gal_options['images_border_color_mobile'] ) && $gal_options['images_border_color_mobile'] != '' ? esc_attr( $gal_options['images_border_color_mobile'] ) : $ays_images_border_color;
+
 $ays_gallery_loader  = (!isset($gal_options['gallery_loader'])) ? "flower" : $gal_options['gallery_loader'];
 
 if ($ays_gallery_loader == 'default') {
@@ -2533,7 +2544,21 @@ $gpg_accordion_svg_html = '
                                         </label>
                                     </div>
                                     <div class="col-sm-10 ays_divider_left">
-                                        <input id="ays_gpg_border_color" name="ays_gpg_border_color" class="ays_gpg_border_color" type="text" data-alpha="true" value="<?php echo $ays_images_border_color; ?>" data-default-color="#000000">
+                                        <div class="ays_toggle_mobile_parent">
+                                            <div>
+                                                <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_images_border_color_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                                <input id="ays_gpg_border_color" name="ays_gpg_border_color" class="ays_gpg_border_color" type="text" data-alpha="true" value="<?php echo $ays_images_border_color; ?>" data-default-color="#000">
+                                            </div>
+                                            <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_images_border_color_mobile ) ? '' : 'display:none'; ?>">
+                                                <hr>
+                                                <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                                <input type="text" id="ays_gpg_border_color_mobile" name="ays_gpg_border_color_mobile" data-alpha="true" value="<?php echo $ays_images_border_color_mobile; ?>" data-default-color="#000">
+                                            </div>
+                                            <div class="ays_gpg_mobile_settings_container">
+                                                <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_border_color_mobile" name="enable_ays_gpg_border_color_mobile" <?php echo $enable_ays_images_border_color_mobile ? 'checked' : '' ?>>
+                                                <label for="enable_ays_gpg_border_color_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>

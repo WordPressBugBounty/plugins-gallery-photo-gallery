@@ -170,7 +170,8 @@
         $(document).find('#ays_gpg_progress_line_color_mobile').wpColorPicker();
         $(document).find('#ays-gpg-hover-color').wpColorPicker();
         $(document).find('#ays-gpg-hover-color-mobile').wpColorPicker();
-        $(document).find('.ays_gpg_border_color').wpColorPicker();
+        $(document).find('#ays_gpg_border_color').wpColorPicker();
+        $(document).find('#ays_gpg_border_color_mobile').wpColorPicker();
         $(document).find('.ays_gallery_live_preview').hover(function () {
             $('.ays_gallery_live_preview').popover('show');
         }, function () {
@@ -2197,7 +2198,9 @@
             $(document).find('#ays_gpg_images_border_style_mobile').val('solid').change();
             $(document).find("#enable_ays_gpg_images_border_style_mobile").prop('checked', true).change();
 
-            $(document).find('.ays_gpg_border_color').val('#000').change();
+            $(document).find('#ays_gpg_border_color').val('#000').change();
+            $(document).find('#ays_gpg_border_color_mobile').val('#000').change();
+            $(document).find('#enable_ays_gpg_border_color_mobile').prop('checked', true).change();
 
             $(document).find('input[name="ays-gpg-images-border-radius"]').val('0').change();
             $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').val('0').change();
