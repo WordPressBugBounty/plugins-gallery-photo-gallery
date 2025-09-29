@@ -196,6 +196,8 @@ class Gallery_Photo_Gallery_Admin {
             'greate'                    => esc_html__( 'Done!', 'gallery-photo-gallery'),
             'thumbsUpGreat'             => esc_html__( 'Thumbs up, great!', 'gallery-photo-gallery'),
             'preivewGallery'            => esc_html__( 'Preview Gallery', 'gallery-photo-gallery' ),
+            'successCopyCoupon'         => esc_html__( "Coupon code copied!", 'gallery-photo-gallery' ),
+            'failedCopyCoupon'          => esc_html__( "Failed to copy coupon code", 'gallery-photo-gallery' ),
 
         ) );
         
