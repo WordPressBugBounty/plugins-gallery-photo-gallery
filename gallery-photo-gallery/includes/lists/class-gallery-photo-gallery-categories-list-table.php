@@ -142,6 +142,65 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         );
     }
 
+    public function duplicate_image_categories( $id ){        
+
+        if( !is_user_logged_in()){
+            wp_die(  esc_html__( 'Something went wrong', 'gallery-photo-gallery' ) );
+        }
+
+        if (
+            ! isset( $_GET['_wpnonce'] ) ||
+            ! wp_verify_nonce(
+                sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ),
+                $this->plugin_name . '-duplicate-gpg-image-category'
+            )
+        ) {
+            wp_die( esc_html__( 'Security check failed', 'gallery-photo-gallery' ) );
+        }
+
+        global $wpdb;
+
+        if ( is_null( $id ) || empty($id) || $id == 0 ) {
+            return;
+        }
+
+        $image_category_table = $wpdb->prefix . 'ays_gallery_categories';
+        $image_category_data = $this->get_image_categories_by_id($id);
+        
+        $title = (isset($image_category_data['title']) && $image_category_data['title'] != "") ? stripslashes( sanitize_text_field( $image_category_data['title'] ) ) : __("Copy", 'gallery-photo-gallery');
+        $description =  (isset($image_category_data['description']) && $image_category_data['description'] != "") ? wp_kses_post( $image_category_data['description'] ) : "";        
+
+        $result = $wpdb->insert(
+            $image_category_table,
+            array(
+                'title'         =>  "Copy - " . $title,
+                'description'   => $description,
+            ),
+            array(
+                '%s', // title
+                '%s', // description
+            )
+        );
+        if( $result >= 0 ){
+            $message = "duplicated";
+            $url = esc_url_raw( remove_query_arg( array( 'action', 'gallery_category', '_wpnonce') ) ) . '&status=' . $message;
+            
+            wp_safe_redirect( $url );
+            exit;
+        }        
+    }
+
+    public function get_image_categories_by_id( $id ){
+        global $wpdb;
+
+        $image_category_table = $wpdb->prefix . 'ays_gallery_categories';
+
+        $sql = "SELECT * FROM {$image_category_table} WHERE id=" . absint( sanitize_text_field( $id ) );
+
+        $result = $wpdb->get_row($sql, 'ARRAY_A');
+
+        return $result;
+    }
 
     /**
      * Returns the count of records in the database.
@@ -155,7 +214,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
         $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}ays_gallery_categories";
 
-        $search = ( isset( $_REQUEST['s'] ) ) ? $_REQUEST['s'] : false;
+        $search = ( isset( $_REQUEST['s'] ) ) ? sanitize_text_field(wp_unslash( $_REQUEST['s']) ) : false;
         if( $search ){
             $filter[] = sprintf(" title LIKE '%%%s%%' ", $search );
         }
@@ -249,6 +308,10 @@ class Gpg_Categories_List_Table extends WP_List_Table{
      */
     function column_title( $item ) {
         $delete_nonce = wp_create_nonce( $this->plugin_name . '-delete-gallery-category' );
+        $duplicate_nonce = wp_create_nonce( $this->plugin_name . '-duplicate-gpg-image-category' );
+
+        $page   = ( isset($_REQUEST['page']) ) ? sanitize_key(wp_unslash($_REQUEST['page'] )): null;
+
 
         $gallery_categories_title_length = intval( $this->title_length );
 
@@ -256,13 +319,21 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         $t = esc_attr($column_t);
 
         $restitle = Gallery_Photo_Gallery_Admin::ays_restriction_string("word", $column_t, $gallery_categories_title_length);
-        $title = sprintf( '<a href="?page=%s&action=%s&gallery_category=%d" title="%s"><strong>%s</strong></a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ), $t, $restitle );        
+        $title = sprintf( '<a href="?page=%s&action=%s&gallery_category=%d" title="%s"><strong>%s</strong></a>', esc_attr( $page ), 'edit', absint( $item['id'] ), $t, $restitle );        
 
         $actions = array(
-            'edit' => sprintf( '<a href="?page=%s&action=%s&gallery_category=%d">'. __('Edit', 'gallery-photo-gallery') .'</a>', esc_attr( $_REQUEST['page'] ), 'edit', absint( $item['id'] ) ),
+            'edit' => sprintf( '<a href="?page=%s&action=%s&gallery_category=%d">'. __('Edit', 'gallery-photo-gallery') .'</a>', esc_attr( $page ), 'edit', absint( $item['id'] ) ),
+            'duplicate' => sprintf(
+                '<a href="?page=%s&action=%s&gallery_category=%d&_wpnonce=%s">%s</a>',
+                esc_attr( $page ),
+                'duplicate',
+                absint( $item['id'] ),
+                $duplicate_nonce,
+                __( 'Duplicate', 'gallery-photo-gallery' )
+            ),
         );
         
-        $actions['delete'] = sprintf( '<a class="ays_confirm_del" data-message="%s" href="?page=%s&action=%s&gallery_category=%s&_wpnonce=%s">'. __('Delete', 'gallery-photo-gallery') .'</a>', $restitle, esc_attr( $_REQUEST['page'] ), 'delete', absint( $item['id'] ), $delete_nonce );
+        $actions['delete'] = sprintf( '<a class="ays_confirm_del" data-message="%s" href="?page=%s&action=%s&gallery_category=%s&_wpnonce=%s">'. __('Delete', 'gallery-photo-gallery') .'</a>', $restitle, esc_attr( $page ), 'delete', absint( $item['id'] ), $delete_nonce );
 
         return $title . $this->row_actions( $actions );
     }    
@@ -345,7 +416,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         ) );
 
 
-        $search = ( isset( $_REQUEST['s'] ) ) ? $_REQUEST['s'] : false;
+        $search = ( isset( $_REQUEST['s'] ) ) ? sanitize_text_field(wp_unslash( $_REQUEST['s']) ) : false;
 
         $do_search = ( $search ) ? sprintf(" title LIKE '%%%s%%' ", $search ) : '';
 
@@ -409,6 +480,8 @@ class Gpg_Categories_List_Table extends WP_List_Table{
             $updated_message = esc_html( __( 'Image category saved.', 'gallery-photo-gallery' ) );
         elseif ( 'deleted' == $status )
             $updated_message = esc_html( __( 'Image category deleted.', 'gallery-photo-gallery' ) );
+        elseif ( 'duplicated' == $status )
+            $updated_message = esc_html( __( 'Image category duplicated.', 'gallery-photo-gallery' ) );
 
         if ( empty( $updated_message ) )
             return;

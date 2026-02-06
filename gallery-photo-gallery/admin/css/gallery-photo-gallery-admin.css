@@ -484,6 +484,7 @@ svg.ays-move-images{
 .ays_gpg_view_type_radio {
     margin-bottom: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .ays_gpg_view_type_radio img {
@@ -2584,6 +2585,9 @@ div.wrap .ays-gallery-wp-heading-inline{
     margin: 0;
     border-bottom: 2px solid #000;
 }
+.ays-gallery-add-new-button-box {
+    margin-top: 20px;
+}
 .ays-gallery-asked-question__header {
     cursor: pointer;
     display: -webkit-box;
@@ -2644,10 +2648,6 @@ div.wrap .ays-gallery-wp-heading-inline{
 .ays_heart_beat {
     font-size: 20px;
     margin-left: 10px;
-}
-.ays-gpg-add-new-button {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
 }
 
 /*How to use Submenu Style End*/
@@ -3826,6 +3826,14 @@ table#ays-gpg-position-table-mobile td:hover {
     color: #fff;
 }
 
+.ays-gpg-add-new-button-box {
+    margin-top: 20px;
+}
+
+.wrap.ays-gpg-list-table .ays-gpg-add-new-button-new-design {
+    margin: 0;
+}
+
 .wrap.ays-gpg-list-table .ays-gpg-add-new-button-new-design:hover {
     background: #0f34e7;
 }
@@ -3833,6 +3841,7 @@ table#ays-gpg-position-table-mobile td:hover {
 .wrap.ays-gpg-list-table .ays-gpg-add-new-button-new-design:active {
     padding: 5px 27px;
     line-height: 2.15384615;
+    margin-left: 0;
 }
 
 .wrap.ays-gpg-list-table .ays-gpg-add-new-button-new-design img {

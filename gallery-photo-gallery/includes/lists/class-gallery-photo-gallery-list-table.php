@@ -3,6 +3,16 @@ ob_start();
 class Galleries_List_Table extends WP_List_Table{
     private $plugin_name;
     private $title_length;
+
+    /**
+     * The wp nonce of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string    $ays_gallery_nonce
+     */
+    public $ays_gallery_nonce;
+
     /** Class constructor */
     public function __construct($plugin_name) {
         $this->plugin_name = $plugin_name;
@@ -13,6 +23,14 @@ class Galleries_List_Table extends WP_List_Table{
             "ajax"     => false //does this table support ajax?
         ) );
         add_action( "admin_notices", array( $this, "gallery_notices" ) );
+
+        $this->ays_gallery_nonce = wp_create_nonce('ays_gallery_admin_list_table_nonce');
+
+        if( empty($this->ays_gallery_nonce) ){
+            add_action('init', function () {
+                $this->ays_gallery_nonce = wp_create_nonce('ays_gallery_admin_list_table_nonce');
+            }, 1);
+        }
 
     }
 
@@ -25,7 +43,22 @@ class Galleries_List_Table extends WP_List_Table{
      *
      * @return mixed
      */
-    public static function get_galleries( $per_page = 5, $page_number = 1 , $search = '' ) {
+    public function get_galleries( $per_page = 5, $page_number = 1 , $search = '' ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
 
         global $wpdb;
 
@@ -82,6 +115,22 @@ class Galleries_List_Table extends WP_List_Table{
     }
 
     public function add_or_edit_gallery($data){
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         $gallery_table = $wpdb->prefix . "ays_gallery";
         
@@ -126,7 +175,15 @@ class Galleries_List_Table extends WP_List_Table{
                 $images_distance        = (isset($data['ays-gpg-images-distance']) && $data['ays-gpg-images-distance'] != '') ? absint( intval( $data['ays-gpg-images-distance'] ) ) : '5';
                 $hover_effect           = (isset($data['ays_hover_simple']) && $data['ays_hover_simple'] != '') ? sanitize_text_field( $data['ays_hover_simple'] ) : '';
                 $img_load_effect        = (isset($data['ays_img_load_effect']) && $data['ays_img_load_effect'] != '') ? sanitize_text_field( $data['ays_img_load_effect'] ) : '';
-                $hover_opacity          = (isset($data['ays-gpg-image-hover-opacity']) && $data['ays-gpg-image-hover-opacity'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-opacity'] ) : '';                
+
+                // Images hover opacity
+                $hover_opacity          = (isset($data['ays-gpg-image-hover-opacity']) && $data['ays-gpg-image-hover-opacity'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-opacity'] ) : '';
+
+                // Enable Images hover opacity Mobile
+                $enable_hover_opacity_mobile = isset( $data['enable_ays_gpg_images_hover_opacity_mobile'] ) && $data['enable_ays_gpg_images_hover_opacity_mobile'] == 'on' ? 'on' : 'off';
+
+                // Images hover opacity Mobile
+                $hover_opacity_mobile = isset( $data['ays-gpg-image-hover-opacity-mobile'] ) && $data['ays-gpg-image-hover-opacity-mobile'] != '' ? sanitize_text_field( $data['ays-gpg-image-hover-opacity-mobile'] ) : "";
 
                 //Gallery hover color 
                 $hover_color = (isset($data['ays-gpg-hover-color']) && $data['ays-gpg-hover-color'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-hover-color'] )) : '#000';
@@ -235,7 +292,16 @@ class Galleries_List_Table extends WP_List_Table{
             
                 $ays_lightbox_counter   = (isset($data['ays_gpg_lightbox_counter']) && $data['ays_gpg_lightbox_counter'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lightbox_counter'] )) : '';
                 $ays_lightbox_autoplay  = (isset($data['ays_gpg_lightbox_autoplay']) && $data['ays_gpg_lightbox_autoplay'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lightbox_autoplay'] )) : '';
+                
+                // Gallery lightbox pause
                 $ays_lg_pause           = (isset($data['ays_gpg_lightbox_pause']) && $data['ays_gpg_lightbox_pause'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lightbox_pause'] )) : '';
+
+                // Enable Gallery lightbox pause Mobile
+                $enable_ays_lg_pause_mobile = isset( $data['enable_ays_gpg_lightbox_pause_mobile'] ) && $data['enable_ays_gpg_lightbox_pause_mobile'] == 'on' ? 'on' : 'off';
+
+                // Gallery lightbox pause Mobile
+                $ays_lg_pause_mobile = isset( $data['ays_gpg_lightbox_pause_mobile'] ) && $data['ays_gpg_lightbox_pause_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_lightbox_pause_mobile'] ) : "";
+
                 $ays_lg_show_caption    = (isset($data['ays_gpg_show_caption']) && $data['ays_gpg_show_caption'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_show_caption'] )) : '';
                 
                 $gallery_img_position = (isset($data['gallery_img_position']) && $data['gallery_img_position'] != '') ? wp_unslash(sanitize_text_field( $data['gallery_img_position'] )) : 'center-center';
@@ -400,6 +466,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "enable_gallery_img_position_mobile"    => $enable_gallery_img_position_mobile,
                     "gallery_img_position_mobile"           => $gallery_img_position_mobile,
                     "hover_opacity"                         => $hover_opacity,
+                    "enable_hover_opacity_mobile"           => $enable_hover_opacity_mobile,
+                    "hover_opacity_mobile"                  => $hover_opacity_mobile,
                     "hover_color"                           => $hover_color,
                     "enable_hover_color_mobile"             => $enable_hover_color_mobile,
                     "hover_color_mobile"                    => $hover_color_mobile,
@@ -456,6 +524,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "lightbox_counter"                  => $ays_lightbox_counter,
                     "lightbox_autoplay"                 => $ays_lightbox_autoplay,
                     "lb_pause"                          => $ays_lg_pause,
+                    "enable_lb_pause_mobile"            => $enable_ays_lg_pause_mobile,
+                    "lb_pause_mobile"                   => $ays_lg_pause_mobile,
                     "lb_show_caption"                   => $ays_lg_show_caption,
                     "filter_lightbox_opt"               => $ays_gpg_filter_lightbox_opt,
                     "enable_filter_lightbox_opt_mobile" => $enable_ays_gpg_filter_lightbox_opt_mobile,
@@ -579,7 +649,23 @@ class Galleries_List_Table extends WP_List_Table{
      *
      * @param int $id customer ID
      */
-    public static function delete_galleries( $id ) {
+    public function delete_galleries( $id ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         $wpdb->delete(
             "{$wpdb->prefix}ays_gallery",
@@ -588,7 +674,23 @@ class Galleries_List_Table extends WP_List_Table{
         );
     }
 
-    public static function ays_gallery_published_unpublished_gallery( $id, $status = 'published' ) {
+    public function ays_gallery_published_unpublished_gallery( $id, $status = 'published' ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         $galleries_table = esc_sql( $wpdb->prefix . "ays_gallery" );
 
@@ -624,7 +726,23 @@ class Galleries_List_Table extends WP_List_Table{
      *
      * @return null|string
      */
-    public static function record_count() {
+    public function record_count() {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
 
         $filter = array();
@@ -651,6 +769,22 @@ class Galleries_List_Table extends WP_List_Table{
     }
 
     public function duplicate_galleries( $id ){
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         $galleries_table = $wpdb->prefix."ays_gallery";
         $gallery = $this->get_gallery_by_id($id);
@@ -787,6 +921,22 @@ class Galleries_List_Table extends WP_List_Table{
      * @return string
      */
     function column_image( $item ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         $gallery_images = isset($item['images']) && $item['images'] != "" ? explode('***', $item['images']) : array();
         $gallery_image  = "";
@@ -827,6 +977,22 @@ class Galleries_List_Table extends WP_List_Table{
     }    
 
     function column_title( $item ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         $delete_nonce = wp_create_nonce( $this->plugin_name . "-delete-gallery" );
         $duplicate_nonce = wp_create_nonce( $this->plugin_name . "-duplicate-gallery" );
         $gallery_title = esc_attr(stripcslashes($item['title']));
@@ -875,6 +1041,22 @@ class Galleries_List_Table extends WP_List_Table{
     }
 
     function column_category_ids( $item ) {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
 
         $gallery_categories_table = esc_sql( $wpdb->prefix . "ays_gpg_gallery_categories" );
@@ -1000,6 +1182,22 @@ class Galleries_List_Table extends WP_List_Table{
      * Handles data query and filter, sorting, and pagination.
      */
     public function prepare_items() {
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
         
         $this->_column_headers = $this->get_column_info();
@@ -1009,7 +1207,7 @@ class Galleries_List_Table extends WP_List_Table{
 
         $per_page     = $this->get_items_per_page( "galleries_per_page", 20 );
         $current_page = $this->get_pagenum();
-        $total_items  = self::record_count();
+        $total_items  = $this->record_count();
 
         $this->set_pagination_args( array(
             "total_items" => $total_items, //WE have to calculate the total number of items
@@ -1019,22 +1217,63 @@ class Galleries_List_Table extends WP_List_Table{
         $search = ( isset( $_REQUEST['s'] ) ) ? esc_sql( sanitize_text_field( $_REQUEST['s'] ) ) : false;
         $do_search = ( $search ) ? sprintf(" title LIKE '%%%s%%' ", esc_sql( $wpdb->esc_like( $search ) ) ) : '';
 
-        $this->items = self::get_galleries( $per_page, $current_page,$do_search );
+        $this->items = $this->get_galleries( $per_page, $current_page,$do_search );
     }
 
     public function process_bulk_action() {
-        //Detect when a bulk action is being triggered...
-        $message = "deleted";
-        if ( "delete" === $this->current_action() ) {
 
-            // In our file that handles the request, verify the nonce.
-            $nonce = esc_attr( $_REQUEST["_wpnonce"] );
+        // Detect when a bulk action is being triggered.
+        $action = $this->current_action();
+        if ( ! $action ) {
+            return;
+        }
 
-            if ( ! wp_verify_nonce( $nonce, $this->plugin_name . "-delete-gallery" ) ) {
-                die( "Go get a life script kiddies" );
+        if( !is_user_logged_in()){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( !current_user_can( 'manage_options' ) ){
+            return;
+        }
+
+        if( current_user_can( 'manage_options' ) && is_user_logged_in() ){
+
+            //Detect when a bulk action is being triggered...
+            $message = "deleted";
+            if ( "delete" === $this->current_action() ) {
+
+                // In our file that handles the request, verify the nonce.
+                $nonce = esc_attr( $_REQUEST["_wpnonce"] );
+
+                if ( ! wp_verify_nonce( $nonce, $this->plugin_name . "-delete-gallery" ) ) {
+                    die( "Go get a life script kiddies" );
+                }
+                else {
+                    $this->delete_galleries( absint( $_GET["gallery"] ) );
+
+                    // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+                    // add_query_arg() return the current url
+
+                    $url = esc_url_raw( remove_query_arg(array("action", "gallery", "_wpnonce")  ) ) . "&status=" . $message . "&type=success";
+                    wp_redirect( $url );
+                    exit();
+                }
+
             }
-            else {
-                self::delete_galleries( absint( $_GET["gallery"] ) );
+
+            // If the delete bulk action is triggered
+            if ( ( isset( $_POST["action"] ) && $_POST["action"] == "bulk-delete" )
+                || ( isset( $_POST["action2"] ) && $_POST["action2"] == "bulk-delete" )
+            ) {
+
+                $delete_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
+
+                // loop over the array of record IDs and delete them
+                foreach ( $delete_ids as $id ) {
+                    $this->delete_galleries( $id );
+
+                }
 
                 // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
                 // add_query_arg() return the current url
@@ -1042,65 +1281,61 @@ class Galleries_List_Table extends WP_List_Table{
                 $url = esc_url_raw( remove_query_arg(array("action", "gallery", "_wpnonce")  ) ) . "&status=" . $message . "&type=success";
                 wp_redirect( $url );
                 exit();
-            }
+            } elseif ((isset($_POST['action']) && $_POST['action'] == 'bulk-published')
+                      || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-published')
+            ) {
 
+                $published_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
+
+                // loop over the array of record IDs and mark as read them
+
+                foreach ( $published_ids as $id ) {
+                    $this->ays_gallery_published_unpublished_gallery( $id , 'published' );
+                }
+
+                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+                // add_query_arg() return the current url
+                $url = esc_url_raw( remove_query_arg(array('action', 'gallery', '_wpnonce')  ) ) . '&status=published';
+                wp_redirect( $url );
+            } elseif ((isset($_POST['action']) && $_POST['action'] == 'bulk-unpublished')
+                      || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-unpublished')
+            ) {
+
+                $unpublished_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
+
+                // loop over the array of record IDs and mark as read them
+
+                foreach ( $unpublished_ids as $id ) {
+                    $this->ays_gallery_published_unpublished_gallery( $id , 'unpublished' );
+                }
+
+                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+                // add_query_arg() return the current url
+                $url = esc_url_raw( remove_query_arg(array('action', 'gallery', '_wpnonce')  ) ) . '&status=unpublished';
+                wp_redirect( $url );
+            }
+        } else {
+            return;
         }
-
-        // If the delete bulk action is triggered
-        if ( ( isset( $_POST["action"] ) && $_POST["action"] == "bulk-delete" )
-            || ( isset( $_POST["action2"] ) && $_POST["action2"] == "bulk-delete" )
-        ) {
-
-            $delete_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
-
-            // loop over the array of record IDs and delete them
-            foreach ( $delete_ids as $id ) {
-                self::delete_galleries( $id );
-
-            }
-
-            // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-            // add_query_arg() return the current url
-
-            $url = esc_url_raw( remove_query_arg(array("action", "gallery", "_wpnonce")  ) ) . "&status=" . $message . "&type=success";
-            wp_redirect( $url );
-            exit();
-        } elseif ((isset($_POST['action']) && $_POST['action'] == 'bulk-published')
-                  || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-published')
-        ) {
-
-            $published_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
-
-            // loop over the array of record IDs and mark as read them
-
-            foreach ( $published_ids as $id ) {
-                self::ays_gallery_published_unpublished_gallery( $id , 'published' );
-            }
-
-            // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-            // add_query_arg() return the current url
-            $url = esc_url_raw( remove_query_arg(array('action', 'gallery', '_wpnonce')  ) ) . '&status=published';
-            wp_redirect( $url );
-        } elseif ((isset($_POST['action']) && $_POST['action'] == 'bulk-unpublished')
-                  || (isset($_POST['action2']) && $_POST['action2'] == 'bulk-unpublished')
-        ) {
-
-            $unpublished_ids = ( isset( $_POST['bulk-delete'] ) && ! empty( $_POST['bulk-delete'] ) ) ? esc_sql( $_POST['bulk-delete'] ) : array();
-
-            // loop over the array of record IDs and mark as read them
-
-            foreach ( $unpublished_ids as $id ) {
-                self::ays_gallery_published_unpublished_gallery( $id , 'unpublished' );
-            }
-
-            // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-            // add_query_arg() return the current url
-            $url = esc_url_raw( remove_query_arg(array('action', 'gallery', '_wpnonce')  ) ) . '&status=unpublished';
-            wp_redirect( $url );
-        }
-    }
+    }    
 
     public function gallery_notices(){
+
+        // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         $status = (isset($_REQUEST["status"])) ? sanitize_text_field( $_REQUEST["status"] ) : "";
         $type = (isset($_REQUEST["type"])) ? sanitize_text_field( $_REQUEST["type"] ) : "success";
 

@@ -554,7 +554,16 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     </strong>
                                     <span> - </span>
                                     <span style="font-size:18px;">
-                                        <?php echo __( "The ID of the current user.", 'gallery-photo-gallery'); ?>
+                                        <?php echo __( "The user's ID when logged-in. In case the user is not logged-in, the field will be empty.", 'gallery-photo-gallery'); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%user_registered%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo __( "The user's registration date when logged-in. In case the user is not logged-in, the field will be empty.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -613,6 +622,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                 </p>
                                 <p class="vmessage">
                                     <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_gallery_author_website_url%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "Shows the current gallery author's Website URL that was filled in their WordPress profile.", 'gallery-photo-gallery') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%creation_date%%" />
                                     </strong>
                                     <span> - </span>
@@ -627,6 +645,33 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <span> - </span>
                                     <span style="font-size:18px;">
                                         <?php echo esc_attr( __( "It will show the current date when loading the gallery.", 'gallery-photo-gallery') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_time%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "It will show the current time when loading the gallery.", 'gallery-photo-gallery') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_day%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "It will show the current day when loading the gallery.", 'gallery-photo-gallery') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_month%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "It will show the current month when loading the gallery.", 'gallery-photo-gallery') ); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">
@@ -703,6 +748,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                 </p>
                                 <p class="vmessage">
                                     <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%post_author_roles%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo __( "The role(s) of the author of the post when logged-in. In case the user is not logged-in, the field will be empty.", 'gallery-photo-gallery', 'gallery-photo-gallery'); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%post_title%%" />
                                     </strong>
                                     <span> - </span>
@@ -726,6 +780,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                     <span> - </span>
                                     <span style="font-size:18px;">
                                         <?php echo __( "The title of the website.", 'gallery-photo-gallery'); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%site_description%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo __( "The description of the website.", 'gallery-photo-gallery'); ?>
                                     </span>
                                 </p>
                                 <p class="vmessage">

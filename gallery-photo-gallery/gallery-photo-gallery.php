@@ -16,7 +16,7 @@ ob_start();
  * Plugin Name:       Gallery - Photo Gallery
  * Plugin URI:        https://ays-pro.com/wordpress/photo-gallery
  * Description:       Gallery – Photo Gallery is an easy-to-use plugin for creating and displaying photo galleries. It lets you customize the layout and style to showcase your pictures beautifully.
- * Version:           6.3.8
+ * Version:           6.5.9
  * Author:            Photo Gallery Team
  * Author URI:        https://ays-pro.com/
  * License:           GPL-2.0+
@@ -29,6 +29,15 @@ ob_start();
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
+
+/**
+ * Currently plugin version.
+ * Start at version 1.0.0 and use SemVer - https://semver.org
+ * Rename this for your plugin and update it as you release new versions.
+ */
+define( 'AYS_GALLERY_VERSION', '6.5.9' );
+define( 'AYS_GALLERY_NAME_VERSION', '6.5.9' );
+define( 'AYS_GALLERY_NAME', 'gallery-photo-gallery' );
 
 if( ! defined( 'AYS_GPG_BASE_URL' ) ) {
     define( 'AYS_GPG_BASE_URL', plugin_dir_url(__FILE__ ) );
@@ -48,15 +57,6 @@ if( ! defined( 'AYS_GPG_PUBLIC_URL' ) ) {
 
 if( ! defined( 'AYS_GPG_BASENAME' ) )
     define( 'AYS_GPG_BASENAME', plugin_basename( __FILE__ ) );
-
-/**
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
- */
-define( 'AYS_GALLERY_VERSION', '6.3.8' );
-define( 'AYS_GALLERY_NAME_VERSION', '6.3.8' );
-define( 'AYS_GALLERY_NAME', 'gallery-photo-gallery' );
 
 /**
  * The code that runs during plugin activation.

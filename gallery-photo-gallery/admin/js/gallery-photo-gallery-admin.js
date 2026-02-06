@@ -185,10 +185,15 @@
 		let current_fs, next_fs, previous_fs; //fieldsets
 		let left, opacity, scale; //fieldset properties which we will animate
 		let animating; //flag to prevent quick multi-click glitches
+        
+        $(document).find('#gpg_opacity_demo').css('opacity', $(document).find('#formControlRange').val());
+        $(document).on('input', '#formControlRange', function(){
+            $(document).find('#gpg_opacity_demo').css('opacity', $(this).val());
+        });
 
-        $(document).find('.gpg_opacity_demo').css('opacity', $(document).find('.gpg_opacity_demo_val').val())
-        $(document).on('input', '.gpg_opacity_demo_val', function(){
-            $(document).find('.gpg_opacity_demo').css('opacity', $(this).val());
+        $(document).find('#gpg_opacity_demo_mobile').css('opacity', $(document).find('#formControlRangeMobile').val());
+        $(document).on('input', '#formControlRangeMobile', function(){
+            $(document).find('#gpg_opacity_demo_mobile').css('opacity', $(this).val());
         });
         
 		$(document).on('click', '.ays-add-multiple-images', function(e){
@@ -2154,7 +2159,9 @@
             aysGpgImagePosition();
 
             $(document).find('#formControlRange').val('0.5').change();
+            $(document).find('#formControlRangeMobile').val('0.5').change();
             $(document).find('.gpg_opacity_demo').css('opacity', '0.5');
+            $(document).find("#enable_ays_gpg_images_hover_opacity_mobile").prop('checked', true).change();
 
             $(document).find('#ays-gpg-hover-color').val('#000').change();
             $(document).find('#ays-gpg-hover-color-mobile').val('#000').change();

@@ -37,7 +37,7 @@
                     <th class="price-info">
                         <div class="price-now"><span style="text-decoration: line-through; color: red;">$75</span>
                                 </div>
-                        <div class="price-now"><span>$49</span>
+                        <div class="price-now"><span>$39</span>
                         <div class="ays-gpg-pracing-table-td-flex">
                             <a href="https://ays-pro.com/wordpress/photo-gallery" class="price-buy"><?php echo __('Buy now','gallery-photo-gallery')?><span class="hide-mobile"></span></a>
                             <span><?php echo __('(One-time payment)', 'gallery-photo-gallery'); ?></span>

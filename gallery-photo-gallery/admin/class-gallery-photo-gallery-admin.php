@@ -177,7 +177,7 @@ class Gallery_Photo_Gallery_Admin {
             'greate'             => __( 'Great!', 'gallery-photo-gallery'),
         ));
 
-        $gpg_banner_date = $this->ays_gpg_update_banner_time();
+        $gpg_banner_date = self::ays_gpg_update_banner_time();
         wp_localize_script( $this->plugin_name, 'galleryLangObj', array(
             'gpgBannerDate'             => $gpg_banner_date,
             'copied'                    => esc_html__( 'Copied!', 'gallery-photo-gallery'),
@@ -1189,7 +1189,7 @@ class Gallery_Photo_Gallery_Admin {
         wp_die();
     }
 
-    public function ays_gpg_update_banner_time(){
+    public static function ays_gpg_update_banner_time(){
 
         $date = time() + ( 3 * 24 * 60 * 60 ) + (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS);
         // $date = time() + ( 60 ) + (int) ( get_option( 'gmt_offset' ) * HOUR_IN_SECONDS); // for testing | 1 min
@@ -1748,5 +1748,185 @@ class Gallery_Photo_Gallery_Admin {
         $content .= '</div>';
 
         echo $content;
+    }
+
+    public function ays_gpg_black_friady_popup_box(){
+        if(!empty($_REQUEST['page']) && sanitize_text_field( $_REQUEST['page'] ) != $this->plugin_name . "-admin-dashboard"){
+            if(false !== strpos( sanitize_text_field( $_REQUEST['page'] ), $this->plugin_name)){
+
+                $flag = true;
+
+                if( isset($_COOKIE['aysGpgBlackFridayPopupCount']) && intval($_COOKIE['aysGpgBlackFridayPopupCount']) >= 2 ){
+                    $flag = false;
+                }
+
+                $ays_gpg_cta_button_link = esc_url('https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=mega-bundle-popup-black-friday-sale-' . AYS_GALLERY_VERSION);
+
+                if( $flag ){
+                ?>
+                <div class="ays-gpg-black-friday-popup-overlay" style="opacity: 0; visibility: hidden; display: none;">
+                  <div class="ays-gpg-black-friday-popup-dialog">
+                    <div class="ays-gpg-black-friday-popup-content">
+                      <div class="ays-gpg-black-friday-popup-background-pattern">
+                        <div class="ays-gpg-black-friday-popup-pattern-row">
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-gpg-black-friday-popup-pattern-row">
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-gpg-black-friday-popup-pattern-row">
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                        <div class="ays-gpg-black-friday-popup-pattern-row">
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                          <div class="ays-gpg-black-friday-popup-pattern-text">SALE SALE SALE</div>
+                        </div>
+                      </div>
+                      
+                      <button class="ays-gpg-black-friday-popup-close" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M18 6 6 18"></path>
+                          <path d="m6 6 12 12"></path>
+                        </svg>
+                      </button>
+                      
+                      <div class="ays-gpg-black-friday-popup-badge">
+                        <div class="ays-gpg-black-friday-popup-badge-content">
+                          <div class="ays-gpg-black-friday-popup-badge-text-sm"><?php echo esc_html__( 'Up to', 'gallery-photo-gallery' ); ?></div>
+                          <div class="ays-gpg-black-friday-popup-badge-text-lg">50%</div>
+                          <div class="ays-gpg-black-friday-popup-badge-text-md"><?php echo esc_html__( 'OFF', 'gallery-photo-gallery' ); ?></div>
+                        </div>
+                      </div>
+                      
+                      <div class="ays-gpg-black-friday-popup-main-content">
+                        <div class="ays-gpg-black-friday-popup-hashtag"><?php echo esc_html__( '#BLACKFRIDAY', 'gallery-photo-gallery' ); ?></div>
+                        <h1 class="ays-gpg-black-friday-popup-title-mega"><?php echo esc_html__( 'PHOTOGRAPHY', 'gallery-photo-gallery' ); ?></h1>
+                        <h1 class="ays-gpg-black-friday-popup-title-bundle"><?php echo esc_html__( 'BUNDLE', 'gallery-photo-gallery' ); ?></h1>
+                        <div class="ays-gpg-black-friday-popup-offer-label">
+                          <h2 class="ays-gpg-black-friday-popup-offer-text"><?php echo esc_html__( 'BLACK FRIDAY OFFER', 'gallery-photo-gallery' ); ?></h2>
+                        </div>
+                        <p class="ays-gpg-black-friday-popup-description"><?php echo esc_html__( 'Get our exclusive plugins in one bundle', 'gallery-photo-gallery' ); ?></p>
+                        <a href="<?php echo esc_url($ays_gpg_cta_button_link); ?>" target="_blank" class="ays-gpg-black-friday-popup-cta-btn"><?php echo esc_html__( 'Get Photography Bundle', 'gallery-photo-gallery' ); ?></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+                    (function() {
+                      var overlay = document.querySelector('.ays-gpg-black-friday-popup-overlay');
+                      var closeBtn = document.querySelector('.ays-gpg-black-friday-popup-close');
+                      var learnMoreBtn = document.querySelector('.ays-gpg-black-friday-popup-learn-more');
+                      var ctaBtn = document.querySelector('.ays-gpg-black-friday-popup-cta-btn');
+
+                      // Cookie helper functions
+                      function setCookie(name, value, days) {
+                        var expires = "";
+                        if (days) {
+                          var date = new Date();
+                          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                          expires = "; expires=" + date.toUTCString();
+                        }
+                        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+                      }
+
+                      function getCookie(name) {
+                        var nameEQ = name + "=";
+                        var ca = document.cookie.split(';');
+                        for (var i = 0; i < ca.length; i++) {
+                          var c = ca[i];
+                          while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                        }
+                        return null;
+                      }
+
+                      // Get current show count from cookie
+                      var showCount = parseInt(getCookie('aysGpgBlackFridayPopupCount') || '0', 10);
+                      var maxShows = 2;
+
+                      // Show popup function
+                      function showPopup() {
+                        if (overlay && showCount < maxShows) {
+                          overlay.classList.add('ays-gpg-black-friday-popup-active');
+                          showCount++;
+                          // Update cookie with new count (expires in 30 days)
+                          setCookie('aysGpgBlackFridayPopupCount', showCount.toString(), 30);
+                        }
+                      }
+
+                      // Close popup function
+                      function closePopup(e) {
+                        if (e) {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }
+                        if (overlay) {
+                          overlay.classList.remove('ays-gpg-black-friday-popup-active');
+                        }
+                      }
+
+                      // Determine timing based on show count
+                      if (showCount === 0) {
+                        // First time - show after 30 seconds
+                        setTimeout(function() {
+                          showPopup();
+                        }, 30000);
+                      } else if (showCount === 1) {
+                        // Second time - show after 200 seconds
+                        setTimeout(function() {
+                          showPopup();
+                        }, 200000);
+                      }
+                      // If showCount >= 2, don't show popup at all
+
+                      // Close button
+                      if (closeBtn) {
+                        closeBtn.addEventListener('click', function(e) {
+                          closePopup(e);
+                        });
+                      }
+
+                      // Learn more button
+                      if (learnMoreBtn) {
+                        learnMoreBtn.addEventListener('click', function(e) {
+                          closePopup(e);
+                        });
+                      }
+
+                      // CTA button (optional - if you want it to close popup too)
+                      if (ctaBtn) {
+                        ctaBtn.addEventListener('click', function(e) {
+                          // You can add redirect logic here if needed
+                          // window.location.href = 'your-url';
+                        });
+                      }
+
+                      // Close on overlay click
+                      if (overlay) {
+                        overlay.addEventListener('click', function(e) {
+                          if (e.target === overlay) {
+                            closePopup(e);
+                          }
+                        });
+                      }
+
+                      // Close on Escape key
+                      document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape' && overlay && overlay.classList.contains('ays-gpg-black-friday-popup-active')) {
+                          closePopup();
+                        }
+                      });
+                    })();
+                </script>
+                <style>
+                    .ays-gpg-black-friday-popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;background-color:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}.ays-gpg-black-friday-popup-overlay.ays-gpg-black-friday-popup-active{display:flex!important;opacity:1!important;visibility:visible!important}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-dialog{position:relative;max-width:470px;width:100%;border-radius:8px;overflow:hidden;background:0 0;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);transform:scale(.95);transition:transform .2s}.ays-gpg-black-friday-popup-overlay.ays-gpg-black-friday-popup-active .ays-gpg-black-friday-popup-dialog{transform:scale(1)}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-content{position:relative;width:470px;height:410px;background:linear-gradient(to right bottom,#c056f5,#f042f0,#7d7de8);overflow:hidden}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-background-pattern{position:absolute;top:0;left:0;right:0;bottom:0;opacity:.07;pointer-events:none;transform:rotate(-12deg) translateY(32px);overflow:hidden}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-pattern-row{display:flex;gap:16px;margin-bottom:16px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-pattern-text{color:#fff;font-weight:900;font-size:96px;white-space:nowrap;line-height:1}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-close{position:absolute;top:16px;right:16px;z-index:9999;background:0 0;border:none;color:rgba(255,255,255,.8);cursor:pointer;padding:4px;transition:color .2s;line-height:0}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-close:hover,.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-learn-more:hover{color:#fff}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge{position:absolute;top:32px;right:32px;width:96px;height:96px;background-color:#d4fc79;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 25px 50px -12px rgba(0,0,0,.25);animation:3s ease-in-out infinite ays-gpg-black-friday-popup-float}@keyframes ays-gpg-black-friday-popup-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-content{text-align:center}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-sm{color:#1a1a1a;font-weight:900;font-size:24px;line-height:1}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-lg{color:#1a1a1a;font-weight:900;font-size:30px;line-height:1;margin-top:4px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-md{color:#1a1a1a;font-weight:900;font-size:20px;line-height:1}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-main-content{position:relative;z-index:10;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 48px;text-align:center}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-hashtag{color:rgba(255,255,255,.9);font-weight:700;font-size:14px;margin-bottom:16px;letter-spacing:.1em}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-mega{color:#fff;font-weight:900;font-size:27px;line-height:1;margin:0 0 12px;text-shadow:0 4px 6px rgba(0,0,0,.1)}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-bundle{color:#fff;font-weight:900;font-size:27px;line-height:1;margin:0 0 24px;text-shadow:0 4px 6px rgba(0,0,0,.1)}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-offer-label{background-color:#000;padding:12px 32px;margin-bottom:24px;display:inline-block}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-offer-text{color:#fff;font-weight:700;font-size:20px;letter-spacing:.05em;margin:0}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-description{color:rgba(255,255,255,.95);font-size:18px;font-weight:500;margin:0 0 32px!important}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-cta-btn{display:inline-flex;align-items:center;justify-content:center;height:48px;background-color:#fff;color:#a855f7;font-size:18px;font-weight:700;border:none;border-radius:24px;padding:0 40px;cursor:pointer;box-shadow:0 20px 25px -5px rgba(0,0,0,.1);transition:.2s;text-decoration:none}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-cta-btn:hover{background-color:rgba(255,255,255,.9);box-shadow:0 25px 50px -12px rgba(0,0,0,.25);transform:scale(1.05)}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-learn-more{background:0 0;border:none;color:rgba(255,255,255,.9);font-size:14px;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:8px;margin-top:16px;transition:color .2s}@media (max-width:768px){.ays-gpg-black-friday-popup-overlay{display:none!important}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-content{width:90vw;max-width:400px;height:380px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-main-content{padding:0 32px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge{width:80px;height:80px;top:24px;right:24px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-sm{font-size:20px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-lg{font-size:26px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-md,.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-offer-text{font-size:18px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-bundle,.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-mega{font-size:48px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-description{font-size:16px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-pattern-text{font-size:72px}}@media (max-width:480px){.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-content{width:95vw;max-width:340px;height:360px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-main-content{padding:0 24px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge{width:70px;height:70px;top:20px;right:20px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-sm,.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-offer-text{font-size:16px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-lg{font-size:22px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-badge-text-md{font-size:14px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-hashtag{font-size:12px;margin-bottom:12px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-bundle,.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-title-mega{font-size:40px;margin-bottom:8px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-offer-label{padding:10px 24px;margin-bottom:20px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-description{font-size:15px;margin-bottom:24px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-cta-btn{font-size:16px;height:44px;padding:0 32px}.ays-gpg-black-friday-popup-overlay .ays-gpg-black-friday-popup-pattern-text{font-size:60px}}
+                </style>
+                <?php
+                }
+            }
+        }
     }
 }

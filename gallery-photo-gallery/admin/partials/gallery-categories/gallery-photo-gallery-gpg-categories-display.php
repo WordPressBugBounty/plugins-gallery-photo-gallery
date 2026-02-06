@@ -1,5 +1,27 @@
 <?php
-    $plus_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/images/icons/plus-icon.svg'></span>";
+
+if (isset($_GET['error'])) {
+    if ($_GET['error'] === 'nonce') {
+        echo '<div class="notice notice-error ays-gpg-notice"><p>' . __('Security check failed. Please try again.', 'gallery-photo-gallery') . '</p></div>';
+    } elseif ($_GET['error'] === 'permissions') {
+        echo '<div class="notice notice-error ays-gpg-notice"><p>' . __('You do not have sufficient permissions.', 'gallery-photo-gallery') . '</p></div>';
+    }
+}
+
+$action = ( isset($_GET['action']) ) ? sanitize_text_field( $_GET['action'] ) : '';
+$id     = ( isset($_GET['gpg_gallery_category']) ) ? absint( sanitize_text_field( $_GET['gpg_gallery_category'] ) ) : null;
+
+if( $action == 'duplicate' && !is_null($id) && isset( $_GET['_wpnonce'] ) ){
+
+    if (!current_user_can('manage_options')) {
+        wp_redirect(add_query_arg('error', 'permissions', admin_url('admin.php?page=' . sanitize_text_field($_REQUEST['page']))));
+        exit;
+    }
+
+    $this->gallery_cats_obj->duplicate_gallery_categories( $id );
+}
+
+$plus_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/images/icons/plus-icon.svg'></span>";
 ?>
 <div class="wrap ays-gpg-list-table">
     <div class="ays-gpg-heading-box">

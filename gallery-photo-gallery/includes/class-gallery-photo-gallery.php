@@ -219,10 +219,11 @@ class Gallery_Photo_Gallery {
 		$this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'codemirror_enqueue_scripts');
 		
 		$this->loader->add_action( 'in_admin_footer', $plugin_admin, 'gallery_admin_footer', 1 );
-
+		// $this->loader->add_action( 'in_admin_footer', $plugin_admin, 'ays_gpg_black_friady_popup_box', 10 );
+		
 		// Sale Banner
         // $this->loader->add_action( 'admin_notices', $plugin_admin, 'ays_gpg_sale_baner', 1 );
-        $this->loader->add_action( 'admin_notices', $data_admin, 'ays_gpg_sale_baner', 1 );
+        $this->loader->add_action( 'admin_notices', $data_admin, 'ays_gpg_sale_baner', 10 );
 
         $this->loader->add_action( 'wp_ajax_ays_gpg_dismiss_button', $plugin_admin, 'ays_gpg_dismiss_button' );
         $this->loader->add_action( 'wp_ajax_nopriv_ays_gpg_dismiss_button', $plugin_admin, 'ays_gpg_dismiss_button' );

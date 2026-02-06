@@ -20,63 +20,67 @@ $author = array(
 );
 $get_all_galleries = Photo_Gallery_Data::get_galleries();
 $g_options = array(
-    'columns_count'         => '3',
-    'view_type'             => 'grid',
-    "border_radius"         => "0",
-    "enable_border_radius_mobile" => "on",
-    "border_radius_mobile"  => "0",
-    "admin_pagination"      => "all",
-    "hover_zoom"            => "no",
-    "show_gal_title"        => "on",
-    "show_gal_title_mobile" => "on",
-    "show_gal_desc"         => "on",
-    "show_gal_desc_mobile"  => "on",
-    "enable_show_gal_head_mobile" => "on",
-    "images_hover_effect"   => "simple",
-    "hover_dir_aware"       => "slide",
-    "images_border"         => "",
-    "images_border_width"   => "1",
-    "images_border_style"   => "solid",
-    "images_border_color"   => "#000",
-    "enable_images_border_color_mobile"   => "on",
-    "images_border_color_mobile"   => "#000",
-    "hover_effect"          => "fadeIn",
-    "hover_opacity"         => "0.5",
-    "image_sizes"           => "full_size",
-    "lightbox_color"        => "rgba(0,0,0,0)",
-    "images_orderby"        => "noordering",
-    "hover_icon"            => "search_plus",
-    "show_title"            => "",
-    "show_title_on"         => "gallery_image",
-    "title_position"        => "bottom",
-    "show_with_date"        => "",
-    "images_distance"       => "5",
-    "images_loading"        => "all_loaded",
-    "gallery_loader"        => "flower",
-    "hover_icon_size"       => "20",
-    "thumbnail_title_size"  => "12",
-    "thumb_height_mobile"   => "170",
-    "thumb_height_desktop"  => "260",
-    "enable_light_box"      => "off",
-    "ays_filter_cat"        => "off",
-    "filter_thubnail_opt"   => "none",
-    "enable_filter_thubnail_opt_mobile" => "none",
-    "filter_thubnail_opt_mobile" => "on",
-    "ordering_asc_desc"     => "ascending",
-    "custom_class"          => "",
-    "link_on_whole_img"     => "off",
-    "create_date"           => current_time( 'mysql' ),
-    "author"                => $author,
-    'gpg_create_author'     => $user_id,
+    'columns_count'                         => '3',
+    'view_type'                             => 'grid',
+    "border_radius"                         => "0",
+    "enable_border_radius_mobile"           => "on",
+    "border_radius_mobile"                  => "0",
+    "admin_pagination"                      => "all",
+    "hover_zoom"                            => "no",
+    "show_gal_title"                        => "on",
+    "show_gal_title_mobile"                 => "on",
+    "show_gal_desc"                         => "on",
+    "show_gal_desc_mobile"                  => "on",
+    "enable_show_gal_head_mobile"           => "on",
+    "images_hover_effect"                   => "simple",
+    "hover_dir_aware"                       => "slide",
+    "images_border"                         => "",
+    "images_border_width"                   => "1",
+    "images_border_style"                   => "solid",
+    "images_border_color"                   => "#000",
+    "enable_images_border_color_mobile"     => "on",
+    "images_border_color_mobile"            => "#000",
+    "hover_effect"                          => "fadeIn",
+    "hover_opacity"                         => "0.5",
+    "enable_hover_opacity_mobile"           => "on",
+    "hover_opacity_mobile"                  => "0.5",
+    "image_sizes"                           => "full_size",
+    "lightbox_color"                        => "rgba(0,0,0,0)",
+    "images_orderby"                        => "noordering",
+    "hover_icon"                            => "search_plus",
+    "show_title"                            => "",
+    "show_title_on"                         => "gallery_image",
+    "title_position"                        => "bottom",
+    "show_with_date"                        => "",
+    "images_distance"                       => "5",
+    "images_loading"                        => "all_loaded",
+    "gallery_loader"                        => "flower",
+    "hover_icon_size"                       => "20",
+    "thumbnail_title_size"                  => "12",
+    "thumb_height_mobile"                   => "170",
+    "thumb_height_desktop"                  => "260",
+    "enable_light_box"                      => "off",
+    "ays_filter_cat"                        => "off",
+    "filter_thubnail_opt"                   => "none",
+    "enable_filter_thubnail_opt_mobile"     => "none",
+    "filter_thubnail_opt_mobile"            => "on",
+    "ordering_asc_desc"                     => "ascending",
+    "custom_class"                          => "",
+    "link_on_whole_img"                     => "off",
+    "create_date"                           => current_time( 'mysql' ),
+    "author"                                => $author,
+    'gpg_create_author'                     => $user_id,
 );
 $g_l_options = array(
-    "lightbox_counter"      => "true",
-    "lightbox_autoplay"     => "true",
-    "lb_pause"              => "5000",
-    "lb_show_caption"       => "true",
-    "filter_lightbox_opt"   => "none",
-    "enable_filter_lightbox_opt_mobile"   => "on",
-    "filter_lightbox_opt_mobile"   => "none",
+    "lightbox_counter"                      => "true",
+    "lightbox_autoplay"                     => "true",
+    "lb_pause"                              => "5000",
+    "enable_lb_pause_mobile"                => "on",
+    "lb_pause_mobile"                       => "5000",
+    "lb_show_caption"                       => "true",
+    "filter_lightbox_opt"                   => "none",
+    "enable_filter_lightbox_opt_mobile"     => "on",
+    "filter_lightbox_opt_mobile"            => "none",
 );
 $gallery = array(
     "id"                => "",
@@ -108,35 +112,42 @@ switch( $action ) {
 }
 
 $gallery_message_vars = array(  
-    '%%user_first_name%%'                       => __("User's First Name", 'gallery-photo-gallery'),
-    '%%user_last_name%%'                        => __("User's Last Name", 'gallery-photo-gallery'),
-    '%%user_display_name%%'                     => __("User's Display Name", 'gallery-photo-gallery'),
-    '%%user_nickname%%'                         => __("User's Nickname", 'gallery-photo-gallery'),
-    '%%user_website_url%%'                      => __("User's Website URL", 'gallery-photo-gallery'),
-    '%%user_wordpress_email%%'                  => __("User's WordPress profile email", 'gallery-photo-gallery'),
-    '%%user_wordpress_roles%%'                  => __("User's Wordpress Roles", 'gallery-photo-gallery'),
-    '%%user_ip_address%%'                       => __("User's IP address", 'gallery-photo-gallery'),
-    '%%user_id%%'                               => __("User's ID", 'gallery-photo-gallery'),
-    '%%gallery_id%%'                            => __("Gallery ID", 'gallery-photo-gallery'),
-    '%%current_gallery_title%%'                 => __("Gallery Title", 'gallery-photo-gallery'),
-    '%%current_gallery_images_count%%'          => __("Gallery Images Count", 'gallery-photo-gallery'),
-    '%%current_gallery_author%%'                => __("Gallery Author", 'gallery-photo-gallery'),
-    '%%current_gallery_author_email%%'          => __("Gallery Author Email", 'gallery-photo-gallery'),
-    '%%current_gallery_author_display_name%%'   => __("Gallery Author Display Name", 'gallery-photo-gallery'),
-    '%%creation_date%%'                         => __("Gallery Creation Date", 'gallery-photo-gallery'),
-    '%%current_date%%'                          => __("Current Date", 'gallery-photo-gallery'),
-    '%%current_gallery_page_link%%'             => __("Gallery page link", 'gallery-photo-gallery'),
-    '%%admin_email%%'                           => __("Admin Email", 'gallery-photo-gallery'),
-    '%%post_author_nickname%%'                  => __("Post Author Nickname", 'gallery-photo-gallery'),
-    '%%post_author_email%%'                     => __("Post Author Email", 'gallery-photo-gallery'),
-    '%%post_author_display_name%%'              => __("Post Author Display Name", 'gallery-photo-gallery'),
-    '%%post_author_first_name%%'                => __("Post Author First Name", 'gallery-photo-gallery'),
-    '%%post_author_last_name%%'                 => __("Post Author Last Name", 'gallery-photo-gallery'),
-    '%%post_author_website_url%%'               => __("Post Author Website URL", 'gallery-photo-gallery'),
-    '%%post_title%%'                            => __("Post Title", 'gallery-photo-gallery'),
-    '%%post_id%%'                               => __("Post ID", 'gallery-photo-gallery'),
-    '%%site_title%%'                            => __("Site Title", 'gallery-photo-gallery'),
-    '%%home_page_url%%'                         => __("Home page URL", 'gallery-photo-gallery'),
+    '%%user_first_name%%'                           => esc_html__("User's First Name", 'gallery-photo-gallery'),
+    '%%user_last_name%%'                            => esc_html__("User's Last Name", 'gallery-photo-gallery'),
+    '%%user_display_name%%'                         => esc_html__("User's Display Name", 'gallery-photo-gallery'),
+    '%%user_nickname%%'                             => esc_html__("User's Nickname", 'gallery-photo-gallery'),
+    '%%user_website_url%%'                          => esc_html__("User's Website URL", 'gallery-photo-gallery'),
+    '%%user_wordpress_email%%'                      => esc_html__("User's WordPress profile email", 'gallery-photo-gallery'),
+    '%%user_wordpress_roles%%'                      => esc_html__("User's Wordpress Roles", 'gallery-photo-gallery'),
+    '%%user_ip_address%%'                           => esc_html__("User's IP address", 'gallery-photo-gallery'),
+    '%%user_id%%'                                   => esc_html__("User's ID", 'gallery-photo-gallery'),
+    '%%user_registered%%'                           => esc_html__("User's Registered", 'gallery-photo-gallery'),
+    '%%gallery_id%%'                                => esc_html__("Gallery ID", 'gallery-photo-gallery'),
+    '%%current_gallery_title%%'                     => esc_html__("Gallery Title", 'gallery-photo-gallery'),
+    '%%current_gallery_images_count%%'              => esc_html__("Gallery Images Count", 'gallery-photo-gallery'),
+    '%%current_gallery_author%%'                    => esc_html__("Gallery Author", 'gallery-photo-gallery'),
+    '%%current_gallery_author_email%%'              => esc_html__("Gallery Author Email", 'gallery-photo-gallery'),
+    '%%current_gallery_author_display_name%%'       => esc_html__("Gallery Author Display Name", 'gallery-photo-gallery'),
+    '%%current_gallery_author_website_url%%'        => esc_html__("Gallery Author Website URL", 'gallery-photo-gallery'),
+    '%%creation_date%%'                             => esc_html__("Gallery Creation Date", 'gallery-photo-gallery'),
+    '%%current_date%%'                              => esc_html__("Current Date", 'gallery-photo-gallery'),
+    '%%current_time%%'                              => esc_html__("Current Time", 'gallery-photo-gallery'),
+    '%%current_day%%'                               => esc_html__("Current Day", 'gallery-photo-gallery'),
+    '%%current_month%%'                             => esc_html__("Current Month", 'gallery-photo-gallery'),
+    '%%current_gallery_page_link%%'                 => esc_html__("Gallery page link", 'gallery-photo-gallery'),
+    '%%admin_email%%'                               => esc_html__("Admin Email", 'gallery-photo-gallery'),
+    '%%post_author_nickname%%'                      => esc_html__("Post Author Nickname", 'gallery-photo-gallery'),
+    '%%post_author_email%%'                         => esc_html__("Post Author Email", 'gallery-photo-gallery'),
+    '%%post_author_display_name%%'                  => esc_html__("Post Author Display Name", 'gallery-photo-gallery'),
+    '%%post_author_first_name%%'                    => esc_html__("Post Author First Name", 'gallery-photo-gallery'),
+    '%%post_author_last_name%%'                     => esc_html__("Post Author Last Name", 'gallery-photo-gallery'),
+    '%%post_author_website_url%%'                   => esc_html__("Post Author Website URL", 'gallery-photo-gallery'),
+    '%%post_author_roles%%'                         => esc_html__("Post Author Roles", 'gallery-photo-gallery'),
+    '%%post_title%%'                                => esc_html__("Post Title", 'gallery-photo-gallery'),
+    '%%post_id%%'                                   => esc_html__("Post ID", 'gallery-photo-gallery'),
+    '%%site_title%%'                                => esc_html__("Site Title", 'gallery-photo-gallery'),
+    '%%site_description%%'                          => esc_html__("Site Description", 'gallery-photo-gallery'),
+    '%%home_page_url%%'                             => esc_html__("Home page URL", 'gallery-photo-gallery'),
 );
 
 // Gallery categories IDs
@@ -222,7 +233,7 @@ $ays_images_hover_dir_aware = (!isset($gal_options['hover_dir_aware']) ||
                               $gal_options['hover_dir_aware'] == "") ? "slide" : $gal_options['hover_dir_aware'];
 $ays_images_border = (!isset($gal_options['images_border'])) ? '' : $gal_options['images_border'];
 
-// Enable Gallery Border width
+// Gallery Border width
 $ays_images_border_width    = (!isset($gal_options['images_border_width'])) ? '1' : $gal_options['images_border_width'];
 
 // Enable Gallery Border width Mobile
@@ -231,6 +242,16 @@ $enable_ays_images_border_width_mobile = $gal_options['enable_images_border_widt
 
 // Gallery Border width Mobile
 $ays_images_border_width_mobile = isset( $gal_options['images_border_width_mobile'] ) && $gal_options['images_border_width_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['images_border_width_mobile'] ) ) : $ays_images_border_width;
+
+// Gallery hover opacity
+$ays_images_hover_opacity    = (!isset($gal_options['hover_opacity'])) ? '0.5' : $gal_options['hover_opacity'];
+
+// Enable Gallery hover opacity Mobile
+$gal_options['enable_hover_opacity_mobile'] = isset($gal_options['enable_hover_opacity_mobile']) && $gal_options['enable_hover_opacity_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_images_hover_opacity_mobile = $gal_options['enable_hover_opacity_mobile'] == 'on' ?  true : false;
+
+// Gallery hover opacity Mobile
+$ays_images_hover_opacity_mobile = isset( $gal_options['hover_opacity_mobile'] ) && $gal_options['hover_opacity_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['hover_opacity_mobile'] ) ) : $ays_images_hover_opacity;
 
 // Gallery Images Border style
 $ays_images_border_style    = (!isset($gal_options['images_border_style'])) ? 'solid' : $gal_options['images_border_style'];
@@ -286,7 +307,17 @@ $ays_thumb_height_desktop = !isset($gal_options['thumb_height_desktop']) ? "260"
 
 $ays_gpg_lightbox_counter           = (!isset($gal_lightbox_options['lightbox_counter'])) ? "true" : $gal_lightbox_options['lightbox_counter'];
 $ays_gpg_lightbox_autoplay          = (!isset($gal_lightbox_options['lightbox_autoplay'])) ? "true" : $gal_lightbox_options['lightbox_autoplay'];
+
+// Gallery lightbox pause
 $ays_gpg_lightbox_pause             = (!isset($gal_lightbox_options['lb_pause'])) ? "5000" : $gal_lightbox_options['lb_pause'];
+
+// Enable Gallery lightbox pause Mobile
+$gal_lightbox_options['enable_lb_pause_mobile'] = isset($gal_lightbox_options['enable_lb_pause_mobile']) && $gal_lightbox_options['enable_lb_pause_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_lightbox_pause_mobile = $gal_lightbox_options['enable_lb_pause_mobile'] == 'on' ?  true : false;
+
+// Gallery lightbox pause Mobile
+$ays_gpg_lightbox_pause_mobile = isset( $gal_lightbox_options['lb_pause_mobile'] ) && $gal_lightbox_options['lb_pause_mobile'] != '' ? stripslashes ( esc_attr( $gal_lightbox_options['lb_pause_mobile'] ) ) : $ays_gpg_lightbox_pause;
+
 $ays_gpg_show_caption               = (!isset($gal_lightbox_options['lb_show_caption'])) ? "true" : $gal_lightbox_options['lb_show_caption'];
 
 $ays_gpg_lg_keypress = (!isset($gal_lightbox_options["lb_keypress"])) ? "true" : $gal_lightbox_options["lb_keypress"];
@@ -2058,14 +2089,41 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-3 ays_divider_left gpg_range_div">
-                            <div>
-                                <input class="gpg_opacity_demo_val form-control-range" id="formControlRange" name="ays-gpg-image-hover-opacity" type="range" min="0" max="1" step="0.01" value="<?php echo isset($gal_options['hover_opacity']) ? $gal_options['hover_opacity'] : '0.5'; ?>">
-                            </div>                    
-                        </div>
-                        <div class="col-sm-6 ays_divider_left">                    
-                            <div class="gpg_opacity_demo"><?php echo esc_html__("Hover opacity preview", 'gallery-photo-gallery');?></div>
-                        </div>
+                        <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_images_hover_opacity_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <div class="ays_divider_left gpg_range_div">
+                                            <div>
+                                                <input class="gpg_opacity_demo_val form-control-range" id="formControlRange" name="ays-gpg-image-hover-opacity" type="range" min="0" max="1" step="0.01" value="<?php echo $ays_images_hover_opacity; ?>">
+                                            </div>                    
+                                        </div>
+                                        <div class="ays_divider_left">                    
+                                            <div id="gpg_opacity_demo" class="gpg_opacity_demo"><?php echo esc_html__("Hover opacity preview", 'gallery-photo-gallery'); ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_images_hover_opacity_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <div class="ays_divider_left gpg_range_div">
+                                            <div>
+                                                <input class="gpg_opacity_demo_val form-control-range" id="formControlRangeMobile" name="ays-gpg-image-hover-opacity-mobile" type="range" min="0" max="1" step="0.01" value="<?php echo $ays_images_hover_opacity_mobile; ?>">
+                                            </div>                    
+                                        </div>
+                                        <div class="ays_divider_left">                    
+                                            <div id="gpg_opacity_demo_mobile" class="gpg_opacity_demo"><?php echo esc_html__("Hover opacity preview", 'gallery-photo-gallery'); ?></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_images_hover_opacity_mobile" name="enable_ays_gpg_images_hover_opacity_mobile" <?php echo $enable_ays_images_hover_opacity_mobile ? 'checked' : '' ?> >
+                                    <label for="enable_ays_gpg_images_hover_opacity_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">
@@ -2858,16 +2916,40 @@ $gpg_accordion_svg_html = '
                                     <label for="ays_gpg_lightbox_pause">
                                         <?php echo esc_html__("Slide duration", 'gallery-photo-gallery');?>
                                     </label>
-                                </div>                        
-                                <div class="col-sm-9 ays_gpg_display_flex_width ays_divider_left">
-                                    <div>
-                                       <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" id="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
-                                        <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
-                                    </div>
-                                    <div class="ays_gpg_dropdown_max_width">
-                                        <input type="text" value="ms" class="ays-gpg-form-hint-for-size" disabled="">
-                                    </div>
                                 </div>
+                                <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
+                                    <div class="ays_toggle_mobile_parent">
+                                        <div>
+                                            <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_lightbox_pause_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                            <div class="ays_gpg_display_flex_width">
+                                                <div>
+                                                    <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" id="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
+                                                    <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
+                                                </div>
+                                                <div class="ays_gpg_dropdown_max_width">
+                                                    <input type="text" value="ms" class="ays-gpg-form-hint-for-size" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_lightbox_pause_mobile ) ? '' : 'display:none'; ?>">
+                                            <hr>
+                                            <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                            <div class="ays_gpg_display_flex_width">
+                                                <div>
+                                                    <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause_mobile" id="ays_gpg_lightbox_pause_mobile" value="<?php echo $ays_gpg_lightbox_pause_mobile; ?>" />
+                                                    <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
+                                                </div>
+                                                <div class="ays_gpg_dropdown_max_width">
+                                                    <input type="text" value="ms" class="ays-gpg-form-hint-for-size" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ays_gpg_mobile_settings_container">
+                                            <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_lightbox_pause_mobile" name="enable_ays_gpg_lightbox_pause_mobile" <?php echo $enable_ays_gpg_lightbox_pause_mobile ? 'checked' : '' ?> >
+                                            <label for="enable_ays_gpg_lightbox_pause_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                        </div>
+                                    </div>
+                                </div>                                
                             </div>
                             <hr/>
                             <div class="form-group row">
