@@ -76,7 +76,6 @@
         ?>
     </div>
 
-
     <?php if ( $gallery_max_id <= 3 ) : ?>
         <div class="ays-gpg-create-gallery-video-box" style="margin: 80px auto 30px;">
             <div class="ays-gpg-create-gallery-title">
@@ -89,9 +88,6 @@
             </div>
             <div class="ays_gpg_small_hint_text_for_message_variables" style="text-align: center;">
                 <?php echo esc_html__( 'Please note that this video will disappear once you created 4 galleries.', 'gallery-photo-gallery' ); ?>
-            </div>            
-            <div class="ays-gpg-create-gallery-youtube-video-button-box">
-                <?php echo sprintf( '<a href="?page=%s&action=%s" class="page-title-action ays-gpg-add-new-button-video ays-gpg-add-new-button-new-design"> %s ' . __('Add New', 'gallery-photo-gallery') . '</a>', esc_attr( $_REQUEST['page'] ), 'add', $plus_icon_svg); ?>
             </div>
         </div>
     <?php else : ?>

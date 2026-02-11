@@ -19,6 +19,15 @@
 .ays-upload-btn::before {
     content: "\f067";
 }
+.ays_gpg_fa-check-square:before {
+    content: "\f14a";
+}
+i.ays_gpg_fa-check-square {
+    color: #28a745;
+}
+div.ays-gpg-list-table .column-status i {
+    padding-right: 8px;
+}
 .ays-upload-btn {
     position: absolute;
     display: block;

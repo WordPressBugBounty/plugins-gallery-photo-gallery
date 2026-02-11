@@ -1109,17 +1109,18 @@ class Galleries_List_Table extends WP_List_Table{
     function column_status( $item ) {
         global $wpdb;
         $status_text = '';
+        $html = '';
         $status_val = isset($item['published']) && $item['published'] != "" ? intval($item['published']) : 1; 
         switch ( $status_val ) {
             case 0:
-                $status_text = __('unpublished', 'gallery-photo-gallery');
+                $status_text = esc_html__('Unpublished', 'gallery-photo-gallery');
+                $html = "<p style='font-size:14px;margin:0;'>" . $status_text . "</p>";
                 break;
             default:
-                $status_text = __('published', 'gallery-photo-gallery');
+                $status_text = esc_html__('Published', 'gallery-photo-gallery');
+                $html = "<p style='font-size:14px;margin:0;'><i class=\"ays_gpg_fa ays_gpg_fa-check-square\"></i>" . $status_text . "</p>";
                 break;
         }
-        $status = ucfirst( $status_text );
-        $html = "<p style='font-size:14px;margin:0;'>" . $status . "</p>";
 
         return $html;
     }
