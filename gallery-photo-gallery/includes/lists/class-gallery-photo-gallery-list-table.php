@@ -808,20 +808,21 @@ class Galleries_List_Table extends WP_List_Table{
         $result = $wpdb->insert(
             $galleries_table,
             array(
-                'title'             => "Copy - ".sanitize_text_field($gallery['title']),
-                'description'       => sanitize_text_field($gallery['description']),
-                'images'            => sanitize_text_field($gallery['images']),
-                'images_titles'     => sanitize_text_field($gallery['images_titles']),
-                'images_descs'      => sanitize_text_field($gallery['images_descs']),
-                'images_alts'       => sanitize_text_field($gallery['images_alts']),
-                'images_urls'       => sanitize_text_field($gallery['images_urls']),
-                'images_dates'      => sanitize_text_field($gallery['images_dates']),
-                'width'             => sanitize_text_field($gallery['width']),
-                'height'            => sanitize_text_field($gallery['height']),
-                'options'           => json_encode($options),
-                'lightbox_options'  => sanitize_text_field($gallery['lightbox_options']),
-                'categories_id'     => sanitize_text_field($gallery['categories_id']),
-                'custom_css'        => $gallery['custom_css']
+                'title'                 => "Copy - ".sanitize_text_field($gallery['title']),
+                'description'           => sanitize_text_field($gallery['description']),
+                'images'                => sanitize_text_field($gallery['images']),
+                'images_titles'         => sanitize_text_field($gallery['images_titles']),
+                'images_descs'          => sanitize_text_field($gallery['images_descs']),
+                'images_alts'           => sanitize_text_field($gallery['images_alts']),
+                'images_urls'           => sanitize_text_field($gallery['images_urls']),
+                'images_dates'          => sanitize_text_field($gallery['images_dates']),
+                'width'                 => sanitize_text_field($gallery['width']),
+                'height'                => sanitize_text_field($gallery['height']),
+                'options'               => json_encode($options),
+                'lightbox_options'      => sanitize_text_field($gallery['lightbox_options']),
+                'categories_id'         => sanitize_text_field($gallery['categories_id']),
+                'category_ids'          => sanitize_text_field($gallery['category_ids']),
+                'custom_css'            => $gallery['custom_css']
             ),
             array(
                 '%s',
@@ -834,6 +835,7 @@ class Galleries_List_Table extends WP_List_Table{
                 '%s',
                 '%d',
                 '%d',
+                '%s',
                 '%s',
                 '%s',
                 '%s',
@@ -1114,11 +1116,11 @@ class Galleries_List_Table extends WP_List_Table{
         switch ( $status_val ) {
             case 0:
                 $status_text = esc_html__('Unpublished', 'gallery-photo-gallery');
-                $html = "<p style='font-size:14px;margin:0;'>" . $status_text . "</p>";
+                $html = "<p class='ays-column-status-paragraph'><i class=\"ays_gpg_fa ays_gpg_fa-xmark-square\"></i>" . $status_text . "</p>";
                 break;
             default:
                 $status_text = esc_html__('Published', 'gallery-photo-gallery');
-                $html = "<p style='font-size:14px;margin:0;'><i class=\"ays_gpg_fa ays_gpg_fa-check-square\"></i>" . $status_text . "</p>";
+                $html = "<p class='ays-column-status-paragraph'><i class=\"ays_gpg_fa ays_gpg_fa-check-square\"></i>" . $status_text . "</p>";
                 break;
         }
 
