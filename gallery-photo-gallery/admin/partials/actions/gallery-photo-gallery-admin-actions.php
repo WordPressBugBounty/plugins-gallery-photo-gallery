@@ -639,40 +639,46 @@ $gpg_accordion_svg_html = '
         </div>
         <hr/>
         <div class="ays-field ays-gpg-desc-message-vars-parent">
-            <label for="gallery_description">
-                <?php echo esc_html__("Gallery Description", 'gallery-photo-gallery');?>
-                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This section is noted for the description of the gallery. You can use Variables (General Settings) to insert user data here.", 'gallery-photo-gallery' ); ?>">
-                   <i class="fas fa-info-circle"></i>
-                </a>
-                <p class="ays_gpg_small_hint_text_for_message_variables">
-                    <span><?php echo esc_html__( "To see all Message Variables " , 'gallery-photo-gallery' ); ?></span>
-                    <a href="?page=gallery-photo-gallery-settings&ays_gpg_tab=tab3" target="_blank"><?php echo esc_html__( "click here" , 'gallery-photo-gallery' ); ?></a>
-                </p>
-            </label>
-            <?php
-                echo $gallery_message_vars_html;
-                $content = stripslashes(wpautop($gallery['description']));
-                $editor_id = 'gallery_description';
-                $settings = array(
-                    'editor_height' => $gpg_wp_editor_height, 
-                    'textarea_name' => 'gallery_description', 
-                    'editor_class' => 'ays-textarea', 
-                    'media_buttons' => true
-                );
-                wp_editor($content, $editor_id, $settings);
-            ?>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="gallery_description">
+                        <?php echo esc_html__( "Gallery Description", 'gallery-photo-gallery' ); ?>
+                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This section is noted for the description of the gallery. You can use Variables (General Settings) to insert user data here.", 'gallery-photo-gallery' ); ?>">
+                           <i class="fas fa-info-circle"></i>
+                        </a>
+                        <p class="ays_gpg_small_hint_text_for_message_variables">
+                            <span><?php echo esc_html__( "To see all Message Variables " , 'gallery-photo-gallery' ); ?></span>
+                            <a href="?page=gallery-photo-gallery-settings&ays_gpg_tab=tab3" target="_blank"><?php echo esc_html__( "click here" , 'gallery-photo-gallery' ); ?></a>
+                        </p>
+                    </label>
+                </div>
+                <div class="col-sm-9">                    
+                    <?php
+                        echo $gallery_message_vars_html;
+                        $content = stripslashes( wpautop( $gallery['description'] ) );
+                        $editor_id = 'gallery_description';
+                        $settings = array(
+                            'editor_height' => $gpg_wp_editor_height, 
+                            'textarea_name' => 'gallery_description', 
+                            'editor_class' => 'ays-textarea', 
+                            'media_buttons' => true
+                        );
+                        wp_editor( $content, $editor_id, $settings );
+                    ?>
+                </div>
+            </div>
         </div>
         <hr/>
         <div class="form-group row">
-            <div class="col-sm-2">
-                <label>
+            <div class="col-sm-3">
+                <label for="ays_gpg_publish">
                     <?php echo esc_html__('Status', 'gallery-photo-gallery'); ?>
                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Published OR Unpublished. Choose whether the gallery is active or not. If you choose Unpublished option, the gallery won’t be shown anywhere in your website (You don’t need to remove shortcodes).','gallery-photo-gallery'); ?>">
                         <i class="fas fa-info-circle"></i>
                     </a>
                 </label>
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-9">
                 <div class="form-check form-check-inline">
                     <input type="radio" id="ays_gpg_publish" name="ays_gpg_publish"
                            value="1" <?php echo ($gallery_published == '') ? "checked" : ""; ?>  <?php echo ($gallery_published == '1') ? 'checked' : ''; ?>/>
@@ -1042,11 +1048,11 @@ $gpg_accordion_svg_html = '
             ?>
             </ul>
             </div>
-            <div class="ays_admin_pages">
-                <ul>
-                    <?php
-                        if($admin_pagination != "all"){
-                            if($pages > 0){
+            <?php if( $admin_pagination != "all" ) : ?>
+                <div class="ays_admin_pages">
+                    <ul>
+                        <?php                        
+                            if( $pages > 0 ){
                                 for($page = 0; $page < $pages; $page++ ){
                                     if(isset($_COOKIE['ays_gpg_page_tab_free']) && $_COOKIE['ays_gpg_page_tab_free'] == "tab_".($page)){
                                         $page_active = 'ays_page_active';
@@ -1056,10 +1062,10 @@ $gpg_accordion_svg_html = '
                                     echo "<li><a class='ays_page $page_active' data-tab='tab_".($page)."' href='#page_".($page)."'>".($page+1)."</a></li>";
                                 }
                             }
-                        }
-                    ?>
-                </ul>
-            </div>            
+                        ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
 		</div>
 		<div id="tab2" class="ays-gallery-tab-content <?php echo ($ays_gpg_tab == 'tab2') ? 'ays-gallery-tab-content-active' : ''; ?>">            
             <div class="ays-gpg-accordion-options-main-container" data-collapsed="false">
@@ -1769,8 +1775,7 @@ $gpg_accordion_svg_html = '
                                 </div>
                             </div> 
                         </div>
-                    </div><!-- Gallery pagination -->		  
-                    <hr/>
+                    </div><!-- Gallery pagination -->
                 </div>
             </div>
         </div>
@@ -2839,8 +2844,7 @@ $gpg_accordion_svg_html = '
                                     id="reset_to_default"><?php echo esc_html__("Reset", 'gallery-photo-gallery') ?>
                             </button>
                         </div>
-                    </div>
-                    <hr/>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -3108,11 +3112,10 @@ $gpg_accordion_svg_html = '
                             <img class="pro_img_style" src="<?php echo AYS_GPG_ADMIN_URL; ?>images/features/lighbox_settings.png">
                         </div>
                     </div>
-                    <hr/>
                 </div>
             </div>
         </div>
-        <div id="tab5" class="only_pro ays-gallery-tab-content <?php echo ($ays_gpg_tab == 'tab5') ? 'ays-gallery-tab-content-active' : ''; ?>" style="padding-top: 15px;">
+        <div id="tab5" class="ays-gallery-tab-content <?php echo ($ays_gpg_tab == 'tab5') ? 'ays-gallery-tab-content-active' : ''; ?>" style="padding-top: 15px;">
             <div class="ays-gpg-accordion-options-main-container" data-collapsed="false">
                 <div class="ays-gpg-accordion-container">
                     <?php echo $gpg_accordion_svg_html; ?>
@@ -3120,35 +3123,37 @@ $gpg_accordion_svg_html = '
                 </div>
                 <hr class="ays-gpg-bolder-hr"/>
                 <div class="ays-gpg-accordion-options-box">
-                    <div class="pro_features">
-                        <div>                    
-                            <a href="https://ays-pro.com/wordpress/photo-gallery/" target="_blank" class="ays-gpg-new-upgrade-button-link">
-                                <div class="ays-gpg-new-upgrade-button-box">
-                                    <div>
-                                        <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_locked_24x24.svg'?>">
-                                        <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_unlocked_24x24.svg'?>" class="ays-gpg-new-upgrade-button-hover">
-                                    </div>
-                                    <div class="ays-gpg-new-upgrade-button"><?php echo esc_html__("Upgrade", 'gallery-photo-gallery'); ?></div>
-                                </div>
-                            </a>
-                            <div class="ays-gpg-center-big-main-button-box ays-gpg-new-big-button-flex">
-                                <div class="ays-gpg-center-big-upgrade-button-box">
-                                    <a href="https://ays-pro.com/wordpress/photo-gallery/" target="_blank" class="ays-gpg-new-upgrade-button-link">
-                                        <div class="ays-gpg-center-new-big-upgrade-button">
-                                            <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_locked_24x24.svg'?>" class="ays-gpg-new-button-img-hide">
-                                            <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_unlocked_24x24.svg'?>" class="ays-gpg-new-upgrade-button-hover">  
-                                            <?php echo esc_html__("Upgrade", 'gallery-photo-gallery'); ?>
+                    <div class="only_pro">
+                        <div class="pro_features">
+                            <div>                    
+                                <a href="https://ays-pro.com/wordpress/photo-gallery/" target="_blank" class="ays-gpg-new-upgrade-button-link">
+                                    <div class="ays-gpg-new-upgrade-button-box">
+                                        <div>
+                                            <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_locked_24x24.svg'?>">
+                                            <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_unlocked_24x24.svg'?>" class="ays-gpg-new-upgrade-button-hover">
                                         </div>
-                                    </a>
+                                        <div class="ays-gpg-new-upgrade-button"><?php echo esc_html__("Upgrade", 'gallery-photo-gallery'); ?></div>
+                                    </div>
+                                </a>
+                                <div class="ays-gpg-center-big-main-button-box ays-gpg-new-big-button-flex">
+                                    <div class="ays-gpg-center-big-upgrade-button-box">
+                                        <a href="https://ays-pro.com/wordpress/photo-gallery/" target="_blank" class="ays-gpg-new-upgrade-button-link">
+                                            <div class="ays-gpg-center-new-big-upgrade-button">
+                                                <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_locked_24x24.svg'?>" class="ays-gpg-new-button-img-hide">
+                                                <img src="<?php echo AYS_GPG_ADMIN_URL.'/images/icons/gpg_unlocked_24x24.svg'?>" class="ays-gpg-new-upgrade-button-hover">  
+                                                <?php echo esc_html__("Upgrade", 'gallery-photo-gallery'); ?>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <img class="pro_img_style" src="<?php echo AYS_GPG_ADMIN_URL; ?>images/features/lighbox_effects.png">
                     </div>
-                    <img class="pro_img_style" src="<?php echo AYS_GPG_ADMIN_URL; ?>images/features/lighbox_effects.png">
-                <hr/>
                 </div>
             </div>
         </div>
+        <hr>
         <div class="form-group row ays-galleries-button-box">
             <div class="ays-question-button-first-row" style="padding: 0;">
             <?php
