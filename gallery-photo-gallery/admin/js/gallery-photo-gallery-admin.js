@@ -1099,6 +1099,8 @@
         });
         
         $('[data-toggle="tooltip"]').tooltip();
+        $('.tablenav.top').find('.clear').before($('#category-filter-div'));
+        $('.tablenav.top').find('.clear').before($('#category-filter-div-gpglist'));
         
         $(document).on('click', '.ays_live_preview_close', function(){
             $(document.body).css('overflow', 'auto');
@@ -1710,7 +1712,64 @@
             }
         });
 
-         $(document).on('click', 'a.add_gallery_loader_custom_gif, span.ays-edit-img', function (e) {
+        $(document).find('.cat-filter-apply-top, .cat-filter-apply-bottom, .user-filter-apply-top, .user-filter-apply-bottom, .category-filter-apply-top, .category-filter-apply-bottom').on('click', function(e){
+            e.preventDefault();
+            var $this = $(this);
+            var parent = $this.parents('.tablenav');
+
+            var html_name = '';
+            var top_or_bottom = 'top';
+
+            if ( parent.hasClass('bottom') ) {
+                top_or_bottom = 'bottom';
+            }
+
+            if ( $this.hasClass('cat-filter-apply-'+ top_or_bottom) ) {
+                html_name = 'filterby';
+            } else if( $this.hasClass('user-filter-apply-'+ top_or_bottom) ){
+                html_name = 'filterbyuser';
+            } else if ( $this.hasClass('category-filter-apply-'+ top_or_bottom) ) {
+                html_name = 'filterbycategory';
+            } else if ( $this.hasClass('question-type-filter-apply-'+ top_or_bottom) ) {
+                html_name = 'type';
+            }
+            if (html_name != '') {
+                aysGalleryFiltersForListTable( top_or_bottom , html_name);
+            }
+        });
+
+        function aysGalleryFiltersForListTable(which, html_name){
+            var filter = $(document).find('select[name="'+ html_name +'-' + which + '"]').val();
+
+            var link = location.href;
+            if( filter != '' ){
+                filter = "&"+ html_name +"="+filter;
+                var linkModifiedStart = link.split('?')[0];
+                var linkModified = link.split('?')[1].split('&');
+                for(var i = 0; i < linkModified.length; i++){
+                    if ( linkModified[i].split("=")[0] == "ays_result_tab" ) {
+                        linkModified.splice(i, 1, "ays_result_tab=poststuff");
+                    }
+                    if(linkModified[i].split("=")[0] == html_name){
+                        linkModified.splice(i, 1);
+                    }
+                }
+                linkModified = linkModified.join('&');
+                document.location.href = linkModifiedStart + "?" + linkModified + filter;
+            }else{
+                var linkModifiedStart = link.split('?')[0];
+                var linkModified = link.split('?')[1].split('&');
+                for(var i = 0; i < linkModified.length; i++){
+                    if(linkModified[i].split("=")[0] == html_name){
+                        linkModified.splice(i, 1);
+                    }
+                }
+                linkModified = linkModified.join('&');
+                document.location.href = linkModifiedStart + "?" + linkModified;
+            }
+        }
+
+        $(document).on('click', 'a.add_gallery_loader_custom_gif, span.ays-edit-img', function (e) {
             openMediaUploaderForImage(e, $(this));
         });
         $(document).on('click', '.ays-remove-gallery-loader-custom-gif', function (e) {

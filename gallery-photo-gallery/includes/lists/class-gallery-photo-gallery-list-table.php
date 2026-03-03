@@ -34,6 +34,88 @@ class Galleries_List_Table extends WP_List_Table{
 
     }
 
+    /**
+     * Override of table nav to avoid breaking with bulk actions & according nonce field
+     */
+    public function display_tablenav( $which ) {
+
+        // Run a security check.
+        if (empty($this->ays_gallery_nonce) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die('Nonce verification failed!');
+        }
+
+        if( !is_user_logged_in()){
+            wp_die(  esc_html__( 'Something went wrong', 'gallery-photo-gallery' ) );
+        }        
+
+        ?>
+        <div class="tablenav <?php echo esc_attr( $which ); ?>">
+            
+            <div class="alignleft actions">
+                <?php  $this->bulk_actions( $which ); ?>
+            </div>
+            <?php
+            $this->extra_tablenav( $which );
+            $this->pagination( $which );
+            ?>
+            <br class="clear" />
+        </div>
+        <?php
+    }
+
+    /**
+     * Disables the views for 'side' context as there's not enough free space in the UI
+     * Only displays them on screen/browser refresh. Else we'd have to do this via an AJAX DB update.
+     *
+     * @see WP_List_Table::extra_tablenav()
+     */
+    public function extra_tablenav($which) {   
+
+        // Run a security check.
+        if (empty($this->ays_gallery_nonce) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die('Nonce verification failed!');
+        }
+
+        if( !is_user_logged_in()){
+            wp_die(  esc_html__( 'Something went wrong', 'gallery-photo-gallery' ) );
+        }        
+
+        global $wpdb;
+        $titles_sql = "SELECT {$wpdb->prefix}ays_gpg_gallery_categories.title,{$wpdb->prefix}ays_gpg_gallery_categories.id FROM {$wpdb->prefix}ays_gpg_gallery_categories ORDER BY {$wpdb->prefix}ays_gpg_gallery_categories.title ASC";
+        $cat_titles = $wpdb->get_results($titles_sql);
+        $cat_id = null;
+        if( isset( $_GET['filterby'] )){
+            $cat_id = absint( intval( $_GET['filterby'] ) );
+        }
+        $categories_select = array();
+        foreach($cat_titles as $key => $cat_title){
+            $selected = "";
+            if($cat_id === intval($cat_title->id)){
+                $selected = "selected";
+            }
+            $categories_select[$cat_title->id]['title'] = $cat_title->title;
+            $categories_select[$cat_title->id]['selected'] = $selected;
+            $categories_select[$cat_title->id]['id'] = $cat_title->id;
+        }
+
+        ?>
+        <div id="category-filter-div-gpglist" class="alignleft actions bulkactions">
+            <select name="filterby-<?php echo esc_attr( $which ); ?>" id="bulk-action-category-selector-<?php echo esc_attr( $which ); ?>">
+                <option value=""><?php echo esc_html__('Select Category','gallery-photo-gallery')?></option>
+                <?php
+                    foreach($categories_select as $key => $cat_title){
+                        echo "<option ".esc_attr($cat_title['selected'])." value='".esc_attr($cat_title['id'])."'>".esc_html($cat_title['title'])."</option>";
+                    }
+                ?>
+            </select>
+            <input type="button" id="doaction-<?php echo esc_attr( $which ); ?>" class="cat-filter-apply-<?php echo esc_attr( $which ); ?> button" value="Filter">
+        </div>
+        
+        <a style="" href="?page=<?php echo esc_attr( $_REQUEST['page'] ); ?>" class="button"><?php echo esc_html__( "Clear filters", 'gallery-photo-gallery' ); ?></a>
+        <?php
+    }
 
     /**
      * Retrieve customers data from the database
@@ -68,6 +150,11 @@ class Galleries_List_Table extends WP_List_Table{
 
         if( $search != '' ){
             $where[] = $search;
+        }        
+
+        if(! empty( $_REQUEST['filterby'] ) && absint( intval( $_REQUEST['filterby'] ) ) > 0){
+            $cat_id = absint( intval( sanitize_text_field( $_REQUEST['filterby'] ) ) );
+            $where[] = $wpdb->prepare( 'FIND_IN_SET( %d, category_ids ) > 0', $cat_id );
         }
 
         if( ! empty($where) ){
@@ -93,9 +180,7 @@ class Galleries_List_Table extends WP_List_Table{
         $sql .= " LIMIT $per_page";
         $sql .= " OFFSET " . ( $page_number - 1 ) * $per_page;
 
-
         $result = $wpdb->get_results( $sql, "ARRAY_A" );
-
         return $result;
     }
 
@@ -747,7 +832,12 @@ class Galleries_List_Table extends WP_List_Table{
 
         $filter = array();
 
-        $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}ays_gallery";
+        $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}ays_gallery";        
+
+        if(! empty( $_REQUEST['filterby'] ) && absint( intval( $_REQUEST['filterby'] ) ) > 0){
+            $cat_id = absint( intval( sanitize_text_field( $_REQUEST['filterby'] ) ) );
+            $filter[] = $wpdb->prepare( 'FIND_IN_SET( %d, category_ids ) > 0', $cat_id );
+        }
 
         $search = ( isset( $_REQUEST['s'] ) ) ? esc_sql( sanitize_text_field( $_REQUEST['s'] ) ) : false;
         if( $search ){
