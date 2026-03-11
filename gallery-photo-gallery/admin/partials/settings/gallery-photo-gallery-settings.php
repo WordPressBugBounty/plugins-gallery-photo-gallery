@@ -604,6 +604,15 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                 </p>
                                 <p class="vmessage">
                                     <strong>
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_gallery_author_nickname%%" />
+                                    </strong>
+                                    <span> - </span>
+                                    <span style="font-size:18px;">
+                                        <?php echo esc_attr( __( "Shows the current gallery author's nickname that was filled in their WordPress profile.", 'gallery-photo-gallery') ); ?>
+                                    </span>
+                                </p>
+                                <p class="vmessage">
+                                    <strong>
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly value="%%current_gallery_author_email%%" />
                                     </strong>
                                     <span> - </span>

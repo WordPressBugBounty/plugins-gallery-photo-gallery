@@ -1928,6 +1928,7 @@ class Gallery_Photo_Gallery_Public {
         }
 
         $current_gallery_author = __( "Unknown", 'gallery-photo-gallery' );
+        $current_gallery_author_nickname = "";
         $current_gallery_author_email = "";
         $current_gallery_author_display_name = "";
         $current_gallery_author_website_url = "";
@@ -1997,6 +1998,7 @@ class Gallery_Photo_Gallery_Public {
             $current_gallery_user_data = get_userdata( $gallery_current_author );
             if ( ! is_null( $current_gallery_user_data ) && $current_gallery_user_data ) {
                 $current_gallery_author = ( isset( $current_gallery_user_data->data->display_name ) && $current_gallery_user_data->data->display_name != '' ) ? sanitize_text_field( $current_gallery_user_data->data->display_name ) : "";
+                $current_gallery_author_nickname = ( isset( $current_gallery_user_data->data->user_nicename ) && $current_gallery_user_data->data->user_nicename != '' ) ? sanitize_text_field( $current_gallery_user_data->data->user_nicename ) : "";
                 $current_gallery_author_email = ( isset( $current_gallery_user_data->data->user_email ) && $current_gallery_user_data->data->user_email != '' ) ? sanitize_text_field( $current_gallery_user_data->data->user_email ) : "";
                 $current_gallery_author_display_name = ( isset( $current_gallery_user_data->data->display_name ) && $current_gallery_user_data->data->display_name != '' ) ? sanitize_text_field( $current_gallery_user_data->data->display_name ) : "";
                 $current_gallery_author_website_url = ( isset( $current_gallery_user_data->data->user_url ) && $current_gallery_user_data->data->user_url != '' ) ? sanitize_text_field( $current_gallery_user_data->data->user_url ) : "";
@@ -2008,42 +2010,43 @@ class Gallery_Photo_Gallery_Public {
         }
 
         $message_data = array(                    
-            'user_first_name'                     => $user_first_name,
-            'user_last_name'                      => $user_last_name,
-            'user_display_name'                   => $user_display_name,
-            'user_nickname'                       => $user_nickname,
-            'user_website_url'                    => $user_website_url,
-            'user_wordpress_email'                => $user_email,
-            'user_wordpress_roles'                => $user_wordpress_roles,
-            'user_ip_address'                     => $user_ip_address,
-            'user_id'                             => $user_id,
-            'user_registered'                     => $user_registered,
-            'gallery_id'                          => $id,
-            'current_gallery_images_count'        => $current_gallery_images_count,
-            'current_gallery_author'              => $current_gallery_author,
-            'current_gallery_author_email'        => $current_gallery_author_email,
-            'current_gallery_author_display_name' => $current_gallery_author_display_name,
-            'current_gallery_author_website_url'  => $current_gallery_author_website_url,
-            'creation_date'                       => $creation_gallery_date,
-            'current_date'                        => $current_date,
-            'current_time'                        => $current_time,
-            'current_day'                         => $current_day,
-            'current_month'                       => $current_month,
-            'current_gallery_title'               => $current_gallery_title,
-            'current_gallery_page_link'           => $gallery_current_page_link_html,
-            'admin_email'                         => $super_admin_email,
-            'post_author_nickname'                => $post_author_nickname,
-            'post_author_first_name'              => $post_author_first_name,
-            'post_author_last_name'               => $post_author_last_name,
-            'post_author_email'                   => $post_author_email,
-            'post_author_display_name'            => $post_author_display_name,
-            'post_author_website_url'             => $post_author_website_url,
-            'post_author_roles'                   => $post_author_roles,
-            'post_title'                          => $post_title,
-            'post_id'                             => $current_post_id,
-            'site_title'                          => $get_site_title,
-            'site_description'                    => $get_site_description,
-            'home_page_url'                       => $home_page_url,
+            'user_first_name'                       => $user_first_name,
+            'user_last_name'                        => $user_last_name,
+            'user_display_name'                     => $user_display_name,
+            'user_nickname'                         => $user_nickname,
+            'user_website_url'                      => $user_website_url,
+            'user_wordpress_email'                  => $user_email,
+            'user_wordpress_roles'                  => $user_wordpress_roles,
+            'user_ip_address'                       => $user_ip_address,
+            'user_id'                               => $user_id,
+            'user_registered'                       => $user_registered,
+            'gallery_id'                            => $id,
+            'current_gallery_images_count'          => $current_gallery_images_count,
+            'current_gallery_author'                => $current_gallery_author,
+            'current_gallery_author_nickname'       => $current_gallery_author_nickname,
+            'current_gallery_author_email'          => $current_gallery_author_email,
+            'current_gallery_author_display_name'   => $current_gallery_author_display_name,
+            'current_gallery_author_website_url'    => $current_gallery_author_website_url,
+            'creation_date'                         => $creation_gallery_date,
+            'current_date'                          => $current_date,
+            'current_time'                          => $current_time,
+            'current_day'                           => $current_day,
+            'current_month'                         => $current_month,
+            'current_gallery_title'                 => $current_gallery_title,
+            'current_gallery_page_link'             => $gallery_current_page_link_html,
+            'admin_email'                           => $super_admin_email,
+            'post_author_nickname'                  => $post_author_nickname,
+            'post_author_first_name'                => $post_author_first_name,
+            'post_author_last_name'                 => $post_author_last_name,
+            'post_author_email'                     => $post_author_email,
+            'post_author_display_name'              => $post_author_display_name,
+            'post_author_website_url'               => $post_author_website_url,
+            'post_author_roles'                     => $post_author_roles,
+            'post_title'                            => $post_title,
+            'post_id'                               => $current_post_id,
+            'site_title'                            => $get_site_title,
+            'site_description'                      => $get_site_description,
+            'home_page_url'                         => $home_page_url,
         );  
 
         $description = $this->ays_gallery_replace_message_variables($description, $message_data);

@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 6.9
-Stable tag: 6.6.3
+Stable tag: 6.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -227,6 +227,9 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.6.4 ( March 10, 2026 ) =
+* Added: Current gallery author nickname message variable on the general settings
 
 = 6.6.3 ( March 03, 2026 ) =
 * Added: Category filter in the galleries list table
