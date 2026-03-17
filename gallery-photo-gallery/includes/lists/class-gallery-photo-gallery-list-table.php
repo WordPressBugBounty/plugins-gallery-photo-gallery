@@ -281,6 +281,10 @@ class Galleries_List_Table extends WP_List_Table{
 
                 $hover_icon             = (isset($data['ays-gpg-image-hover-icon']) && $data['ays-gpg-image-hover-icon'] != '') ? sanitize_text_field( $data['ays-gpg-image-hover-icon'] ) : '';
                 $image_sizes            = (isset($data['ays_image_sizes']) && $data['ays_image_sizes'] != '') ? sanitize_text_field( $data['ays_image_sizes'] ) : '';
+
+                // Gallery URL
+                $main_gallery_url = ( isset( $data['ays_main_gallery_url'] ) && sanitize_url( $data['ays_main_gallery_url'] ) != "" ) ? sanitize_url( $data['ays_main_gallery_url'] ) : "";
+
                 $custom_css             = isset($data['gallery_custom_css']) && $data['gallery_custom_css'] != '' ? stripslashes( esc_attr( sanitize_text_field( $data['gallery_custom_css'] ) ) ) : '';
 
                 //Thumbnail title bg color 
@@ -642,10 +646,11 @@ class Galleries_List_Table extends WP_List_Table{
                             "published"         => $gallery_published,
                             "options"           => json_encode($options),
                             "lightbox_options"  => json_encode($lightbox_options),
+                            "gallery_url"       => $main_gallery_url,
                             "custom_css"        => $custom_css,
                             "images_dates"      => $images_dates
                         ),
-                        array( "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%d", "%d", "%d", "%s", "%s", "%s", "%s" )
+                        array( "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%d", "%d", "%d", "%s", "%s", "%s", "%s", "%s" )
                     );
                     $inserted_id = $wpdb->insert_id;
                     $message = "created";
@@ -676,11 +681,12 @@ class Galleries_List_Table extends WP_List_Table{
                             "published"         => $gallery_published,
                             "options"           => json_encode($options),
                             "lightbox_options"  => json_encode($lightbox_options),
+                            "gallery_url"       => $main_gallery_url,
                             "custom_css"        => $custom_css,
                             "images_dates"      => $images_dates
                         ),
                         array( "id" => $id ),
-                        array( "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%d", "%d", "%d", "%s", "%s", "%s", "%s" ),
+                        array( "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%s", "%d", "%d", "%d", "%s", "%s", "%s", "%s", "%s" ),
                         array( "%d" )
                     );
                     $inserted_id = $id;

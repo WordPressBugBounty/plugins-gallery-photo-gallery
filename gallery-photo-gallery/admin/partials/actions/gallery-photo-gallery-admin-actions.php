@@ -98,6 +98,7 @@ $gallery = array(
     "published"         => 1,
     "options"           => json_encode($g_options,true),
     "lightbox_options"  => json_encode($g_l_options,true),
+    "gallery_url"       => "",
     "custom_css"        => "",
     "images_dates"      => "",
 );
@@ -487,6 +488,8 @@ $change_gpg_create_author = (isset($gal_options['gpg_create_author']) && $gal_op
 
 // Images distance
 $images_distance = (isset($gal_options['images_distance']) && $gal_options['images_distance'] != '') ? absint( intval( $gal_options['images_distance'] ) ) : '5';
+
+$main_gallery_url = (isset( $gallery['gallery_url'] ) && esc_url( $gallery['gallery_url'] ) != '' ) ? esc_url( $gallery['gallery_url'] ) : '';
 
 if( $change_gpg_create_author  && $change_gpg_create_author > 0 ){
     global $wpdb;
@@ -1680,6 +1683,20 @@ $gpg_accordion_svg_html = '
                                     echo "<option value='" . $ays_gpg_create_author_data['ID'] . "' selected>" . $ays_gpg_create_author_data['display_name'] . "</option>";
                                 ?>
                             </select>
+                        </div>
+                    </div> <!-- Change the author of the current gallery -->
+                    <hr/>
+                    <div class="form-group row">
+                        <div class="col-sm-3">
+                            <label for="ays_main_gallery_url">
+                                <?php echo esc_html__('Gallery Display Page URL','gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Copy and Paste the link of the page where your gallery is displayed. This option is for easily detecting where your gallery is displayed.','gallery-photo-gallery'); ?>">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                            </label>
+                        </div>
+                        <div class="col-sm-9 ays_divider_left">                    
+                           <input type="text" class="ays-text-input" id="ays_main_gallery_url" name="ays_main_gallery_url" value="<?php echo esc_url( $main_gallery_url ); ?>"/>
                         </div>
                     </div> <!-- Change the author of the current gallery -->
                     <hr/>   
