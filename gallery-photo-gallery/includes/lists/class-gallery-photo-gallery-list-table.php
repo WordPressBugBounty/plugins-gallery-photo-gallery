@@ -220,6 +220,9 @@ class Galleries_List_Table extends WP_List_Table{
         $gallery_table = $wpdb->prefix . "ays_gallery";
         
         if( isset($data["ays_gallery_action"]) && wp_verify_nonce( $data["ays_gallery_action"],"ays_gallery_action" ) ) {
+
+                $gpg_allowed_html = Photo_Gallery_Data::ays_gpg_custom_allowed_html();
+
                 $image_paths_array = isset($data["ays-image-path"]) && $data["ays-image-path"] != '' ? $data["ays-image-path"] : array();
                 $path_key = array_search("",$image_paths_array);                
                 if ($path_key !== false) {
@@ -233,7 +236,8 @@ class Galleries_List_Table extends WP_List_Table{
                 
                 $id                     = ( $data["id"] != NULL ) ? absint( intval( $data["id"] ) ) : null;
                 $title                  = (isset($data["gallery_title"]) && $data["gallery_title"] != '') ? stripslashes(sanitize_text_field( $data["gallery_title"] )) : '';
-                $description            = !isset($data['gallery_description']) ? '' : wp_kses_post( $data['gallery_description'] );
+                
+                $description            = isset( $data['gallery_description'] ) && $data['gallery_description'] != '' ? wp_kses( $data['gallery_description'], $gpg_allowed_html ) : '';
 
                 $gallery_published      = absint( sanitize_text_field( $data['ays_gpg_publish'] ) );
                 

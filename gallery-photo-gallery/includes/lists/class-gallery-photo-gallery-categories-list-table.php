@@ -80,9 +80,13 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         $gpg_category_table = $wpdb->prefix . 'ays_gallery_categories';
         $ays_change_type = (isset($data['ays_change_type']))?$data['ays_change_type']:'';
         if( isset($data["gallery_category_action"]) && wp_verify_nonce( $data["gallery_category_action"],'gallery_category_action' ) ){
+
+            $gpg_allowed_html = Photo_Gallery_Data::ays_gpg_custom_allowed_html();
+
             $id = absint( intval( $data['id'] ) );
             $title = stripslashes(sanitize_text_field($data['ays_title']));
-            $description =  stripslashes($data['ays_description']);
+            $description = isset( $data['ays_description'] ) && $data['ays_description'] != '' ? wp_kses( $data['ays_description'], $gpg_allowed_html ) : '';
+
             $message = '';
             if( $id == 0 ){
                 $result = $wpdb->insert(
@@ -164,11 +168,14 @@ class Gpg_Categories_List_Table extends WP_List_Table{
             return;
         }
 
+        $gpg_allowed_html = Photo_Gallery_Data::ays_gpg_custom_allowed_html();
+
         $image_category_table = $wpdb->prefix . 'ays_gallery_categories';
         $image_category_data = $this->get_image_categories_by_id($id);
         
-        $title = (isset($image_category_data['title']) && $image_category_data['title'] != "") ? stripslashes( sanitize_text_field( $image_category_data['title'] ) ) : __("Copy", 'gallery-photo-gallery');
-        $description =  (isset($image_category_data['description']) && $image_category_data['description'] != "") ? wp_kses_post( $image_category_data['description'] ) : "";        
+        $title = (isset($image_category_data['title']) && $image_category_data['title'] != "") ? stripslashes( sanitize_text_field( $image_category_data['title'] ) ) : __("Copy", 'gallery-photo-gallery');        
+
+        $description = isset( $image_category_data['description'] ) && $image_category_data['description'] != '' ? wp_kses( $image_category_data['description'], $gpg_allowed_html ) : '';
 
         $result = $wpdb->insert(
             $image_category_table,

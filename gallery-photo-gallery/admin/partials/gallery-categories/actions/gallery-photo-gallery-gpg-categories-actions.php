@@ -58,32 +58,34 @@
                 <div class="col-sm-2">
                     <label for='ays-title'>
                         <?php echo __('Title', 'gallery-photo-gallery'); ?>
-                        <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Title of the category','gallery-photo-gallery')?>">
-                            <i class="ays_fa ays_fa_info_circle"></i>
-                        </a>
+                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Title of the category", 'gallery-photo-gallery' ); ?>">
+                           <i class="fas fa-info-circle"></i>
+                        </a>                        
                     </label>
                 </div>
                 <div class="col-sm-10">
                     <input class='ays-text-input' id='ays-title' name='ays_title' required type='text' value='<?php echo esc_attr(stripslashes( $gallery_category['title'])); ?>'>
                 </div>
             </div>
-
             <hr/>
-            <div class='ays-field'>
-                <label for='ays-description'>
-                    <?php echo __('Description', 'gallery-photo-gallery'); ?>
-                    <a class="ays_help" data-toggle="tooltip" title="<?php echo __('Provide more information about the gallery category','gallery-photo-gallery')?>">
-                        <i class="ays_fa ays_fa_info_circle"></i>
-                    </a>
-                </label>
-                <?php
-                $content = (stripslashes(htmlentities($gallery_category['description'])));
-                $editor_id = 'ays-gpg-description';
-                $settings = array('editor_height'=>$gpg_wp_editor_height,'textarea_name'=>'ays_description','editor_class'=>'ays-textarea');
-                wp_editor($content,$editor_id,$settings);
-                ?>
+            <div class="form-group row">
+                <div class="col-sm-2">
+                    <label for='ays-description'>
+                        <?php echo __('Description', 'gallery-photo-gallery'); ?>
+                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Provide more information about the gallery category", 'gallery-photo-gallery' ); ?>">
+                           <i class="fas fa-info-circle"></i>
+                        </a>                        
+                    </label>
+                </div>
+                <div class="col-sm-10">
+                    <?php
+                        $content = stripslashes( wpautop( $gallery_category['description'] ) );
+                        $editor_id = 'ays-gpg-description';
+                        $settings = array('editor_height'=>$gpg_wp_editor_height,'textarea_name'=>'ays_description','editor_class'=>'ays-textarea');
+                        wp_editor($content,$editor_id,$settings);
+                    ?>
+                </div>
             </div>
-
             <hr/>
             <div class="form-group row ays-galleries-button-box">
                 <div class="ays-question-button-first-row" style="padding: 0;">
