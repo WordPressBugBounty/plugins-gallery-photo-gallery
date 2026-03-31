@@ -57,6 +57,9 @@
         <div id="post-body" class="metabox-holder">
             <div id="post-body-content">
                 <div class="meta-box-sortables ui-sortable">
+                    <?php
+                        $this->gallery_obj->views();
+                    ?>
                     <form method="post">
                         <?php
                         $this->gallery_obj->prepare_items();
