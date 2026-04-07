@@ -1095,7 +1095,7 @@ class Gallery_Photo_Gallery_Public {
                                             'padding-top': 'calc(".(($view == 'grid')?100:50)."% - 25px)',
                                         });
                                         $(this).parent().find('.ays_image_loading_div').find('img').css('position', 'static');
-                                        $(this).parent().find('.ays_image_loading_div').find('img').attr('src', '".AYS_GPG_PUBLIC_URL."/images/error-404.png');
+                                        $(this).parent().find('.ays_image_loading_div').find('img').attr('src', '".AYS_GPG_PUBLIC_URL."images/error-404.png');
                                         var ays_err_massage = $('<span>Image not found!</span>');
                                         var img_parent = $(this).parent().find('.ays_image_loading_div').eq(0);
                                         img_parent.append(ays_err_massage);

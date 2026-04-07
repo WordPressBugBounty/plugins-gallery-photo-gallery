@@ -18,8 +18,6 @@
             return null;
         }
 
-        // wp_enqueue_script( AYS_GALLERY_NAME, AYS_GPG_PUBLIC_URL . '/js/gallery-photo-gallery-public.js', array('jquery'), AYS_GALLERY_VERSION, true);        
-
         // Enqueue the bundled block JS file
         if( $versionCompare ){
             wp_enqueue_script(
@@ -37,8 +35,6 @@
                 AYS_GALLERY_VERSION, true
             );
         }
-        
-        // wp_enqueue_style( AYS_GALLERY_NAME, AYS_GPG_PUBLIC_URL . '/css/gallery-photo-gallery-public.css', array(), AYS_GALLERY_VERSION, 'all');
 
         // Enqueue the bundled block CSS file
         if( $versionCompare ){            

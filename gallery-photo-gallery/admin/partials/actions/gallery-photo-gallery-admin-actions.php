@@ -682,7 +682,7 @@ $gpg_accordion_svg_html = '
                     </a>
                 </label>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-9 ays_gpg_display_flex_width">
                 <div class="form-check form-check-inline">
                     <input type="radio" id="ays_gpg_publish" name="ays_gpg_publish"
                            value="1" <?php echo ($gallery_published == '') ? "checked" : ""; ?>  <?php echo ($gallery_published == '1') ? 'checked' : ''; ?>/>
@@ -2304,47 +2304,47 @@ $gpg_accordion_svg_html = '
                         <div class="col-sm-9 ays_divider_left ays_gpg_toggle_loader_parent">
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="flower" <?php echo ($ays_gallery_loader == 'flower') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/flower.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/flower.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="ball" <?php echo ($ays_gallery_loader == 'ball') ? 'checked' : ''; ?> />
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/ball.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/ball.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="bars" <?php echo ($ays_gallery_loader == 'bars') ? 'checked' : ''; ?> />
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/bars.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/bars.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="curved_bar" <?php echo ($ays_gallery_loader == 'curved_bar') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/curved_bar.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/curved_bar.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="react" <?php echo ($ays_gallery_loader == 'react') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/react.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/react.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="gallery" <?php echo ($ays_gallery_loader == 'gallery') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/gallery.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/gallery.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="fracox" <?php echo ($ays_gallery_loader == 'fracox') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/fracox.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/fracox.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="fracoxner" <?php echo ($ays_gallery_loader == 'fracoxner') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/fracoxner.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/fracoxner.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="frik" <?php echo ($ays_gallery_loader == 'frik') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/frik.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/frik.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="clock_frik" <?php echo ($ays_gallery_loader == 'clock_frik') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/clock_frik.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/clock_frik.svg' ?>">
                             </label>
                             <label class="ays_gpg_image_hover_icon">
                                 <input name="ays_gpg_loader" class="ays_gpg_toggle_loader_radio" data-flag="false" data-type="loader" type="radio" value="in_yan" <?php echo ($ays_gallery_loader == 'in_yan') ? 'checked' : ''; ?>>
-                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'/images/in_yan.svg' ?>">
+                                <img style="width: 50px;" src="<?php echo AYS_GPG_PUBLIC_URL.'images/in_yan.svg' ?>">
                             </label>
                             <hr/>
                             <label class="ays_gpg_image_hover_icon">

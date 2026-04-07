@@ -220,6 +220,20 @@ class Gallery_Photo_Gallery_Admin {
         wp_localize_script( $this->plugin_name.'-wp-color-picker-alpha', 'wpColorPickerL10n', $color_picker_strings );
 	}
 
+    public function ays_gpg_add_body_class( $classes ) {
+        global $pagenow;
+
+        if ( $pagenow === 'admin.php' ) {
+            $page = isset( $_GET['page'] ) ? sanitize_key( $_GET['page'] ) : '';
+            
+            if ( strpos( $page, $this->plugin_name ) === 0 ) {
+                $classes .= ' ays-gpg-plugin-admin';
+            }
+        }
+
+        return $classes;
+    }
+
     /**
      * De-register JavaScript files for the admin area.
      *
