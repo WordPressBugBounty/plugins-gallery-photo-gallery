@@ -112,6 +112,8 @@ switch( $action ) {
         break;
 }
 
+$gallery_category_page_url  = admin_url( 'admin.php?page=gallery-photo-gallery-gpg-categories' );
+
 $gallery_message_vars = array(  
     '%%user_first_name%%'                               => esc_html__("User's First Name", 'gallery-photo-gallery'),
     '%%user_last_name%%'                                => esc_html__("User's Last Name", 'gallery-photo-gallery'),
@@ -1105,6 +1107,15 @@ $gpg_accordion_svg_html = '
                                 }
                                 ?>
                             </select>
+                            <div class="ays_gpg_small_hint_text_for_message_variables" style="margin-top: 5px;">
+                            <span><?php
+                                echo (sprintf(
+                                    /* translators: %s: opening and closing <a> HTML code  */
+                                    wp_kses_post(__('Create a new category %s here %s', 'gallery-photo-gallery')),
+                                    '<a href="'. esc_url( $gallery_category_page_url ) .'" target="_blank">',
+                                    '</a>'
+                                )) ;
+                            ?></div>
                         </div>
                     </div> <!-- Gallery Category -->
                     <hr/>

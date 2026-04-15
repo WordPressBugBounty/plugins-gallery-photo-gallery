@@ -46,6 +46,12 @@ div.ays-gpg-list-table .column-status i {
     padding-right: 8px;
 }
 
+.ays_gpg_small_hint_text_for_message_variables {
+    font-style: italic;
+    font-size: 11px;
+    color: gray;
+}
+
 .ays-upload-btn {
     position: absolute;
     display: block;
