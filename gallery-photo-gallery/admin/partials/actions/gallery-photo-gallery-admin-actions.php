@@ -73,6 +73,8 @@ $g_options = array(
 );
 $g_l_options = array(
     "lightbox_counter"                      => "true",
+    "enable_lightbox_counter_mobile"        => "on",
+    "lightbox_counter_mobile"               => "true",
     "lightbox_autoplay"                     => "true",
     "lb_pause"                              => "5000",
     "enable_lb_pause_mobile"                => "on",
@@ -309,7 +311,16 @@ $ays_gpg_thumbnail_title_size = !isset($gal_options['thumbnail_title_size']) ? "
 $ays_thumb_height_mobile = !isset($gal_options['thumb_height_mobile']) ? "170" : ($gal_options['thumb_height_mobile']);
 $ays_thumb_height_desktop = !isset($gal_options['thumb_height_desktop']) ? "260" : ($gal_options['thumb_height_desktop']);
 
-$ays_gpg_lightbox_counter           = (!isset($gal_lightbox_options['lightbox_counter'])) ? "true" : $gal_lightbox_options['lightbox_counter'];
+// Lightbox_Counter
+$ays_gpg_lightbox_counter = (!isset($gal_lightbox_options['lightbox_counter'])) ? "true" : $gal_lightbox_options['lightbox_counter'];
+
+// Enable Lightbox_Counter Mobile
+$gal_lightbox_options['enable_lightbox_counter_mobile'] = isset($gal_lightbox_options['enable_lightbox_counter_mobile']) && $gal_lightbox_options['enable_lightbox_counter_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_lightbox_counter_mobile = $gal_lightbox_options['enable_lightbox_counter_mobile'] == 'on' ?  true : false;
+
+// Lightbox_Counter Mobile
+$ays_gpg_lightbox_counter_mobile = isset( $gal_lightbox_options['lightbox_counter_mobile'] ) ? $gal_lightbox_options['lightbox_counter_mobile'] : $ays_gpg_lightbox_counter;
+
 $ays_gpg_lightbox_autoplay          = (!isset($gal_lightbox_options['lightbox_autoplay'])) ? "true" : $gal_lightbox_options['lightbox_autoplay'];
 
 // Gallery lightbox pause
@@ -1108,14 +1119,17 @@ $gpg_accordion_svg_html = '
                                 ?>
                             </select>
                             <div class="ays_gpg_small_hint_text_for_message_variables" style="margin-top: 5px;">
-                            <span><?php
-                                echo (sprintf(
-                                    /* translators: %s: opening and closing <a> HTML code  */
-                                    wp_kses_post(__('Create a new category %s here %s', 'gallery-photo-gallery')),
-                                    '<a href="'. esc_url( $gallery_category_page_url ) .'" target="_blank">',
-                                    '</a>'
-                                )) ;
-                            ?></div>
+                                <span>
+                                    <?php
+                                        echo (sprintf(
+                                            /* translators: %s: opening and closing <a> HTML code  */
+                                            wp_kses_post(__('Create a new category %s here %s', 'gallery-photo-gallery')),
+                                            '<a href="'. esc_url( $gallery_category_page_url ) .'" target="_blank">',
+                                            '</a>'
+                                        ));
+                                    ?>
+                                </span>
+                            </div>
                         </div>
                     </div> <!-- Gallery Category -->
                     <hr/>
@@ -2896,12 +2910,36 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-10 ays_divider_left">
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
-                                <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "true") ? "checked" : ""; ?> value="true"/>
-                            </label>
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
-                                <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "false") ? "checked" : ""; ?> value="false"/>
-                            </label>
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_lightbox_counter_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                            <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "true") ? "checked" : ""; ?> value="true"/>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                            <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "false") ? "checked" : ""; ?> value="false"/>
+                                        </label>                                        
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_lightbox_counter_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                            <input type="radio" class="" name="ays_gpg_lightbox_counter_mobile" <?php echo ($ays_gpg_lightbox_counter_mobile == "true") ? "checked" : ""; ?> value="true"/>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                            <input type="radio" class="" name="ays_gpg_lightbox_counter_mobile" <?php echo ($ays_gpg_lightbox_counter_mobile == "false") ? "checked" : ""; ?> value="false"/>
+                                        </label> 
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_lightbox_counter_mobile" name="enable_ays_gpg_lightbox_counter_mobile" <?php echo $enable_ays_gpg_lightbox_counter_mobile ? 'checked' : '' ?> >
+                                    <label for="enable_ays_gpg_lightbox_counter_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                     <hr/>
@@ -2935,7 +2973,7 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-2 ays_divider_left">
+                        <div class="col-sm-3 ays_divider_left">
                             <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lightbox_autoplay" <?php echo ($ays_gpg_lightbox_autoplay == "true") ? "checked" : ""; ?> value="true"/>
                             </label>
@@ -2943,7 +2981,7 @@ $gpg_accordion_svg_html = '
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lightbox_autoplay" <?php echo ($ays_gpg_lightbox_autoplay == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
-                        <div class="col-sm-8 ays_hidden ays_divider_left">
+                        <div class="col-sm-7 ays_hidden ays_divider_left">
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label for="ays_gpg_lightbox_pause">
@@ -3088,7 +3126,7 @@ $gpg_accordion_svg_html = '
                                 </a>
                             </label>
                         </div>
-                        <div class="col-sm-2 ays_divider_left">
+                        <div class="col-sm-3 ays_divider_left">
                             <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lg_keypress" <?php echo ($ays_gpg_lg_keypress == "true") ? "checked" : ""; ?> value="true"/>
                             </label>
@@ -3096,7 +3134,7 @@ $gpg_accordion_svg_html = '
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lg_keypress" <?php echo ($ays_gpg_lg_keypress == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
-                        <div class="col-sm-8 ays_hidden ays_divider_left">
+                        <div class="col-sm-7 ays_hidden ays_divider_left">
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label><?php echo esc_html__("Allow Esc key", 'gallery-photo-gallery');?></label>

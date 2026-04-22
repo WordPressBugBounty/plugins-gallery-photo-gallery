@@ -447,7 +447,15 @@ class Galleries_List_Table extends WP_List_Table{
                 $thumb_height_mobile    = wp_unslash(sanitize_text_field( isset($data['ays-thumb-height-mobile']) ? $data['ays-thumb-height-mobile'] : '' ));
                 $thumb_height_desktop   = wp_unslash(sanitize_text_field( isset($data['ays-thumb-height-desktop']) ? $data['ays-thumb-height-desktop'] : '' ));
             
+                // Lightbox Counter
                 $ays_lightbox_counter   = (isset($data['ays_gpg_lightbox_counter']) && $data['ays_gpg_lightbox_counter'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lightbox_counter'] )) : '';
+
+                // Enable Lightbox Counter Mobile
+                $enable_ays_lightbox_counter_mobile = isset( $data['enable_ays_gpg_lightbox_counter_mobile'] ) && $data['enable_ays_gpg_lightbox_counter_mobile'] == 'on' ? 'on' : 'off';
+
+                // Lightbox Counter Mobile                
+                $ays_lightbox_counter_mobile = isset( $data['ays_gpg_lightbox_counter_mobile'] ) && $data['ays_gpg_lightbox_counter_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_lightbox_counter_mobile'] ) : "";
+
                 $ays_lightbox_autoplay  = (isset($data['ays_gpg_lightbox_autoplay']) && $data['ays_gpg_lightbox_autoplay'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_lightbox_autoplay'] )) : '';
                 
                 // Gallery lightbox pause
@@ -679,6 +687,8 @@ class Galleries_List_Table extends WP_List_Table{
                 );
                 $lightbox_options = array(
                     "lightbox_counter"                  => $ays_lightbox_counter,
+                    "enable_lightbox_counter_mobile"    => $enable_ays_lightbox_counter_mobile,
+                    "lightbox_counter_mobile"           => $ays_lightbox_counter_mobile,
                     "lightbox_autoplay"                 => $ays_lightbox_autoplay,
                     "lb_pause"                          => $ays_lg_pause,
                     "enable_lb_pause_mobile"            => $enable_ays_lg_pause_mobile,

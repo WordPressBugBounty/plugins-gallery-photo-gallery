@@ -242,8 +242,20 @@ class Gallery_Photo_Gallery_Public {
                                       $gallery_options['hover_dir_aware'] == null ||
                                       $gallery_options['hover_dir_aware'] == "") ? "slide" : $gallery_options['hover_dir_aware'];        
         $images_distance = (isset($gallery_options['images_distance']) && $gallery_options['images_distance'] != '') ? absint( intval( $gallery_options['images_distance'] ) ) : '5';
+
+        // Lightbox Counter
         $ays_gpg_lightbox_counter = (!isset($gal_lightbox_options['lightbox_counter']) ||
                                     $gal_lightbox_options['lightbox_counter'] == false) ? "true" : $gal_lightbox_options['lightbox_counter'];
+        // Enable Lightbox Counter Mobile
+        $gal_lightbox_options['enable_lightbox_counter_mobile'] = ( isset( $gal_lightbox_options['enable_lightbox_counter_mobile'] ) && $gal_lightbox_options['enable_lightbox_counter_mobile'] == 'off') ? false : true;
+        
+        // Lightbox Counter Mobile
+        if ( $gal_lightbox_options['enable_lightbox_counter_mobile'] ) {
+            $ays_gpg_lightbox_counter_mobile = ( isset( $gal_lightbox_options['lightbox_counter_mobile'] ) && $gal_lightbox_options['lightbox_counter_mobile'] != '' ) ?  stripslashes( esc_attr( $gal_lightbox_options['lightbox_counter_mobile'] ) ) : $ays_gpg_lightbox_counter;
+        } else {
+            $ays_gpg_lightbox_counter_mobile = $ays_gpg_lightbox_counter;
+        }
+
         $ays_gpg_lightbox_autoplay = (!isset($gal_lightbox_options['lightbox_autoplay']) ||
                                     $gal_lightbox_options['lightbox_autoplay'] == false) ? "true" : $gal_lightbox_options['lightbox_autoplay'];
 
@@ -698,8 +710,10 @@ class Gallery_Photo_Gallery_Public {
                         }
 
                         var lightboxPause = $ays_gpg_lightbox_pause;
+                        var lightboxCounter = $ays_gpg_lightbox_counter;
                         if (window.matchMedia('(max-width: 768px)').matches) {
                             lightboxPause = $ays_gpg_lightbox_pause_mobile;
+                            lightboxCounter = $ays_gpg_lightbox_counter_mobile;
                         }
                         
                         var gpgFilterLightboxOptions = {
@@ -717,7 +731,7 @@ class Gallery_Photo_Gallery_Public {
                             pager: false,
                             download: false,
                             autoplayControls: $ays_gpg_lightbox_autoplay,
-                            counter: $ays_gpg_lightbox_counter,
+                            counter: lightboxCounter,
                             showThumbByDefault: false,
                             getCaptionFromTitleOrAlt: false,
                             subHtmlSelectorRelative: true
@@ -928,8 +942,10 @@ class Gallery_Photo_Gallery_Public {
                         },300);
                         
                         var lightboxPause = '. $ays_gpg_lightbox_pause .';
+                        var lightboxCounter = '. $ays_gpg_lightbox_counter .';
                         if (window.matchMedia("(max-width: 768px)").matches) {
                             lightboxPause = '. $ays_gpg_lightbox_pause_mobile .';
+                            lightboxCounter = '. $ays_gpg_lightbox_counter_mobile .';
                         }
 
                         var gpgSearchLightboxOptions = {
@@ -947,7 +963,7 @@ class Gallery_Photo_Gallery_Public {
                             pager: false,
                             download: false,
                             autoplayControls: '.$ays_gpg_lightbox_autoplay.',
-                            counter: '.$ays_gpg_lightbox_counter.',
+                            counter: lightboxCounter,
                             showThumbByDefault: false,
                             getCaptionFromTitleOrAlt: false,
                             subHtmlSelectorRelative: true
@@ -992,8 +1008,10 @@ class Gallery_Photo_Gallery_Public {
                                         '.$srch_show_lightbox.'
                                     }else{
                                         var lightboxPause = '. $ays_gpg_lightbox_pause .';
+                                        var lightboxCounter = '. $ays_gpg_lightbox_counter .';
                                         if (window.matchMedia("(max-width: 768px)").matches) {
                                             lightboxPause = '. $ays_gpg_lightbox_pause_mobile .';
+                                            lightboxCounter = '. $ays_gpg_lightbox_counter_mobile .';
                                         }
 
                                         $(document).find("'.$gallery_view_selector.'").data("lightGallery").destroy(true);
@@ -1012,7 +1030,7 @@ class Gallery_Photo_Gallery_Public {
                                             pager: false,
                                             download: false,
                                             autoplayControls: '.$ays_gpg_lightbox_autoplay.',
-                                            counter: '.$ays_gpg_lightbox_counter.',
+                                            counter: lightboxCounter,
                                             showThumbByDefault: false,
                                             getCaptionFromTitleOrAlt: false,
                                             subHtmlSelectorRelative: true
@@ -1026,8 +1044,10 @@ class Gallery_Photo_Gallery_Public {
 
                            $gallery_view .= "
                                 var lightboxPause = $ays_gpg_lightbox_pause;
+                                var lightboxCounter = $ays_gpg_lightbox_counter;
                                 if (window.matchMedia('(max-width: 768px)').matches) {
                                     lightboxPause = $ays_gpg_lightbox_pause_mobile;
+                                    lightboxCounter = $ays_gpg_lightbox_counter_mobile;
                                 }
                             ";
                            $gallery_view .= "$(document).find('$gallery_view_selector').lightGallery({
@@ -1046,7 +1066,7 @@ class Gallery_Photo_Gallery_Public {
                                 pager: false,
                                 download: false,
                                 autoplayControls: $ays_gpg_lightbox_autoplay,
-                                counter: $ays_gpg_lightbox_counter,
+                                counter: lightboxCounter,
                                 showThumbByDefault: false,
                                 getCaptionFromTitleOrAlt: false,
                                 subHtmlSelectorRelative: true
@@ -1179,8 +1199,10 @@ class Gallery_Photo_Gallery_Public {
 
                     $gallery_view .='
                         var lightboxPause = '. $ays_gpg_lightbox_pause .';
+                        var lightboxCounter = '. $ays_gpg_lightbox_counter .';
                         if (window.matchMedia("(max-width: 768px)").matches) {
                             lightboxPause = '. $ays_gpg_lightbox_pause_mobile .';
+                            lightboxCounter = '. $ays_gpg_lightbox_counter_mobile .';
                         }
                     ';
                     $gallery_view .='var gpgSearchLightboxOptions = {
@@ -1198,7 +1220,7 @@ class Gallery_Photo_Gallery_Public {
                         pager: false,
                         download: false,
                         autoplayControls: '.$ays_gpg_lightbox_autoplay.',
-                        counter: '.$ays_gpg_lightbox_counter.',
+                        counter: lightboxCounter,
                         showThumbByDefault: false,
                         getCaptionFromTitleOrAlt: false,
                         subHtmlSelectorRelative: true
@@ -1259,8 +1281,10 @@ class Gallery_Photo_Gallery_Public {
                                 }else{
                                     $(document).find("'.$gallery_view_selector.'").data("lightGallery").destroy(true);
                                     var lightboxPause = '. $ays_gpg_lightbox_pause .';
+                                    var lightboxCounter = '. $ays_gpg_lightbox_counter .';
                                     if (window.matchMedia("(max-width: 768px)").matches) {
                                         lightboxPause = '. $ays_gpg_lightbox_pause_mobile .';
+                                        lightboxCounter = '. $ays_gpg_lightbox_counter_mobile .';
                                     }
                                     $(document).find("'.$gallery_view_selector.'").lightGallery({
                                         selector: ".'.$gallery_lightbox_selector.'",
@@ -1277,7 +1301,7 @@ class Gallery_Photo_Gallery_Public {
                                         pager: false,
                                         download: false,
                                         autoplayControls: '.$ays_gpg_lightbox_autoplay.',
-                                        counter: '.$ays_gpg_lightbox_counter.',
+                                        counter: lightboxCounter,
                                         showThumbByDefault: false,
                                         getCaptionFromTitleOrAlt: false,
                                         subHtmlSelectorRelative: true
@@ -1289,8 +1313,10 @@ class Gallery_Photo_Gallery_Public {
                    if($disable_lightbox){
                         $gallery_view .= "
                             var lightboxPause = $ays_gpg_lightbox_pause;
+                            var lightboxCounter = $ays_gpg_lightbox_counter;
                             if (window.matchMedia('(max-width: 768px)').matches) {
                                 lightboxPause = $ays_gpg_lightbox_pause_mobile;
+                                lightboxCounter = $ays_gpg_lightbox_counter_mobile;                                
                             }
                         ";
                        $gallery_view .= "$(document).find('$gallery_view_selector').lightGallery({
@@ -1309,7 +1335,7 @@ class Gallery_Photo_Gallery_Public {
                             pager: false,
                             download: false,
                             autoplayControls: $ays_gpg_lightbox_autoplay,
-                            counter: $ays_gpg_lightbox_counter,
+                            counter: lightboxCounter,
                             showThumbByDefault: false,
                             getCaptionFromTitleOrAlt: false,
                             subHtmlSelectorRelative: true
@@ -1563,9 +1589,20 @@ class Gallery_Photo_Gallery_Public {
         } else {
             $ays_images_border_color_mobile = $ays_images_border_color;
         }
-        
+
+        // Lightbox Counter
         $ays_gpg_lightbox_counter = (!isset($gal_lightbox_options['lightbox_counter']) ||
                                     $gal_lightbox_options['lightbox_counter'] == false) ? "true" : $gal_lightbox_options['lightbox_counter'];
+        // Enable Lightbox Counter Mobile
+        $gal_lightbox_options['enable_lightbox_counter_mobile'] = ( isset( $gal_lightbox_options['enable_lightbox_counter_mobile'] ) && $gal_lightbox_options['enable_lightbox_counter_mobile'] == 'off') ? false : true;
+        
+        // Lightbox Counter Mobile
+        if ( $gal_lightbox_options['enable_lightbox_counter_mobile'] ) {
+            $ays_gpg_lightbox_counter_mobile = ( isset( $gal_lightbox_options['lightbox_counter_mobile'] ) && $gal_lightbox_options['lightbox_counter_mobile'] != '' ) ?  stripslashes( esc_attr( $gal_lightbox_options['lightbox_counter_mobile'] ) ) : $ays_gpg_lightbox_counter;
+        } else {
+            $ays_gpg_lightbox_counter_mobile = $ays_gpg_lightbox_counter;
+        }
+
         $ays_gpg_lightbox_autoplay = (!isset($gal_lightbox_options['lightbox_autoplay']) ||
                                     $gal_lightbox_options['lightbox_autoplay'] == false) ? "true" : $gal_lightbox_options['lightbox_autoplay'];
 
