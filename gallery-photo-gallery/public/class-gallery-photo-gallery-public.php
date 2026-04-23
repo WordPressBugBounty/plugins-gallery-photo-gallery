@@ -264,7 +264,7 @@ class Gallery_Photo_Gallery_Public {
                                     $gal_lightbox_options['lb_pause'] == '') ? "5000" : $gal_lightbox_options['lb_pause'];
         
         // Gallery lightbox pause Mobile
-        if ( $gal_lightbox_options['enable_lb_pause_mobile'] ) {
+        if ( isset( $gal_lightbox_options['enable_lb_pause_mobile'] ) && $gal_lightbox_options['enable_lb_pause_mobile'] ) {
             $ays_gpg_lightbox_pause_mobile = ( isset( $gal_lightbox_options['lb_pause_mobile'] ) && $gal_lightbox_options['lb_pause_mobile'] != '' ) ?  stripslashes( esc_attr( $gal_lightbox_options['lb_pause_mobile'] ) ) : $ays_gpg_lightbox_pause;
         } else {
             $ays_gpg_lightbox_pause_mobile = $ays_gpg_lightbox_pause;
@@ -1611,7 +1611,7 @@ class Gallery_Photo_Gallery_Public {
                                     $gal_lightbox_options['lb_pause'] == '') ? "5000" : $gal_lightbox_options['lb_pause'];
 
         // Gallery lightbox pause Mobile
-        if ( $gal_lightbox_options['enable_lb_pause_mobile'] ) {
+        if ( isset( $gal_lightbox_options['enable_lb_pause_mobile'] ) && $gal_lightbox_options['enable_lb_pause_mobile'] ) {
             $ays_gpg_lightbox_pause_mobile = ( isset( $gal_lightbox_options['lb_pause_mobile'] ) && $gal_lightbox_options['lb_pause_mobile'] != '' ) ?  stripslashes( esc_attr( $gal_lightbox_options['lb_pause_mobile'] ) ) : $ays_gpg_lightbox_pause;
         } else {
             $ays_gpg_lightbox_pause_mobile = $ays_gpg_lightbox_pause;
