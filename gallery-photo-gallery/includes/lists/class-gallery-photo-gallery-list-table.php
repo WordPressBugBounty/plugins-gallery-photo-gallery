@@ -467,7 +467,14 @@ class Galleries_List_Table extends WP_List_Table{
                 // Gallery lightbox pause Mobile
                 $ays_lg_pause_mobile = isset( $data['ays_gpg_lightbox_pause_mobile'] ) && $data['ays_gpg_lightbox_pause_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_lightbox_pause_mobile'] ) : "";
 
+                // Gallery show caption
                 $ays_lg_show_caption    = (isset($data['ays_gpg_show_caption']) && $data['ays_gpg_show_caption'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_show_caption'] )) : '';
+
+                // Enable Gallery show caption Mobile
+                $enable_ays_lg_show_caption_mobile = isset( $data['enable_ays_gpg_show_caption_mobile'] ) && $data['enable_ays_gpg_show_caption_mobile'] == 'on' ? 'on' : 'off';
+
+                // Gallery show caption Mobile                
+                $ays_lg_show_caption_mobile = isset( $data['ays_gpg_show_caption_mobile'] ) && $data['ays_gpg_show_caption_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_show_caption_mobile'] ) : "";
                 
                 $gallery_img_position = (isset($data['gallery_img_position']) && $data['gallery_img_position'] != '') ? wp_unslash(sanitize_text_field( $data['gallery_img_position'] )) : 'center-center';
 
@@ -694,6 +701,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "enable_lb_pause_mobile"            => $enable_ays_lg_pause_mobile,
                     "lb_pause_mobile"                   => $ays_lg_pause_mobile,
                     "lb_show_caption"                   => $ays_lg_show_caption,
+                    "enable_lb_show_caption_mobile"     => $enable_ays_lg_show_caption_mobile,
+                    "lb_show_caption_mobile"            => $ays_lg_show_caption_mobile,
                     "filter_lightbox_opt"               => $ays_gpg_filter_lightbox_opt,
                     "enable_filter_lightbox_opt_mobile" => $enable_ays_gpg_filter_lightbox_opt_mobile,
                     "filter_lightbox_opt_mobile"        => $ays_gpg_filter_lightbox_opt_mobile,

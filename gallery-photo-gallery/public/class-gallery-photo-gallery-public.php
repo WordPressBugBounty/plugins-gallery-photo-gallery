@@ -1652,6 +1652,38 @@ class Gallery_Photo_Gallery_Public {
                 break;
             }
         }
+        
+        $ays_show_caption_mobile = $ays_show_caption;
+
+        $enable_ays_show_caption_mobile_mobile = ( isset($gal_lightbox_options['enable_lb_show_caption_mobile'] ) && $gal_lightbox_options['enable_lb_show_caption_mobile'] == 'on' ) ? true : false;
+
+        if ( $enable_ays_show_caption_mobile_mobile ) {
+            if( isset( $gal_lightbox_options['lb_show_caption_mobile'] ) && $gal_lightbox_options['lb_show_caption_mobile'] != '' ) {
+                switch( $gal_lightbox_options['lb_show_caption_mobile'] ){
+                    case "true":
+                        $ays_show_caption_mobile = true;
+                    break;
+                    case "false":
+                        $ays_show_caption_mobile = false;
+                    break;
+                }
+            }else{
+                $ays_show_caption_mobile = $ays_show_caption;
+            }
+            
+        } else {
+            $ays_show_caption_mobile = $ays_show_caption;
+        }
+
+        $ays_show_caption_style = 'display: block;';
+        if ( ! $ays_show_caption ) {
+            $ays_show_caption_style = 'display: none;';
+        }
+
+        $ays_show_caption_mobile_style = 'display: block;';
+        if ( ! $ays_show_caption_mobile ) {
+            $ays_show_caption_mobile_style = 'display: none;';
+        }
 
         // All images text
         $gpg_all_images_text = (isset($settings_options['gpg_all_images_text']) && $settings_options['gpg_all_images_text'] != '') ?  stripslashes( esc_attr($settings_options['gpg_all_images_text'])) : 'All';        
@@ -2225,7 +2257,7 @@ class Gallery_Photo_Gallery_Public {
 
                     $ays_caption = "";
                     $ays_data_sub_html = "";
-                    if($ays_show_caption){
+                    if($ays_show_caption || $ays_show_caption_mobile){
                         $ays_caption = "<div class='ays_caption_wrap'>
                                     <div class='ays_caption'>
                                         <h4>".$image_titles[$key]."</h4>
@@ -2341,7 +2373,7 @@ class Gallery_Photo_Gallery_Public {
 
                     $ays_caption = "";
                     $ays_data_sub_html = "";
-                    if($ays_show_caption){
+                    if($ays_show_caption || $ays_show_caption_mobile){
                         $ays_caption = "<div class='ays_caption_wrap'>
                                     <div class='ays_caption'>
                                         <h4>".$image_titles[$key]."</h4>
@@ -2437,7 +2469,7 @@ class Gallery_Photo_Gallery_Public {
                     
                     $ays_caption = "";
                     $ays_data_sub_html = "";
-                    if($ays_show_caption){
+                    if($ays_show_caption || $ays_show_caption_mobile){
                         $ays_caption = "<div class='ays_caption_wrap'>
                                     <div class='ays_caption'>
                                         <h4>".$image_titles[$key]."</h4>
@@ -2533,7 +2565,7 @@ class Gallery_Photo_Gallery_Public {
 
                     $ays_caption = "";
                     $ays_data_sub_html = "";
-                    if($ays_show_caption){
+                    if($ays_show_caption || $ays_show_caption_mobile){
                         $ays_caption = "<div class='ays_caption_wrap'>
                                     <div class='ays_caption'>
                                         <h4>".$image_titles[$key]."</h4>
@@ -3026,6 +3058,10 @@ class Gallery_Photo_Gallery_Public {
                 .ays_gallery_header.ays_gallery_header_mobile{
                     display:none;        
                 }
+                div.ays_gpg_lightbox_".$id." div.lg-sub-html {
+                    ". $ays_show_caption_style ."
+                }
+
                 @media screen and (max-width: 768px){
                     .ays_image_title > span {
                         color:". $thumbnail_title_color_mobile ."
@@ -3104,6 +3140,10 @@ class Gallery_Photo_Gallery_Public {
                     div.ays_masonry_grid div.ays_masonry_item_".$id.",
                     div.ays_grid_row div.ays_grid_column_".$id." {
                         ". $show_images_with_border_mobile ."
+                    }
+
+                    div.ays_gpg_lightbox_".$id." div.lg-sub-html {
+                        ". $ays_show_caption_mobile_style ."
                     }
                 }
 

@@ -80,6 +80,8 @@ $g_l_options = array(
     "enable_lb_pause_mobile"                => "on",
     "lb_pause_mobile"                       => "5000",
     "lb_show_caption"                       => "true",
+    "enable_lb_show_caption_mobile"         => "on",
+    "lb_show_caption_mobile"                => "true",
     "filter_lightbox_opt"                   => "none",
     "enable_filter_lightbox_opt_mobile"     => "on",
     "filter_lightbox_opt_mobile"            => "none",
@@ -333,7 +335,15 @@ $enable_ays_gpg_lightbox_pause_mobile = $gal_lightbox_options['enable_lb_pause_m
 // Gallery lightbox pause Mobile
 $ays_gpg_lightbox_pause_mobile = isset( $gal_lightbox_options['lb_pause_mobile'] ) && $gal_lightbox_options['lb_pause_mobile'] != '' ? stripslashes ( esc_attr( $gal_lightbox_options['lb_pause_mobile'] ) ) : $ays_gpg_lightbox_pause;
 
-$ays_gpg_show_caption               = (!isset($gal_lightbox_options['lb_show_caption'])) ? "true" : $gal_lightbox_options['lb_show_caption'];
+// Gallery Show_caption
+$ays_gpg_show_caption = (!isset($gal_lightbox_options['lb_show_caption'])) ? "true" : $gal_lightbox_options['lb_show_caption'];
+
+// Enable Gallery Show_caption Mobile
+$gal_lightbox_options['enable_lb_show_caption_mobile'] = isset($gal_lightbox_options['enable_lb_show_caption_mobile']) && $gal_lightbox_options['enable_lb_show_caption_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_show_caption_mobile = $gal_lightbox_options['enable_lb_show_caption_mobile'] == 'on' ?  true : false;
+
+// Gallery Show_caption Mobile
+$ays_gpg_show_caption_mobile = isset( $gal_lightbox_options['lb_show_caption_mobile'] ) ? $gal_lightbox_options['lb_show_caption_mobile'] : $ays_gpg_show_caption;
 
 $ays_gpg_lg_keypress = (!isset($gal_lightbox_options["lb_keypress"])) ? "true" : $gal_lightbox_options["lb_keypress"];
 $ays_gpg_lg_esckey = (!isset($gal_lightbox_options["lb_esckey"])) ? "true" : $gal_lightbox_options["lb_esckey"];
@@ -2938,8 +2948,7 @@ $gpg_accordion_svg_html = '
                                     <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_lightbox_counter_mobile" name="enable_ays_gpg_lightbox_counter_mobile" <?php echo $enable_ays_gpg_lightbox_counter_mobile ? 'checked' : '' ?> >
                                     <label for="enable_ays_gpg_lightbox_counter_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
                                 </div>
-                            </div>
-                            
+                            </div>                            
                         </div>
                     </div>
                     <hr/>
@@ -2954,12 +2963,35 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-10 ays_divider_left">
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
-                                <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "true") ? "checked" : ""; ?> value="true"/>
-                            </label>
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
-                                <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "false") ? "checked" : ""; ?> value="false"/>
-                            </label>
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_show_caption_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                            <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "true") ? "checked" : ""; ?> value="true"/>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                            <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "false") ? "checked" : ""; ?> value="false"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_show_caption_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <div class="ays_gpg_display_flex_width">
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                            <input type="radio" class="" name="ays_gpg_show_caption_mobile" <?php echo ($ays_gpg_show_caption_mobile == "true") ? "checked" : ""; ?> value="true"/>
+                                        </label>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                            <input type="radio" class="" name="ays_gpg_show_caption_mobile" <?php echo ($ays_gpg_show_caption_mobile == "false") ? "checked" : ""; ?> value="false"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_show_caption_mobile" name="enable_ays_gpg_show_caption_mobile" <?php echo $enable_ays_gpg_show_caption_mobile ? 'checked' : '' ?> >
+                                    <label for="enable_ays_gpg_show_caption_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                     <hr/>
