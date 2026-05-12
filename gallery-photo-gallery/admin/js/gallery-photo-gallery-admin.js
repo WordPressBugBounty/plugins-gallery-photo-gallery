@@ -2272,7 +2272,9 @@
             $(document).find('input[name="ays-gpg-images-border-radius-mobile"]').val('0').change();
             $(document).find('input[name="enable-ays-gpg-images-border-radius-mobile"]').prop('checked', true).change();
 
-            $(document).find('input[name="ays_gpg_thumbnail_title_size"]').val('12').change();
+            $(document).find('#ays_gpg_thumbnail_title_size').val('12').change();
+            $(document).find('#ays_gpg_thumbnail_title_size_mobile').val('12').change();
+            $(document).find("#enable_ays_gpg_thumbnail_title_size_mobile").prop('checked', true).change();
 
             $(document).find('#ays_gallery_title_color').val('#000').change();
             $(document).find('#ays_gallery_title_color_mobile').val('#000').change();

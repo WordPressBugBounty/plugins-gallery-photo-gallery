@@ -399,7 +399,16 @@ class Galleries_List_Table extends WP_List_Table{
                 $ays_images_b_radius_mobile = isset( $data['ays-gpg-images-border-radius-mobile'] ) && $data['ays-gpg-images-border-radius-mobile'] != '' ? sanitize_text_field( $data['ays-gpg-images-border-radius-mobile'] ) : "";
 
                 $ays_hover_icon_size    = (isset($data['ays-gpg-hover-icon-size']) && $data['ays-gpg-hover-icon-size'] != '') ? wp_unslash(sanitize_text_field( $data['ays-gpg-hover-icon-size'] )) : '';
+
+                // Gallery Thumbnail title size
                 $ays_gpg_thumbnail_title_size = (isset($data['ays_gpg_thumbnail_title_size']) && $data['ays_gpg_thumbnail_title_size'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_thumbnail_title_size'] )) : '';
+
+                // Enable Gallery Thumbnail title size Mobile
+                $enable_ays_gpg_thumbnail_title_size_mobile = isset( $data['enable_ays_gpg_thumbnail_title_size_mobile'] ) && $data['enable_ays_gpg_thumbnail_title_size_mobile'] == 'on' ? 'on' : 'off';
+
+                // Gallery Thumbnail title size Mobile
+                $ays_gpg_thumbnail_title_size_mobile = isset( $data['ays_gpg_thumbnail_title_size_mobile'] ) && $data['ays_gpg_thumbnail_title_size_mobile'] != '' ? sanitize_text_field( $data['ays_gpg_thumbnail_title_size_mobile'] ) : "";
+
                 $ays_gpg_loader         = (isset($data['ays_gpg_loader']) && $data['ays_gpg_loader'] != '') ? wp_unslash(sanitize_text_field( $data['ays_gpg_loader'] )) : '';
 
                 // Gallery loader text value
@@ -660,6 +669,8 @@ class Galleries_List_Table extends WP_List_Table{
                     "gallery_loader_text_value"             => $gallery_loader_text_value,
                     "hover_icon_size"                       => $ays_hover_icon_size,
                     "thumbnail_title_size"                  => $ays_gpg_thumbnail_title_size,
+                    "enable_thumbnail_title_size_mobile"    => $enable_ays_gpg_thumbnail_title_size_mobile,
+                    "thumbnail_title_size_mobile"           => $ays_gpg_thumbnail_title_size_mobile,
                     "thumb_height_mobile"                   => $thumb_height_mobile,
                     "thumb_height_desktop"                  => $thumb_height_desktop,
                     "enable_light_box"                      => $enable_light_box,

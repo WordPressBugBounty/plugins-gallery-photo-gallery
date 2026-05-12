@@ -309,7 +309,17 @@ $enable_ays_gpg_border_radius_mobile = $gal_options['enable_border_radius_mobile
 $ays_gpg_border_radius_mobile = isset( $gal_options['border_radius_mobile'] ) && $gal_options['border_radius_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['border_radius_mobile'] ) ) : $ays_gpg_border_radius;
 
 $ays_gpg_hover_icon_size = !isset($gal_options['hover_icon_size']) ? "20" : ($gal_options['hover_icon_size']);
+
+// Gallery Thumbnail title size
 $ays_gpg_thumbnail_title_size = !isset($gal_options['thumbnail_title_size']) ? "12" : ($gal_options['thumbnail_title_size']);
+
+// Enable Gallery Thumbnail title size Mobile
+$gal_options['enable_thumbnail_title_size_mobile'] = isset($gal_options['enable_thumbnail_title_size_mobile']) && $gal_options['enable_thumbnail_title_size_mobile'] == 'off' ? 'off' : 'on';
+$enable_ays_gpg_thumbnail_title_size_mobile = $gal_options['enable_thumbnail_title_size_mobile'] == 'on' ?  true : false;
+
+// Gallery Thumbnail title size Mobile
+$ays_gpg_thumbnail_title_size_mobile = isset( $gal_options['thumbnail_title_size_mobile'] ) && $gal_options['thumbnail_title_size_mobile'] != '' ? stripslashes ( esc_attr( $gal_options['thumbnail_title_size_mobile'] ) ) : $ays_gpg_thumbnail_title_size;
+
 $ays_thumb_height_mobile = !isset($gal_options['thumb_height_mobile']) ? "170" : ($gal_options['thumb_height_mobile']);
 $ays_thumb_height_desktop = !isset($gal_options['thumb_height_desktop']) ? "260" : ($gal_options['thumb_height_desktop']);
 
@@ -2731,15 +2741,25 @@ $gpg_accordion_svg_html = '
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
-                        </div>               
-                        <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
-                            <div>
-                                <input name="ays_gpg_thumbnail_title_size" id="ays_gpg_thumbnail_title_size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_thumbnail_title_size; ?>">
-                            </div>
-                            <div class="ays_gpg_dropdown_max_width">
-                                <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
-                            </div>
                         </div>
+                        <div class="col-sm-9 ays_divider_left">
+                            <div class="ays_toggle_mobile_parent">
+                                <div>
+                                    <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ($enable_ays_gpg_thumbnail_title_size_mobile) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
+
+                                    <input name="ays_gpg_thumbnail_title_size" id="ays_gpg_thumbnail_title_size" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_thumbnail_title_size; ?>">
+                                </div>
+                                <div class="ays_toggle_target ays_gpg_title_color_mobile_container" style=" <?php echo ( $enable_ays_gpg_thumbnail_title_size_mobile ) ? '' : 'display:none'; ?>">
+                                    <hr>
+                                    <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 100px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
+                                    <input name="ays_gpg_thumbnail_title_size_mobile" id="ays_gpg_thumbnail_title_size_mobile" class="ays-text-input ays-text-input-short" type="number" value="<?php echo $ays_gpg_thumbnail_title_size_mobile; ?>">                                    
+                                </div>
+                                <div class="ays_gpg_mobile_settings_container">
+                                    <input type="checkbox" class="ays_toggle_mobile_checkbox" id="enable_ays_gpg_thumbnail_title_size_mobile" name="enable_ays_gpg_thumbnail_title_size_mobile" <?php echo $enable_ays_gpg_thumbnail_title_size_mobile ? 'checked' : '' ?>>
+                                    <label for="enable_ays_gpg_thumbnail_title_size_mobile" ><?php echo esc_html__('Use a different setting for Mobile', 'gallery-photo-gallery') ?></label>
+                                </div>
+                            </div>                                        
+                        </div>                        
                     </div>
                     <hr/>
                     <div class="form-group row">
