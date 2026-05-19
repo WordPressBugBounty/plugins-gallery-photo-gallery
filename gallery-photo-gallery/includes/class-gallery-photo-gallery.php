@@ -224,7 +224,7 @@ class Gallery_Photo_Gallery {
 		
 		// Sale Banner
         // $this->loader->add_action( 'admin_notices', $plugin_admin, 'ays_gpg_sale_baner', 1 );
-        $this->loader->add_action( 'admin_notices', $data_admin, 'ays_gpg_sale_baner', 10 );
+        $this->loader->add_action( 'admin_notices', $data_admin, 'ays_gpg_sale_baner', 15 );
 
         $this->loader->add_action( 'wp_ajax_ays_gpg_dismiss_button', $plugin_admin, 'ays_gpg_dismiss_button' );
         $this->loader->add_action( 'wp_ajax_nopriv_ays_gpg_dismiss_button', $plugin_admin, 'ays_gpg_dismiss_button' );

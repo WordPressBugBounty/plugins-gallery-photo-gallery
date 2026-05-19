@@ -304,7 +304,8 @@ class Photo_Gallery_Data {
                 if( self::get_max_id_by_table( 'gallery' ) >= 1 ){
                     // self::ays_gpg_black_friday_message( $ays_gpg_ishmar );
                     // self::ays_gallery_christmas_banner_message_2025( $ays_gpg_ishmar );
-                    self::ays_gpg_new_mega_bundle_message_2026( $ays_gpg_ishmar );
+                    // self::ays_gpg_new_mega_bundle_message_2026( $ays_gpg_ishmar );
+                    self::ays_gpg_footer_sale_banner_2026( $ays_gpg_ishmar );
                 }
             }
         }
@@ -699,6 +700,323 @@ class Photo_Gallery_Data {
             $content = implode( '', $content );
             echo wp_kses_post($content);
         }
+    }
+
+    // Gallery Footer Blue Banner Sale 20%
+    public static function ays_gpg_footer_sale_banner_2026($ishmar){
+        if($ishmar == 0 ){
+            $content = array();
+            
+            $gpg_cta_button_link = esc_url( 'https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=private-offer-20-off-' . AYS_GALLERY_VERSION );
+
+            $content[] = '
+                <div class="ays-gpg-footer-banner-bottom-banner-wrapper" style="display: none;">
+                    <div class="ays-gpg-footer-banner-bottom-banner-container">
+                        <div class="ays-gpg-footer-banner-bottom-banner-content">
+                            <div class="ays-gpg-footer-banner-bottom-banner-inner">
+                                <div class="ays-gpg-footer-banner-bottom-banner-left">
+                                    <div class="ays-gpg-footer-banner-bottom-banner-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 7v14"></path>
+                                            <path d="M20 11v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"></path>
+                                            <path d="M7.5 7a1 1 0 0 1 0-5A4.8 8 0 0 1 12 7a4.8 8 0 0 1 4.5-5 1 1 0 0 1 0 5"></path>
+                                            <rect x="3" y="7" width="18" height="4" rx="1"></rect>
+                                        </svg>
+                                    </div>
+                                    <span class="ays-gpg-footer-banner-bottom-banner-title">'. esc_html__('Photo Gallery by AYS', 'gallery-photo-gallery') .'</span>
+                                </div>
+                                <span class="ays-gpg-footer-banner-bottom-banner-separator"></span>
+                                <span class="ays-gpg-footer-banner-bottom-banner-discount">'. esc_html__('20% Off', 'gallery-photo-gallery') .'</span>
+                                <div class="ays-gpg-footer-banner-bottom-banner-code" onclick="aysSurveyFooterBannerCopyToClipboard()" title="'. esc_html__('Copy Coupon Code', 'gallery-photo-gallery') .'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path>
+                                        <path d="M13 5v2"></path>
+                                        <path d="M13 17v2"></path>
+                                        <path d="M13 11v2"></path>
+                                    </svg>
+                                    <span>GALLERY20OFF</span>
+                                    <button type="button" class="ays-gpg-footer-banner-bottom-banner-copy" aria-label="'. esc_html__('Copy Coupon Code', 'gallery-photo-gallery') .'">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                                            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button type="button" class="ays-gpg-footer-banner-bottom-banner-cta">
+                                    '. esc_html__('Get Deal', 'gallery-photo-gallery') .'
+                                </button>
+                                <button type="button" class="ays-gpg-footer-banner-bottom-banner-close" aria-label="'. esc_html__('Close popup', 'gallery-photo-gallery') .'">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M18 6 6 18"></path>
+                                        <path d="m6 6 12 12"></path>
+                                    </svg>
+                                </button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>';
+
+            $content[] = '<style id="ays-gpg-progress-banner-styles-inline-css">';
+
+            $content[] = '@keyframes ays-pro-slide-up{0%{opacity:0;transform:translateY(24px)}100%{opacity:1;transform:translateY(0)}}@keyframes ays-pro-slide-down{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(24px)}}.ays-gpg-footer-banner-bottom-banner-wrapper{position:fixed;bottom:0;left:0;right:0;z-index:99999;padding:0 16px 28px;text-align:center;animation:.45s cubic-bezier(.16,1,.3,1) forwards ays-pro-slide-up}.ays-gpg-footer-banner-bottom-banner-wrapper.ays-pro-banner-closing{animation:.32s cubic-bezier(.16,1,.3,1) forwards ays-pro-slide-down}.ays-gpg-footer-banner-bottom-banner-container{display:inline-block;max-width:100%;border-radius:16px;background:linear-gradient(90deg,#2f6bff 0,#3e7bff 100%);box-shadow:0 20px 40px -15px rgba(47,107,255,.55),0 8px 20px -10px rgba(47,107,255,.35);overflow:hidden}.ays-gpg-footer-banner-bottom-banner-code,.ays-gpg-footer-banner-bottom-banner-content,.ays-gpg-footer-banner-bottom-banner-inner,.ays-gpg-footer-banner-bottom-banner-left{display:flex;align-items:center}.ays-gpg-footer-banner-bottom-banner-inner{gap:16px;padding:8px 14px 8px 10px;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}.ays-gpg-footer-banner-bottom-banner-left{gap:14px}.ays-gpg-footer-banner-bottom-banner-icon{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.15);color:#fff}.ays-gpg-footer-banner-bottom-banner-icon svg{width:24px;height:24px}.ays-gpg-footer-banner-bottom-banner-discount,.ays-gpg-footer-banner-bottom-banner-title{font-size:17px;font-weight:600;line-height:1.25;letter-spacing:0;white-space:nowrap;color:#fff}.ays-gpg-footer-banner-bottom-banner-separator{display:block;width:1px;height:24px;background:rgba(255,255,255,.4)}.ays-gpg-footer-banner-bottom-banner-code{gap:6px;border:1px dashed rgba(255,255,255,.7);border-radius:999px;padding:6px 9px;color:#fff;cursor:pointer;transition:background-color .15s,border-color .15s}.ays-gpg-footer-banner-bottom-banner-code:hover{background:rgba(255,255,255,.1);border-color:#fff}.ays-gpg-footer-banner-bottom-banner-code button svg,.ays-gpg-footer-banner-bottom-banner-code>svg{width:16px;height:16px}.ays-gpg-footer-banner-bottom-banner-code span{font-size:14px;font-weight:600;line-height:1;letter-spacing:.05em;color:#fff}.ays-gpg-footer-banner-bottom-banner-close,.ays-gpg-footer-banner-bottom-banner-copy{display:flex;align-items:center;justify-content:center;margin:0;padding:0;background:0 0;border:0;color:rgba(255,255,255,.9);cursor:pointer;box-shadow:none;transition:color .15s,background-color .15s}.ays-gpg-footer-banner-bottom-banner-close:hover,.ays-gpg-footer-banner-bottom-banner-copy:hover{color:#fff;background:0 0}.ays-gpg-footer-banner-bottom-banner-wrapper .ays-gpg-footer-banner-bottom-banner-cta{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 20px;border:0;border-radius:999px;background:#fff;color:#2f6bff;font-size:15px;font-weight:600;line-height:1;white-space:nowrap;cursor:pointer;box-shadow:0 1px 2px rgba(0,0,0,.08);transition:background-color .15s,transform .15s}.ays-gpg-footer-banner-bottom-banner-wrapper .ays-gpg-footer-banner-bottom-banner-cta:hover{background:rgba(255,255,255,.95);color:#2f6bff;transform:translateY(-1px)}.ays-gpg-footer-banner-bottom-banner-close{width:22px;height:22px;margin-left:2px}.ays-gpg-footer-banner-bottom-banner-close svg{width:20px;height:20px}.ays-gpg-footer-banner-copy-notification{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.8);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;z-index:10000;opacity:0;transition:opacity .3s}.ays-gpg-footer-banner-copy-notification.show{opacity:1}@media (max-width:768px){.ays-gpg-footer-banner-bottom-banner-wrapper{display:none}}';
+            $content[] = '</style>';
+
+            $content[] = '<script>';
+
+            $content[] = "
+            /**
+             * Footer Banner JavaScript - ES5 Compatible
+             * With delayed popup and visit tracking
+             */
+            
+            (function() {
+              'use strict';
+              
+              // Configuration
+              var STORAGE_KEY = 'ays_gpg_footer_banner_data';
+              var POPUP_RULES = [
+                { visit: 1, delay: 10000 },   // 1st visit: 10 seconds
+                { visit: 2, delay: 10000 },   // 2nd visit: 10 seconds
+                { visit: 3, delay: 15000 },   // 3th visit: 15 seconds
+                { visit: 4, delay: 15000 },   // 4th visit: 15 seconds
+                { visit: 5, delay: 20000 },   // 5th visit: 20 seconds
+                { visit: 7, delay: 20000 },   // 7th visit: 20 seconds
+                { visit: 10, delay: 30000 }   // 10th visit: 30 seconds
+              ];
+              var MAX_SHOWS_PER_DAY = 7;
+              
+              // Wait for DOM to be ready
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initBanner);
+              } else {
+                initBanner();
+              }
+              
+              function initBanner() {
+                var banner = document.querySelector('.ays-gpg-footer-banner-bottom-banner-wrapper');
+                var closeButton = document.querySelector('.ays-gpg-footer-banner-bottom-banner-close');
+                var ctaButton = document.querySelector('.ays-gpg-footer-banner-bottom-banner-cta');
+                
+                if (!banner) {
+                  return;
+                }
+                
+                // Hide banner initially
+                banner.style.display = 'none';
+                
+                // Get or initialize banner data
+                var bannerData = getBannerData();
+                
+                // Check if we need to reset daily data
+                if (shouldResetData(bannerData.lastResetDate)) {
+                  bannerData = resetDailyData();
+                }
+                
+                // Increment visit count
+                bannerData.visitCount++;
+                saveBannerData(bannerData);
+                
+                // Check if banner should be shown
+                var shouldShow = shouldShowBanner(bannerData);
+                
+                if (shouldShow.show) {
+                  // Show banner after delay
+                  setTimeout(function() {
+                    banner.style.display = 'block';
+                    
+                    // Increment show count
+                    bannerData.showCount++;
+                    saveBannerData(bannerData);
+                  }, shouldShow.delay);
+                }
+                
+                // Close button handler
+                if (closeButton) {
+                  closeButton.addEventListener('click', function() {
+                    closeBanner(banner);
+                  });
+                }
+                
+                // CTA button handler
+                if (ctaButton) {
+                  ctaButton.addEventListener('click', function() {
+                    window.open('https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=private-offer-20-off-". AYS_GALLERY_VERSION ."', '_blank');
+                    // Optionally close banner after click
+                    closeBanner(banner);
+                  });
+                }
+              }
+              
+              /**
+               * Get banner data from localStorage
+               */
+              function getBannerData() {
+                try {
+                  var data = localStorage.getItem(STORAGE_KEY);
+                  if (data) {
+                    return JSON.parse(data);
+                  }
+                } catch (e) {
+                  // localStorage not available or parsing error
+                }
+                
+                // Return default data
+                return {
+                  visitCount: 0,
+                  showCount: 0,
+                  lastResetDate: getTodayDate()
+                };
+              }
+              
+              /**
+               * Save banner data to localStorage
+               */
+              function saveBannerData(data) {
+                try {
+                  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                } catch (e) {
+                  // localStorage not available
+                }
+              }
+              
+              /**
+               * Check if data should be reset (new day)
+               */
+              function shouldResetData(lastResetDate) {
+                var today = getTodayDate();
+                return lastResetDate !== today;
+              }
+              
+              /**
+               * Reset daily data
+               */
+              function resetDailyData() {
+                var newData = {
+                  visitCount: 0,
+                  showCount: 0,
+                  lastResetDate: getTodayDate()
+                };
+                saveBannerData(newData);
+                return newData;
+              }
+              
+              /**
+               * Get today's date as string (YYYY-MM-DD)
+               */
+              function getTodayDate() {
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = String(date.getMonth() + 1).padStart(2, '0');
+                var day = String(date.getDate()).padStart(2, '0');
+                return year + '-' + month + '-' + day;
+              }
+              
+              /**
+               * Check if banner should be shown based on rules
+               */
+              function shouldShowBanner(bannerData) {
+                // Check if already shown max times today
+                if (bannerData.showCount >= MAX_SHOWS_PER_DAY) {
+                  return { show: false, delay: 0 };
+                }
+                
+                // Check visit count against rules
+                for (var i = 0; i < POPUP_RULES.length; i++) {
+                  var rule = POPUP_RULES[i];
+                  if (bannerData.visitCount === rule.visit) {
+                    return { show: true, delay: rule.delay };
+                  }
+                }
+                
+                return { show: false, delay: 0 };
+              }
+              
+              /**
+               * Close banner with animation
+               */
+              function closeBanner(banner) {
+                if (!banner) {
+                  return;
+                }
+                
+                // Add closing animation class
+                banner.classList.add('ays-pro-banner-closing');
+                
+                // Wait for animation to complete
+                setTimeout(function() {
+                  banner.style.display = 'none';
+                }, 400);
+              }
+              
+              // Polyfill for String.padStart (for older browsers)
+              if (!String.prototype.padStart) {
+                String.prototype.padStart = function(targetLength, padString) {
+                  targetLength = targetLength >> 0;
+                  padString = String(typeof padString !== 'undefined' ? padString : ' ');
+                  if (this.length >= targetLength) {
+                    return String(this);
+                  } else {
+                    targetLength = targetLength - this.length;
+                    if (targetLength > padString.length) {
+                      padString += padString.repeat(targetLength / padString.length);
+                    }
+                    return padString.slice(0, targetLength) + String(this);
+                  }
+                };
+              }
+            })();
+            
+            function aysSurveyFooterBannerCopyToClipboard() {
+                var textarea = document.createElement('textarea');
+                textarea.value = 'GALLERY20OFF';
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                
+                textarea.select();
+                textarea.setSelectionRange(0, 99999);
+                
+                try {
+                    document.execCommand('copy');
+                    aysSurveyFooterBannerShowCopyNotification('". esc_html__('Coupon code copied', 'gallery-photo-gallery') ."');
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+                
+                document.body.removeChild(textarea);
+            }
+
+            function aysSurveyFooterBannerShowCopyNotification(message) {
+                var existingNotification = document.querySelector('.ays-gpg-footer-banner-copy-notification');
+                if (existingNotification) {
+                    document.body.removeChild(existingNotification);
+                }
+                
+                var notification = document.createElement('div');
+                notification.className = 'ays-gpg-footer-banner-copy-notification';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+                
+                setTimeout(function() {
+                    notification.classList.add('show');
+                }, 10);
+                
+                setTimeout(function() {
+                    notification.classList.remove('show');
+                    setTimeout(function() {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 300);
+                }, 2000);
+            }";
+
+            $content[] = '</script>';
+
+            $content = implode( '', $content );
+            echo ($content);
+        }
+
     }
 
     // New Mega Bundle 2026
