@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery – Photo Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 19:43+0300\n"
-"PO-Revision-Date: 2026-04-13 19:46+0300\n"
+"POT-Creation-Date: 2026-05-26 19:51+0300\n"
+"PO-Revision-Date: 2026-05-26 19:52+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -79,12 +79,12 @@ msgid "Copied!"
 msgstr "Скопировано!"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:184
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:588
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:619
 msgid "Click for copy."
 msgstr "Нажмите, чтобы скопировать."
 
 #: ../admin/class-gallery-photo-gallery-admin.php:185
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2376
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2410
 msgid "Add Gif"
 msgstr "Добавить гифку"
 
@@ -127,7 +127,7 @@ msgid "Preview Gallery"
 msgstr "Предыдущая галерея"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:199
-#: ../includes/class-gallery-photo-gallery-data.php:931
+#: ../includes/class-gallery-photo-gallery-data.php:1249
 msgid "Coupon code copied!"
 msgstr "Код купона скопирован!"
 
@@ -152,8 +152,8 @@ msgid "Clear color"
 msgstr "Очистить цвет"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:215
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1634
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1648
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1668
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1682
 msgid "Default"
 msgstr "По умолчанию"
 
@@ -171,8 +171,8 @@ msgstr "Значение цвета"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:389
 #: ../admin/class-gallery-photo-gallery-admin.php:390
-#: ../includes/class-gallery-photo-gallery-data.php:877
-#: ../includes/class-gallery-photo-gallery-data.php:2631
+#: ../includes/class-gallery-photo-gallery-data.php:1195
+#: ../includes/class-gallery-photo-gallery-data.php:2949
 msgid "Photo Gallery"
 msgstr "Photo Gallery"
 
@@ -220,14 +220,14 @@ msgid "PRO Features"
 msgstr "Характеристики PRO"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:497
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:616
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:647
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:56
 msgid "Settings"
 msgstr "Настройки"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:498
-#: ../gallery-photo-gallery.php:155 ../gallery-photo-gallery.php:166
-#: ../gallery-photo-gallery.php:175
+#: ../gallery-photo-gallery.php:160 ../gallery-photo-gallery.php:171
+#: ../gallery-photo-gallery.php:180
 msgid "Demo"
 msgstr "Демо"
 
@@ -280,8 +280,8 @@ msgid "Photo Gallery plugin demo"
 msgstr "Photo Gallery plugin demo"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:545
-#: ../gallery-photo-gallery.php:156 ../gallery-photo-gallery.php:167
-#: ../gallery-photo-gallery.php:176
+#: ../gallery-photo-gallery.php:161 ../gallery-photo-gallery.php:172
+#: ../gallery-photo-gallery.php:181
 msgid "Free Support"
 msgstr "Бесплатная поддержка"
 
@@ -296,7 +296,7 @@ msgid "Image categories"
 msgstr "Категории изображений"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:657
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1087
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1118
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:389
 msgid "Gallery categories"
 msgstr "Категории галереи"
@@ -552,10 +552,10 @@ msgid "Install Plugin"
 msgstr "Установить плагин"
 
 #: ../admin/class-gallery-photo-gallery-admin.php:1756
-#: ../includes/class-gallery-photo-gallery-data.php:691
-#: ../includes/class-gallery-photo-gallery-data.php:794
-#: ../includes/class-gallery-photo-gallery-data.php:899
-#: ../includes/class-gallery-photo-gallery-data.php:2456
+#: ../includes/class-gallery-photo-gallery-data.php:692
+#: ../includes/class-gallery-photo-gallery-data.php:1112
+#: ../includes/class-gallery-photo-gallery-data.php:1217
+#: ../includes/class-gallery-photo-gallery-data.php:2774
 msgid "Buy Now"
 msgstr "Купить сейчас"
 
@@ -591,166 +591,166 @@ msgstr "Получите наши эксклюзивные плагины в о�
 msgid "Get Photography Bundle"
 msgstr "Получить Photography Bundle"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:107
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:111
 msgid "Add new gallery"
 msgstr "Добавить новую галерею"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:110
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:114
 msgid "Edit gallery"
 msgstr "Редактировать галерею"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:118
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:122
 msgid "User's First Name"
 msgstr "Имя пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:119
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:123
 msgid "User's Last Name"
 msgstr "Фамилия пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:120
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:124
 msgid "User's Display Name"
 msgstr "Отображаемое имя пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:121
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:125
 msgid "User's Nickname"
 msgstr "Никнейм пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:122
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:126
 msgid "User's Website URL"
 msgstr "URL-адрес веб-сайта пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:123
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:127
 msgid "User's WordPress profile email"
 msgstr "Электронная почта профиля пользователя WordPress"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:124
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:128
 msgid "User's Wordpress Roles"
 msgstr "Роли пользователя Wordpress"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:125
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:129
 msgid "User's IP address"
 msgstr "IP-адрес пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:126
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:130
 msgid "User's ID"
 msgstr "ID пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:127
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:131
 msgid "User's Registered"
 msgstr "Пользователь зарегистрирован"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:128
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:132
 msgid "Gallery ID"
 msgstr "ID галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:129
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:636
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:643
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:133
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:667
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:674
 #: ../pb_templates/gallery_photo_gallery_elementor.php:26
 msgid "Gallery Title"
 msgstr "Название Галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:130
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:134
 msgid "Gallery Images Count"
 msgstr "Количество изображений в галерее"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:131
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:135
 msgid "Gallery Author"
 msgstr "Автор галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:132
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:136
 msgid "Gallery Author Nickname"
 msgstr "Псевдоним автора галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:133
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:137
 msgid "Gallery Author Email"
 msgstr "Электронная почта автора галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:134
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:138
 msgid "Gallery Author Display Name"
 msgstr "Отображаемое имя автора галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:135
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:139
 msgid "Gallery Author Website URL"
 msgstr "URL-адрес веб-сайта автора галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:136
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:140
 msgid "Gallery Creation Date"
 msgstr "Дата создания галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:137
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:141
 msgid "Current Date"
 msgstr "Текущая дата"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:138
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:142
 msgid "Current Time"
 msgstr "Текущее время"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:139
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:143
 msgid "Current Day"
 msgstr "Текущий день"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:140
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:144
 msgid "Current Month"
 msgstr "Текущий месяц"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:141
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:145
 msgid "Gallery page link"
 msgstr "Ссылка на страницу галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:142
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:146
 msgid "Admin Email"
 msgstr "Электронная почта администратора"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:143
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:147
 msgid "Post Author Nickname"
 msgstr "Ник автора сообщения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:144
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:148
 msgid "Post Author Email"
 msgstr "Электронная почта автора публикации"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:145
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:149
 msgid "Post Author Display Name"
 msgstr "Отображаемое имя автора сообщения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:146
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:150
 msgid "Post Author First Name"
 msgstr "Имя автора сообщения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:147
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:151
 msgid "Post Author Last Name"
 msgstr "Фамилия автора поста"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:148
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:152
 msgid "Post Author Website URL"
 msgstr "URL-адрес веб-сайта автора сообщения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:149
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:153
 msgid "Post Author Roles"
 msgstr "Роли авторов поста"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:150
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:154
 msgid "Post Title"
 msgstr "Заголовок поста"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:151
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:155
 msgid "Post ID"
 msgstr "Post ID"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:152
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:156
 msgid "Site Title"
 msgstr "Название сайта"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:153
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:157
 msgid "Site Description"
 msgstr "Описание сайта"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:154
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:158
 msgid "Home page URL"
 msgstr "URL-адрес домашней страницы"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:537
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:568
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:49
 #: ../admin/partials/categories/gallery-photo-gallery-categories-display.php:31
 #: ../admin/partials/features/gallery-photo-gallery-featured-plugins.php:7
@@ -763,63 +763,63 @@ msgstr "URL-адрес домашней страницы"
 msgid "View Documentation"
 msgstr "Посмотреть документацию"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:551
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3196
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:582
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3286
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:107
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:107
 msgid "Save and close"
 msgstr "Сохранить и закрыть"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:552
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3197
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3230
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:583
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3287
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3320
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:108
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:108
 msgid "Save"
 msgstr "Сохранить"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:583
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:614
 msgid "Shortcode text for editor"
 msgstr "Текст шорткода для редактора"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:587
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:618
 msgid "To insert the Gallery into a page, post or text widget, copy shortcode"
 msgstr ""
 "Чтобы вставить галерею на страницу, публикацию или текстовый виджет, "
 "скопируйте шорткод"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:589
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:620
 msgid "and paste it at the desired place in the editor."
 msgstr "и вставьте его в нужное место в редакторе."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:613
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:644
 msgid "Images"
 msgstr "Изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:619
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:650
 msgid "Styles"
 msgstr "Стили"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:622
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:653
 msgid "Lightbox settings"
 msgstr "Настройки лайтбокса"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:625
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3151
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:656
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3241
 msgid "Lightbox effects"
 msgstr "Эффекты лайтбокса"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:637
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:668
 msgid "In this field is noted the name of the gallery"
 msgstr "В этом поле указано название галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:651
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:682
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:468
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:474
 msgid "Gallery Description"
 msgstr "Описание галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:652
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:683
 msgid ""
 "This section is noted for the description of the gallery. You can use "
 "Variables (General Settings) to insert user data here."
@@ -827,20 +827,20 @@ msgstr ""
 "Этот раздел отмечен описанием галереи. Вы можете использовать переменные "
 "(общие настройки), чтобы вставить сюда пользовательские данные."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:656
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:687
 msgid "To see all Message Variables "
 msgstr "Чтобы увидеть все переменные сообщения "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:657
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:688
 msgid "click here"
 msgstr "кликните сюда"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:681
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1402
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:712
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1432
 msgid "Status"
 msgstr "Статус"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:682
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:713
 msgid ""
 "Published OR Unpublished. Choose whether the gallery is active or not. If "
 "you choose Unpublished option, the gallery won’t be shown anywhere in your "
@@ -850,56 +850,56 @@ msgstr ""
 "вы выберете опцию «Неопубликовано», галерея не будет отображаться нигде на "
 "вашем веб-сайте (вам не нужно удалять шорткоды)."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:692
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:723
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:171
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1379
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1409
 msgid "Published"
 msgstr "Опубликованный"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:698
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:729
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:172
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1375
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1405
 msgid "Unpublished"
 msgstr "Неопубликованный"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:703
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:734
 msgid "Add Images"
 msgstr "Добавить изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:704
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:735
 msgid "Upload images for your gallery"
 msgstr "Загрузить изображения для вашей галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:705
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:736
 msgid "Add multiple images +"
 msgstr "Добавить несколько изображений +"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:706
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:737
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:343
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:399
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:329
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:386
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1271
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1282
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1434
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1301
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1312
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1464
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:707
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:738
 msgid "Select all"
 msgstr "Выбрать все"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:708
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:765
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:887
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:992
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:739
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:796
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:918
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1023
 msgid "It shows the name of the inserted picture"
 msgstr "Показывает название вставленного изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:709
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:774
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:896
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1001
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:740
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:805
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:927
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1032
 msgid ""
 "This field shows the alternate text when the picture is not loaded or not "
 "found"
@@ -907,136 +907,136 @@ msgstr ""
 "В этом поле отображается альтернативный текст, когда изображение не "
 "загружено или не найдено"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:710
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:783
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:905
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1010
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:741
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:814
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:936
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1041
 msgid "This field shows the description of the chosen image"
 msgstr "В этом поле отображается описание выбранного изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:711
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:792
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:914
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1019
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:742
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:823
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:945
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1050
 msgid "This section is for the URL address"
 msgstr "Этот раздел для URL-адреса"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:712
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:802
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:924
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1029
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:743
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:833
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:955
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1060
 msgid "Select image categories"
 msgstr "Выберите категории изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:717
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:748
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:170
 msgid "All"
 msgstr "Все"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:718
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:749
 msgid "5"
 msgstr "5"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:719
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:750
 msgid "10"
 msgstr "10"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:720
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:751
 msgid "15"
 msgstr "15"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:721
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:752
 msgid "20"
 msgstr "20"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:722
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:753
 msgid "25"
 msgstr "25"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:723
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:754
 msgid "30"
 msgstr "30"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:725
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:756
 msgid "This field is for the creation of pagination"
 msgstr "Это поле для создания нумерации страниц"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:728
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:759
 msgid "Image pagination"
 msgstr "Нумерация изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:731
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:762
 msgid "Change the ordering"
 msgstr "Изменить порядок"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:764
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:886
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:991
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1273
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:795
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:917
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1022
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1307
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:60
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:60
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:369
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:356
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1395
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1425
 msgid "Title"
 msgstr "По заглавку"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:769
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:891
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:996
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:800
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:922
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1027
 msgid "Image title"
 msgstr "Название изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:773
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:895
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1000
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:804
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:926
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1031
 msgid "Alt"
 msgstr "Alt"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:778
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:900
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1005
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:809
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:931
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1036
 msgid "Image alt"
 msgstr "Image alt"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:782
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:904
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1009
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:813
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:935
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1040
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:74
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:74
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:370
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:357
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1398
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1428
 msgid "Description"
 msgstr "Описание"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:787
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:909
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1014
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:818
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:940
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1045
 msgid "Image description"
 msgstr "Описание изображении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:791
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:796
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:913
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:918
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1018
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1023
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:822
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:827
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:944
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:949
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1049
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1054
 msgid "URL"
 msgstr "URL"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:801
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:923
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1028
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:832
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:954
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1059
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:11
 msgid "Image Category"
 msgstr "Категория изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1080
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1111
 msgid "General options"
 msgstr "Общие настройки"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1091
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1122
 #, php-format
 msgid ""
 "Choose the category/categories your gallery belongs to. To create a "
@@ -1045,16 +1045,16 @@ msgstr ""
 "Выберите категорию/категории, к которым относится ваша галерея. Чтобы "
 "создать категорию, перейдите на страницу %1$sКатегории%2$s."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1114
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1146
 #, php-format
 msgid "Create a new category %s here %s"
 msgstr "Создайте новую категорию %s тут %s"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1125
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1159
 msgid "Enable filter by image categories"
 msgstr "Включить фильтр по категориям изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1126
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1160
 msgid ""
 "You can decide whether to show the filter by category of the gallery or not. "
 "This option is compatible only with the Grid layout."
@@ -1062,193 +1062,202 @@ msgstr ""
 "Вы можете решить, показывать ли фильтр по категории галереи или нет. Эта "
 "опция совместима только с Grid layout."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1139
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1173
 msgid "Categories filter animation"
 msgstr "Анимация фильтра категорий"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1140
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1174
 msgid ""
 "Choose the animation of the images displaying while filtering them by "
 "categories."
 msgstr ""
 "Выберите анимацию отображения изображений при фильтрации их по категориям."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1155
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1325
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1964
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1189
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1359
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1998
 msgid "Slide Up"
 msgstr "Slide Up"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1156
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1326
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1965
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1190
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1360
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1999
 msgid "Slide Down"
 msgstr "Slide Down"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1157
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1327
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1966
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1191
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1361
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2000
 msgid "Slide Left"
 msgstr "Slide Left"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1158
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1328
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1967
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1192
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1362
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2001
 msgid "Slide Right"
 msgstr "Slide Right"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1176
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1210
 msgid "Show gallery head"
 msgstr "Показать вверхную часть галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1177
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1211
 msgid ""
 "You can decide whether to show the title and description of the gallery or "
 "not"
 msgstr "Вы можете решить, показывать ли название и описание галереи или нет"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1187
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1471
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1666
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2036
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2129
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2176
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2270
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2551
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2593
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2641
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2672
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2733
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2761
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2789
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2817
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2956
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3016
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1221
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1505
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1700
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2070
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2163
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2210
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2304
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2585
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2627
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2675
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2706
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2748
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2777
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2805
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2833
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2861
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2945
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2988
 #: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3046
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3106
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3136
 msgid "PC"
 msgstr "PC"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1189
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1223
 msgid "Show gallery title "
 msgstr "Показать название галереи "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1192
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1226
 msgid "If it is marked it will show the title"
 msgstr "Если он помечен, то будет показан заголовок"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1196
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1230
 msgid "Show gallery description "
 msgstr "Показать описание галереи "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1199
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1233
 msgid "If it is marked it will show the description"
 msgstr "Если он помечен, то будет показано его описание"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1207
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1477
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1672
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2043
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2089
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2143
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2181
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2285
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2563
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2608
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2646
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2684
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2738
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2766
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2794
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2822
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2969
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3021
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3061
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1241
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1511
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1706
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2077
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2123
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2177
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2215
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2319
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2597
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2642
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2680
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2718
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2754
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2782
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2810
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2838
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2866
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2957
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3000
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3059
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3111
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3151
 msgid "Mobile"
 msgstr "Мобильный"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1209
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1243
 msgid "Show gallery title mobile"
 msgstr "Показать название галереи на мобильном телефоне"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1212
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1246
 msgid "If it is marked it will show the mobile title"
 msgstr ""
 "Если эта опция отмечена, то будет отображаться название мобильного устройства"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1216
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1250
 msgid "Show gallery description mobile"
 msgstr "Показать описание галереи на мобильном телефоне"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1219
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1253
 msgid "If it is marked it will show the mobile description"
 msgstr "Если эта опция отмечена, то будет показано мобильное описание"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1227
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2050
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2112
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2157
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2186
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2300
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2575
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2623
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2651
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2696
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2743
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2771
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2799
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2827
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2982
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3026
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3076
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1261
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2084
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2146
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2191
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2220
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2334
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2609
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2657
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2685
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2730
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2759
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2787
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2815
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2843
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2871
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2969
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3012
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3072
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3116
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3166
 msgid "Use a different setting for Mobile"
 msgstr "Используйте другие настройки для мобильных устройств"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1236
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1270
 msgid "Thumbnail Size"
 msgstr "Размер миниатюры"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1237
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1271
 msgid "The size of the image in the thumbnail"
 msgstr "Размер изображения в миниатюре"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1244
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1278
 msgid "Full size"
 msgstr "Полный размер"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1264
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1298
 msgid "Images order by"
 msgstr "Сортировка изображений по"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1265
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1299
 msgid "This field arranges the images by parameters of title, date, random"
 msgstr ""
 "Это поле упорядочивает изображения по параметрам заголовка, даты, случайности"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1272
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1306
 msgid "No ordering"
 msgstr "Не сортировать"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1274
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1308
 msgid "Date"
 msgstr "По дату добавления"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1275
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1309
 msgid "Random"
 msgstr "Случайный"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1280
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1314
 msgid "Ascending"
 msgstr "По возрастанию"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1281
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1315
 msgid "Descending"
 msgstr "По убыванию"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1289
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1323
 msgid "Images loading"
 msgstr "Загрузка изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1290
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1324
 msgid ""
 "The images are loaded according to two principles: already loaded gallery "
 "with images and at first opens gallery after then the images"
@@ -1256,68 +1265,68 @@ msgstr ""
 "Изображения загружаются по двум принципам: уже загруженная галерея с "
 "изображениями и сначала открывается галерея, затем изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1297
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1331
 msgid "Global loading "
 msgstr "Глобальная загрузка "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1301
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1335
 msgid "Lazy loading "
 msgstr "Отложенная загрузка "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1309
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1343
 msgid "Images loading effect"
 msgstr "Эффект загрузки изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1310
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1344
 msgid "Choose Images loading animation"
 msgstr "Выберите анимацию загрузки изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1344
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1378
 msgid "Redirect URL"
 msgstr "Перенаправить URL-адрес"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1347
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1381
 msgid "Specify the opening method of the Image URLs:"
 msgstr "Укажите способ открытия URL-адресов изображений:"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1349
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1383
 msgid ""
 "Current tab։ Enable this option in order to open the URL in the same tab"
 msgstr ""
 "Текущая вкладка։ Включите эту опцию, чтобы открыть URL-адрес на той же "
 "вкладке"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1350
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1384
 msgid "New tab։ Enable this option in order to redirect the URL to a new tab"
 msgstr ""
 "Новая вкладка։ Включите эту опцию, чтобы перенаправить URL-адрес на новую "
 "вкладку"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1359
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1393
 msgid "New Tab"
 msgstr "Новая вкладка"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1362
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1396
 msgid "Current Tab"
 msgstr "Текущая вкладка"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1373
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1407
 msgid "Show title on thumbnail"
 msgstr "Показать заголовок на миниатюре"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1374
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1408
 msgid "The name of the image is written in the below of it"
 msgstr "Название изображения написано в нижней его части"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1382
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1416
 msgid "Show title "
 msgstr "Показать название "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1388
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1422
 msgid "Show on"
 msgstr "Показать"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1389
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1423
 msgid ""
 "If you choose the case of Thumbnail hover the title will appear when the "
 "mouse cursor stops on the image, otherwise the title by default will appear "
@@ -1327,62 +1336,62 @@ msgstr ""
 "будет отображаться при остановке курсора мыши на изображении, в противном "
 "случае заголовок по умолчанию будет отображаться в нижней части изображения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1395
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1429
 msgid "Thumbnail hover "
 msgstr "Наведите на миниатюру "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1396
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1430
 msgid "Gallery thumbnail "
 msgstr "Миниатюра галереи "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1402
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1436
 msgid "Image title position"
 msgstr "Положение заголовка изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1403
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1437
 msgid "Show title: in the bottom or on top"
 msgstr "Показать заголовок: внизу или сверху"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1409
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1443
 msgid "Bottom"
 msgstr "Снизу"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1410
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1444
 msgid "Top"
 msgstr "Сверху"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1415
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1449
 msgid "Show with date "
 msgstr "Показать с датой "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1416
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1450
 msgid ""
 "If you choose the Show with a date of adding the image to the gallery will "
 "appear on the date with the title."
 msgstr ""
 "Если вы выберете показать с датой, то в галерее появится дата с названием."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1422
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1456
 msgid "Yes"
 msgstr "Да"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1423
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1457
 msgid "No"
 msgstr "Нет"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1434
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1468
 msgid "Disable lightbox"
 msgstr "Отключить лайтбокс"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1435
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1469
 msgid "By checking this option it will disable lightbox on image click"
 msgstr "Отметив эту опцию, вы отключите лайтбокс при нажатии"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1448
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1482
 msgid "Make a link on the whole image"
 msgstr "Сделать ссылку на все изображение"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1449
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1483
 msgid ""
 "Make a URL redirection while clicking on any spot on the image container. "
 "Please note that the option works when the Disable lightbox option is "
@@ -1392,32 +1401,32 @@ msgstr ""
 "изображения. Обратите внимание, что эта опция работает, когда активирована "
 "опция «Отключить лайтбокс»."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1462
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1496
 msgid "Enable search for image"
 msgstr "Включить поиск изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1463
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1497
 msgid "This option is not compatible with the Mosaic layout."
 msgstr "Этот параметр несовместим с макетом Mosaic."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1489
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1497
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1523
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1531
 msgid "Gallery Width"
 msgstr "Ширина галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1490
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1524
 msgid "This field shows the width of the Gallery"
 msgstr "Это поле показывает ширину галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1498
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1532
 msgid "For 100% leave blank"
 msgstr "For 100% leave blank"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1539
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1573
 msgid "Responsive Width/Height"
 msgstr "Адаптивная ширина/высота"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1540
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1574
 msgid ""
 "Enable the option if you want to assign the values to height and weight by "
 "ratio."
@@ -1425,11 +1434,11 @@ msgstr ""
 "Включите эту опцию, если вы хотите присвоить значения высоте и ширине по "
 "соотношению."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1553
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1587
 msgid "Height / Width ratio"
 msgstr "Соотношение высоты/ширины"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1554
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1588
 msgid ""
 "This ratio indicates the quantitative relation between height and width. For "
 "example, if you give 1.2 value to ratio while the width is 300, then the "
@@ -1439,53 +1448,53 @@ msgstr ""
 "шириной. Например, если вы присвоите коэффициенту значение 1.2, а ширина "
 "равна 300, тогда высота будет 300x1.2=360."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1567
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1601
 msgid "Thumbnails height"
 msgstr "Высота миниатюр"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1568
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1602
 msgid "The height of the thumbnails of the Gallery"
 msgstr "Высота миниатюр Галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1577
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1627
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1611
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1661
 msgid "On desktop"
 msgstr "На рабочем столе"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1578
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1612
 msgid "Specify the thumbnails height of the gallery for desktop devices."
 msgstr "Укажите высоту миниатюр галереи для настольных устройств."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1596
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1641
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1630
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1675
 msgid "On mobile"
 msgstr "Для мобильных устройств"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1597
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1631
 msgid "Specify the thumbnails height of the gallery for mobile devices."
 msgstr "Укажите высоту миниатюр галереи для мобильных устройств."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1617
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1651
 msgid "Columns count"
 msgstr "Количество столбцов"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1618
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1652
 msgid "The counts of the columns of the Gallery"
 msgstr "Количество колонок галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1628
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1662
 msgid "Specify the columns count of the gallery for desktop devices."
 msgstr "Укажите количество столбцов в галерее для настольных устройств."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1642
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1676
 msgid "Specify the columns count of the gallery for mobile devices."
 msgstr "Укажите количество столбцов галереи для мобильных устройств."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1657
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1691
 msgid "Use RTL Direction"
 msgstr "Используйте направление RTL"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1658
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1692
 msgid ""
 "Enable Right to Left direction for the text. This option is intended for the "
 "Arabic language."
@@ -1493,11 +1502,11 @@ msgstr ""
 "Включите направление текста справа налево. Эта опция предназначена для "
 "арабского языка."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1684
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1718
 msgid "Change the author of the current gallery"
 msgstr "Изменить автора текущей галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1685
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1719
 msgid ""
 "You can change the author who created the current gallery to your preferred "
 "one. You need to write the User ID here. Please note, that in case you write "
@@ -1510,15 +1519,15 @@ msgstr ""
 "пользователи, изменения не будут применены и предыдущий автор останется "
 "прежним."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1692
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1726
 msgid "Select User"
 msgstr "Выберите пользователя"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1703
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1737
 msgid "Gallery Display Page URL"
 msgstr "URL-адрес страницы отображения галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1704
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1738
 msgid ""
 "Copy and Paste the link of the page where your gallery is displayed. This "
 "option is for easily detecting where your gallery is displayed."
@@ -1526,23 +1535,23 @@ msgstr ""
 "Скопируйте и вставьте ссылку на страницу, на которой отображается ваша "
 "галерея. Эта опция позволяет легко определить, где отображается ваша галерея."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1724
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1733
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3125
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3134
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3164
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3173
-#: ../gallery-photo-gallery.php:148
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1758
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1767
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3215
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3224
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3254
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3263
+#: ../gallery-photo-gallery.php:153
 msgid "Upgrade"
 msgstr "Обновить"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1743
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1777
 #: ../admin/partials/features/gallery-photo-gallery-features-display.php:240
 #: ../admin/partials/features/gallery-photo-gallery-features-display.php:243
 msgid "Pagination"
 msgstr "Нумерация страниц"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1744
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1778
 msgid ""
 "You will be able to choose the way of the pagination. By default it is none, "
 "so all the images will loaded in the Front-end."
@@ -1550,40 +1559,40 @@ msgstr ""
 "Вы сможете выбрать способ нумерации страниц. По умолчанию его нет, поэтому "
 "все изображения будут загружены во внешний интерфейс."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1751
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3048
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3063
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1785
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3138
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3153
 msgid "None"
 msgstr "None"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1754
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1788
 msgid "Simple"
 msgstr "Простой"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1757
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1791
 msgid "Load More "
 msgstr "Загрузить больше "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1767
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1781
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1801
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1815
 msgid "Images per page"
 msgstr "Изображения на странице"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1768
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1802
 msgid "Set the exact number of images you want to be displayed on each page"
 msgstr ""
 "Установите точное количество изображений, которые вы хотите отображать на "
 "каждой странице"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1782
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1816
 msgid "Choose the number of images you want to be displayed at the beginning"
 msgstr "Выберите количество изображений, которые вы хотите отображать в начале"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1795
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1829
 msgid "Images per load"
 msgstr "Изображения для каждой загрузки"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1796
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1830
 msgid ""
 "Choose how many images will be loaded after clicking on the ''Load More'' "
 "button"
@@ -1591,15 +1600,15 @@ msgstr ""
 "Выберите, сколько изображений будет загружено после нажатия кнопки "
 "«Загрузить еще»"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1879
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1913
 msgid "Style options"
 msgstr "Варианты стиля"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1886
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1920
 msgid "Gallery view type"
 msgstr "Тип галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1887
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1921
 msgid ""
 "This section notes the type of the Gallery that is in what sequence should "
 "the pictures be"
@@ -1607,211 +1616,211 @@ msgstr ""
 "В этом разделе указывается тип галереи, в какой последовательности должны "
 "быть изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1910
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1944
 msgid "This feature available only in PRO version!!!"
 msgstr "Эта функция доступна только в версии PRO!!!"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1927
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1961
 msgid "Images hover effect"
 msgstr "Эффекты наведения на изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1928
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1962
 msgid "Effect intended for hover according to animation"
 msgstr "Эффект, предназначенный для наведения в соответствии с анимацией"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1935
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1969
 msgid "Simple animation "
 msgstr "Простая анимация "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1939
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1973
 msgid "Direction-aware "
 msgstr "Direction-aware "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1948
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1997
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1982
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2031
 msgid "Images hover animation"
 msgstr "Анимация наведения изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1949
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1998
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1983
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2032
 msgid "Hover appearing animation of the images of Gallery"
 msgstr "При наведении курсора появляется анимация изображений галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1981
 #: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2015
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2049
 msgid "Hover animation preview"
 msgstr "Предварительный просмотр анимации при наведении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2005
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2039
 msgid "Slide"
 msgstr "Slide"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2006
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2040
 msgid "Rotate 3D"
 msgstr "Rotate 3D"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2012
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2046
 msgid "Hover this preview block"
 msgstr "Наведите курсор на этот блок предварительного просмотра"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2026
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2060
 msgid "Images hover animation speed"
 msgstr "Скорость анимации при наведении изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2027
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2061
 msgid "Specify the animation speed of the image."
 msgstr "Укажите скорость анимации изображения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2059
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2093
 msgid "Image position"
 msgstr "Положение изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2060
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2094
 msgid "The position image of the gallery"
 msgstr "Положение изображения галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2068
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2102
 msgid "Desktop"
 msgstr "Рабочий стол"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2120
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2154
 msgid "Images hover opacity"
 msgstr "Непрозрачность изображения при наведении курсора"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2121
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2155
 msgid "The transparency degree of the image hover"
 msgstr "Степень прозрачности изображения при наведении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2137
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2151
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2171
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2185
 msgid "Hover opacity preview"
 msgstr "Предварительный просмотр прозрачности при наведении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2166
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2200
 msgid "Images hover color"
 msgstr "Цвет наведения изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2167
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2201
 msgid "The color of the image hover"
 msgstr "Цвет изображения при наведении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2195
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2229
 msgid "Images hover zoom effect"
 msgstr "Эффект увеличения при наведении на изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2196
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2230
 msgid "During image hover, the zoom effect of the image"
 msgstr ""
 "Во время наведения курсора на изображение, эффект масштабирования изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2203
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2236
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2237
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2270
 msgid "Yes "
 msgstr "Да "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2204
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2237
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2238
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2271
 msgid "No "
 msgstr "Нет "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2211
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2244
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2245
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2278
 msgid "Animation speed"
 msgstr "Скорость анимации"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2212
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2246
 msgid "Specify the animation speed of the zoom effect of the image."
 msgstr "Укажите скорость анимации эффекта масштабирования изображения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2228
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2262
 msgid "Images hover scale box shadow effect"
 msgstr "Эффект тени при наведении на масштаб изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2229
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2263
 msgid "During image hover, the scale box shadow effect of the image"
 msgstr ""
 "При наведении на изображение эффект затенения масштабируемой рамки "
 "изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2245
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2279
 msgid "Specify the animation speed of the scale effect of the image."
 msgstr "Укажите скорость анимации эффекта масштаба изображения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2261
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2295
 msgid "Choose filter for thumbnail"
 msgstr "Выберите фильтр для миниатюр"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2262
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3038
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2296
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3128
 msgid "The filter property defines visual effects to images of Gallery"
 msgstr "Свойство filter определяет визуальные эффекты для изображений галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2272
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2287
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2306
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2321
 msgid "Default none"
 msgstr "По умолчанию"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2273
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2288
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3049
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3064
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2307
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2322
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3139
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3154
 msgid "Blur"
 msgstr "Blur"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2274
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2289
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3050
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3065
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2308
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2323
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3140
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3155
 msgid "Brightness"
 msgstr "Brightness"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2275
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2290
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3051
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3066
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2309
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2324
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3141
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3156
 msgid "Contrast"
 msgstr "Contrast"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2276
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2291
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3052
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3067
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2310
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2325
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3142
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3157
 msgid "Grayscale"
 msgstr "Grayscale"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2277
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2292
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3053
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3068
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2311
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2326
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3143
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3158
 msgid "Hue Rotate"
 msgstr "Hue Rotate"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2278
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2293
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3054
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3069
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2312
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2327
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3144
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3159
 msgid "Invert"
 msgstr "Invert"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2279
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2294
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3055
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3070
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2313
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2328
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3145
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3160
 msgid "Saturate"
 msgstr "Saturate"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2280
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2295
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3056
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3071
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2314
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2329
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3146
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3161
 msgid "Sepia"
 msgstr "Sepia"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2309
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2343
 msgid "Loader style"
 msgstr "Стиль загрузчика"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2310
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2344
 msgid ""
 "Choose your desired loader icon that will appear while the Gallery is "
 "loading."
@@ -1819,128 +1828,128 @@ msgstr ""
 "Выберите нужный значок загрузчика, который будет отображаться во время "
 "загрузки Галереи."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2364
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2398
 msgid "Text"
 msgstr "Текст"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2373
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2407
 msgid "Gif"
 msgstr "Gif"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2389
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2423
 msgid "Width (px)"
 msgstr "Ширина (px)"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2390
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2424
 msgid "Custom Gif width in pixels. It accepts only numeric values."
 msgstr ""
 "Пользовательская ширина GIF в пикселях. Он принимает только числовые "
 "значения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2406
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2440
 msgid "Images hover icon"
 msgstr "Значок наведения изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2407
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2441
 msgid "During hover, the icon seen on the image"
 msgstr "Во время наведения значок виден на изображении"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2484
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2518
 msgid "Select icon for the gallery images"
 msgstr "Выберите значок для галереи изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2491
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2525
 msgid "Images hover icon size"
 msgstr "Размер значка при наведении изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2492
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2526
 msgid "Specify the image hover icon size in pixels."
 msgstr "Укажите размер иконки при наведении на изображение в пикселях."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2510
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2544
 msgid "Images distance"
 msgstr "Расстояние между изображениями"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2511
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2530
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2545
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2564
 msgid "The distance among images with pixels"
 msgstr "Расстояние между изображениями в пикселях"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2529
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2563
 msgid "Images border"
 msgstr "Границы изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2542
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2576
 msgid "Images border width"
 msgstr "Ширина границы изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2543
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2577
 msgid "Images border width in pixels. It accepts only numeric values."
 msgstr ""
 "Ширина границы изображения в пикселях. Принимает только числовые значения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2584
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2618
 msgid "Images border style"
 msgstr "Стиль границы изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2585
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2619
 msgid "Specify images border style."
 msgstr "Укажите стиль границ изображений."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2632
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2666
 msgid "Images border color"
 msgstr "Цвет границы изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2633
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2667
 msgid "Specify images border color."
 msgstr "Укажите цвет границы изображения."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2663
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2697
 msgid "Images border radius"
 msgstr "Радиус границы изображения"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2664
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2698
 msgid "The degree of borders curvature of images"
 msgstr "Степень границы кривизны изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2705
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2739
 msgid "Thumbnail title icon size"
 msgstr "Размер иконки заголовка миниатюры"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2706
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2740
 msgid "Specify the thumbnail image hover icon size in pixels."
 msgstr ""
 "Укажите размер значка миниатюрного изображения при наведении в пикселях."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2724
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2768
 msgid "Gallery title text color"
 msgstr "Цвет текста заголовка галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2725
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2769
 msgid "The color of the Gallery title"
 msgstr "Цвет заголовка галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2752
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2796
 msgid "Gallery description text color"
 msgstr "Цвет текста описания галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2753
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2797
 msgid "The color of the Gallery description"
 msgstr "Цвет описания Галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2780
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2824
 msgid "Background color of the Gallery thumbnail title"
 msgstr "Цвет фона заголовка миниатюры галереи"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2781
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2825
 msgid "The color of the background of the Gallery Thumbnail title"
 msgstr "Цвет фона названия галереи миниатюр"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2808
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2852
 msgid "Thumbnail title text color"
 msgstr "Цвет текста заголовка миниатюры"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2809
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2853
 msgid ""
 "Choose the color of the title text on the thumbnail. Make it transparent if "
 "you want."
@@ -1948,11 +1957,11 @@ msgstr ""
 "Выберите цвет текста заголовка на миниатюре. Сделайте его прозрачным, если "
 "хотите."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2836
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2880
 msgid "Custom class"
 msgstr "Пользовательский класс"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2837
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2881
 msgid ""
 "Custom HTML class for gallery container. You can use your class for adding "
 "your custom styles for gallery container."
@@ -1960,110 +1969,114 @@ msgstr ""
 "Пользовательский класс HTML для контейнера галереи. Вы можете использовать "
 "свой класс для добавления пользовательских стилей для контейнера галереи."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2843
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2887
 msgid "myClass myAnotherClass..."
 msgstr "myClass myAnotherClass..."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2850
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2894
 msgid "Custom CSS"
 msgstr "Пользовательские CSS"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2851
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2895
 msgid "You can add your CSS"
 msgstr "Вы можете добавить свой CSS"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2864
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2908
 msgid "Reset styles"
 msgstr "Сбросить стили"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2866
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2910
 msgid "Reset styles to default values"
 msgstr "Сброс стилей к значениям по умолчанию"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2873
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2917
 msgid "Reset"
 msgstr "Сброс"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2884
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2928
 msgid "Lightbox options"
 msgstr "Опции лайтбокса"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2891
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2935
 msgid "Images counter"
 msgstr "Счетчик изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2893
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2937
 msgid "Enable this option to show the number of images while sliding them."
 msgstr ""
 "Включите эту опцию, чтобы отображать количество изображений при их "
 "перелистывании."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2899
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2919
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2939
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2995
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3092
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3105
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2947
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2959
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2990
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3002
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3029
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3085
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3182
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3195
 msgid "Enable "
 msgstr "Включить "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2902
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2922
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2942
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2998
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3095
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3108
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2950
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2962
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2993
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3005
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3032
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3088
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3185
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3198
 msgid "Disable "
 msgstr "Отключить "
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2911
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2978
 msgid "Show caption in lightbox"
 msgstr "Показать заголовок в лайтбоксе"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2913
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2980
 msgid "Enable this option to display the image caption in the lightbox."
 msgstr ""
 "Включите эту опцию, чтобы отобразить подпись к изображению в лайтбоксе."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2931
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3021
 msgid "Images slide show"
 msgstr "Слайд-шоу изображений"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2933
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3023
 msgid "Enable this option to automatically slide through the Images."
 msgstr ""
 "Включите эту опцию для автоматического переключения между изображениями."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2950
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3040
 msgid "Slide duration"
 msgstr "Продолжительность слайда"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2960
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2973
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3050
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3063
 msgid "1 sec = 1000 ms"
 msgstr "1 сек = 1000 мс"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:2991
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3081
 msgid "Hide Progress Line"
 msgstr "Скрыть линию загрузки"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3007
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3097
 msgid "Progress Line color"
 msgstr "Цвет линии загрузки"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3008
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3098
 msgid "The color of the Progress Line"
 msgstr "Цвет линии загрузки"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3037
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3127
 msgid "Choose filter for lightbox"
 msgstr "Выберите фильтр для лайтбокса"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3085
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3175
 msgid "Allow key control"
 msgstr "Разрешить управление клавиатурой"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3086
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3176
 msgid ""
 "Enable this option to allow your users to navigate through images via key "
 "control."
@@ -2071,19 +2084,19 @@ msgstr ""
 "Включите эту опцию, чтобы разрешить пользователям перемещаться по "
 "изображениям с помощью клавиш управления."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3102
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3192
 msgid "Allow Esc key"
 msgstr "Разрешить клавишу Esc"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3215
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3305
 msgid "Previous Gallery"
 msgstr "Предыдущая галерея"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3223
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3313
 msgid "Next Gallery"
 msgstr "Следующая галерея"
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3229
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3319
 msgid ""
 "View your gallery in live preview. In the preview you can’t see Thumbnail "
 "size and Image order changes."
@@ -2092,7 +2105,7 @@ msgstr ""
 "предварительном просмотре вы не видите изменения размера эскиза и порядка "
 "изображений."
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3229
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3319
 msgid "Gallery preview"
 msgstr "Предварительный просмотр галереи"
 
@@ -2708,7 +2721,7 @@ msgstr ""
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:414
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:432
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:450
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1399
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1429
 msgid "Shortcode"
 msgstr "Шорткод"
 
@@ -2981,31 +2994,40 @@ msgstr "Сохранить изменения"
 msgid "Gallery - Photo Gallery"
 msgstr "Галерея - Фотогалерея"
 
-#: ../gallery-photo-gallery.php:150
-#: ../includes/class-gallery-photo-gallery-data.php:417
-#: ../includes/class-gallery-photo-gallery-data.php:508
-#: ../includes/class-gallery-photo-gallery-data.php:604
-#: ../includes/class-gallery-photo-gallery-data.php:693
-#: ../includes/class-gallery-photo-gallery-data.php:796
-#: ../includes/class-gallery-photo-gallery-data.php:2458
+#: ../gallery-photo-gallery.php:146
+#: ../includes/class-gallery-photo-gallery-data.php:726
+msgid "Photo Gallery by AYS"
+msgstr "Photo Gallery by AYS"
+
+#: ../gallery-photo-gallery.php:147
+msgid "Create Attractive Image Galleries"
+msgstr "Создавайте привлекательные галереи изображений"
+
+#: ../gallery-photo-gallery.php:155
+#: ../includes/class-gallery-photo-gallery-data.php:418
+#: ../includes/class-gallery-photo-gallery-data.php:509
+#: ../includes/class-gallery-photo-gallery-data.php:605
+#: ../includes/class-gallery-photo-gallery-data.php:694
+#: ../includes/class-gallery-photo-gallery-data.php:1114
+#: ../includes/class-gallery-photo-gallery-data.php:2776
 msgid "One-time payment"
 msgstr "Одноразовый платеж"
 
-#: ../gallery-photo-gallery.php:154 ../gallery-photo-gallery.php:165
-#: ../gallery-photo-gallery.php:174
+#: ../gallery-photo-gallery.php:159 ../gallery-photo-gallery.php:170
+#: ../gallery-photo-gallery.php:179
 msgid "Pricing"
 msgstr "Цены"
 
-#: ../gallery-photo-gallery.php:157 ../gallery-photo-gallery.php:177
+#: ../gallery-photo-gallery.php:162 ../gallery-photo-gallery.php:182
 msgid "Make a Suggestion"
 msgstr "Сделать предложение"
 
-#: ../gallery-photo-gallery.php:159 ../gallery-photo-gallery.php:179
+#: ../gallery-photo-gallery.php:164 ../gallery-photo-gallery.php:184
 msgid "Live Chat"
 msgstr "Живой чат"
 
-#: ../gallery-photo-gallery.php:161 ../gallery-photo-gallery.php:168
-#: ../gallery-photo-gallery.php:181
+#: ../gallery-photo-gallery.php:166 ../gallery-photo-gallery.php:173
+#: ../gallery-photo-gallery.php:186
 msgid "Contact us"
 msgstr "Связаться с нами"
 
@@ -3029,55 +3051,55 @@ msgstr "Галереи пока нет"
 msgid "-Select Gallery-"
 msgstr "-Выбрать галерею-"
 
-#: ../includes/class-gallery-photo-gallery-data.php:392
-#: ../includes/class-gallery-photo-gallery-data.php:443
-#: ../includes/class-gallery-photo-gallery-data.php:535
+#: ../includes/class-gallery-photo-gallery-data.php:393
+#: ../includes/class-gallery-photo-gallery-data.php:444
+#: ../includes/class-gallery-photo-gallery-data.php:536
 msgid "Offer ends in:"
 msgstr "Предложение заканчивается через:"
 
-#: ../includes/class-gallery-photo-gallery-data.php:416
-#: ../includes/class-gallery-photo-gallery-data.php:2522
-#: ../includes/class-gallery-photo-gallery-data.php:2599
+#: ../includes/class-gallery-photo-gallery-data.php:417
+#: ../includes/class-gallery-photo-gallery-data.php:2840
+#: ../includes/class-gallery-photo-gallery-data.php:2917
 msgid "Buy Now !"
 msgstr "Купить сейчас !"
-
-#: ../includes/class-gallery-photo-gallery-data.php:447
-#: ../includes/class-gallery-photo-gallery-data.php:539
-#: ../includes/class-gallery-photo-gallery-data.php:666
-#: ../includes/class-gallery-photo-gallery-data.php:1338
-#: ../includes/class-gallery-photo-gallery-data.php:2643
-#: ../includes/class-gallery-photo-gallery-data.php:2699
-msgid "Days"
-msgstr "Days"
 
 #: ../includes/class-gallery-photo-gallery-data.php:448
 #: ../includes/class-gallery-photo-gallery-data.php:540
 #: ../includes/class-gallery-photo-gallery-data.php:667
-#: ../includes/class-gallery-photo-gallery-data.php:1339
-#: ../includes/class-gallery-photo-gallery-data.php:2644
-#: ../includes/class-gallery-photo-gallery-data.php:2700
-msgid "Hours"
-msgstr "Hours"
+#: ../includes/class-gallery-photo-gallery-data.php:1656
+#: ../includes/class-gallery-photo-gallery-data.php:2961
+#: ../includes/class-gallery-photo-gallery-data.php:3017
+msgid "Days"
+msgstr "Days"
 
 #: ../includes/class-gallery-photo-gallery-data.php:449
 #: ../includes/class-gallery-photo-gallery-data.php:541
 #: ../includes/class-gallery-photo-gallery-data.php:668
-#: ../includes/class-gallery-photo-gallery-data.php:1340
-#: ../includes/class-gallery-photo-gallery-data.php:2645
-#: ../includes/class-gallery-photo-gallery-data.php:2701
-msgid "Minutes"
-msgstr "Minutes"
+#: ../includes/class-gallery-photo-gallery-data.php:1657
+#: ../includes/class-gallery-photo-gallery-data.php:2962
+#: ../includes/class-gallery-photo-gallery-data.php:3018
+msgid "Hours"
+msgstr "Hours"
 
 #: ../includes/class-gallery-photo-gallery-data.php:450
 #: ../includes/class-gallery-photo-gallery-data.php:542
 #: ../includes/class-gallery-photo-gallery-data.php:669
-#: ../includes/class-gallery-photo-gallery-data.php:1341
-#: ../includes/class-gallery-photo-gallery-data.php:2646
-#: ../includes/class-gallery-photo-gallery-data.php:2702
+#: ../includes/class-gallery-photo-gallery-data.php:1658
+#: ../includes/class-gallery-photo-gallery-data.php:2963
+#: ../includes/class-gallery-photo-gallery-data.php:3019
+msgid "Minutes"
+msgstr "Minutes"
+
+#: ../includes/class-gallery-photo-gallery-data.php:451
+#: ../includes/class-gallery-photo-gallery-data.php:543
+#: ../includes/class-gallery-photo-gallery-data.php:670
+#: ../includes/class-gallery-photo-gallery-data.php:1659
+#: ../includes/class-gallery-photo-gallery-data.php:2964
+#: ../includes/class-gallery-photo-gallery-data.php:3020
 msgid "Seconds"
 msgstr "Seconds"
 
-#: ../includes/class-gallery-photo-gallery-data.php:470
+#: ../includes/class-gallery-photo-gallery-data.php:471
 msgid ""
 "<span><a href='https://ays-pro.com/photography-bundle?"
 "utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-"
@@ -3089,119 +3111,140 @@ msgstr ""
 "bundle-sale-banner' class='ays-gpg-black-friday-bundle-title-link' "
 "target='_blank'>Black Friday Sale</a></span>"
 
-#: ../includes/class-gallery-photo-gallery-data.php:477
+#: ../includes/class-gallery-photo-gallery-data.php:478
 msgid "50% OFF"
 msgstr "50% OFF"
 
-#: ../includes/class-gallery-photo-gallery-data.php:487
-#: ../includes/class-gallery-photo-gallery-data.php:581
-#: ../includes/class-gallery-photo-gallery-data.php:648
-#: ../includes/class-gallery-photo-gallery-data.php:759
-#: ../includes/class-gallery-photo-gallery-data.php:909
-#: ../includes/class-gallery-photo-gallery-data.php:1531
-#: ../includes/class-gallery-photo-gallery-data.php:2117
-#: ../includes/class-gallery-photo-gallery-data.php:2668
-#: ../includes/class-gallery-photo-gallery-data.php:2724
+#: ../includes/class-gallery-photo-gallery-data.php:488
+#: ../includes/class-gallery-photo-gallery-data.php:582
+#: ../includes/class-gallery-photo-gallery-data.php:649
+#: ../includes/class-gallery-photo-gallery-data.php:1077
+#: ../includes/class-gallery-photo-gallery-data.php:1227
+#: ../includes/class-gallery-photo-gallery-data.php:1849
+#: ../includes/class-gallery-photo-gallery-data.php:2435
+#: ../includes/class-gallery-photo-gallery-data.php:2986
+#: ../includes/class-gallery-photo-gallery-data.php:3042
 msgid "Dismiss ad"
 msgstr "Dismiss ad"
 
-#: ../includes/class-gallery-photo-gallery-data.php:500
+#: ../includes/class-gallery-photo-gallery-data.php:501
 msgid "Photography Bundle"
 msgstr "Photography Bundle"
 
-#: ../includes/class-gallery-photo-gallery-data.php:506
-#: ../includes/class-gallery-photo-gallery-data.php:602
-#: ../includes/class-gallery-photo-gallery-data.php:1355
-#: ../includes/class-gallery-photo-gallery-data.php:2660
+#: ../includes/class-gallery-photo-gallery-data.php:507
+#: ../includes/class-gallery-photo-gallery-data.php:603
+#: ../includes/class-gallery-photo-gallery-data.php:1673
+#: ../includes/class-gallery-photo-gallery-data.php:2978
 msgid "Get Your Deal"
 msgstr "Get Your Deal"
 
-#: ../includes/class-gallery-photo-gallery-data.php:563
+#: ../includes/class-gallery-photo-gallery-data.php:564
 msgid "Christmas Sale"
 msgstr "Рождественская распродажа"
 
-#: ../includes/class-gallery-photo-gallery-data.php:571
+#: ../includes/class-gallery-photo-gallery-data.php:572
 msgid "20% Extra OFF"
 msgstr "20% Extra OFF"
 
-#: ../includes/class-gallery-photo-gallery-data.php:597
+#: ../includes/class-gallery-photo-gallery-data.php:598
 msgid "20% Extra Discount Coupon"
 msgstr "20% Extra Discount Coupon"
 
-#: ../includes/class-gallery-photo-gallery-data.php:629
+#: ../includes/class-gallery-photo-gallery-data.php:630
 msgid "<span><a href='"
 msgstr "<span><a href='"
 
-#: ../includes/class-gallery-photo-gallery-data.php:635
-#: ../includes/class-gallery-photo-gallery-data.php:742
+#: ../includes/class-gallery-photo-gallery-data.php:636
+#: ../includes/class-gallery-photo-gallery-data.php:1060
 msgid "30 Day Money Back Guarantee"
 msgstr "30-дневная гарантия возврата денег"
 
-#: ../includes/class-gallery-photo-gallery-data.php:735
+#: ../includes/class-gallery-photo-gallery-data.php:729
+msgid "20% Off"
+msgstr "20% Off"
+
+#: ../includes/class-gallery-photo-gallery-data.php:730
+#: ../includes/class-gallery-photo-gallery-data.php:738
+msgid "Copy Coupon Code"
+msgstr "Скопировать промокод"
+
+#: ../includes/class-gallery-photo-gallery-data.php:746
+msgid "Get Deal"
+msgstr "Получить скидку"
+
+#: ../includes/class-gallery-photo-gallery-data.php:748
+msgid "Close popup"
+msgstr "Закрыть всплывающее окно"
+
+#: ../includes/class-gallery-photo-gallery-data.php:981
+msgid "Coupon code copied"
+msgstr "Код купона скопирован!"
+
+#: ../includes/class-gallery-photo-gallery-data.php:1053
 #, php-format
 msgid "%1$s Photography Bundle %2$s"
 msgstr "%1$s Photography Bundle %2$s"
 
-#: ../includes/class-gallery-photo-gallery-data.php:881
+#: ../includes/class-gallery-photo-gallery-data.php:1199
 msgid "CHRISTMAS SPECIAL"
 msgstr "CHRISTMAS SPECIAL"
 
-#: ../includes/class-gallery-photo-gallery-data.php:887
+#: ../includes/class-gallery-photo-gallery-data.php:1205
 msgid "Limited time offer"
 msgstr "Предложение ограничено по времени."
 
-#: ../includes/class-gallery-photo-gallery-data.php:891
-#: ../includes/class-gallery-photo-gallery-data.php:2088
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1289
+#: ../includes/class-gallery-photo-gallery-data.php:1209
+#: ../includes/class-gallery-photo-gallery-data.php:2406
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1319
 msgid "Click to copy"
 msgstr "Нажмите, чтобы скопировать"
 
-#: ../includes/class-gallery-photo-gallery-data.php:1312
+#: ../includes/class-gallery-photo-gallery-data.php:1630
 msgid "Coupon Code"
 msgstr "Код купона"
 
-#: ../includes/class-gallery-photo-gallery-data.php:1475
+#: ../includes/class-gallery-photo-gallery-data.php:1793
 msgid "days"
 msgstr "дни"
 
-#: ../includes/class-gallery-photo-gallery-data.php:1480
+#: ../includes/class-gallery-photo-gallery-data.php:1798
 msgid "hours"
 msgstr "часы"
 
-#: ../includes/class-gallery-photo-gallery-data.php:1485
+#: ../includes/class-gallery-photo-gallery-data.php:1803
 msgid "minutes"
 msgstr "минуты"
 
-#: ../includes/class-gallery-photo-gallery-data.php:1490
+#: ../includes/class-gallery-photo-gallery-data.php:1808
 msgid "seconds"
 msgstr "секунд"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2081
+#: ../includes/class-gallery-photo-gallery-data.php:2399
 #, php-format
 msgid "Get the Pro Version of %s Gallery%s – 20%% OFF"
 msgstr "Get the Pro Version of %s Gallery%s – 20%% OFF"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2082
+#: ../includes/class-gallery-photo-gallery-data.php:2400
 msgid "Unlock advanced features + 30 day Money Back Guarantee"
 msgstr "Разблокируйте расширенные функции + 30-дневная гарантия возврата денег"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2097
+#: ../includes/class-gallery-photo-gallery-data.php:2415
 msgid "Only"
 msgstr "Только"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2097
+#: ../includes/class-gallery-photo-gallery-data.php:2415
 msgid "of 50 discounted licenses left"
 msgstr "из 50 оставшихся лицензий со скидкой"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2109
+#: ../includes/class-gallery-photo-gallery-data.php:2427
 msgid "Upgrade Now"
 msgstr "Обновить сейчас"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2411
+#: ../includes/class-gallery-photo-gallery-data.php:2729
 msgid "30 Days Money Back Guarantee"
 msgstr "30-дневная гарантия возврата денег"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2486
+#: ../includes/class-gallery-photo-gallery-data.php:2804
 msgid ""
 "Limited Time <span class='ays-gpg-dicount-wrap-color'>20%</span> SALE on "
 "<span><a href='https://ays-pro.com/wordpress/photo-gallery' target='_blank' "
@@ -3213,7 +3256,7 @@ msgstr ""
 "class='ays-gpg-dicount-wrap-color ays-gpg-dicount-wrap-text-decoration' "
 "style='display:block;'>Photo Gallery</a></span>"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2489
+#: ../includes/class-gallery-photo-gallery-data.php:2807
 msgid ""
 "Hurry up! <a href='https://ays-pro.com/wordpress/photo-gallery' "
 "target='_blank'>Check it out!</a>"
@@ -3221,7 +3264,7 @@ msgstr ""
 "Hurry up! <a href='https://ays-pro.com/wordpress/photo-gallery' "
 "target='_blank'>Check it out!</a>"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2551
+#: ../includes/class-gallery-photo-gallery-data.php:2869
 msgid ""
 "Limited Time \n"
 "                            <span class='ays-gpg-dicount-wrap-color-"
@@ -3259,7 +3302,7 @@ msgstr ""
 "                                </a>\n"
 "                            </span>"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2564
+#: ../includes/class-gallery-photo-gallery-data.php:2882
 msgid ""
 "Hurry up! \n"
 "                                                <a href='https://ays-pro.com/"
@@ -3277,28 +3320,28 @@ msgstr ""
 "                                                    Check it out!\n"
 "                                                </a>"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2630
-#: ../includes/class-gallery-photo-gallery-data.php:2690
+#: ../includes/class-gallery-photo-gallery-data.php:2948
+#: ../includes/class-gallery-photo-gallery-data.php:3008
 msgid "Limited Time"
 msgstr "Ограниченный срок"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2630
+#: ../includes/class-gallery-photo-gallery-data.php:2948
 msgid "Sale"
 msgstr "Распродажа"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2635
+#: ../includes/class-gallery-photo-gallery-data.php:2953
 msgid "20% off"
 msgstr "20% off"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2690
+#: ../includes/class-gallery-photo-gallery-data.php:3008
 msgid "20%"
 msgstr "20%"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2691
+#: ../includes/class-gallery-photo-gallery-data.php:3009
 msgid "Photo Gallery Plugin"
 msgstr "Photo Gallery Plugin"
 
-#: ../includes/class-gallery-photo-gallery-data.php:2716
+#: ../includes/class-gallery-photo-gallery-data.php:3034
 msgid "BUY NOW!"
 msgstr "КУПИ СЕЙЧАС!"
 
@@ -3325,21 +3368,21 @@ msgstr "Категорий изображений пока нет."
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:332
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:316
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1269
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1274
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1299
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1304
 msgid "Edit"
 msgstr "Редактировать"
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:339
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:324
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1270
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1276
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1300
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1306
 msgid "Duplicate"
 msgstr "Дубликат"
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:371
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:358
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1403
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1433
 msgid "ID"
 msgstr "ID"
 
@@ -3398,85 +3441,85 @@ msgstr "Очистить фильтры"
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:125
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:190
 #: ../includes/lists/class-gallery-photo-gallery-list-table.php:271
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:816
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:841
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:893
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:941
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:970
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:999
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1033
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1187
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1243
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1307
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1449
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1587
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:846
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:871
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:923
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:971
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1000
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1029
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1063
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1217
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1273
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1337
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1479
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1617
 msgid "Nonce verification failed!"
 msgstr "Проверка одноразового кода не удалась!"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1025
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1055
 msgid "There are no galleries yet."
 msgstr "Здесь еще нет галерей."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1279
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1309
 msgid "Preview"
 msgstr "Предварительный просмотр"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1396
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1426
 msgid "Image"
 msgstr "Изображение"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1397
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1427
 msgid "Category"
 msgstr "Категория"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1400
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1430
 msgid "Created"
 msgstr "Созданный"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1401
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1431
 msgid "Items"
 msgstr "Предметы"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1432
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1462
 msgid "Publish"
 msgstr "Публиковать"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1433
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1463
 msgid "Unpublish"
 msgstr "Неопубликовать"
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1606
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1636
 msgid "Gallery created."
 msgstr "Галерея создана."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1608
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1638
 msgid "Gallery saved."
 msgstr "Галерея сохранена."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1610
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1640
 msgid "Gallery duplicated."
 msgstr "Галерея продублирована."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1612
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1642
 msgid "Gallery deleted."
 msgstr "Галерея удалена."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1614
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1644
 msgid "Gallery published."
 msgstr "Галерея опубликована."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1616
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1646
 msgid "Gallery unpublished."
 msgstr "Галерея неопубликована."
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1618
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1648
 msgid ""
 "You're not allowed to add gallery for more galleries please checkout to "
 msgstr ""
 "Вы не можете добавить галерею, для получения дополнительных галерей "
 "пожалуйста ознакомьтесь с разделом "
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1618
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1648
 msgid "version"
 msgstr "версию"
 
@@ -3504,16 +3547,16 @@ msgstr "Gallery - Photo Gallery by AYS"
 msgid "Please select your gallery from dropdown"
 msgstr "Пожалуйста, выберите свою галерею из выпадающего списка"
 
-#: ../public/class-gallery-photo-gallery-public.php:1082
+#: ../public/class-gallery-photo-gallery-public.php:1102
 msgid "Some of the images haven\\'t been loaded"
 msgstr "Некоторые изображения еще не были загружены"
 
-#: ../public/class-gallery-photo-gallery-public.php:1930
+#: ../public/class-gallery-photo-gallery-public.php:2012
 #: ../public/partials/class-gallery-photo-gallery-extra-shortcode.php:204
 msgid "Unknown"
 msgstr "Неизвестный"
 
-#: ../public/class-gallery-photo-gallery-public.php:1989
+#: ../public/class-gallery-photo-gallery-public.php:2071
 msgid "Gallery link"
 msgstr "Ссылка на галерею"
 

@@ -105,7 +105,7 @@
 
                     $other_attributes = array( 'id' => 'ays-button' );
                     submit_button( __( 'Save and close', 'gallery-photo-gallery' ), 'primary ays-gpg-save-comp', 'ays_submit', true, $other_attributes );
-                    submit_button(__('Save', 'gallery-photo-gallery'), 'ays-gpg-save-comp', 'ays_apply', false, $save_attributes);
+                    submit_button(__('Save', 'gallery-photo-gallery'), 'ays-gpg-save-comp action-button', 'ays_apply', false, $save_attributes);
                     echo $loader_iamge;
                             
                     $buttons_html = '</div>';

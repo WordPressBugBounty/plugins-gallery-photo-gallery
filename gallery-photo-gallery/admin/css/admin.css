@@ -107,6 +107,7 @@ body.ays-gpg-plugin-admin .button.ays_bulk_del_images,
 body.ays-gpg-plugin-admin .button.ays_select_all_images,
 body.ays-gpg-plugin-admin .button.insert-media, 
 body.ays-gpg-plugin-admin .button.action-button:not(.button-primary), 
+body.ays-gpg-plugin-admin #search-submit, 
 body.ays-gpg-plugin-admin .button-secondary {
     background: #f6f7f7;
     border-color: #2271b1;
@@ -121,6 +122,7 @@ body.ays-gpg-plugin-admin .button.ays_select_all_images:focus,
 body.ays-gpg-plugin-admin .button.action:focus, 
 body.ays-gpg-plugin-admin .button.insert-media:focus, 
 body.ays-gpg-plugin-admin .button.action-button:not(.button-primary):focus, 
+body.ays-gpg-plugin-admin #search-submit:focus, 
 body.ays-gpg-plugin-admin .button-secondary:focus, 
 body.ays-gpg-plugin-admin .button.add_new_block_content:hover,
 body.ays-gpg-plugin-admin .button.wp-picker-default:hover,
@@ -130,6 +132,7 @@ body.ays-gpg-plugin-admin .button.ays_bulk_del_images:hover,
 body.ays-gpg-plugin-admin .button.ays_select_all_images:hover,
 body.ays-gpg-plugin-admin .button.insert-media:hover,
 body.ays-gpg-plugin-admin .button.action-button:not(.button-primary):hover,
+body.ays-gpg-plugin-admin #search-submit:hover,
 body.ays-gpg-plugin-admin .button-secondary:hover {
     background: #f0f0f1;
     border-color: #135e96;

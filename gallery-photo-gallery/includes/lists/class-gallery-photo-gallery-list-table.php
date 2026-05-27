@@ -110,10 +110,10 @@ class Galleries_List_Table extends WP_List_Table{
                     }
                 ?>
             </select>
-            <input type="button" id="doaction-<?php echo esc_attr( $which ); ?>" class="cat-filter-apply-<?php echo esc_attr( $which ); ?> button" value="Filter">
+            <input type="button" id="doaction-<?php echo esc_attr( $which ); ?>" class="cat-filter-apply-<?php echo esc_attr( $which ); ?> button action-button" value="Filter">
         </div>
         
-        <a style="" href="?page=<?php echo esc_attr( $_REQUEST['page'] ); ?>" class="button"><?php echo esc_html__( "Clear filters", 'gallery-photo-gallery' ); ?></a>
+        <a style="" href="?page=<?php echo esc_attr( $_REQUEST['page'] ); ?>" class="button action-button"><?php echo esc_html__( "Clear filters", 'gallery-photo-gallery' ); ?></a>
         <?php
     }
 

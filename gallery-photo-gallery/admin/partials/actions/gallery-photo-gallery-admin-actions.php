@@ -3283,7 +3283,7 @@ $gpg_accordion_svg_html = '
                     $buttons_html .= '<div class="ays_submit_button ays_save_buttons_box">';
                     echo $buttons_html;
             ?>
-                <input type="submit" name="ays-submit" class="button ays-submit ays-button button-primary ays-gpg-save-comp" value="<?php echo esc_attr__("Save and close", 'gallery-photo-gallery');?>" gpg_submit_name="ays-submit" />            
+                <input type="submit" name="ays-submit" class="button ays-submit ays-button action-button button-primary ays-gpg-save-comp" value="<?php echo esc_attr__("Save and close", 'gallery-photo-gallery');?>" gpg_submit_name="ays-submit" />            
                 <input type="submit" name="ays-apply" id="ays_submit_apply" class="button ays-button ays-submit ays-gpg-save-comp" title="Ctrl + s" data-toggle="tooltip" data-delay='{"show":"1000"}' value="<?php echo esc_attr__("Save", 'gallery-photo-gallery');?>" gpg_submit_name="ays-apply"/>
                 <?php echo $loader_iamge; ?> 
             <?php

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gallery – Photo Gallery\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-13 19:43+0300\n"
+"POT-Creation-Date: 2026-05-26 19:51+0300\n"
 "PO-Revision-Date: 2018-07-13 11:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -103,8 +103,8 @@ msgstr ""
 
 #: ../admin/class-gallery-photo-gallery-admin.php:389
 #: ../admin/class-gallery-photo-gallery-admin.php:390
-#: ../includes/class-gallery-photo-gallery-data.php:877
-#: ../includes/class-gallery-photo-gallery-data.php:2631
+#: ../includes/class-gallery-photo-gallery-data.php:1195
+#: ../includes/class-gallery-photo-gallery-data.php:2949
 msgid "Photo Gallery"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgid "Settings"
 msgstr ""
 
 #: ../admin/class-gallery-photo-gallery-admin.php:498
-#: ../gallery-photo-gallery.php:175
+#: ../gallery-photo-gallery.php:180
 msgid "Demo"
 msgstr ""
 
@@ -352,56 +352,56 @@ msgid "Create contact forms, payment forms, surveys, and many more custom forms.
 msgstr ""
 
 #: ../admin/class-gallery-photo-gallery-admin.php:1756
-#: ../includes/class-gallery-photo-gallery-data.php:691
-#: ../includes/class-gallery-photo-gallery-data.php:794
-#: ../includes/class-gallery-photo-gallery-data.php:899
-#: ../includes/class-gallery-photo-gallery-data.php:2456
+#: ../includes/class-gallery-photo-gallery-data.php:692
+#: ../includes/class-gallery-photo-gallery-data.php:1112
+#: ../includes/class-gallery-photo-gallery-data.php:1217
+#: ../includes/class-gallery-photo-gallery-data.php:2774
 msgid "Buy Now"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:107
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:111
 msgid "Add new gallery"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:110
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:114
 msgid "Edit gallery"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:551
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:582
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:107
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:107
 msgid "Save and close"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:552
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:583
 #: ../admin/partials/categories/actions/gallery-photo-gallery-categories-actions.php:108
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:108
 msgid "Save"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1091
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1122
 #, php-format
 msgid "Choose the category/categories your gallery belongs to. To create a category, go to the %1$sCategories%2$s page."
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1114
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1146
 #, php-format
 msgid "Create a new category %s here %s"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1349
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1383
 msgid "Current tab։ Enable this option in order to open the URL in the same tab"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1350
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:1384
 msgid "New tab։ Enable this option in order to redirect the URL to a new tab"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3215
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3305
 msgid "Previous Gallery"
 msgstr ""
 
-#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3223
+#: ../admin/partials/actions/gallery-photo-gallery-admin-actions.php:3313
 msgid "Next Gallery"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr ""
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:60
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:369
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:356
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1395
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1425
 msgid "Title"
 msgstr ""
 
@@ -437,7 +437,7 @@ msgstr ""
 #: ../admin/partials/gallery-categories/actions/gallery-photo-gallery-gpg-categories-actions.php:74
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:370
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:357
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1398
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1428
 msgid "Description"
 msgstr ""
 
@@ -915,7 +915,7 @@ msgstr ""
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:414
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:432
 #: ../admin/partials/settings/gallery-photo-gallery-settings.php:450
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1399
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1429
 msgid "Shortcode"
 msgstr ""
 
@@ -1106,33 +1106,33 @@ msgstr ""
 msgid "Gallery - Photo Gallery"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:148
+#: ../gallery-photo-gallery.php:153
 msgid "Upgrade"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:150
-#: ../includes/class-gallery-photo-gallery-data.php:417
-#: ../includes/class-gallery-photo-gallery-data.php:508
-#: ../includes/class-gallery-photo-gallery-data.php:604
-#: ../includes/class-gallery-photo-gallery-data.php:693
-#: ../includes/class-gallery-photo-gallery-data.php:796
-#: ../includes/class-gallery-photo-gallery-data.php:2458
+#: ../gallery-photo-gallery.php:155
+#: ../includes/class-gallery-photo-gallery-data.php:418
+#: ../includes/class-gallery-photo-gallery-data.php:509
+#: ../includes/class-gallery-photo-gallery-data.php:605
+#: ../includes/class-gallery-photo-gallery-data.php:694
+#: ../includes/class-gallery-photo-gallery-data.php:1114
+#: ../includes/class-gallery-photo-gallery-data.php:2776
 msgid "One-time payment"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:176
+#: ../gallery-photo-gallery.php:181
 msgid "Free Support"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:177
+#: ../gallery-photo-gallery.php:182
 msgid "Make a Suggestion"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:179
+#: ../gallery-photo-gallery.php:184
 msgid "Live Chat"
 msgstr ""
 
-#: ../gallery-photo-gallery.php:181
+#: ../gallery-photo-gallery.php:186
 msgid "Contact us"
 msgstr ""
 
@@ -1156,183 +1156,183 @@ msgstr ""
 msgid "-Select Gallery-"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:392
-#: ../includes/class-gallery-photo-gallery-data.php:443
-#: ../includes/class-gallery-photo-gallery-data.php:535
+#: ../includes/class-gallery-photo-gallery-data.php:393
+#: ../includes/class-gallery-photo-gallery-data.php:444
+#: ../includes/class-gallery-photo-gallery-data.php:536
 msgid "Offer ends in:"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:416
-#: ../includes/class-gallery-photo-gallery-data.php:2522
-#: ../includes/class-gallery-photo-gallery-data.php:2599
+#: ../includes/class-gallery-photo-gallery-data.php:417
+#: ../includes/class-gallery-photo-gallery-data.php:2840
+#: ../includes/class-gallery-photo-gallery-data.php:2917
 msgid "Buy Now !"
-msgstr ""
-
-#: ../includes/class-gallery-photo-gallery-data.php:447
-#: ../includes/class-gallery-photo-gallery-data.php:539
-#: ../includes/class-gallery-photo-gallery-data.php:666
-#: ../includes/class-gallery-photo-gallery-data.php:1338
-#: ../includes/class-gallery-photo-gallery-data.php:2643
-#: ../includes/class-gallery-photo-gallery-data.php:2699
-msgid "Days"
 msgstr ""
 
 #: ../includes/class-gallery-photo-gallery-data.php:448
 #: ../includes/class-gallery-photo-gallery-data.php:540
 #: ../includes/class-gallery-photo-gallery-data.php:667
-#: ../includes/class-gallery-photo-gallery-data.php:1339
-#: ../includes/class-gallery-photo-gallery-data.php:2644
-#: ../includes/class-gallery-photo-gallery-data.php:2700
-msgid "Hours"
+#: ../includes/class-gallery-photo-gallery-data.php:1656
+#: ../includes/class-gallery-photo-gallery-data.php:2961
+#: ../includes/class-gallery-photo-gallery-data.php:3017
+msgid "Days"
 msgstr ""
 
 #: ../includes/class-gallery-photo-gallery-data.php:449
 #: ../includes/class-gallery-photo-gallery-data.php:541
 #: ../includes/class-gallery-photo-gallery-data.php:668
-#: ../includes/class-gallery-photo-gallery-data.php:1340
-#: ../includes/class-gallery-photo-gallery-data.php:2645
-#: ../includes/class-gallery-photo-gallery-data.php:2701
-msgid "Minutes"
+#: ../includes/class-gallery-photo-gallery-data.php:1657
+#: ../includes/class-gallery-photo-gallery-data.php:2962
+#: ../includes/class-gallery-photo-gallery-data.php:3018
+msgid "Hours"
 msgstr ""
 
 #: ../includes/class-gallery-photo-gallery-data.php:450
 #: ../includes/class-gallery-photo-gallery-data.php:542
 #: ../includes/class-gallery-photo-gallery-data.php:669
-#: ../includes/class-gallery-photo-gallery-data.php:1341
-#: ../includes/class-gallery-photo-gallery-data.php:2646
-#: ../includes/class-gallery-photo-gallery-data.php:2702
+#: ../includes/class-gallery-photo-gallery-data.php:1658
+#: ../includes/class-gallery-photo-gallery-data.php:2963
+#: ../includes/class-gallery-photo-gallery-data.php:3019
+msgid "Minutes"
+msgstr ""
+
+#: ../includes/class-gallery-photo-gallery-data.php:451
+#: ../includes/class-gallery-photo-gallery-data.php:543
+#: ../includes/class-gallery-photo-gallery-data.php:670
+#: ../includes/class-gallery-photo-gallery-data.php:1659
+#: ../includes/class-gallery-photo-gallery-data.php:2964
+#: ../includes/class-gallery-photo-gallery-data.php:3020
 msgid "Seconds"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:470
+#: ../includes/class-gallery-photo-gallery-data.php:471
 msgid "<span><a href='https://ays-pro.com/photography-bundle?utm_source=dashboard&utm_medium=gpg-free&utm_campaign=black-friday-mega-bundle-sale-banner' class='ays-gpg-black-friday-bundle-title-link' target='_blank'>Black Friday Sale</a></span>"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:477
+#: ../includes/class-gallery-photo-gallery-data.php:478
 msgid "50% OFF"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:487
-#: ../includes/class-gallery-photo-gallery-data.php:581
-#: ../includes/class-gallery-photo-gallery-data.php:648
-#: ../includes/class-gallery-photo-gallery-data.php:759
-#: ../includes/class-gallery-photo-gallery-data.php:909
-#: ../includes/class-gallery-photo-gallery-data.php:1531
-#: ../includes/class-gallery-photo-gallery-data.php:2117
-#: ../includes/class-gallery-photo-gallery-data.php:2668
-#: ../includes/class-gallery-photo-gallery-data.php:2724
+#: ../includes/class-gallery-photo-gallery-data.php:488
+#: ../includes/class-gallery-photo-gallery-data.php:582
+#: ../includes/class-gallery-photo-gallery-data.php:649
+#: ../includes/class-gallery-photo-gallery-data.php:1077
+#: ../includes/class-gallery-photo-gallery-data.php:1227
+#: ../includes/class-gallery-photo-gallery-data.php:1849
+#: ../includes/class-gallery-photo-gallery-data.php:2435
+#: ../includes/class-gallery-photo-gallery-data.php:2986
+#: ../includes/class-gallery-photo-gallery-data.php:3042
 msgid "Dismiss ad"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:500
+#: ../includes/class-gallery-photo-gallery-data.php:501
 msgid "Photography Bundle"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:506
-#: ../includes/class-gallery-photo-gallery-data.php:602
-#: ../includes/class-gallery-photo-gallery-data.php:1355
-#: ../includes/class-gallery-photo-gallery-data.php:2660
+#: ../includes/class-gallery-photo-gallery-data.php:507
+#: ../includes/class-gallery-photo-gallery-data.php:603
+#: ../includes/class-gallery-photo-gallery-data.php:1673
+#: ../includes/class-gallery-photo-gallery-data.php:2978
 msgid "Get Your Deal"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:563
+#: ../includes/class-gallery-photo-gallery-data.php:564
 msgid "Christmas Sale"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:571
+#: ../includes/class-gallery-photo-gallery-data.php:572
 msgid "20% Extra OFF"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:597
+#: ../includes/class-gallery-photo-gallery-data.php:598
 msgid "20% Extra Discount Coupon"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:629
+#: ../includes/class-gallery-photo-gallery-data.php:630
 msgid "<span><a href='"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:635
-#: ../includes/class-gallery-photo-gallery-data.php:742
+#: ../includes/class-gallery-photo-gallery-data.php:636
+#: ../includes/class-gallery-photo-gallery-data.php:1060
 msgid "30 Day Money Back Guarantee"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:735
+#: ../includes/class-gallery-photo-gallery-data.php:1053
 #, php-format
 msgid "%1$s Photography Bundle %2$s"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:881
+#: ../includes/class-gallery-photo-gallery-data.php:1199
 msgid "CHRISTMAS SPECIAL"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:887
+#: ../includes/class-gallery-photo-gallery-data.php:1205
 msgid "Limited time offer"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:891
-#: ../includes/class-gallery-photo-gallery-data.php:2088
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1289
+#: ../includes/class-gallery-photo-gallery-data.php:1209
+#: ../includes/class-gallery-photo-gallery-data.php:2406
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1319
 msgid "Click to copy"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:931
+#: ../includes/class-gallery-photo-gallery-data.php:1249
 msgid "Coupon code copied!"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:1312
+#: ../includes/class-gallery-photo-gallery-data.php:1630
 msgid "Coupon Code"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:1475
+#: ../includes/class-gallery-photo-gallery-data.php:1793
 msgid "days"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:1480
+#: ../includes/class-gallery-photo-gallery-data.php:1798
 msgid "hours"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:1485
+#: ../includes/class-gallery-photo-gallery-data.php:1803
 msgid "minutes"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:1490
+#: ../includes/class-gallery-photo-gallery-data.php:1808
 msgid "seconds"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2081
+#: ../includes/class-gallery-photo-gallery-data.php:2399
 #, php-format
 msgid "Get the Pro Version of %s Gallery%s – 20%% OFF"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2082
+#: ../includes/class-gallery-photo-gallery-data.php:2400
 msgid "Unlock advanced features + 30 day Money Back Guarantee"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2097
+#: ../includes/class-gallery-photo-gallery-data.php:2415
 msgid "Only"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2097
+#: ../includes/class-gallery-photo-gallery-data.php:2415
 msgid "of 50 discounted licenses left"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2109
+#: ../includes/class-gallery-photo-gallery-data.php:2427
 msgid "Upgrade Now"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2411
+#: ../includes/class-gallery-photo-gallery-data.php:2729
 msgid "30 Days Money Back Guarantee"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2486
+#: ../includes/class-gallery-photo-gallery-data.php:2804
 msgid "Limited Time <span class='ays-gpg-dicount-wrap-color'>20%</span> SALE on <span><a href='https://ays-pro.com/wordpress/photo-gallery' target='_blank' class='ays-gpg-dicount-wrap-color ays-gpg-dicount-wrap-text-decoration' style='display:block;'>Photo Gallery</a></span>"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2489
+#: ../includes/class-gallery-photo-gallery-data.php:2807
 msgid "Hurry up! <a href='https://ays-pro.com/wordpress/photo-gallery' target='_blank'>Check it out!</a>"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2551
+#: ../includes/class-gallery-photo-gallery-data.php:2869
 msgid ""
 "Limited Time \n"
 "                            <span class='ays-gpg-dicount-wrap-color-helloween' style='color:#b2ff00;'>20%</span> \n"
@@ -1347,7 +1347,7 @@ msgid ""
 "                            </span>"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2564
+#: ../includes/class-gallery-photo-gallery-data.php:2882
 msgid ""
 "Hurry up! \n"
 "                                                <a href='https://ays-pro.com/wordpress/photo-gallery?utm_source=dashboard-gallery&utm_medium=free-gallery&utm_campaign=sale-banner-gallery' target='_blank' style='color:#ffc700;'>\n"
@@ -1355,28 +1355,28 @@ msgid ""
 "                                                </a>"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2630
-#: ../includes/class-gallery-photo-gallery-data.php:2690
+#: ../includes/class-gallery-photo-gallery-data.php:2948
+#: ../includes/class-gallery-photo-gallery-data.php:3008
 msgid "Limited Time"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2630
+#: ../includes/class-gallery-photo-gallery-data.php:2948
 msgid "Sale"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2635
+#: ../includes/class-gallery-photo-gallery-data.php:2953
 msgid "20% off"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2690
+#: ../includes/class-gallery-photo-gallery-data.php:3008
 msgid "20%"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2691
+#: ../includes/class-gallery-photo-gallery-data.php:3009
 msgid "Photo Gallery Plugin"
 msgstr ""
 
-#: ../includes/class-gallery-photo-gallery-data.php:2716
+#: ../includes/class-gallery-photo-gallery-data.php:3034
 msgid "BUY NOW!"
 msgstr ""
 
@@ -1395,14 +1395,14 @@ msgstr ""
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:332
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:316
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1269
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1299
 msgid "Edit"
 msgstr ""
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:339
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:324
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1270
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1276
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1300
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1306
 msgid "Duplicate"
 msgstr ""
 
@@ -1410,15 +1410,15 @@ msgstr ""
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:399
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:329
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:386
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1271
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1282
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1434
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1301
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1312
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1464
 msgid "Delete"
 msgstr ""
 
 #: ../includes/lists/class-gallery-photo-gallery-categories-list-table.php:371
 #: ../includes/lists/class-gallery-photo-gallery-gpg-categories-list-table.php:358
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1403
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1433
 msgid "ID"
 msgstr ""
 
@@ -1478,67 +1478,67 @@ msgstr ""
 msgid "Unpublished"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1025
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1055
 msgid "There are no galleries yet."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1396
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1426
 msgid "Image"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1397
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1427
 msgid "Category"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1400
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1430
 msgid "Created"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1401
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1431
 msgid "Items"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1402
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1432
 msgid "Status"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1432
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1462
 msgid "Publish"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1433
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1463
 msgid "Unpublish"
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1606
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1636
 msgid "Gallery created."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1608
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1638
 msgid "Gallery saved."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1610
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1640
 msgid "Gallery duplicated."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1612
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1642
 msgid "Gallery deleted."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1614
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1644
 msgid "Gallery published."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1616
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1646
 msgid "Gallery unpublished."
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1618
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1648
 msgid "You're not allowed to add gallery for more galleries please checkout to "
 msgstr ""
 
-#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1618
+#: ../includes/lists/class-gallery-photo-gallery-list-table.php:1648
 msgid "version"
 msgstr ""
 
@@ -1570,15 +1570,15 @@ msgstr ""
 msgid "Please select your gallery from dropdown"
 msgstr ""
 
-#: ../public/class-gallery-photo-gallery-public.php:1082
+#: ../public/class-gallery-photo-gallery-public.php:1102
 msgid "Some of the images haven\\'t been loaded"
 msgstr ""
 
-#: ../public/class-gallery-photo-gallery-public.php:1930
+#: ../public/class-gallery-photo-gallery-public.php:2012
 #: ../public/partials/class-gallery-photo-gallery-extra-shortcode.php:204
 msgid "Unknown"
 msgstr ""
 
-#: ../public/class-gallery-photo-gallery-public.php:1989
+#: ../public/class-gallery-photo-gallery-public.php:2071
 msgid "Gallery link"
 msgstr ""
