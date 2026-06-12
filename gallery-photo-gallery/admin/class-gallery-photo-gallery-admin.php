@@ -626,6 +626,14 @@ class Gallery_Photo_Gallery_Admin {
         return $value;
     }
 
+    public function gallery_hide_popupbox_screen_options($show_screen, $screen) {        
+
+        if ( $screen->id === 'toplevel_page_gallery-photo-gallery' || $screen->id === 'photo-gallery_page_gallery-photo-gallery-categories' || $screen->id === 'photo-gallery_page_gallery-photo-gallery-gpg-categories' ) {
+            return false;
+        }
+
+        return $show_screen;
+    }
 
     public function screen_option_gallery() {
         $option = 'per_page';
@@ -635,7 +643,12 @@ class Gallery_Photo_Gallery_Admin {
             'option'  => 'galleries_per_page'
         ];
 
-        add_screen_option( $option, $args );
+        if( ! ( isset( $_GET['action'] ) && ( $_GET['action'] == 'add' || $_GET['action'] == 'edit' ) ) ){
+            add_screen_option($option, $args);
+        }else{
+            add_filter('screen_options_show_screen', array($this, 'gallery_hide_popupbox_screen_options'), 10, 2);
+        }
+
         $this->gallery_obj = new Galleries_List_Table($this->plugin_name);
     }
 
@@ -647,7 +660,12 @@ class Gallery_Photo_Gallery_Admin {
             'option'  => 'gallery_categories_per_page',
         );
 
-        add_screen_option($option, $args);
+        if( ! ( isset( $_GET['action'] ) && ( $_GET['action'] == 'add' || $_GET['action'] == 'edit' ) ) ){
+            add_screen_option($option, $args);
+        }else{
+            add_filter('screen_options_show_screen', array($this, 'gallery_hide_popupbox_screen_options'), 10, 2);
+        }
+        
         $this->cats_obj = new Gpg_Categories_List_Table($this->plugin_name);
     }
 
@@ -659,7 +677,12 @@ class Gallery_Photo_Gallery_Admin {
             'option'  => 'gallery_gpg_categories_per_page',
         );
 
-        add_screen_option($option, $args);
+        if( ! ( isset( $_GET['action'] ) && ( $_GET['action'] == 'add' || $_GET['action'] == 'edit' ) ) ){
+            add_screen_option($option, $args);
+        }else{
+            add_filter('screen_options_show_screen', array($this, 'gallery_hide_popupbox_screen_options'), 10, 2);
+        }
+
         $this->gallery_cats_obj = new Gallery_Categories_List_Table($this->plugin_name);
     }
 
@@ -1138,24 +1161,19 @@ class Gallery_Photo_Gallery_Admin {
 
         $content[] = '<div class="ays-gpg-message-vars-box">';
             $content[] = '<div class="ays-gpg-message-vars-icon">';
-                $content[] = '<div>';
-                    $content[] = '<i class="ays_fa ays_fa_link"></i>';
-                $content[] = '</div>';
-                $content[] = '<div>';
-                    $content[] = '<span>'. __("Message Variables" , 'gallery-photo-gallery') .'</span>';
-                    $content[] = '<a class="ays_help" data-toggle="tooltip" data-html="true" title="'. __("Insert your preferred message variable into the editor by clicking." , 'gallery-photo-gallery') .'">';
-                        $content[] = '<i class="fas fa-info-circle"></i>';
-                    $content[] = '</a>';
-                $content[] = '</div>';
+
+                $content[] = '<span class="ays-gpg-message-vars-braces" aria-hidden="true">{ }</span>';
+                $content[] = '<span>'. esc_html__( "Message Variables" , 'gallery-photo-gallery') .'</span>';
+                $content[] = '<span class="ays-gpg-message-vars-chevron" aria-hidden="true"></span>';
+
             $content[] = '</div>';
             $content[] = '<div class="ays-gpg-message-vars-data">';
                 foreach($gallery_message_vars as $var => $var_name){
                     $var_counter++;
                     $content[] = '<label class="ays-gpg-message-vars-each-data-label">';
-                        $content[] = '<input type="radio" class="ays-gpg-message-vars-each-data-checker" hidden id="ays_gpg_message_var_count_'. $var_counter .'" name="ays_gpg_message_var_count">';
                         $content[] = '<div class="ays-gpg-message-vars-each-data">';
-                            $content[] = '<input type="hidden" class="ays-gpg-message-vars-each-var" value="'. $var .'">';
-                            $content[] = '<span>'. $var_name .'</span>';
+                            $content[] = '<input type="hidden" class="ays-gpg-message-vars-each-var" value="'. esc_attr( $var ) .'">';
+                            $content[] = '<span>'. esc_html( $var_name ) .'</span>';
                         $content[] = '</div>';
                     $content[] = '</label>';
                 }

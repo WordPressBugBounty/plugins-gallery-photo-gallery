@@ -1810,7 +1810,9 @@
 
         // Select message vars galleries page | Start
         $(document).find('.ays-gpg-message-vars-icon').on('click', function(e){
-            $(this).parents(".ays-gpg-message-vars-box").find(".ays-gpg-message-vars-data").toggle('fast');
+            var messageVarsBox = $(this).parents(".ays-gpg-message-vars-box");
+            messageVarsBox.toggleClass("ays-gpg-message-vars-open");
+            messageVarsBox.find(".ays-gpg-message-vars-data").toggle('fast');
         });
         
         $(document).on( "click" , function(e){
@@ -1818,6 +1820,7 @@
             } 
             else{
                 $(document).find(".ays-gpg-message-vars-box .ays-gpg-message-vars-data").hide('fast');
+                $(document).find(".ays-gpg-message-vars-box").removeClass("ays-gpg-message-vars-open");
             }
         });
 
