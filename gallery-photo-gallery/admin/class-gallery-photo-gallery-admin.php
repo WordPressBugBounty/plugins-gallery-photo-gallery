@@ -758,11 +758,11 @@ class Gallery_Photo_Gallery_Admin {
         ?>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
-                <title><?php echo __( 'Gallery Photo Gallery', 'gallery-photo-gallery' ); ?></title>
+                <title><?php echo esc_html__( 'Gallery Photo Gallery', 'gallery-photo-gallery' ); ?></title>
                 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
-                <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/mctabs.js"></script>
-                <script language="javascript" type="text/javascript" src="<?php echo site_url(); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
+                <script language="javascript" type="text/javascript" src="<?php echo esc_url( site_url() ); ?>/wp-includes/js/tinymce/tiny_mce_popup.js"></script>
+                <script language="javascript" type="text/javascript" src="<?php echo esc_url( site_url() ); ?>/wp-includes/js/tinymce/utils/mctabs.js"></script>
+                <script language="javascript" type="text/javascript" src="<?php echo esc_url( site_url() ); ?>/wp-includes/js/tinymce/utils/form_utils.js"></script>
 
                 <?php
                     wp_print_scripts('jquery');
@@ -774,13 +774,13 @@ class Gallery_Photo_Gallery_Admin {
 
               <table align="center">
                   <tr>
-                    <td><label for="ays_gpg">Gallery</label></td>
+                    <td><label for="ays_gpg"><?php echo esc_html__( 'Gallery', 'gallery-photo-gallery' ); ?></label></td>
                     <td>
                       <span>
                         <select id="ays_gpg" style="padding: 2px; height: 25px; font-size: 16px;width:100%;">
-                            <option>--Select Gallery--</option>
+                            <option><?php echo esc_html__( '--Select Gallery--', 'gallery-photo-gallery' ); ?></option>
                                 <?php foreach($shortcode_data as $index=>$data)
-                                    echo '<option id="'.$data[0].'" value="'.$data[0].'" mw="'.$data[2].'" mh="'.$data[3].'" class="ays_gpg_options">'.$data[1].'</option>';
+                                    echo '<option id="'. esc_attr( $data[0] ).'" value="'. esc_attr(  $data[0] ) .'" mw="'.esc_attr(  $data[2] ) .'" mh="'. esc_attr( $data[3] ) .'" class="ays_gpg_options">'. esc_html(  $data[1] ) .'</option>';
                                 ?>
                         </select>
                         </span>
@@ -921,15 +921,15 @@ class Gallery_Photo_Gallery_Admin {
             if(false !== strpos( sanitize_text_field( $_REQUEST['page'] ), $this->plugin_name)){
                 ?>
                 <div class="ays-gpg-footer-support-box">
-                    <span class="ays-gpg-footer-link-row"><a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo __( "Support", 'gallery-photo-gallery'); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://wordpress.org/support/plugin/gallery-photo-gallery/" target="_blank"><?php echo esc_html__( "Support", 'gallery-photo-gallery'); ?></a></span>
                     <span class="ays-gpg-footer-slash-row">/</span>
-                    <span class="ays-gpg-footer-link-row"><a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank"><?php echo __( "Docs", 'gallery-photo-gallery'); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://ays-pro.com/wordpress-photo-gallery-user-manual" target="_blank"><?php echo esc_html__( "Docs", 'gallery-photo-gallery'); ?></a></span>
                     <span class="ays-gpg-footer-slash-row">/</span>
-                    <span class="ays-gpg-footer-link-row"><a href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo __( "Suggest a Feature", 'gallery-photo-gallery'); ?></a></span>
+                    <span class="ays-gpg-footer-link-row"><a href="https://ays-demo.com/gallery-plugin-survey/" target="_blank"><?php echo esc_html__( "Suggest a Feature", 'gallery-photo-gallery'); ?></a></span>
                 </div>
                 <p style="font-size:13px;text-align:center;font-style:italic;">
                     <span style="margin-left:0px;margin-right:10px;" class="ays_heart_beat"><i class="far fa-heart animated"></i></span>
-                    <span><?php echo __( "If you love our plugin, please do big favor and rate us on", 'gallery-photo-gallery'); ?></span> 
+                    <span><?php echo esc_html__( "If you love our plugin, please do big favor and rate us on", 'gallery-photo-gallery'); ?></span> 
                     <a target="_blank" href='https://wordpress.org/support/plugin/gallery-photo-gallery/reviews/'>WordPress.org</a>
                     <a target="_blank" class="ays-rated-link" href='https://wordpress.org/support/plugin/gallery-photo-gallery/reviews/'>
                         <span class="ays-dashicons ays-dashicons-star-empty"></span>

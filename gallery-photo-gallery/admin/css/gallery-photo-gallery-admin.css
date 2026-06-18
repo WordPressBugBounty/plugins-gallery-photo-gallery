@@ -5900,7 +5900,9 @@ div.ays-notice-banner {
     flex: 0 0 auto;
     margin-left: 4px;
 }
-
+.ays_gpg_option_for_desktop label {
+    text-align: center;
+}
 @media screen and (min-width: 1321px) {
     .ays-notice-banner .modile-ddmenu-lg.modile-ddmenu-lg-custom {
         display: block;
