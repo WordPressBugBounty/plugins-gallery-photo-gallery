@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 7.0
-Stable tag: 6.7.7
+Stable tag: 6.7.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -227,6 +227,12 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.7.8 ( June 24, 2026 ) =
+* Added: Shortcode column to Gallery categories admin list table for easy front-end embedding
+* Added: Gallery categories datatable on the front end with title, description, image count, and date columns
+* Added: Gallery Display Page URL option to make gallery titles clickable and redirect users to a custom link
+* Improved: Gallery categories listing and front-end display structure
 
 = 6.7.7 ( June 18, 2026 ) =
 * Improved: Some changes on the admin dashboard

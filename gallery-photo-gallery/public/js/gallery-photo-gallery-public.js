@@ -58,16 +58,36 @@
             $(window).trigger('resize');
         });
 
-        // $(document).on("click" , ".ays_count_views",function(){
-        //     var data = {
-        //         action: "ays_calculate_gallery_views"
-        //     }
-        //     $.ajax({
-        //         url: gal_ajax_public.ajax_url,
-        //         type: "POST",
-        //         data : data,
-        //     });
-        // });
+        $(document).ready(function () {
+            // for details
+            // ays-all-galleries-table-generic
+            $(document).find('table.ays-all-galleries-table-generic').DataTable({
+                "language": {
+                    "sEmptyTable":     galleryLangDataTableObj.sEmptyTable,
+                    "sInfo":           galleryLangDataTableObj.sInfo,
+                    "sInfoEmpty":      galleryLangDataTableObj.sInfoEmpty,
+                    "sInfoFiltered":   galleryLangDataTableObj.sInfoFiltered,
+                    "sInfoPostFix":    "",
+                    "sInfoThousands":  ",",
+                    "sLengthMenu":     galleryLangDataTableObj.sLengthMenu,
+                    "sLoadingRecords": galleryLangDataTableObj.sLoadingRecords,
+                    "sProcessing":     galleryLangDataTableObj.sProcessing,
+                    "sSearch":         galleryLangDataTableObj.sSearch,
+                    "sUrl":            "",
+                    "sZeroRecords":    galleryLangDataTableObj.sZeroRecords,
+                    "oPaginate": {
+                        "sFirst":    galleryLangDataTableObj.sFirst,
+                        "sLast":     galleryLangDataTableObj.sLast,
+                        "sNext":     galleryLangDataTableObj.sNext,
+                        "sPrevious": galleryLangDataTableObj.sPrevious,
+                    },
+                    "oAria": {
+                        "sSortAscending":  galleryLangDataTableObj.sSortAscending,
+                        "sSortDescending": galleryLangDataTableObj.sSortDescending
+                    }
+                }
+            });
+        });
     })
 })(jQuery)
 

@@ -967,6 +967,7 @@ div.ays-gpg-top-menu-wrapper div.ays-gpg-top-menu div.ays-gpg-top-tab-wrapper a.
     font-size: 15px;
     border: none;
     background: revert;
+    transition-property: background, color;
 }
 
 div.ays-gpg-top-menu-wrapper div.ays-gpg-top-menu div.ays-gpg-top-tab-wrapper a.nav-tab-active {
@@ -978,6 +979,7 @@ div.ays-gpg-top-menu-wrapper div.ays-gpg-top-menu div.ays-gpg-top-tab-wrapper a.
     background-color: revert;
     text-decoration: none;
     border-bottom: 1px solid #005AE0;
+    border-color: #005AE0;
 }
 
 .nav-tab-wrapper .nav-tab:focus{

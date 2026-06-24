@@ -263,6 +263,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
             case 'description':
                 return Gallery_Photo_Gallery_Admin::ays_restriction_string("word",strip_tags($item[ $column_name ]), 15);
                 break;
+            case "shortcode":
             case 'items_count':
             case 'id':
                 return $item[ $column_name ];
@@ -332,6 +333,15 @@ class Gallery_Categories_List_Table extends WP_List_Table{
         return $title . $this->row_actions( $actions );
     }
 
+    function column_shortcode( $item ) {
+        return sprintf('<div class="ays-gpg-shortcode-container">
+                    <div class="ays-gpg-copy-image" data-bs-toggle="tooltip" title="'. esc_html(__('Click to copy','gallery-photo-gallery')).'">
+                            <img src="'. esc_url(AYS_GPG_ADMIN_URL) . '/images/icons/copy-image.svg">
+                    </div>                                            
+                    <input type="text" class="ays-gpg-shortcode-input" readonly value="'. esc_attr('[ays_gallery_cat id="%s"]').'" />
+                </div>', $item["id"]);      
+    }
+
     function column_items_count( $item ) {
         global $wpdb;
 
@@ -355,6 +365,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
             'cb'            => '<input type="checkbox" />',
             'title'         => __( 'Title', 'gallery-photo-gallery' ),
             'description'   => __( 'Description', 'gallery-photo-gallery' ),
+            "shortcode"     => __( "Shortcode", 'gallery-photo-gallery' ),
             'id'            => __( 'ID', 'gallery-photo-gallery' ),
         );
 

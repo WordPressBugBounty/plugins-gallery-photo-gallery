@@ -1,0 +1,109 @@
+/**
+ * All of the CSS for your public-facing functionality shortcode - ays_generate_gallery_cat_table" should be
+ * included in this file.
+ */
+
+ .ays-all-galleries-table-container {
+    background-color: #F6F8EF;
+    overflow-x: auto;
+}
+
+.ays-all-galleries-table-generic {
+    margin: 0 auto !important;
+}
+.ays-all-galleries-table-generic thead th {
+    font-size: 16px;
+}
+.ays-all-galleries-table-generic td {
+    font-size: 14px;
+}
+
+.ays-all-galleries-table-generic thead th,
+.ays-all-galleries-table-generic td {
+    word-break: initial !important;
+    word-wrap: break-word;
+    vertical-align: middle;
+    text-align: center !important;
+    white-space: nowrap;
+}
+
+
+/*
+Generic Styling, for Desktops/Laptops
+*/
+
+div.ays-all-galleries-table-container .dataTables_length {
+    padding-left: 5px;
+}
+
+div.ays-all-galleries-table-container .dataTables_filter {
+    padding-right: 5px;
+}
+
+div.ays-all-galleries-table-container .dataTables_length>label,
+div.ays-all-galleries-table-container .dataTables_filter>label {
+    color: #333;
+    font-size: unset in;
+    font-weight: normal;
+}
+
+div.ays-all-galleries-table-container .dataTables_length>label select,
+div.ays-all-galleries-table-container .dataTables_filter>label input {
+    padding: 0;
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    box-shadow: none;
+    color: #000;
+    border: 1px solid #767676;
+    border-radius: unset;
+}
+
+table.ays-all-galleries-table-generic {
+    width: 99%;
+    border-collapse: collapse;
+}
+/* Zebra striping */
+table.ays-all-galleries-table-generic tr:nth-of-type(odd) {
+    background: #eee;
+}
+table.ays-all-galleries-table-generic th {
+    background-color: #333 !important;
+    color: white;
+    font-weight: bold;
+}
+table.ays-all-galleries-table-generic td,
+table.ays-all-galleries-table-generic th {
+    padding: 6px !important;
+    border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .ays-all-galleries-table-container table.ays-all-galleries-table-generic td {
+        text-wrap: wrap;
+	}
+}
+
+div.centered_by_flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.centered_by_flex .right_check_icon{
+    height: 22px;
+    padding:2px;
+    box-shadow: unset;
+}
+div.ays-all-galleries-table-cat_title_seperator{
+    padding: 18px 0;
+}
+div.ays-all-galleries-table-cat-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+hr.ays_gallery_seperator{
+    margin:25px 0;
+}

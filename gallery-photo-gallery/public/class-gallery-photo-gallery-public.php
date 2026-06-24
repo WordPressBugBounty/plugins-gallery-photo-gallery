@@ -39,6 +39,7 @@ class Gallery_Photo_Gallery_Public {
      * @var      string    $version    The current version of this plugin.
      */
     private $version;
+    private $unique_id;
 
     /**
      * Initialize the class and set its properties.
@@ -53,6 +54,7 @@ class Gallery_Photo_Gallery_Public {
         $this->version = $version;
         // $this->settings = new Gallery_Settings_Actions($this->plugin_name);
         add_shortcode( 'gallery_p_gallery', array($this, 'ays_generate_gallery') );
+        add_shortcode( 'ays_gallery_cat', array($this, 'ays_generate_gallery_cat_table') );
     }
 
     /**
@@ -79,6 +81,8 @@ class Gallery_Photo_Gallery_Public {
         wp_enqueue_style( 'jquery.mosaic.min.css', plugin_dir_url( __FILE__ ) . 'css/jquery.mosaic.min.css?v=4', array(), $this->version, 'all' );
         wp_enqueue_style( 'masonry.pkgd.css', plugin_dir_url( __FILE__ ) . 'css/masonry.pkgd.css', array(), $this->version, 'all' );
         wp_enqueue_style( 'animate.css', plugin_dir_url( __FILE__ ) . 'css/animate.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name . '-gallery-dataTable', plugin_dir_url( __FILE__ ) . '/css/gallery-photo-gallery-dataTables.min.css', array(), $this->version, 'all' );
+        wp_enqueue_style( $this->plugin_name. '-all-in-table', plugin_dir_url( __FILE__ ) . '/css/gallery-photo-gallery-all-in-table-public.css', array(), $this->version, 'all' );
     }
 
     /**
@@ -110,7 +114,24 @@ class Gallery_Photo_Gallery_Public {
         wp_enqueue_script( $this->plugin_name.'-jquery.mosaic.min.js', plugin_dir_url( __FILE__ ) . 'js/jquery.mosaic.min.js', array( 'jquery' ), $this->version, true );
         wp_enqueue_script( $this->plugin_name.'-masonry.pkgd.min.js', plugin_dir_url( __FILE__ ) . 'js/masonry.pkgd.min.js', array( 'jquery' ), $this->version, true );
         wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gallery-photo-gallery-public.js', array( 'jquery' ), $this->version, true );
-        // wp_localize_script($this->plugin_name, 'gal_ajax_public', array('ajax_url' => admin_url('admin-ajax.php')));
+        wp_enqueue_script( $this->plugin_name . '-gallery-dataTable', plugin_dir_url( __FILE__ ) . '/js/gallery-photo-gallery-datatable.min.js', array('jquery'), $this->version, true);
+        wp_localize_script( $this->plugin_name . '-gallery-dataTable', 'galleryLangDataTableObj', array(
+            "sEmptyTable"           => __( "No data available in table", 'gallery-photo-gallery' ),
+            "sInfo"                 => __( "Showing _START_ to _END_ of _TOTAL_ entries", 'gallery-photo-gallery' ),
+            "sInfoEmpty"            => __( "Showing 0 to 0 of 0 entries", 'gallery-photo-gallery' ),
+            "sInfoFiltered"         => __( "(filtered from _MAX_ total entries)", 'gallery-photo-gallery' ),
+            "sLengthMenu"           => __( "Show _MENU_ entries", 'gallery-photo-gallery' ),
+            "sLoadingRecords"       => __( "Loading...", 'gallery-photo-gallery' ),
+            "sProcessing"           => __( "Processing...", 'gallery-photo-gallery' ),
+            "sSearch"               => __( "Search:", 'gallery-photo-gallery' ),
+            "sZeroRecords"          => __( "No matching records found", 'gallery-photo-gallery' ),
+            "sFirst"                => __( "First", 'gallery-photo-gallery' ),
+            "sLast"                 => __( "Last", 'gallery-photo-gallery' ),
+            "sNext"                 => __( "Next", 'gallery-photo-gallery' ),
+            "sPrevious"             => __( "Previous", 'gallery-photo-gallery' ),
+            "sSortAscending"        => __( ": activate to sort column ascending", 'gallery-photo-gallery' ),
+            "sSortDescending"       => __( ": activate to sort column descending", 'gallery-photo-gallery' ),
+        ) );
 
     }
 
@@ -3257,5 +3278,160 @@ class Gallery_Photo_Gallery_Public {
         }
 
         return $attr;
+    }
+
+    public function get_galleries_info(){
+        global $wpdb;
+        
+        $galleries_table = esc_sql( $wpdb->prefix . "ays_gallery" );
+
+        $user_id = get_current_user_id();
+
+        if( $user_id < 1 ){ 
+            return array();
+        }        
+
+        $sql = "SELECT id, title, description, category_ids as cat_id, images, gallery_url, options FROM $galleries_table";
+
+        $results = $wpdb->get_results( $sql, "ARRAY_A" );
+        
+        return $results;
+
+    }    
+
+    public function ays_prepare_gallery_datas( $attr ){
+
+        $gallery_infos = $this->get_galleries_info();
+        $processed_gallery_infos = array();
+        foreach( $gallery_infos as $val ){
+
+            if ( ! empty( $val['images'] ) ) {
+                $images_count = explode( '***', $val['images'] );
+                $val['images_count'] = count( $images_count );
+            }else{
+                $val['images_count'] = 0;
+            }
+
+            $cat_id = explode( ',', $val['cat_id'] );
+
+            $options = json_decode( $val['options'],true );
+            $val['create_date'] = isset( $options['create_date'] ) ? $options['create_date'] : "-";
+
+            foreach( $attr as $cat_val ){ 
+                if( in_array( $cat_val, $cat_id ) ){                    
+                    $processed_gallery_infos[] = $val;
+                    break;
+                }
+            }
+        }
+        return $processed_gallery_infos;
+    }
+
+     public function ays_generate_table_html( $table_data ){
+        $res_empty_class = "";
+
+        $columns = array(
+            'gallery_name' => "<th style='width:20%;'>" . __( "Gallery Title", 'gallery-photo-gallery' ) . "</th>",
+            'description' => "<th style='width:20%;'>" . __( "Description", 'gallery-photo-gallery' ) . "</th>",
+            'images_count' => "<th style='width:20%;'>" . __( "Image count", 'gallery-photo-gallery' ) . "</th>",
+            'create_date' => "<th style='width:20%;'>" . __( "Date", 'gallery-photo-gallery' ) . "</th>",
+        );        
+
+        $options = (Gallery_Settings_Actions::ays_get_setting('options') === false) ? array() : json_decode( stripcslashes( Gallery_Settings_Actions::ays_get_setting('options') ), true);
+        $galleries_title_length = (isset($options['galleries_title_length']) && intval($options['galleries_title_length']) != 0) ? absint(intval($options['galleries_title_length'])) : 5;
+        if( $galleries_title_length == 0 ){
+            $galleries_title_length = 5;
+        }
+
+        if( is_null( $table_data ) || empty( $table_data ) )
+            $res_empty_class = "ays-all-galleries-table-is-empty";
+        
+        $html = "<div class='ays-all-galleries-table-container ". $res_empty_class ."'>
+        <table id='ays-all-galleries-table". $this->unique_id ."' class='ays-all-galleries-table-generic'>
+            <thead>";
+        $html .= "<tr>";
+        foreach( $columns as $key => $value ){
+            $html .= $value;
+        }
+        $html .= "</tr></thead>";
+
+        $html .= "<tbody>";
+        $data_order_index = 0;
+
+        $date_format = get_option( 'date_format' );
+        $time_format = get_option( 'time_format' );
+        $full_format = $date_format . " " . $time_format;
+
+        if ( $res_empty_class == "" ){
+            foreach( $table_data as $index => $value ){
+                $class_no_sort = "";                
+
+                //// gallery_name
+                $title = "";
+                if( isset( $value['title'] ) ){
+                    $title = wp_trim_words( $value['title'], $galleries_title_length );
+                }
+
+                if( isset( $value['title'] ) && $value['title'] != "" && isset( $value['gallery_url'] ) && $value['gallery_url'] != "" ){
+                    $columns['gallery_name'] = "<td data-order='" . $data_order_index ."'><a href='" . filter_var(esc_html( $value['gallery_url'] ), FILTER_SANITIZE_URL ) . "' target='_blank'>" . esc_html( $title ) . "</a></td>";
+                }
+                else if( isset($value['gallery_url'] ) && $value['gallery_url'] != "" ){
+                    $columns['gallery_name'] = "<td ><a href='" . filter_var( esc_html( $value['gallery_url'] ), FILTER_SANITIZE_URL) . "' target='_blank'> - </a></td>";
+
+                }
+                else if( isset( $value['title'] ) && $value['title'] != "" ){
+                    $columns['gallery_name'] = "<td data-order='" . $data_order_index ."'>" . esc_html( $title ) . "</td>";
+                }
+                else{
+                    $columns['gallery_name'] = "<td> - </td>";
+                }
+
+                //// description 
+                if( isset( $value['description'] ) && $value['description'] != "" ){
+                    $columns['description'] = "<td data-order='" . $data_order_index ."'>" . esc_html( $value['description'] ) . "</td>";
+                }
+                else{
+                    $columns['description'] = "<td > - </td>";
+                }
+
+                //// images_count 
+                if( isset( $value['images_count'] ) && $value['images_count'] != "" ){
+                    $columns['images_count'] = "<td data-order='" . $data_order_index ."'>" . esc_html( $value['images_count'] ) . "</td>";
+                }
+                else{
+                    $columns['images_count'] = "<td > - </td>";
+                }
+
+                //// create_date
+                if( isset( $value['create_date'] ) && $value['create_date'] != "" ){
+                    $columns['create_date'] = "<td data-order='" . strtotime( $value['create_date'] ) ."'>" . date( $full_format, strtotime( $value['create_date'] ) ) . "</td>";
+                }
+                else{
+                    $columns['create_date'] = "<td > - </td>";
+                }
+                $html .= "<tr class='" . $class_no_sort . "' >";
+                    $html .= implode( $columns );
+                $html .= "</tr>";
+                $data_order_index++;
+            }
+        }
+        $html .= "</tbody>";
+        $html .= "</table>";
+        $html .= "<hr class='ays_gallery_seperator'>";
+        $html .= "</div>";
+        return $html;
+    }
+
+    public function ays_generate_gallery_cat_table( $attr ){
+        $this->unique_id = uniqid();
+        if(! is_user_logged_in()){
+            return "<p style='text-align: center;font-style:italic;'>" . __( "You must log in to see your results.", $this->plugin_name ) . "</p>";
+        }
+        $this->enqueue_styles();
+        $this->enqueue_scripts();
+        $table_data = $this->ays_prepare_gallery_datas($attr);
+        $table_html = $this->ays_generate_table_html($table_data);
+
+        return $table_html;
     }
 }
