@@ -580,8 +580,8 @@ $gpg_accordion_svg_html = '
         <?php echo $heading; ?>        
     </h1>
     <div class="ays_save_buttons_content">
-        <input type="submit" name="ays-submit-top" class="ays-submit button action-button button-primary ays-gpg-save-comp" value="<?php echo __("Save and close", 'gallery-photo-gallery');?>" gpg_submit_name="ays-submit" />        
-        <input type="submit" name="ays-apply-top" class="ays-submit action-button button ays-gpg-save-comp" id="ays-button-top-apply" title="Ctrl + s" data-toggle="tooltip" data-delay='{"show":"1000"}' value="<?php echo __("Save", 'gallery-photo-gallery');?>" gpg_submit_name="ays-apply"/>
+        <input type="submit" name="ays-submit-top" class="ays-submit button action-button button-primary ays-gpg-save-comp" value="<?php echo __("Save and close", 'gallery-photo-gallery'); ?>" gpg_submit_name="ays-submit" />        
+        <input type="submit" name="ays-apply-top" class="ays-submit action-button button ays-gpg-save-comp" id="ays-button-top-apply" title="Ctrl + s" data-toggle="tooltip" data-delay='{"show":"1000"}' value="<?php echo __("Save", 'gallery-photo-gallery'); ?>" gpg_submit_name="ays-apply"/>
         <?php echo $loader_iamge; ?>
     </div>
     <div>        
@@ -617,7 +617,7 @@ $gpg_accordion_svg_html = '
             <div class="col-sm-9">
                 <p style="font-size:14px; font-style:italic;">
                     <?php echo esc_html__("To insert the Gallery into a page, post or text widget, copy shortcode", 'gallery-photo-gallery'); ?>
-                    <strong class="ays-gallery-shortcode-box" onClick="selectElementContents(this)" data-toggle="tooltip" title="<?php echo esc_attr__('Click for copy.', 'gallery-photo-gallery');?>" style="font-size:16px; font-style:normal;"><?php echo "[gallery_p_gallery id=".$id."]"; ?></strong>
+                    <strong class="ays-gallery-shortcode-box" onClick="selectElementContents(this)" data-toggle="tooltip" title="<?php echo esc_attr__('Click for copy.', 'gallery-photo-gallery'); ?>" style="font-size:16px; font-style:normal;"><?php echo "[gallery_p_gallery id=".$id."]"; ?></strong>
                     <?php echo " " . esc_html__( "and paste it at the desired place in the editor.", 'gallery-photo-gallery'); ?>
                 </p>
             </div>
@@ -642,19 +642,19 @@ $gpg_accordion_svg_html = '
         <div class="ays-gpg-top-menu">
             <div class="nav-tab-wrapper ays-gpg-top-tab-wrapper">
                 <a href="#tab1" data-tab="tab1" class="nav-tab <?php echo ($ays_gpg_tab == 'tab1') ? 'nav-tab-active' : ''; ?>">
-                    <?php echo esc_html__("Images", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Images", 'gallery-photo-gallery'); ?>
                 </a>
                 <a href="#tab2" data-tab="tab2" class="nav-tab <?php echo ($ays_gpg_tab == 'tab2') ? 'nav-tab-active' : ''; ?>">
-                    <?php echo esc_html__("Settings", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Settings", 'gallery-photo-gallery'); ?>
                 </a>
                 <a href="#tab3" data-tab="tab3" class="nav-tab <?php echo ($ays_gpg_tab == 'tab3') ? 'nav-tab-active' : ''; ?>">
-                    <?php echo esc_html__("Styles", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Styles", 'gallery-photo-gallery'); ?>
                 </a>
                 <a href="#tab4" data-tab="tab4" class="nav-tab <?php echo ($ays_gpg_tab == 'tab4') ? 'nav-tab-active' : ''; ?>">
-                    <?php echo esc_html__("Lightbox settings", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Lightbox settings", 'gallery-photo-gallery'); ?>
                 </a>
                 <a href="#tab5" data-tab="tab5" class="nav-tab <?php echo ($ays_gpg_tab == 'tab5') ? 'nav-tab-active' : ''; ?>">
-                    <?php echo esc_html__("Lightbox effects", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Lightbox effects", 'gallery-photo-gallery'); ?>
                 </a>
             </div>  
         </div>              
@@ -665,14 +665,14 @@ $gpg_accordion_svg_html = '
         <div class="form-group row">
             <div class="col-sm-3">
                 <label for="gallery_title">
-                    <?php echo esc_html__("Gallery Title", 'gallery-photo-gallery');?>
+                    <?php echo esc_html__("Gallery Title", 'gallery-photo-gallery'); ?>
                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("In this field is noted the name of the gallery", 'gallery-photo-gallery' ); ?>">
                        <i class="fas fa-info-circle"></i>
                     </a>
                 </label>
             </div>
             <div class="col-sm-9">
-                <input type="text" required name="gallery_title" id="gallery_title" class="ays-text-input" placeholder="<?php echo esc_attr__("Gallery Title", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(htmlentities($gallery["title"])); ?>"/>
+                <input type="text" required name="gallery_title" id="gallery_title" class="ays-text-input" placeholder="<?php echo esc_attr__("Gallery Title", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(htmlentities($gallery["title"])); ?>"/>
             </div>
         </div>
         <hr/>
@@ -793,44 +793,44 @@ $gpg_accordion_svg_html = '
                         <div class="ays_image_attr_item_parent">
                             <div class="ays_image_attr_item">
                                 <label>
-                                    <?php echo esc_html__("Title", 'gallery-photo-gallery');?>
+                                    <?php echo esc_html__("Title", 'gallery-photo-gallery'); ?>
                                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("It shows the name of the inserted picture", 'gallery-photo-gallery' ); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
-                                <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery');?>"/>
+                                <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery'); ?>"/>
                             </div>
                             <div class="ays_image_attr_item">
                                 <label>
-                                    <?php echo esc_html__("Alt", 'gallery-photo-gallery');?>
+                                    <?php echo esc_html__("Alt", 'gallery-photo-gallery'); ?>
                                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the alternate text when the picture is not loaded or not found", 'gallery-photo-gallery' ); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
-                                <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery');?>"/>
+                                <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery'); ?>"/>
                             </div>
                             <div class="ays_image_attr_item">
                                 <label>
-                                    <?php echo esc_html__("Description", 'gallery-photo-gallery');?>
+                                    <?php echo esc_html__("Description", 'gallery-photo-gallery'); ?>
                                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the description of the chosen image", 'gallery-photo-gallery' ); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
-                                <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery');?>"/>
+                                <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery'); ?>"/>
                             </div>
                             <div class="ays_image_attr_item">
                                 <label>
-                                    <?php echo esc_html__("URL", 'gallery-photo-gallery');?>
+                                    <?php echo esc_html__("URL", 'gallery-photo-gallery'); ?>
                                     <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This section is for the URL address", 'gallery-photo-gallery' ); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
-                                <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery');?>"/>
+                                <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery'); ?>"/>
                             </div>
                         </div>
                         <div class="ays_image_cat">
                             <label>
-                                <?php echo esc_html__("Image Category", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Image Category", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Select image categories", 'gallery-photo-gallery' ); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
@@ -915,44 +915,44 @@ $gpg_accordion_svg_html = '
                                     <div class="ays_image_attr_item_parent">
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Title", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Title", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("It shows the name of the inserted picture", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_titles[$key])); ?>"/>
+                                            <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_titles[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Alt", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Alt", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the alternate text when the picture is not loaded or not found", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_alts[$key])); ?>"/>
+                                            <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_alts[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Description", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Description", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the description of the chosen image", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_descriptions[$key])); ?>"/>
+                                            <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_descriptions[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("URL", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("URL", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This section is for the URL address", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery');?>" value="<?php echo esc_attr($images_urls[$key]); ?>"/>
+                                            <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery'); ?>" value="<?php echo esc_attr($images_urls[$key]); ?>"/>
                                         </div>
                                     </div>
                                     <div class="ays_image_cat">
                                         <label>
-                                            <?php echo esc_html__("Image Category", 'gallery-photo-gallery');?>
+                                            <?php echo esc_html__("Image Category", 'gallery-photo-gallery'); ?>
                                             <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Select image categories", 'gallery-photo-gallery' ); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
@@ -1020,44 +1020,44 @@ $gpg_accordion_svg_html = '
                                     <div class="ays_image_attr_item_parent">
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Title", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Title", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("It shows the name of the inserted picture", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_titles[$key])); ?>"/>
+                                            <input class="ays_img_title" type="text" name="ays-image-title[]" placeholder="<?php echo esc_attr__("Image title", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_titles[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Alt", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Alt", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the alternate text when the picture is not loaded or not found", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_alts[$key])); ?>"/>
+                                            <input class="ays_img_alt" type="text" name="ays-image-alt[]" placeholder="<?php echo esc_attr__("Image alt", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_alts[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("Description", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("Description", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the description of the chosen image", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>                                    
                                             </label>
-                                            <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery');?>" value="<?php echo stripslashes(esc_attr($images_descriptions[$key])); ?>"/>
+                                            <input class="ays_img_desc" type="text" name="ays-image-description[]" placeholder="<?php echo esc_attr__("Image description", 'gallery-photo-gallery'); ?>" value="<?php echo stripslashes(esc_attr($images_descriptions[$key])); ?>"/>
                                         </div>
                                         <div class="ays_image_attr_item">
                                             <label>
-                                                <?php echo esc_html__("URL", 'gallery-photo-gallery');?>
+                                                <?php echo esc_html__("URL", 'gallery-photo-gallery'); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This section is for the URL address", 'gallery-photo-gallery' ); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
-                                            <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery');?>" value="<?php echo esc_attr($images_urls[$key]); ?>"/>
+                                            <input class="ays_img_url" type="url" name="ays-image-url[]" placeholder="<?php echo esc_attr__("URL", 'gallery-photo-gallery'); ?>" value="<?php echo esc_attr($images_urls[$key]); ?>"/>
                                         </div>
                                     </div>
                                     <div class="ays_image_cat">
                                         <label>
-                                            <?php echo esc_html__("Image Category", 'gallery-photo-gallery');?>
+                                            <?php echo esc_html__("Image Category", 'gallery-photo-gallery'); ?>
                                             <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Select image categories", 'gallery-photo-gallery' ); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
@@ -1157,8 +1157,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row ays_toggle_parent">
                         <div class="col-sm-3">
                             <label for="ays_filter_cat">
-                                <?php echo esc_html__("Enable filter by image categories", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can decide whether to show the filter by category of the gallery or not. This option is compatible only with the Grid layout.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Enable filter by image categories", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can decide whether to show the filter by category of the gallery or not. This option is compatible only with the Grid layout.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1171,8 +1171,8 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row">
                                 <div class="col-sm-4">
                                     <label for="ays_filter_cat_animation">
-                                        <?php echo esc_html__("Categories filter animation", 'gallery-photo-gallery');?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the animation of the images displaying while filtering them by categories.", 'gallery-photo-gallery');?>">
+                                        <?php echo esc_html__("Categories filter animation", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the animation of the images displaying while filtering them by categories.", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -1187,10 +1187,10 @@ $gpg_accordion_svg_html = '
                                             <option <?php echo 'fadeInUp' == $ays_gpg_filter_cat_anim ? 'selected' : ''; ?> value="fadeInUp">Fade In Up</option>
                                         </optgroup>
                                         <optgroup label="Sliding Entrances">
-                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery');?></option>
+                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ($ays_gpg_filter_cat_anim == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery'); ?></option>
                                         </optgroup>                                
                                         <optgroup label="Zoom Entrances">
                                             <option <?php echo 'zoomIn' == $ays_gpg_filter_cat_anim ? 'selected' : ''; ?> value="zoomIn">Zoom In</option> 
@@ -1208,8 +1208,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Show gallery head", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can decide whether to show the title and description of the gallery or not", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Show gallery head", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can decide whether to show the title and description of the gallery or not", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1221,17 +1221,17 @@ $gpg_accordion_svg_html = '
                                 <div>
                                     <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_show_gal_head_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 600px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title ", 'gallery-photo-gallery'); ?>
                                             <input type="checkbox" class="" name="ays_gpg_title_show" <?php
                                                echo ($show_gal_title == "on") ? "checked" : ""; ?>/>
-                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the title", 'gallery-photo-gallery');?>">
+                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the title", 'gallery-photo-gallery'); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description ", 'gallery-photo-gallery'); ?>
                                             <input type="checkbox" class="" name="ays_gpg_desc_show" <?php
                                                echo ($show_gal_desc == "on") ? "checked" : ""; ?>/>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the description", 'gallery-photo-gallery');?>">
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the description", 'gallery-photo-gallery'); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
@@ -1241,17 +1241,17 @@ $gpg_accordion_svg_html = '
                                     <hr>
                                     <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 600px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title mobile", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery title mobile", 'gallery-photo-gallery'); ?>
                                             <input type="checkbox" class="" name="ays_gpg_title_show_mobile" <?php
                                                echo ( $show_gal_title_mobile == "on" ) ? "checked" : ""; ?>/>
-                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile title", 'gallery-photo-gallery');?>">
+                                            <a class="ays_help poqr_tooltip" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile title", 'gallery-photo-gallery'); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description mobile", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Show gallery description mobile", 'gallery-photo-gallery'); ?>
                                             <input type="checkbox" class="" name="ays_gpg_desc_show_mobile" <?php
                                                echo ( $show_gal_desc_mobile == "on" ) ? "checked" : ""; ?>/>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile description", 'gallery-photo-gallery');?>">
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If it is marked it will show the mobile description", 'gallery-photo-gallery'); ?>">
                                                <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
@@ -1268,8 +1268,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_image_sizes">
-                                <?php echo esc_html__("Thumbnail Size", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The size of the image in the thumbnail", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Thumbnail Size", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The size of the image in the thumbnail", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1296,24 +1296,24 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_images_ordering">
-                                <?php echo esc_html__("Images order by", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field arranges the images by parameters of title, date, random", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images order by", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field arranges the images by parameters of title, date, random", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-3 ays_divider_left">				
                             <select name="ays_images_ordering" class="ays-text-input ays-text-input-short" id="ays_images_ordering">
-                                <option <?php echo ($gal_options['images_orderby'] == "noordering") ? "selected" : ""; ?> value="noordering"><?php echo esc_html__("No ordering", 'gallery-photo-gallery');?></option>
-                                <option <?php echo ($gal_options['images_orderby'] == "title") ? "selected" : ""; ?> value="title"><?php echo esc_html__("Title", 'gallery-photo-gallery');?></option>
-                                <option <?php echo ($gal_options['images_orderby'] == "date") ? "selected" : ""; ?> value="date"><?php echo esc_html__("Date", 'gallery-photo-gallery');?></option>
-                                <option <?php echo ($gal_options['images_orderby'] == "random") ? "selected" : ""; ?> value="random"><?php echo esc_html__("Random", 'gallery-photo-gallery');?></option>
+                                <option <?php echo ($gal_options['images_orderby'] == "noordering") ? "selected" : ""; ?> value="noordering"><?php echo esc_html__("No ordering", 'gallery-photo-gallery'); ?></option>
+                                <option <?php echo ($gal_options['images_orderby'] == "title") ? "selected" : ""; ?> value="title"><?php echo esc_html__("Title", 'gallery-photo-gallery'); ?></option>
+                                <option <?php echo ($gal_options['images_orderby'] == "date") ? "selected" : ""; ?> value="date"><?php echo esc_html__("Date", 'gallery-photo-gallery'); ?></option>
+                                <option <?php echo ($gal_options['images_orderby'] == "random") ? "selected" : ""; ?> value="random"><?php echo esc_html__("Random", 'gallery-photo-gallery'); ?></option>
                             </select>
                         </div>
                         <div class="col-sm-6">                
                             <select name="ays_gpg_ordering_asc_desc" class="ays-text-input ays-text-input-short" id="ays_gpg_ordering_asc_desc" <?php echo ($gal_options['images_orderby'] == "random" || $gal_options['images_orderby'] == "noordering") ? "style='display:none;'" : ""; ?>>
-                                <option <?php echo ($ordering_asc_desc == "ascending") ? "selected" : ""; ?> value="ascending"><?php echo esc_html__("Ascending", 'gallery-photo-gallery');?></option>
-                                <option <?php echo ($ordering_asc_desc == "descending") ? "selected" : ""; ?> value="descending"><?php echo esc_html__("Descending", 'gallery-photo-gallery');?></option>
+                                <option <?php echo ($ordering_asc_desc == "ascending") ? "selected" : ""; ?> value="ascending"><?php echo esc_html__("Ascending", 'gallery-photo-gallery'); ?></option>
+                                <option <?php echo ($ordering_asc_desc == "descending") ? "selected" : ""; ?> value="descending"><?php echo esc_html__("Descending", 'gallery-photo-gallery'); ?></option>
                             </select>
                         </div>
                     </div>
@@ -1321,19 +1321,19 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images loading", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The images are loaded according to two principles: already loaded gallery with images and at first opens gallery after then the images", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images loading", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The images are loaded according to two principles: already loaded gallery with images and at first opens gallery after then the images", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
                             <div>
-                                <label class="ays_gpg_image_hover_icon" id="gpg_image_global_loading"><?php echo esc_html__("Global loading ", 'gallery-photo-gallery');?>
+                                <label class="ays_gpg_image_hover_icon" id="gpg_image_global_loading"><?php echo esc_html__("Global loading ", 'gallery-photo-gallery'); ?>
                                     <input type="radio" id="ays_gpg_images_global_loading" name="ays_images_loading" value="all_loaded"
                                     <?php echo ($loading_type == "all_loaded") ? "checked" : ""; ?> />
                                 </label>
-                                <label class="ays_gpg_image_hover_icon" id="gpg_image_lazy_loading"><?php echo esc_html__("Lazy loading ", 'gallery-photo-gallery');?> <input type="radio" id="ays_gpg_images_lazy_loading" name="ays_images_loading" value="current_loaded" <?php echo ($loading_type == "current_loaded") ? "checked" : ""; ?>/></label>
+                                <label class="ays_gpg_image_hover_icon" id="gpg_image_lazy_loading"><?php echo esc_html__("Lazy loading ", 'gallery-photo-gallery'); ?> <input type="radio" id="ays_gpg_images_lazy_loading" name="ays_images_loading" value="current_loaded" <?php echo ($loading_type == "current_loaded") ? "checked" : ""; ?>/></label>
                             </div>
                         </div>
                     </div>
@@ -1341,8 +1341,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row show_load_effect">
                         <div class="col-sm-3">
                             <label for="gallery_img_loading_effect">
-                                <?php echo esc_html__("Images loading effect", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose Images loading animation", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images loading effect", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose Images loading animation", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1357,10 +1357,10 @@ $gpg_accordion_svg_html = '
                                     <option <?php echo 'fadeInUp' == $img_load_effect ? 'selected' : ''; ?> value="fadeInUp">Fade In Up</option>
                                 </optgroup>
                                 <optgroup label="Sliding Entrances">
-                                    <option <?php echo ($img_load_effect == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery');?></option>
-                                    <option <?php echo ($img_load_effect == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery');?></option>
-                                    <option <?php echo ($img_load_effect == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery');?></option>
-                                    <option <?php echo ($img_load_effect == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery');?></option>
+                                    <option <?php echo ($img_load_effect == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery'); ?></option>
+                                    <option <?php echo ($img_load_effect == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery'); ?></option>
+                                    <option <?php echo ($img_load_effect == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery'); ?></option>
+                                    <option <?php echo ($img_load_effect == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery'); ?></option>
                                 </optgroup>                                
                                 <optgroup label="Zoom Entrances">
                                     <option <?php echo 'zoomIn' == $img_load_effect ? 'selected' : ''; ?> value="zoomIn">Zoom In</option> 
@@ -1376,7 +1376,7 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Redirect URL", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Redirect URL", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip" data-html="true"
                                     title="<?php
                                         echo esc_attr__('Specify the opening method of the Image URLs:','gallery-photo-gallery') .
@@ -1391,10 +1391,10 @@ $gpg_accordion_svg_html = '
                         </div>
                         <div class="col-sm-9 ays_divider_left">
                             <div>
-                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("New Tab", 'gallery-photo-gallery');?>
+                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("New Tab", 'gallery-photo-gallery'); ?>
                                     <input type="radio" id="gpg_redirect_url_new_tab" name="gpg_redirect_url_tab" value="_blank" <?php echo ($redirect_type == "_blank") ? "checked" : ""; ?>/>
                                 </label>
-                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Current Tab", 'gallery-photo-gallery');?>
+                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Current Tab", 'gallery-photo-gallery'); ?>
                                     <input type="radio" id="gpg_redirect_url_current_tab" name="gpg_redirect_url_tab" value="_self"
                                     <?php echo ($redirect_type == "_self") ? "checked" : ""; ?> />
                                 </label>
@@ -1405,8 +1405,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="show_title">
-                                <?php echo esc_html__("Show title on thumbnail", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The name of the image is written in the below of it", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Show title on thumbnail", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The name of the image is written in the below of it", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1421,7 +1421,7 @@ $gpg_accordion_svg_html = '
                                         <div class="col-sm-4">
                                             <label >
                                                 <?php echo esc_html__("Show on", 'gallery-photo-gallery'); ?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If you choose the case of Thumbnail hover the title will appear when the mouse cursor stops on the image, otherwise the title by default will appear at the bottom of the image.", 'gallery-photo-gallery');?>">
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If you choose the case of Thumbnail hover the title will appear when the mouse cursor stops on the image, otherwise the title by default will appear at the bottom of the image.", 'gallery-photo-gallery'); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
@@ -1434,28 +1434,28 @@ $gpg_accordion_svg_html = '
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label >
-                                                <?php echo esc_html__("Image title position", 'gallery-photo-gallery');?>
-                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Show title: in the bottom or on top", 'gallery-photo-gallery');?>">
+                                                <?php echo esc_html__("Image title position", 'gallery-photo-gallery'); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Show title: in the bottom or on top", 'gallery-photo-gallery'); ?>">
                                                    <i class="fas fa-info-circle"></i>
                                                 </a>
                                             </label>
                                         </div>
                                         <div class="col-sm-8 ays_divider_left">
-                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Bottom", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="image_title_position" <?php echo ($thumb_title_position == "bottom") ? "checked" : ""; ?> value="bottom"/></label>
-                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Top", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_top" name="image_title_position" <?php echo ($thumb_title_position == "top") ? "checked" : ""; ?> value="top"/></label>
+                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Bottom", 'gallery-photo-gallery'); ?> <input type="radio" class="image_title_position_bottom" name="image_title_position" <?php echo ($thumb_title_position == "bottom") ? "checked" : ""; ?> value="bottom"/></label>
+                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Top", 'gallery-photo-gallery'); ?> <input type="radio" class="image_title_position_top" name="image_title_position" <?php echo ($thumb_title_position == "top") ? "checked" : ""; ?> value="top"/></label>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-4">
                                             <label><?php echo esc_html__( "Show with date ", 'gallery-photo-gallery'); ?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If you choose the Show with a date of adding the image to the gallery will appear on the date with the title.", 'gallery-photo-gallery');?>">
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("If you choose the Show with a date of adding the image to the gallery will appear on the date with the title.", 'gallery-photo-gallery'); ?>">
                                                        <i class="fas fa-info-circle"></i>
                                                     </a>
                                             </label>
                                         </div>    
                                         <div class="col-sm-8 ays_divider_left">
-                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Yes", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "on") ? "checked" : ""; ?> value="on"/></label>
-                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("No", 'gallery-photo-gallery');?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "") ? "checked" : ""; ?> value=""/></label>
+                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Yes", 'gallery-photo-gallery'); ?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "on") ? "checked" : ""; ?> value="on"/></label>
+                                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("No", 'gallery-photo-gallery'); ?> <input type="radio" class="image_title_position_bottom" name="ays_gpg_show_with_date" <?php echo ($gal_options['show_with_date'] == "") ? "checked" : ""; ?> value=""/></label>
                                         </div>
                                     </div>
                                 </div>
@@ -1466,8 +1466,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="light_box">
-                                <?php echo esc_html__("Disable lightbox", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("By checking this option it will disable lightbox on image click", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Disable lightbox", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("By checking this option it will disable lightbox on image click", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1480,8 +1480,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="link_on_whole_img">
-                                <?php echo esc_html__("Make a link on the whole image", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Make a URL redirection while clicking on any spot on the image container. Please note that the option works when the Disable lightbox option is activated.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Make a link on the whole image", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Make a URL redirection while clicking on any spot on the image container. Please note that the option works when the Disable lightbox option is activated.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1494,8 +1494,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="gpg_search_img">
-                                <?php echo esc_html__("Enable search for image", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This option is not compatible with the Mosaic layout.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Enable search for image", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This option is not compatible with the Mosaic layout.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1525,16 +1525,16 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="gallery_width">
-                                <?php echo esc_html__("Gallery Width", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the width of the Gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Gallery Width", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This field shows the width of the Gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
                             <div>
-                               <input type="number" id="gallery_width" class="ays-text-input ays-text-input-short" name="gallery_width" placeholder="<?php echo esc_attr__("Gallery Width", 'gallery-photo-gallery');?>" value="<?php echo $gallery["width"] == 0 ? '' : $gallery["width"]; ?>"/>
-                            <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("For 100% leave blank", 'gallery-photo-gallery');?></span>
+                               <input type="number" id="gallery_width" class="ays-text-input ays-text-input-short" name="gallery_width" placeholder="<?php echo esc_attr__("Gallery Width", 'gallery-photo-gallery'); ?>" value="<?php echo $gallery["width"] == 0 ? '' : $gallery["width"]; ?>"/>
+                            <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("For 100% leave blank", 'gallery-photo-gallery'); ?></span>
                             </div>
                             <div class="ays_gpg_dropdown_max_width">
                                 <input type="text" value="px" class="ays-gpg-form-hint-for-size" disabled="">
@@ -1575,8 +1575,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row" id="ays_gpg_resp_width" <?php echo $bacel;?>>
                         <div class="col-sm-3">
                             <label for="gpg_resp_width">
-                                <?php echo esc_html__("Responsive Width/Height", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Enable the option if you want to assign the values to height and weight by ratio.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Responsive Width/Height", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Enable the option if you want to assign the values to height and weight by ratio.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1589,8 +1589,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row bacel" id="ays_height_width_ratio" <?php echo $height_width_ratio;?>>
                         <div class="col-sm-3">
                             <label for="gpg_height_width_ratio">
-                                <?php echo esc_html__("Height / Width ratio", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This ratio indicates the quantitative relation between height and width. For example, if you give 1.2 value to ratio while the width is 300, then the height will be 300x1.2=360.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Height / Width ratio", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("This ratio indicates the quantitative relation between height and width. For example, if you give 1.2 value to ratio while the width is 300, then the height will be 300x1.2=360.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1603,8 +1603,8 @@ $gpg_accordion_svg_html = '
                     <div id="ays-thumb-height" class="form-group row pakel3" <?php echo $thumb_height;?>>
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Thumbnails height", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The height of the thumbnails of the Gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Thumbnails height", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The height of the thumbnails of the Gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1614,7 +1614,7 @@ $gpg_accordion_svg_html = '
                                 <div class="col-sm-2">
                                     <label for="ays_thumb_height_desktop">
                                         <?php echo esc_html__("On desktop", 'gallery-photo-gallery'); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnails height of the gallery for desktop devices.", 'gallery-photo-gallery');?>">
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnails height of the gallery for desktop devices.", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -1633,7 +1633,7 @@ $gpg_accordion_svg_html = '
                                 <div class="col-sm-2">
                                     <label for="ays_thumb_height_mobile">
                                         <?php echo esc_html__("On mobile", 'gallery-photo-gallery'); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnails height of the gallery for mobile devices.", 'gallery-photo-gallery');?>">
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnails height of the gallery for mobile devices.", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -1653,8 +1653,8 @@ $gpg_accordion_svg_html = '
                     <div id="ays-columns-count" class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_columns_count">
-                                <?php echo esc_html__("Columns count", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The counts of the columns of the Gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Columns count", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The counts of the columns of the Gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -1664,13 +1664,13 @@ $gpg_accordion_svg_html = '
                                 <div class="col-sm-2">
                                     <label for="ays_columns_count">
                                         <?php echo esc_html__("On desktop", 'gallery-photo-gallery'); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the columns count of the gallery for desktop devices.", 'gallery-photo-gallery');?>">
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the columns count of the gallery for desktop devices.", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
                                 </div>
                                 <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
-                                    <input type="number" id="ays_columns_count" name="ays-columns-count" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("Default", 'gallery-photo-gallery');?>: 3" value="<?php echo isset($gal_options['columns_count']) ? $gal_options['columns_count'] : 3; ?>"/>
+                                    <input type="number" id="ays_columns_count" name="ays-columns-count" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("Default", 'gallery-photo-gallery'); ?>: 3" value="<?php echo isset($gal_options['columns_count']) ? $gal_options['columns_count'] : 3; ?>"/>
                                 </div>
                             </div>
                             <hr>
@@ -1678,13 +1678,13 @@ $gpg_accordion_svg_html = '
                                 <div class="col-sm-2">
                                     <label for="ays_thumb_height_mobile">
                                         <?php echo esc_html__("On mobile", 'gallery-photo-gallery'); ?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the columns count of the gallery for mobile devices.", 'gallery-photo-gallery');?>">
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the columns count of the gallery for mobile devices.", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
                                 </div>                        
                                 <div class="col-sm-10 ays_gpg_display_flex_width ays_divider_left">
-                                    <input type="number" id="ays_columns_count_mobile" name="ays-columns-count-mobile" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("Default", 'gallery-photo-gallery');?>: 1" value="<?php echo isset($gal_options['columns_count_mobile']) ? $gal_options['columns_count_mobile'] : 1; ?>"/>
+                                    <input type="number" id="ays_columns_count_mobile" name="ays-columns-count-mobile" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("Default", 'gallery-photo-gallery'); ?>: 1" value="<?php echo isset($gal_options['columns_count_mobile']) ? $gal_options['columns_count_mobile'] : 1; ?>"/>
                                 </div>
                             </div>
                         </div>
@@ -1783,21 +1783,21 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row" style="padding-top:15px;">
                                 <div class="col-sm-3">
                                     <label for="gallery_pagination">
-                                        <?php echo esc_html__("Pagination", 'gallery-photo-gallery');?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You will be able to choose the way of the pagination. By default it is none, so all the images will loaded in the Front-end.", 'gallery-photo-gallery');?>">
+                                        <?php echo esc_html__("Pagination", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You will be able to choose the way of the pagination. By default it is none, so all the images will loaded in the Front-end.", 'gallery-photo-gallery'); ?>">
                                         <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
                                 </div>
                                 <div class="col-sm-9 ays_divider_left">
                                     <div>
-                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_none"><?php echo esc_html__("None", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?>
                                             <input type="radio" id="gpg_pagination_none" name="ays_gpg_pagination" value="none"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_simple"><?php echo esc_html__("Simple", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_simple"><?php echo esc_html__("Simple", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" id="gpg_pagination_simple" name="ays_gpg_pagination" value="simple"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_load_more"><?php echo esc_html__("Load More ", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon" id="gpg_pagination_load_more"><?php echo esc_html__("Load More ", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" id="gpg_pagination_load_more" name="ays_gpg_pagination" checked value="load_more"/>
                                         </label>
                                     </div>
@@ -1807,8 +1807,8 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row show_load_effect_simple">
                                 <div class="col-sm-3">
                                     <label for="gallery_img_per_page_simple">
-                                        <?php echo esc_html__("Images per page", 'gallery-photo-gallery');?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Set the exact number of images you want to be displayed on each page", 'gallery-photo-gallery');?>">
+                                        <?php echo esc_html__("Images per page", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Set the exact number of images you want to be displayed on each page", 'gallery-photo-gallery'); ?>">
                                         <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -1821,8 +1821,8 @@ $gpg_accordion_svg_html = '
                                 <div class="form-group row">
                                     <div class="col-sm-3">
                                         <label for="gallery_img_per_page_load_more">
-                                            <?php echo esc_html__("Images per page", 'gallery-photo-gallery');?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the number of images you want to be displayed at the beginning", 'gallery-photo-gallery');?>">
+                                            <?php echo esc_html__("Images per page", 'gallery-photo-gallery'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the number of images you want to be displayed at the beginning", 'gallery-photo-gallery'); ?>">
                                                 <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
@@ -1835,8 +1835,8 @@ $gpg_accordion_svg_html = '
                                 <div class="form-group row">
                                     <div class="col-sm-3">
                                         <label for="gallery_img_per_load">
-                                            <?php echo esc_html__("Images per load", 'gallery-photo-gallery');?>
-                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose how many images will be loaded after clicking on the ''Load More'' button", 'gallery-photo-gallery');?>">
+                                            <?php echo esc_html__("Images per load", 'gallery-photo-gallery'); ?>
+                                            <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose how many images will be loaded after clicking on the ''Load More'' button", 'gallery-photo-gallery'); ?>">
                                             <i class="fas fa-info-circle"></i>
                                             </a>
                                         </label>
@@ -1926,7 +1926,7 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Gallery view type", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Gallery view type", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo  esc_attr__('This section notes the type of the Gallery that is in what sequence should the pictures be', 'gallery-photo-gallery') ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
@@ -1967,19 +1967,19 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover effect", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Effect intended for hover according to animation", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover effect", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Effect intended for hover according to animation", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
                             <div>
-                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Simple animation ", 'gallery-photo-gallery');?>
+                                <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Simple animation ", 'gallery-photo-gallery'); ?>
                                     <input type="radio" class="ays_hover_effect_radio ays_hover_effect_radio_simple" name="ays_images_hover_effect" <?php
                                        echo ($ays_images_hover_effect == "simple") ? "checked" : ""; ?> value="simple"/>
                                 </label>
-                                <label class="ays_gpg_image_hover_icon" style="<?php echo ($gal_options['view_type'] == "masonry") ? "color: rgb(204, 204, 204);" : ""; ?>"><?php echo esc_html__("Direction-aware ", 'gallery-photo-gallery');?> <input type="radio" class="ays_hover_effect_radio ays_hover_effect_radio_dir_aware" name="ays_images_hover_effect" <?php echo ($ays_images_hover_effect == "dir_aware") ? "checked" : ""; ?> <?php echo ($gal_options['view_type'] == "masonry") ? "disabled='disabled'" : ""; ?> value="dir_aware"/></label>
+                                <label class="ays_gpg_image_hover_icon" style="<?php echo ($gal_options['view_type'] == "masonry") ? "color: rgb(204, 204, 204);" : ""; ?>"><?php echo esc_html__("Direction-aware ", 'gallery-photo-gallery'); ?> <input type="radio" class="ays_hover_effect_radio ays_hover_effect_radio_dir_aware" name="ays_images_hover_effect" <?php echo ($ays_images_hover_effect == "dir_aware") ? "checked" : ""; ?> <?php echo ($gal_options['view_type'] == "masonry") ? "disabled='disabled'" : ""; ?> value="dir_aware"/></label>
                             </div>
                         </div>
                     </div>
@@ -1988,8 +1988,8 @@ $gpg_accordion_svg_html = '
                         <div class="form-group row">
                             <div class="col-sm-3">
                                 <label for="gallery_img_hover_simple">
-                                    <?php echo esc_html__("Images hover animation", 'gallery-photo-gallery');?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Hover appearing animation of the images of Gallery", 'gallery-photo-gallery');?>">
+                                    <?php echo esc_html__("Images hover animation", 'gallery-photo-gallery'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Hover appearing animation of the images of Gallery", 'gallery-photo-gallery'); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
@@ -2004,10 +2004,10 @@ $gpg_accordion_svg_html = '
                                         <option <?php echo 'fadeInUp'    == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="fadeInUp">Fade In Up</option>
                                     </optgroup>
                                     <optgroup label="Sliding Entrances">
-                                        <option <?php echo ($gal_options['hover_effect'] == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery');?></option>
-                                        <option <?php echo ($gal_options['hover_effect'] == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery');?></option>
-                                        <option <?php echo ($gal_options['hover_effect'] == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery');?></option>
-                                        <option <?php echo ($gal_options['hover_effect'] == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery');?></option>
+                                        <option <?php echo ($gal_options['hover_effect'] == "slideInUp") ? "selected" : ""; ?> value="slideInUp"><?php echo esc_html__("Slide Up", 'gallery-photo-gallery'); ?></option>
+                                        <option <?php echo ($gal_options['hover_effect'] == "slideInDown") ? "selected" : ""; ?> value="slideInDown"><?php echo esc_html__("Slide Down", 'gallery-photo-gallery'); ?></option>
+                                        <option <?php echo ($gal_options['hover_effect'] == "slideInLeft") ? "selected" : ""; ?> value="slideInLeft"><?php echo esc_html__("Slide Left", 'gallery-photo-gallery'); ?></option>
+                                        <option <?php echo ($gal_options['hover_effect'] == "slideInRight") ? "selected" : ""; ?> value="slideInRight"><?php echo esc_html__("Slide Right", 'gallery-photo-gallery'); ?></option>
                                     </optgroup>                                
                                     <optgroup label="Zoom Entrances">
                                         <option <?php echo 'zoomIn' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="zoomIn">Zoom In</option> 
@@ -2021,7 +2021,7 @@ $gpg_accordion_svg_html = '
                             <div class="col-sm-2 ays_divider_left">
                                 <div class="gpg_animation_demo">
                                     <div class="gpg_animation_demo_text ">
-                                        <?php echo esc_html__("Hover animation preview", 'gallery-photo-gallery');?>
+                                        <?php echo esc_html__("Hover animation preview", 'gallery-photo-gallery'); ?>
                                     </div>
                                 </div>
                             </div>
@@ -2037,25 +2037,25 @@ $gpg_accordion_svg_html = '
                         <div class="form-group row">
                             <div class="col-sm-3">
                                 <label for="gallery_img_hover_dir_aware">
-                                    <?php echo esc_html__("Images hover animation", 'gallery-photo-gallery');?>
-                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Hover appearing animation of the images of Gallery", 'gallery-photo-gallery');?>">
+                                    <?php echo esc_html__("Images hover animation", 'gallery-photo-gallery'); ?>
+                                    <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Hover appearing animation of the images of Gallery", 'gallery-photo-gallery'); ?>">
                                        <i class="fas fa-info-circle"></i>
                                     </a>
                                 </label>
                             </div>
                             <div class="col-sm-3 ays_divider_left">
                                 <select id="gallery_img_hover_dir_aware" class="ays-text-input ays-text-input-short" name="ays_hover_dir_aware">
-                                    <option <?php echo 'slide' == $ays_images_hover_dir_aware ? 'selected' : ''; ?> value="slide"><?php echo esc_html__("Slide", 'gallery-photo-gallery');?></option>
-                                    <option <?php echo 'rotate3d' == $ays_images_hover_dir_aware ? 'selected' : ''; ?> value="rotate3d"><?php echo esc_html__("Rotate 3D", 'gallery-photo-gallery');?></option>
+                                    <option <?php echo 'slide' == $ays_images_hover_dir_aware ? 'selected' : ''; ?> value="slide"><?php echo esc_html__("Slide", 'gallery-photo-gallery'); ?></option>
+                                    <option <?php echo 'rotate3d' == $ays_images_hover_dir_aware ? 'selected' : ''; ?> value="rotate3d"><?php echo esc_html__("Rotate 3D", 'gallery-photo-gallery'); ?></option>
                                 </select>
                             </div>
                             <div class="col-sm-6" style="position: initial;">                    
                                 <div class="gpg_animation_demo_dAware demo_<?php echo $ays_images_hover_dir_aware; ?>">
                                     <div class="text_before_effect gpg_animation_demo_text" style="background: revert; color:#3c434a;">
-                                        <?php echo esc_html__("Hover this preview block", 'gallery-photo-gallery');?>
+                                        <?php echo esc_html__("Hover this preview block", 'gallery-photo-gallery'); ?>
                                     </div>
                                     <div class="gpg_animation_demo_text ays_hover_mask">
-                                        <?php echo esc_html__("Hover animation preview", 'gallery-photo-gallery');?>
+                                        <?php echo esc_html__("Hover animation preview", 'gallery-photo-gallery'); ?>
                                     </div>
                                 </div>
                             </div>
@@ -2103,8 +2103,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="gallery_img_position">
-                                <?php echo esc_html__("Image position", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The position image of the gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Image position", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The position image of the gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2164,8 +2164,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover opacity", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The transparency degree of the image hover", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover opacity", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The transparency degree of the image hover", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2210,8 +2210,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover color", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the image hover", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover color", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the image hover", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2239,8 +2239,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover zoom effect", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During image hover, the zoom effect of the image", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover zoom effect", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During image hover, the zoom effect of the image", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2272,8 +2272,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover scale box shadow effect", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During image hover, the scale box shadow effect of the image", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover scale box shadow effect", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During image hover, the scale box shadow effect of the image", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2305,8 +2305,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_gpg_filter_thubnail">
-                                <?php echo esc_html__("Choose filter for thumbnail", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The filter property defines visual effects to images of Gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Choose filter for thumbnail", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The filter property defines visual effects to images of Gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2317,15 +2317,15 @@ $gpg_accordion_svg_html = '
                                     <div>
                                         <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_filter_thubnail_opt_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_thubnail" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt">
-                                            <option <?php echo $filter_thubnail_opt == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery');?></option>
+                                            <option <?php echo $filter_thubnail_opt == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </div>
                                 </label>
@@ -2334,15 +2334,15 @@ $gpg_accordion_svg_html = '
                                     <label>
                                         <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_thubnail_mobile" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt_mobile">
-                                            <option <?php echo $filter_thubnail_opt_mobile == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery');?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo $filter_thubnail_opt_mobile == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </label>
                                 </div>
@@ -2454,8 +2454,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Images hover icon", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During hover, the icon seen on the image", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover icon", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("During hover, the icon seen on the image", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2532,15 +2532,15 @@ $gpg_accordion_svg_html = '
                                 <input type="radio" name="ays-gpg-image-hover-icon" value="camera" <?php echo $ays_hover_icon == 'camera' ? 'checked' : ''; ?>/>
                                 <i class="fas fa-camera"></i>
                             </label>
-                            <p class="ays_gpg_image_hover_icon_text"><span><?php echo esc_html__("Select icon for the gallery images", 'gallery-photo-gallery');?></span></p>
+                            <p class="ays_gpg_image_hover_icon_text"><span><?php echo esc_html__("Select icon for the gallery images", 'gallery-photo-gallery'); ?></span></p>
                         </div>
                     </div>
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays-gpg-hover-icon-size">
-                                <?php echo esc_html__("Images hover icon size", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the image hover icon size in pixels.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images hover icon size", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the image hover icon size in pixels.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2558,8 +2558,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays-gpg-images-distance">
-                                <?php echo esc_html__("Images distance", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The distance among images with pixels", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images distance", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The distance among images with pixels", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2719,8 +2719,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays-gpg-images-border-radius">
-                                <?php echo esc_html__("Images border radius", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The degree of borders curvature of images", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Images border radius", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The degree of borders curvature of images", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2765,8 +2765,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="ays_gpg_thumbnail_title_size">
-                                <?php echo esc_html__("Thumbnail title icon size", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnail image hover icon size in pixels.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Thumbnail title icon size", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Specify the thumbnail image hover icon size in pixels.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2798,8 +2798,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for='ays_gallery_title_color'>
-                                <?php echo esc_html__("Gallery title text color", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Gallery title", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Gallery title text color", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Gallery title", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2826,8 +2826,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for='ays_gallery_desc_color'>
-                                <?php echo esc_html__("Gallery description text color", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Gallery description", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Gallery description text color", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Gallery description", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2854,8 +2854,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label>
-                                <?php echo esc_html__("Background color of the Gallery thumbnail title", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the background of the Gallery Thumbnail title", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Background color of the Gallery thumbnail title", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the background of the Gallery Thumbnail title", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2882,8 +2882,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for='ays_gpg_thumbnail_title_color'>
-                                <?php echo esc_html__("Thumbnail title text color", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the color of the title text on the thumbnail. Make it transparent if you want.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Thumbnail title text color", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Choose the color of the title text on the thumbnail. Make it transparent if you want.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2910,22 +2910,22 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="custom_class">
-                                <?php echo esc_html__("Custom class", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Custom class", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Custom HTML class for gallery container. You can use your class for adding your custom styles for gallery container.", 'gallery-photo-gallery' ); ?>">
                                 <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-9 ays_divider_left">
-                            <input type="text" name="ays_custom_class" id="custom_class" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("myClass myAnotherClass...", 'gallery-photo-gallery');?>" value="<?php echo esc_attr($custom_class); ?>"/>
+                            <input type="text" name="ays_custom_class" id="custom_class" class="ays-text-input ays-text-input-short" placeholder="<?php echo esc_attr__("myClass myAnotherClass...", 'gallery-photo-gallery'); ?>" value="<?php echo esc_attr($custom_class); ?>"/>
                         </div>
                     </div>
                     <hr/>
                     <div class="form-group row">
                         <div class="col-sm-3">
                             <label for="gallery_custom_css">
-                                <?php echo esc_html__("Custom CSS", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can add your CSS", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Custom CSS", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You can add your CSS", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -2965,7 +2965,7 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label>
-                                <?php echo esc_html__("Images counter", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Images counter", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip"
                                    title="<?php echo esc_attr__('Enable this option to show the number of images while sliding them.', 'gallery-photo-gallery') ?>">
                                     <i class="fas fa-info-circle"></i>
@@ -2977,10 +2977,10 @@ $gpg_accordion_svg_html = '
                                 <div>
                                     <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_lightbox_counter_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                             <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "true") ? "checked" : ""; ?> value="true"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" class="" name="ays_gpg_lightbox_counter" <?php echo ($ays_gpg_lightbox_counter == "false") ? "checked" : ""; ?> value="false"/>
                                         </label>                                        
                                     </div>
@@ -2989,10 +2989,10 @@ $gpg_accordion_svg_html = '
                                     <hr>
                                     <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                             <input type="radio" class="" name="ays_gpg_lightbox_counter_mobile" <?php echo ($ays_gpg_lightbox_counter_mobile == "true") ? "checked" : ""; ?> value="true"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" class="" name="ays_gpg_lightbox_counter_mobile" <?php echo ($ays_gpg_lightbox_counter_mobile == "false") ? "checked" : ""; ?> value="false"/>
                                         </label> 
                                     </div>
@@ -3008,7 +3008,7 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label>
-                                <?php echo esc_html__("Show caption in lightbox", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Show caption in lightbox", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip"
                                    title="<?php echo esc_attr__('Enable this option to display the image caption in the lightbox.', 'gallery-photo-gallery') ?>">
                                     <i class="fas fa-info-circle"></i>
@@ -3020,10 +3020,10 @@ $gpg_accordion_svg_html = '
                                 <div>
                                     <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_gpg_show_caption_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                             <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "true") ? "checked" : ""; ?> value="true"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" class="" name="ays_gpg_show_caption" <?php echo ($ays_gpg_show_caption == "false") ? "checked" : ""; ?> value="false"/>
                                         </label>
                                     </div>
@@ -3032,10 +3032,10 @@ $gpg_accordion_svg_html = '
                                     <hr>
                                     <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 250px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                     <div class="ays_gpg_display_flex_width">
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                             <input type="radio" class="" name="ays_gpg_show_caption_mobile" <?php echo ($ays_gpg_show_caption_mobile == "true") ? "checked" : ""; ?> value="true"/>
                                         </label>
-                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                        <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                             <input type="radio" class="" name="ays_gpg_show_caption_mobile" <?php echo ($ays_gpg_show_caption_mobile == "false") ? "checked" : ""; ?> value="false"/>
                                         </label>
                                     </div>
@@ -3051,7 +3051,7 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label>
-                                <?php echo esc_html__("Images slide show", 'gallery-photo-gallery');?>
+                                <?php echo esc_html__("Images slide show", 'gallery-photo-gallery'); ?>
                                 <a class="ays_help" data-toggle="tooltip"
                                    title="<?php echo esc_attr__('Enable this option to automatically slide through the Images.', 'gallery-photo-gallery') ?>">
                                     <i class="fas fa-info-circle"></i>
@@ -3059,10 +3059,10 @@ $gpg_accordion_svg_html = '
                             </label>
                         </div>
                         <div class="col-sm-3 ays_divider_left">
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lightbox_autoplay" <?php echo ($ays_gpg_lightbox_autoplay == "true") ? "checked" : ""; ?> value="true"/>
                             </label>
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lightbox_autoplay" <?php echo ($ays_gpg_lightbox_autoplay == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
@@ -3070,7 +3070,10 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label for="ays_gpg_lightbox_pause">
-                                        <?php echo esc_html__("Slide duration", 'gallery-photo-gallery');?>
+                                        <?php echo esc_html__("Slide duration", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Set how long each image remains visible before the slideshow moves to the next image. The duration is entered in milliseconds.', 'gallery-photo-gallery'); ?>">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
                                     </label>
                                 </div>
                                 <div class="col-sm-9 ays_divider_left ays_gpg_display_flex_width">
@@ -3081,7 +3084,7 @@ $gpg_accordion_svg_html = '
                                                 <div class="ays_gpg_display_flex_width">
                                                     <div>
                                                         <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause" id="ays_gpg_lightbox_pause" value="<?php echo $ays_gpg_lightbox_pause; ?>" />
-                                                        <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
+                                                        <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery'); ?></span>
                                                     </div>
                                                     <div class="ays_gpg_dropdown_max_width">
                                                         <input type="text" value="ms" class="ays-gpg-form-hint-for-size" disabled="">
@@ -3096,7 +3099,7 @@ $gpg_accordion_svg_html = '
                                                 <div class="ays_gpg_display_flex_width">
                                                     <div>
                                                         <input type="number" class="ays-text-input" name="ays_gpg_lightbox_pause_mobile" id="ays_gpg_lightbox_pause_mobile" value="<?php echo $ays_gpg_lightbox_pause_mobile; ?>" />
-                                                        <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery');?></span>
+                                                        <span class="ays_gpg_image_hover_icon_text"><?php echo esc_html__("1 sec = 1000 ms", 'gallery-photo-gallery'); ?></span>
                                                     </div>
                                                     <div class="ays_gpg_dropdown_max_width">
                                                         <input type="text" value="ms" class="ays-gpg-form-hint-for-size" disabled="">
@@ -3115,14 +3118,17 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label>
-                                        <?php echo esc_html__("Hide Progress Line", 'gallery-photo-gallery');?>
+                                        <?php echo esc_html__("Hide Progress Line", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Choose whether to hide the progress line displayed at the top of the slideshow.', 'gallery-photo-gallery'); ?>">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
                                     </label>
                                 </div>                        
                                 <div class="col-sm-9 ays_divider_left">                            
-                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                         <input type="radio" class="" name="ays_gpg_hide_progress_line" <?php echo ($ays_gpg_hide_progress_line == "true") ? "checked" : ""; ?> value="true"/>
                                     </label>
-                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                         <input type="radio" class="" name="ays_gpg_hide_progress_line" <?php echo ($ays_gpg_hide_progress_line == "false") ? "checked" : ""; ?> value="false"/>
                                     </label>                            
                                 </div>
@@ -3131,8 +3137,8 @@ $gpg_accordion_svg_html = '
                             <div class="form-group row">
                                 <div class="col-sm-3">
                                     <label for='ays_gpg_progress_line_color'>
-                                        <?php echo esc_html__("Progress Line color", 'gallery-photo-gallery');?>
-                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Progress Line", 'gallery-photo-gallery');?>">
+                                        <?php echo esc_html__("Progress Line color", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The color of the Progress Line", 'gallery-photo-gallery'); ?>">
                                            <i class="fas fa-info-circle"></i>
                                         </a>
                                     </label>
@@ -3161,8 +3167,8 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label for="ays_gpg_filter_lightbox">
-                                <?php echo esc_html__("Choose filter for lightbox", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The filter property defines visual effects to images of Gallery", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Choose filter for lightbox", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("The filter property defines visual effects to images of Gallery", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
@@ -3173,15 +3179,15 @@ $gpg_accordion_svg_html = '
                                     <div>
                                         <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_filter_lightbox_opt_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_lightbox" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_lightbox_opt">
-                                            <option <?php echo ( $filter_lightbox_opt == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery');?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </div>
                                 </label>
@@ -3190,15 +3196,15 @@ $gpg_accordion_svg_html = '
                                     <label>
                                         <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_lightbox_mobile" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_lightbox_opt_mobile">
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery');?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery');?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                            <option <?php echo ( $filter_lightbox_opt_mobile == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </label>
                                 </div>
@@ -3213,30 +3219,35 @@ $gpg_accordion_svg_html = '
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label>
-                                <?php echo esc_html__("Allow key control", 'gallery-photo-gallery');?>
-                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Enable this option to allow your users to navigate through images via key control.", 'gallery-photo-gallery');?>">
+                                <?php echo esc_html__("Allow key control", 'gallery-photo-gallery'); ?>
+                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("Enable this option to allow your users to navigate through images via key control.", 'gallery-photo-gallery'); ?>">
                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </label>
                         </div>
                         <div class="col-sm-3 ays_divider_left">
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lg_keypress" <?php echo ($ays_gpg_lg_keypress == "true") ? "checked" : ""; ?> value="true"/>
                             </label>
-                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                            <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                 <input type="radio" class="ays_enable_disable" name="ays_gpg_lg_keypress" <?php echo ($ays_gpg_lg_keypress == "false") ? "checked" : ""; ?> value="false"/>
                             </label>
                         </div>
                         <div class="col-sm-7 ays_hidden ays_divider_left">
                             <div class="form-group row">
                                 <div class="col-sm-3">
-                                    <label><?php echo esc_html__("Allow Esc key", 'gallery-photo-gallery');?></label>
+                                    <label>
+                                        <?php echo esc_html__("Allow Esc Key", 'gallery-photo-gallery'); ?>
+                                        <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__('Choose whether users can close the lightbox by pressing the Esc key on their keyboard.', 'gallery-photo-gallery'); ?>">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
+                                    </label>
                                 </div>
                                 <div class="col-sm-9 ays_divider_left">
-                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery');?>
+                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Enable ", 'gallery-photo-gallery'); ?>
                                         <input type="radio" class="" name="ays_gpg_lg_esckey" <?php echo ($ays_gpg_lg_esckey == "true") ? "checked" : ""; ?> value="true"/>
                                     </label>
-                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery');?> 
+                                    <label class="ays_gpg_image_hover_icon"><?php echo esc_html__("Disable ", 'gallery-photo-gallery'); ?> 
                                         <input type="radio" class="" name="ays_gpg_lg_esckey" <?php echo ($ays_gpg_lg_esckey == "false") ? "checked" : ""; ?> value="false"/>
                                     </label>
                                 </div>
@@ -3324,8 +3335,8 @@ $gpg_accordion_svg_html = '
                     $buttons_html .= '<div class="ays_submit_button ays_save_buttons_box">';
                     echo $buttons_html;
             ?>
-                <input type="submit" name="ays-submit" class="button ays-submit ays-button action-button button-primary ays-gpg-save-comp" value="<?php echo esc_attr__("Save and close", 'gallery-photo-gallery');?>" gpg_submit_name="ays-submit" />            
-                <input type="submit" name="ays-apply" id="ays_submit_apply" class="button ays-button ays-submit ays-gpg-save-comp" title="Ctrl + s" data-toggle="tooltip" data-delay='{"show":"1000"}' value="<?php echo esc_attr__("Save", 'gallery-photo-gallery');?>" gpg_submit_name="ays-apply"/>
+                <input type="submit" name="ays-submit" class="button ays-submit ays-button action-button button-primary ays-gpg-save-comp" value="<?php echo esc_attr__("Save and close", 'gallery-photo-gallery'); ?>" gpg_submit_name="ays-submit" />            
+                <input type="submit" name="ays-apply" id="ays_submit_apply" class="button ays-button ays-submit ays-gpg-save-comp" title="Ctrl + s" data-toggle="tooltip" data-delay='{"show":"1000"}' value="<?php echo esc_attr__("Save", 'gallery-photo-gallery'); ?>" gpg_submit_name="ays-apply"/>
                 <?php echo $loader_iamge; ?> 
             <?php
                         
@@ -3357,8 +3368,8 @@ $gpg_accordion_svg_html = '
             </div>
         </div>
 		        
-        <button type="button" class="ays_gallery_live_preview" data-container="body" data-toggle="popover" data-placement="top" data-content="<?php echo esc_attr__("View your gallery in live preview. In the preview you can’t see Thumbnail size and Image order changes.", 'gallery-photo-gallery');?>" data-original-title="<?php echo esc_attr__("Gallery preview", 'gallery-photo-gallery');?>"><i class="fas fa-search-plus"></i></button>    
-        <button class="ays_gallery_live_save" type="submit" name="ays-apply" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-original-title="<?php echo esc_attr__("Save", 'gallery-photo-gallery');?>"><i class="far fa-save" gpg_submit_name="ays-apply"></i></button>
+        <button type="button" class="ays_gallery_live_preview" data-container="body" data-toggle="popover" data-placement="top" data-content="<?php echo esc_attr__("View your gallery in live preview. In the preview you can’t see Thumbnail size and Image order changes.", 'gallery-photo-gallery'); ?>" data-original-title="<?php echo esc_attr__("Gallery preview", 'gallery-photo-gallery'); ?>"><i class="fas fa-search-plus"></i></button>    
+        <button class="ays_gallery_live_save" type="submit" name="ays-apply" data-container="body" data-toggle="popover" data-placement="top" data-content="" data-original-title="<?php echo esc_attr__("Save", 'gallery-photo-gallery'); ?>"><i class="far fa-save" gpg_submit_name="ays-apply"></i></button>
         <input type="hidden" id="ays_gpg_admin_url" value="<?php echo AYS_GPG_ADMIN_URL; ?>"/>
     </form>
     </div>
