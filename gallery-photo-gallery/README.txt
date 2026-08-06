@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 7.0
-Stable tag: 6.8.1
+Stable tag: 6.8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -64,12 +64,12 @@ It is not a secret that images are one of the best and most effective ways to at
 Whether you specialize in **photography**, **creative design**, **journalism** or you are a **travel blogger**, your photos tell a unique story and deserve to be presented in the best possible way. And our friendly and feature rich Photo Gallery plugin will help you with that! Here, you can create your own single and multiple free galleries from your photo library. We offer a **responsive Lightbox Gallery plugin**. So you will give thorough information about your portfolio.
 Adding an image gallery page to your website helps with:
 
-* Attracting potential customers – As already mentioned images and photos grab attention, add engagement and give a boost in pageviews.
-* Generating more sales – Photo Galleries give more information about your work and affect the final purchase decision. 
-* Increasing SEO rankings – Adding relevant tags, URL and metadata will provide more visibility in search results in Google.
+* Attracting potential customers - As already mentioned images and photos grab attention, add engagement and give a boost in pageviews.
+* Generating more sales - Photo Galleries give more information about your work and affect the final purchase decision. 
+* Increasing SEO rankings - Adding relevant tags, URL and metadata will provide more visibility in search results in Google.
 * Better page navigation and control
 
-And… don't forget! Visual content is a power.
+And... don't forget! Visual content is a power.
 
 **[PRO](https://ays-pro.com/wordpress/photo-gallery) | [DEMO](https://ays-demo.com/wordpress-photo-gallery-plugin-pro-demo/) | [DOCUMENTATION](https://ays-pro.com/wordpress-photo-gallery-user-manual)**
 
@@ -210,7 +210,7 @@ The Photo Gallery has 30+ awesome views. In the Free version, you can find 3 typ
 
 = 7. Will the speed of the page fall because of many images? =
 
-Well, to avoid that we have designed 2 very important features – Thumbnail size and Global and Lazy loadings. To have fast performance you can chose between Global and Lazy loadings, also select your preferred thumbnail size. 
+Well, to avoid that we have designed 2 very important features - Thumbnail size and Global and Lazy loadings. To have fast performance you can chose between Global and Lazy loadings, also select your preferred thumbnail size. 
 
 = 8. Can I use Custom CSS for the Gallery? =
 
@@ -227,6 +227,9 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.8.2 ( Aug 06, 2026 ) =
+* Added: With/Without Description filter to the Gallery Categories list table
 
 = 6.8.1 ( Jule 21, 2026 ) =
 * Improved: Some changes on the admin dashboard

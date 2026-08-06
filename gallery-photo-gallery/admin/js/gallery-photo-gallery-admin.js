@@ -1712,7 +1712,7 @@
             }
         });
 
-        $(document).find('.cat-filter-apply-top, .cat-filter-apply-bottom, .user-filter-apply-top, .user-filter-apply-bottom, .category-filter-apply-top, .category-filter-apply-bottom').on('click', function(e){
+        $(document).find('.cat-filter-apply-top, .cat-filter-apply-bottom, .user-filter-apply-top, .user-filter-apply-bottom, .category-filter-apply-top, .category-filter-apply-bottom, .description-filter-apply-top, .description-filter-apply-bottom').on('click', function(e){
             e.preventDefault();
             var $this = $(this);
             var parent = $this.parents('.tablenav');
@@ -1730,6 +1730,8 @@
                 html_name = 'filterbyuser';
             } else if ( $this.hasClass('category-filter-apply-'+ top_or_bottom) ) {
                 html_name = 'filterbycategory';
+            } else if ( $this.hasClass('description-filter-apply-'+ top_or_bottom) ) {
+                html_name = 'filterbyDescription';
             } else if ( $this.hasClass('question-type-filter-apply-'+ top_or_bottom) ) {
                 html_name = 'type';
             }
@@ -1750,8 +1752,9 @@
                     if ( linkModified[i].split("=")[0] == "ays_result_tab" ) {
                         linkModified.splice(i, 1, "ays_result_tab=poststuff");
                     }
-                    if(linkModified[i].split("=")[0] == html_name){
+                    if(linkModified[i].split("=")[0] == html_name || linkModified[i].split("=")[0] == 'paged'){
                         linkModified.splice(i, 1);
+                        i--;
                     }
                 }
                 linkModified = linkModified.join('&');
@@ -1760,8 +1763,9 @@
                 var linkModifiedStart = link.split('?')[0];
                 var linkModified = link.split('?')[1].split('&');
                 for(var i = 0; i < linkModified.length; i++){
-                    if(linkModified[i].split("=")[0] == html_name){
+                    if(linkModified[i].split("=")[0] == html_name || linkModified[i].split("=")[0] == 'paged'){
                         linkModified.splice(i, 1);
+                        i--;
                     }
                 }
                 linkModified = linkModified.join('&');

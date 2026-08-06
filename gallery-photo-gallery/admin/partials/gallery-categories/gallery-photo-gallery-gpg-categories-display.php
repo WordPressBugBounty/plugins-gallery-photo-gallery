@@ -47,6 +47,7 @@ $plus_icon_svg = "<span class=''><img src='". esc_url(AYS_GPG_ADMIN_URL) ."/imag
             <div id="post-body-content">
                 <div class="meta-box-sortables ui-sortable">
                     <form method="post">
+                        <input type="hidden" name="page" value="<?php echo isset( $_REQUEST['page'] ) ? esc_attr( sanitize_key( wp_unslash( $_REQUEST['page'] ) ) ) : ''; ?>">
                         <?php
                             $this->gallery_cats_obj->prepare_items();
                             $search = __( "Search", 'gallery-photo-gallery' );
