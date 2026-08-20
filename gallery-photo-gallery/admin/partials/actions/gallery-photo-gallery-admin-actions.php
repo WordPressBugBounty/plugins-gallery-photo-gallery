@@ -2016,6 +2016,13 @@ $gpg_accordion_svg_html = '
                                         <option <?php echo 'zoomInRight' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="zoomInRight">Zoom In Right</option> 
                                         <option <?php echo 'zoomInUp' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="zoomInUp">Zoom In Up</option> 
                                     </optgroup>
+                                    <optgroup label="Bouncing Entrances">
+                                        <option <?php echo 'bounceIn' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceIn">Bounce In</option>
+                                        <option <?php echo 'bounceInDown' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInDown">Bounce In Down</option>
+                                        <option <?php echo 'bounceInLeft' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInLeft">Bounce In Left</option>
+                                        <option <?php echo 'bounceInRight' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInRight">Bounce In Right</option>
+                                        <option <?php echo 'bounceInUp' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInUp">Bounce In Up</option>
+                                    </optgroup>
                                 </select>
                             </div>
                             <div class="col-sm-2 ays_divider_left">

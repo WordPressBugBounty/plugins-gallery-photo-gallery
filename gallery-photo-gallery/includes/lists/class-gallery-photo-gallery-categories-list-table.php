@@ -3,16 +3,34 @@ ob_start();
 class Gpg_Categories_List_Table extends WP_List_Table{
     private $plugin_name;
     private $title_length;
+
+    /**
+     * The wp nonce of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string    $ays_gallery_nonce
+     */
+    public $ays_gallery_nonce;
+
     /** Class constructor */
     public function __construct($plugin_name) {
         $this->plugin_name = $plugin_name;
         $this->title_length = Gallery_Photo_Gallery_Admin::get_gpg_listtables_title_length('image_categories');
         parent::__construct( array(
-            'singular' => __( 'Image Category', 'gallery-photo-gallery' ), //singular name of the listed records
-            'plural'   => __( 'Image Categories', 'gallery-photo-gallery' ), //plural name of the listed records
-            'ajax'     => false //does this table support ajax?
+            'singular'  => __( 'Image Category', 'gallery-photo-gallery' ), //singular name of the listed records
+            'plural'    => __( 'Image Categories', 'gallery-photo-gallery' ), //plural name of the listed records
+            'ajax'      => false //does this table support ajax?
         ) );
         add_action( 'admin_notices', array( $this, 'image_category_notices' ) );
+
+        $this->ays_gallery_nonce = wp_create_nonce('ays_gallery_admin_category_list_table_nonce');
+
+        if( empty($this->ays_gallery_nonce) ){
+            add_action('init', function () {
+                $this->ays_gallery_nonce = wp_create_nonce('ays_gallery_admin_category_list_table_nonce');
+            }, 1);
+        }
     }
     
     /**
@@ -102,8 +120,8 @@ class Gpg_Categories_List_Table extends WP_List_Table{
                 $result = $wpdb->update(
                     $gpg_category_table,
                     array(
-                        'title'         => $title,
-                        'description'   => $description
+                        'title'             => $title,
+                        'description'       => $description
                     ),
                     array( 'id' => $id ),
                     array( '%s', '%s' ),
@@ -116,9 +134,9 @@ class Gpg_Categories_List_Table extends WP_List_Table{
                 if($ays_change_type != ''){
                     if($id == null){
                         $url = esc_url_raw( add_query_arg( array(
-                            "action"    => "edit",
+                            "action"            => "edit",
                             "gallery_category"  => $wpdb->insert_id,
-                            "status"    => $message
+                            "status"            => $message
                         ) ) );
                     }else{
                         $url = esc_url_raw( remove_query_arg(false) ) . '&status=' . $message;
@@ -180,8 +198,8 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         $result = $wpdb->insert(
             $image_category_table,
             array(
-                'title'         =>  "Copy - " . $title,
-                'description'   => $description,
+                'title'             =>  "Copy - " . $title,
+                'description'       => $description,
             ),
             array(
                 '%s', // title
@@ -214,7 +232,23 @@ class Gpg_Categories_List_Table extends WP_List_Table{
      *
      * @return null|string
      */
-    public static function record_count() {
+    public function record_count() {
+
+            // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_category_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
         global $wpdb;
 
         $filter = array();
@@ -223,7 +257,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
         $search = ( isset( $_REQUEST['s'] ) ) ? sanitize_text_field(wp_unslash( $_REQUEST['s']) ) : false;
         if( $search ){
-            $filter[] = sprintf(" title LIKE '%%%s%%' ", $search );
+            $filter[] = $wpdb->prepare(" title LIKE %s ", '%' . $wpdb->esc_like( $search ) . '%');
         }
         
         if(count($filter) !== 0){
@@ -365,10 +399,10 @@ class Gpg_Categories_List_Table extends WP_List_Table{
      */
     function get_columns() {
         $columns = array(
-            'cb'            => '<input type="checkbox" />',
-            'title'         => __( 'Title', 'gallery-photo-gallery' ),
-            'description'   => __( 'Description', 'gallery-photo-gallery' ),
-            'id'            => __( 'ID', 'gallery-photo-gallery' ),
+            'cb'                => '<input type="checkbox" />',
+            'title'             => __( 'Title', 'gallery-photo-gallery' ),
+            'description'       => __( 'Description', 'gallery-photo-gallery' ),
+            'id'                => __( 'ID', 'gallery-photo-gallery' ),
         );
 
         return $columns;
@@ -382,8 +416,8 @@ class Gpg_Categories_List_Table extends WP_List_Table{
      */
     public function get_sortable_columns() {
         $sortable_columns = array(
-            'title'         => array( 'title', true ),
-            'id'            => array( 'id', true ),
+            'title'             => array( 'title', true ),
+            'id'                => array( 'id', true ),
         );
 
         return $sortable_columns;
@@ -408,6 +442,23 @@ class Gpg_Categories_List_Table extends WP_List_Table{
      */
     public function prepare_items() {
 
+         // Run a security check.
+        if ( empty( $this->ays_gallery_nonce ) || ! wp_verify_nonce( $this->ays_gallery_nonce, 'ays_gallery_admin_category_list_table_nonce' ) ) {
+            // This nonce is not valid.
+            wp_die( esc_html__( 'Nonce verification failed!', 'gallery-photo-gallery' ) );
+        }
+
+        if( ! is_user_logged_in() ){
+            return;
+        }
+
+        // Verify unauthorized requests
+        if( ! current_user_can( 'manage_options' ) ){
+            return;
+        }
+
+        global $wpdb;
+
         $this->_column_headers = $this->get_column_info();
 
         /** Process bulk action */
@@ -415,7 +466,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
         $per_page     = $this->get_items_per_page( 'gallery_categories_per_page', 20 );
         $current_page = $this->get_pagenum();
-        $total_items  = self::record_count();
+        $total_items  = $this->record_count();
 
         $this->set_pagination_args( array(
             'total_items' => $total_items, //WE have to calculate the total number of items
@@ -425,7 +476,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
         $search = ( isset( $_REQUEST['s'] ) ) ? sanitize_text_field(wp_unslash( $_REQUEST['s']) ) : false;
 
-        $do_search = ( $search ) ? sprintf(" title LIKE '%%%s%%' ", $search ) : '';
+        $do_search = ( $search ) ? $wpdb->prepare(" title LIKE %s ", '%' . $wpdb->esc_like( $search ) . '%') : '';
 
 
         $this->items = self::get_image_categories( $per_page, $current_page,$do_search );

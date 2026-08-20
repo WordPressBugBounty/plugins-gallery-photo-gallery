@@ -4,7 +4,7 @@ Donate link: https://ays-pro.com/wordpress/photo-gallery
 Tags:  photo gallery, image gallery, responsive gallery, wordpress gallery plugin, gallery
 Requires at least: 4.0
 Tested up to: 7.0
-Stable tag: 6.8.2
+Stable tag: 6.8.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -227,6 +227,11 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 
 == Changelog ==
+
+= 6.8.3 ( Aug 19, 2026 ) =
+* Added: Bouncing Entrances in Images hover animation option
+* Improved: Some changes on the admin dashboard
+
 
 = 6.8.2 ( Aug 06, 2026 ) =
 * Added: With/Without Description filter to the Gallery Categories list table
