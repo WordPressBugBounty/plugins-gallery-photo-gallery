@@ -490,10 +490,17 @@
 
         $(document).find('.ays_animation_preview').on('click', function(){
             let animationVal = $(document).find('#gallery_img_hover_simple').val();
+            // Attention seeker animations don't have "Out" versions
+            let attentionSeekers = ['tada', 'rubberBand', 'pulse', 'shake', 'swing', 'wobble', 'jello'];
+            let outAnimation = attentionSeekers.includes(animationVal) ? 'fadeOut' : animationVal.replace('In', 'Out');
+            
             $(document).find('.gpg_animation_demo_text').css({"animation-name":animationVal});
             setTimeout(function () {
-                $(document).find('.gpg_animation_demo_text').css('animation-name','');                
-            }, 350);
+                $(document).find('.gpg_animation_demo_text').css('animation-name', outAnimation);
+                setTimeout(function () {
+                    $(document).find('.gpg_animation_demo_text').css('animation-name','');
+                }, 350);
+            }, 500);
         });
 
         $(document).find('#gallery_img_hover_dir_aware').on('change', function(){

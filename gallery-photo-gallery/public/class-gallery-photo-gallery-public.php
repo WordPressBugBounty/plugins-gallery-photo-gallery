@@ -401,7 +401,14 @@ class Gallery_Photo_Gallery_Public {
         $ays_hover_dir_aware_js = "";
         if($ays_images_hover_effect == "simple"){
             
-            $hover_out_effect = str_replace("In", "Out", $hover_effect);
+            // Attention seeker animations don't have "Out" versions, so use fadeOut for exit
+            $attention_seekers = array('tada', 'rubberBand', 'pulse', 'shake', 'swing', 'wobble', 'jello');
+            if(in_array($hover_effect, $attention_seekers)){
+                $hover_out_effect = 'fadeOut';
+            } else {
+                $hover_out_effect = str_replace("In", "Out", $hover_effect);
+            }
+            
             $hover_effect__simple_js = "$(document).find('$gallery_item_class').hover(function(){
                                             $(this).find('.ays_hover_mask').css('animation-name', '".$hover_effect."');
                                             $(this).find('.ays_hover_mask').css('animation-duration', '.5s');

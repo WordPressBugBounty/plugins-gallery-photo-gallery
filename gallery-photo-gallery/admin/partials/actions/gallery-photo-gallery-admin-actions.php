@@ -2023,6 +2023,15 @@ $gpg_accordion_svg_html = '
                                         <option <?php echo 'bounceInRight' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInRight">Bounce In Right</option>
                                         <option <?php echo 'bounceInUp' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="bounceInUp">Bounce In Up</option>
                                     </optgroup>
+                                    <optgroup label="Attention Seekers">
+                                        <option <?php echo 'tada' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="tada">Tada</option>
+                                        <option <?php echo 'rubberBand' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="rubberBand">Rubber Band</option>
+                                        <option <?php echo 'pulse' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="pulse">Pulse</option>
+                                        <option <?php echo 'shake' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="shake">Shake</option>
+                                        <option <?php echo 'swing' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="swing">Swing</option>
+                                        <option <?php echo 'wobble' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="wobble">Wobble</option>
+                                        <option <?php echo 'jello' == $gal_options['hover_effect'] ? 'selected' : ''; ?> value="jello">Jello</option>
+                                    </optgroup>
                                 </select>
                             </div>
                             <div class="col-sm-2 ays_divider_left">
