@@ -2333,15 +2333,16 @@ $gpg_accordion_svg_html = '
                                     <div>
                                         <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_filter_thubnail_opt_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_thubnail" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt">
-                                            <option <?php echo $filter_thubnail_opt == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "opacity" ? "selected" : ""; ?> value="opacity"><?php echo esc_html__("Opacity", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </div>
                                 </label>
@@ -2350,15 +2351,16 @@ $gpg_accordion_svg_html = '
                                     <label>
                                         <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_thubnail_mobile" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_thubnail_opt_mobile">
-                                            <option <?php echo $filter_thubnail_opt_mobile == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo $filter_thubnail_opt_mobile == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "none" ? "selected" : ""; ?> value="none"><?php echo esc_html__("Default none", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "blur" ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "brightness" ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "contrast" ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "grayscale" ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "hue_rotate" ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "invert" ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "opacity" ? "selected" : ""; ?> value="opacity"><?php echo esc_html__("Opacity", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "saturate" ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo $filter_thubnail_opt_mobile == "sepia" ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </label>
                                 </div>
@@ -2664,15 +2666,15 @@ $gpg_accordion_svg_html = '
                                                 <div>
                                                     <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_ays_images_border_style_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                                     <select id="ays_gpg_images_border_style" name="ays_gpg_images_border_style">
-                                                        <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
-                                                        <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
-                                                        <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
-                                                        <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
-                                                        <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
-                                                        <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
-                                                        <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
-                                                        <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
-                                                        <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
+                                                            <option value="solid" <?php echo $ays_images_border_style == "solid" ? 'selected' : ''; ?>>Solid</option>
+                                                            <option value="dashed" <?php echo $ays_images_border_style == "dashed" ? 'selected' : ''; ?>>Dashed</option>
+                                                            <option value="dotted" <?php echo $ays_images_border_style == "dotted" ? 'selected' : ''; ?>>Dotted</option>
+                                                            <option value="double" <?php echo $ays_images_border_style == "double" ? 'selected' : ''; ?>>Double</option>
+                                                            <option value="groove" <?php echo $ays_images_border_style == "groove" ? 'selected' : ''; ?>>Groove</option>
+                                                            <option value="ridge" <?php echo $ays_images_border_style == "ridge" ? 'selected' : ''; ?>>Ridge</option>
+                                                            <option value="inset" <?php echo $ays_images_border_style == "inset" ? 'selected' : ''; ?>>Inset</option>
+                                                            <option value="outset" <?php echo $ays_images_border_style == "outset" ? 'selected' : ''; ?>>Outset</option>
+                                                            <option value="none" <?php echo $ays_images_border_style == "none" ? 'selected' : ''; ?>>None</option>
                                                     </select>
                                                 </div>
                                             </label>
@@ -2681,15 +2683,15 @@ $gpg_accordion_svg_html = '
                                                 <label>
                                                     <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                                     <select id="ays_gpg_images_border_style_mobile" name="ays_gpg_images_border_style_mobile">
-                                                        <option value="solid" <?php echo $ays_images_border_style_mobile == "solid" ? 'selected' : ''; ?>>Solid</option>
-                                                        <option value="dashed" <?php echo $ays_images_border_style_mobile == "dashed" ? 'selected' : ''; ?>>Dashed</option>
-                                                        <option value="dotted" <?php echo $ays_images_border_style_mobile == "dotted" ? 'selected' : ''; ?>>Dotted</option>
-                                                        <option value="double" <?php echo $ays_images_border_style_mobile == "double" ? 'selected' : ''; ?>>Double</option>
-                                                        <option value="groove" <?php echo $ays_images_border_style_mobile == "groove" ? 'selected' : ''; ?>>Groove</option>
-                                                        <option value="ridge" <?php echo $ays_images_border_style_mobile == "ridge" ? 'selected' : ''; ?>>Ridge</option>
-                                                        <option value="inset" <?php echo $ays_images_border_style_mobile == "inset" ? 'selected' : ''; ?>>Inset</option>
-                                                        <option value="outset" <?php echo $ays_images_border_style_mobile == "outset" ? 'selected' : ''; ?>>Outset</option>
-                                                        <option value="none" <?php echo $ays_images_border_style_mobile == "none" ? 'selected' : ''; ?>>None</option>
+                                                            <option value="solid" <?php echo $ays_images_border_style_mobile == "solid" ? 'selected' : ''; ?>>Solid</option>
+                                                            <option value="dashed" <?php echo $ays_images_border_style_mobile == "dashed" ? 'selected' : ''; ?>>Dashed</option>
+                                                            <option value="dotted" <?php echo $ays_images_border_style_mobile == "dotted" ? 'selected' : ''; ?>>Dotted</option>
+                                                            <option value="double" <?php echo $ays_images_border_style_mobile == "double" ? 'selected' : ''; ?>>Double</option>
+                                                            <option value="groove" <?php echo $ays_images_border_style_mobile == "groove" ? 'selected' : ''; ?>>Groove</option>
+                                                            <option value="ridge" <?php echo $ays_images_border_style_mobile == "ridge" ? 'selected' : ''; ?>>Ridge</option>
+                                                            <option value="inset" <?php echo $ays_images_border_style_mobile == "inset" ? 'selected' : ''; ?>>Inset</option>
+                                                            <option value="outset" <?php echo $ays_images_border_style_mobile == "outset" ? 'selected' : ''; ?>>Outset</option>
+                                                            <option value="none" <?php echo $ays_images_border_style_mobile == "none" ? 'selected' : ''; ?>>None</option>
                                                     </select>
                                                 </label>
                                             </div>
@@ -3195,15 +3197,15 @@ $gpg_accordion_svg_html = '
                                     <div>
                                         <div class="ays_gpg_current_device_name ays_gpg_current_device_name_pc_default_on ays_gpg_current_device_name_pc show ays_toggle_target" style="<?php echo ( $enable_filter_lightbox_opt_mobile ) ? '' : 'display: none;' ?> text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('PC', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_lightbox" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_lightbox_opt">
-                                            <option <?php echo ( $filter_lightbox_opt == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </div>
                                 </label>
@@ -3212,15 +3214,15 @@ $gpg_accordion_svg_html = '
                                     <label>
                                         <div class="ays_gpg_current_device_name show" style="text-align: center; margin-bottom: 10px; max-width: 200px;"><?php echo esc_html__('Mobile', 'gallery-photo-gallery') ?></div>
                                         <select id="ays_gpg_filter_lightbox_mobile" class="ays-text-input ays-text-input-short" name="ays_gpg_filter_lightbox_opt_mobile">
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
-                                            <option <?php echo ( $filter_lightbox_opt_mobile == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "none" ) ? "selected" : ""; ?> value="none"><?php echo esc_html__("None", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "blur" ) ? "selected" : ""; ?> value="blur"><?php echo esc_html__("Blur", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "brightness" ) ? "selected" : ""; ?> value="brightness"><?php echo esc_html__("Brightness", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "contrast" ) ? "selected" : ""; ?> value="contrast"><?php echo esc_html__("Contrast", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "grayscale" ) ? "selected" : ""; ?> value="grayscale"><?php echo esc_html__("Grayscale", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "hue_rotate" ) ? "selected" : ""; ?> value="hue_rotate"><?php echo esc_html__("Hue Rotate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "invert" ) ? "selected" : ""; ?> value="invert"><?php echo esc_html__("Invert", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "saturate" ) ? "selected" : ""; ?> value="saturate"><?php echo esc_html__("Saturate", 'gallery-photo-gallery'); ?></option>
+                                                <option <?php echo ( $filter_lightbox_opt_mobile == "sepia" ) ? "selected" : ""; ?> value="sepia"><?php echo esc_html__("Sepia", 'gallery-photo-gallery'); ?></option>
                                         </select>
                                     </label>
                                 </div>

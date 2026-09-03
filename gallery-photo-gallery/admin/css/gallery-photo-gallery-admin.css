@@ -2601,6 +2601,10 @@ i.ays_fa_ellipsis_h:before {
     width: 20%;
 }
 
+.wrap.ays-gpg-list-table .column-title > a {
+    font-size: 14px;
+}
+
 .shortcode.column-shortcode input{
     width:100%;
 }

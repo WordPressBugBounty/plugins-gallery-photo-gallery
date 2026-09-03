@@ -301,12 +301,12 @@ class Photo_Gallery_Data {
         $ays_gpg_ishmar += intval(get_option('ays_gpg_sale_btn_for_two_months'));
         if($ays_gpg_ishmar == 0 ){
             if (isset($_GET['page']) && strpos($_GET['page'], AYS_GALLERY_NAME) !== false) {
-                if( self::get_max_id_by_table( 'gallery' ) >= 1 ){
+                // if( self::get_max_id_by_table( 'gallery' ) >= 1 ){
                     // self::ays_gpg_black_friday_message( $ays_gpg_ishmar );
                     // self::ays_gallery_christmas_banner_message_2025( $ays_gpg_ishmar );
-                    // self::ays_gpg_new_mega_bundle_message_2026( $ays_gpg_ishmar );
-                    self::ays_gpg_footer_sale_banner_2026( $ays_gpg_ishmar );
-                }
+                    self::ays_gpg_back_to_school_banner_2026($ays_gpg_ishmar);
+                    // self::ays_gpg_footer_sale_banner_2026( $ays_gpg_ishmar );
+                // }
             }
         }
     }    
@@ -701,6 +701,98 @@ class Photo_Gallery_Data {
             echo wp_kses_post($content);
         }
     }
+
+ // Back to School top banner
+    public static function ays_gpg_back_to_school_banner_2026($ishmar){
+        if($ishmar == 0 ){
+            $content = array();
+            $gpg_cta_button_link = esc_url('https://ays-pro.com/wordpress/photo-gallery/?utm_source=dashboard&utm_medium=gallery-free&utm_campaign=back-to-school-sale-banner-' . AYS_GALLERY_VERSION);
+            $content[] = '<div id="ays-gpg-back-to-school-banner-2026" class="ays-gpg-back-to-school-banner-2026 ays-gpg-admin-notice notice notice-success is-dismissible ays_gpg_dicount_info">';
+                $content[] = '<svg class="ays-gpg-bts-decoration ays-gpg-bts-plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"></path><path d="M22 2 15 22l-4-9-9-4Z"></path></svg>';
+                $content[] = '<svg class="ays-gpg-bts-decoration ays-gpg-bts-ruler" viewBox="0 0 36 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><rect x="1" y="6" width="34" height="9" rx="2"></rect><path d="M8 6v3M14 6v4M20 6v3M26 6v4"></path></svg>';
+                $content[] = '<svg class="ays-gpg-bts-decoration ays-gpg-bts-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.6 6.6L21.5 9l-5 4.6 1.4 7-5.9-3.5L6.1 20.6l1.4-7L2.5 9l6.9-.4Z"></path></svg>';
+                $content[] = '<svg class="ays-gpg-bts-decoration ays-gpg-bts-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>';
+                $content[] = '<svg class="ays-gpg-bts-decoration ays-gpg-bts-wave" viewBox="0 0 96 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M2 8c8-8 16 8 24 0s16 8 24 0 16 8 24 0 16 8 20 2"></path></svg>';
+                $content[] = '<div class="ays-gpg-bts-content">';
+                    $content[] = '<div class="ays-gpg-bts-offer">';
+                        $content[] = '<img class="ays-gpg-bts-handwritten" src="'. esc_url(AYS_GPG_ADMIN_URL . '/images/ays-gpg-back-to-school-handwritten.svg') .'" alt="Back to School Sale">';
+                        $content[] = '<span class="ays-gpg-bts-dot" aria-hidden="true"></span>';
+                        $content[] = '<span class="ays-gpg-bts-discount">'. esc_html__('20% OFF', 'gallery-photo-gallery') .'</span>';
+                    $content[] = '</div>';
+                    $content[] = '<div class="ays-gpg-bts-actions">';
+                        $content[] = '<span class="ays-gpg-bts-use-code">'. esc_html__('Use code', 'gallery-photo-gallery') .'</span>';
+                        $content[] = '<button type="button" class="ays-gpg-bts-coupon" data-coupon="SCHOOL20" aria-label="'. esc_attr__('Copy coupon code SCHOOL20', 'gallery-photo-gallery') .'"><span>SCHOOL20</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button>';
+                        $content[] = '<a href="'. esc_url($gpg_cta_button_link) .'" class="ays-gpg-bts-cta" target="_blank" rel="noopener noreferrer">'. esc_html__('Upgrade Now', 'gallery-photo-gallery') .'</a>';
+                    $content[] = '</div>';
+                $content[] = '</div>';
+                $content[] = '<div class="ays-gpg-bts-dismiss"><form action="" method="POST"><div id="ays-gpg-dismiss-buttons-content">';
+                    if( current_user_can( 'manage_options' ) ){
+                        $content[] = '<button class="btn btn-link ays-button" name="ays_gpg_sale_btn">'. esc_html__('Dismiss ad', 'gallery-photo-gallery') .'</button>';
+                        $content[] = wp_nonce_field( 'photo-gallery-sale-banner', 'photo-gallery-sale-banner', true, false );
+                    }
+                $content[] = '</div></form></div>';
+            $content[] = '</div>';
+            $content[] = '<style id="ays-gpg-back-to-school-banner-2026-inline-css">';
+            $content[] = '#ays-gpg-back-to-school-banner-2026{box-sizing:border-box;position:relative;isolation:isolate;width:calc(100% - 20px);max-width:none;min-height:112px;margin:20px 20px 16px 0;padding:0 38px;overflow:hidden;border:1px solid #e8dcc9;border-left-width:1px;border-radius:12px;background-color:#fffdf8;background-image:radial-gradient(circle at 1px 1px,rgba(91,72,45,.09) 1px,transparent 1px),radial-gradient(120% 140% at 0 0,rgba(20,75,220,.07),transparent 55%),radial-gradient(120% 140% at 100% 100%,rgba(126,34,206,.09),transparent 55%);background-size:6px 6px,100% 100%,100% 100%;box-shadow:0 10px 30px -18px rgba(76,45,140,.55);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif}.ays-gpg-bts-content{position:relative;z-index:2;display:flex;min-height:110px;align-items:center;justify-content:space-between;gap:28px}.ays-gpg-bts-offer,.ays-gpg-bts-actions{display:flex;align-items:center}.ays-gpg-bts-offer{min-width:0;gap:9px}.ays-gpg-bts-handwritten{width:280px;max-width:23vw;height:auto;color:#0755df;overflow:visible;flex:0 1 auto}.ays-gpg-bts-dot{width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#ffc51b;align-self:flex-start;margin-top:27px}.ays-gpg-bts-discount{color:#8127df;font-size:38px;font-weight:800;line-height:1;letter-spacing:-1.2px;white-space:nowrap}.ays-gpg-bts-actions{flex:0 0 auto;gap:12px}.ays-gpg-bts-use-code{color:#5f5b69;font-size:11px;font-weight:600;line-height:1;text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}.ays-gpg-bts-coupon{box-sizing:border-box;display:flex;min-height:50px;align-items:center;gap:12px;padding:8px 14px;border:2px dashed rgba(129,39,223,.5);border-radius:10px;background:#fff;color:#1147c8;cursor:pointer;box-shadow:none}.ays-gpg-bts-coupon:hover,.ays-gpg-bts-coupon:focus{border-color:#8127df;background:rgba(129,39,223,.05);color:#1147c8}.ays-gpg-bts-coupon span{font-size:19px;font-weight:700;letter-spacing:.04em}.ays-gpg-bts-coupon svg{width:16px;height:16px;color:#8127df}.ays-gpg-bts-cta{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 27px;border-radius:9px;background:linear-gradient(90deg,#1249e7,#8127df);color:#fff!important;font-size:16px;font-weight:700;text-decoration:none!important;white-space:nowrap;box-shadow:0 8px 18px -8px rgba(91,37,194,.9);transition:transform .15s,box-shadow .15s}.ays-gpg-bts-cta:hover,.ays-gpg-bts-cta:focus{color:#fff;transform:translateY(-1px);box-shadow:0 10px 20px -8px rgba(91,37,194,.95)}.ays-gpg-bts-decoration{position:absolute;z-index:1;pointer-events:none}.ays-gpg-bts-plane{top:8px;left:12px;width:24px;color:rgba(129,39,223,.55)}.ays-gpg-bts-ruler{bottom:7px;left:24px;width:36px;color:rgba(20,73,230,.35)}.ays-gpg-bts-star{top:8px;right:14px;width:19px;color:#ffc51b}.ays-gpg-bts-pencil{right:31px;bottom:7px;width:21px;color:rgba(129,39,223,.5);transform:rotate(-12deg)}.ays-gpg-bts-wave{bottom:3px;left:50%;width:96px;color:rgba(20,73,230,.22);transform:translateX(-50%)}#ays-gpg-back-to-school-banner-2026 .notice-dismiss{top:1px;right:1px;color:#756b82}#ays-gpg-back-to-school-banner-2026 .notice-dismiss:before{font-size:18px}.ays-gpg-bts-dismiss{position:absolute;right:39px;bottom:0;z-index:3}.ays-gpg-bts-dismiss form{margin:0}.ays-gpg-bts-dismiss #ays-gpg-dismiss-buttons-content .ays-button{height:22px!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:#777!important;font-size:10px!important;line-height:22px!important;text-decoration:underline;box-shadow:none!important}.ays-gpg-bts-copy-notification{position:fixed;top:50%;left:50%;z-index:10000;transform:translate(-50%,-50%);padding:12px 24px;border-radius:8px;background:rgba(0,0,0,.82);color:#fff;font-size:14px;opacity:0;transition:opacity .25s}.ays-gpg-bts-copy-notification.ays-gpg-bts-show{opacity:1}@media screen and (max-width:1200px){.ays-gpg-bts-content{gap:18px}.ays-gpg-bts-handwritten{width:225px}.ays-gpg-bts-discount{font-size:31px}.ays-gpg-bts-actions{gap:8px}.ays-gpg-bts-coupon{min-height:44px;padding:7px 10px}.ays-gpg-bts-cta{min-height:44px;padding:0 18px;font-size:14px}}@media screen and (max-width:960px){#ays-gpg-back-to-school-banner-2026{padding:15px 38px 20px}.ays-gpg-bts-content{min-height:90px;flex-wrap:wrap;justify-content:center;gap:12px 24px}.ays-gpg-bts-handwritten{max-width:none}.ays-gpg-bts-actions{justify-content:center}.ays-gpg-bts-dismiss{right:38px}}@media screen and (max-width:600px){#ays-gpg-back-to-school-banner-2026{width:calc(100% - 20px);margin-right:10px;padding:18px 30px 23px 18px}.ays-gpg-bts-content{flex-direction:column}.ays-gpg-bts-offer{flex-wrap:wrap;justify-content:center}.ays-gpg-bts-handwritten{width:210px}.ays-gpg-bts-discount{font-size:28px}.ays-gpg-bts-actions{flex-wrap:wrap}.ays-gpg-bts-use-code{width:100%;text-align:center}.ays-gpg-bts-coupon{min-height:40px}.ays-gpg-bts-coupon span{font-size:16px}.ays-gpg-bts-cta{min-height:40px}.ays-gpg-bts-plane,.ays-gpg-bts-ruler,.ays-gpg-bts-pencil,.ays-gpg-bts-wave{display:none}.ays-gpg-bts-dismiss{right:30px}}';
+            $content[] = '</style>';
+            $content[] = '<script>
+                (function() {
+                    "use strict";
+                    function initBackToSchoolBanner() {
+                        var banner = document.getElementById("ays-gpg-back-to-school-banner-2026");
+                        if (!banner) {
+                            return;
+                        }
+                        var couponButton = banner.querySelector(".ays-gpg-bts-coupon");
+                        if (!couponButton) {
+                            return;
+                        }
+                        couponButton.addEventListener("click", function() {
+                            var couponCode = couponButton.getAttribute("data-coupon");
+                            var textarea = document.createElement("textarea");
+                            textarea.value = couponCode;
+                            textarea.style.position = "fixed";
+                            textarea.style.opacity = "0";
+                            document.body.appendChild(textarea);
+                            textarea.focus();
+                            textarea.select();
+                            try {
+                                document.execCommand("copy");
+                                showCopyNotification();
+                            } catch (error) {
+                                // Keep the banner usable when clipboard access is unavailable.
+                            }
+                            document.body.removeChild(textarea);
+                        });
+                    }
+                    function showCopyNotification() {
+                        var notification = document.createElement("div");
+                        notification.className = "ays-gpg-bts-copy-notification";
+                        notification.textContent = "'. esc_js(__('Coupon code copied', 'gallery-photo-gallery')) .'";
+                        document.body.appendChild(notification);
+                        setTimeout(function() {
+                            notification.classList.add("ays-gpg-bts-show");
+                        }, 10);
+                        setTimeout(function() {
+                            notification.classList.remove("ays-gpg-bts-show");
+                            setTimeout(function() {
+                                if (notification.parentNode) {
+                                    notification.parentNode.removeChild(notification);
+                                }
+                            }, 250);
+                        }, 2000);
+                    }
+                    if (document.readyState === "loading") {
+                        document.addEventListener("DOMContentLoaded", initBackToSchoolBanner);
+                    } else {
+                        initBackToSchoolBanner();
+                    }
+                })();
+            </script>';
+            echo implode('', $content); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static banner markup; dynamic values are escaped above.
+        }
+    }
+
 
     // Gallery Footer Blue Banner Sale 20%
     public static function ays_gpg_footer_sale_banner_2026($ishmar){

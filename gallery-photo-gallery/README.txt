@@ -228,6 +228,10 @@ Sure! In the Free version, you get support for 3 months for one site. In the Bus
 
 == Changelog ==
 
+= 6.8.5 ( Sep 3, 2026 ) =
+* Added: Opacity filter in Choose filter for thumbnail option
+* Improved: Made some changes to the admin dashboard
+
 = 6.8.4 ( Aug 25, 2026 ) =
 * Added: Attention Seekers in Images hover animation option
 * Updated: POT file

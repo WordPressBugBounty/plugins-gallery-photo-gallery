@@ -2730,6 +2730,9 @@ class Gallery_Photo_Gallery_Public {
             case 'invert':
                 $gpg_filter_image = 'invert(100%)';
                 break;
+            case 'opacity':
+                $gpg_filter_image = 'opacity(60%)';
+                break;
             case 'saturate':
                 $gpg_filter_image = 'saturate(8)';
                 break;
@@ -2759,6 +2762,9 @@ class Gallery_Photo_Gallery_Public {
                 break;
             case 'invert':
                 $gpg_filter_image_mobile = 'invert(100%)';
+                break;
+            case 'opacity':
+                $gpg_filter_image_mobile = 'opacity(60%)';
                 break;
             case 'saturate':
                 $gpg_filter_image_mobile = 'saturate(8)';
