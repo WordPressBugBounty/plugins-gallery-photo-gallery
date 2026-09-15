@@ -50,7 +50,14 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         $where = array();
 
         if( $search != '' ){
-            $where[] = $search;
+            $where[] = $wpdb->prepare( "title LIKE %s", '%' . $wpdb->esc_like( $search ) . '%' );
+        }
+
+        $description_filter = self::get_description_filter();
+        if ( 'with' === $description_filter ) {
+            $where[] = "description != ''";
+        } elseif ( 'without' === $description_filter ) {
+            $where[] = "description = ''";
         }
 
         if( ! empty($where) ){
@@ -259,6 +266,13 @@ class Gpg_Categories_List_Table extends WP_List_Table{
         if( $search ){
             $filter[] = $wpdb->prepare(" title LIKE %s ", '%' . $wpdb->esc_like( $search ) . '%');
         }
+
+        $description_filter = self::get_description_filter();
+        if ( 'with' === $description_filter ) {
+            $filter[] = "description != ''";
+        } elseif ( 'without' === $description_filter ) {
+            $filter[] = "description = ''";
+        }
         
         if(count($filter) !== 0){
             $sql .= " WHERE ".implode(" AND ", $filter);
@@ -266,6 +280,19 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
 
         return $wpdb->get_var( $sql );
+    }
+
+    /**
+     * Get a validated description filter value from the request.
+     *
+     * @return string
+     */
+    private static function get_description_filter() {
+        $filter = isset( $_REQUEST['filterbyDescription'] )
+            ? sanitize_key( wp_unslash( $_REQUEST['filterbyDescription'] ) )
+            : '';
+
+        return in_array( $filter, array( 'with', 'without' ), true ) ? $filter : '';
     }
 
     public static function all_record_count() {
@@ -424,6 +451,31 @@ class Gpg_Categories_List_Table extends WP_List_Table{
     }
 
     /**
+     * Render the description filter above and below the table.
+     *
+     * @param string $which Navigation position.
+     */
+    protected function extra_tablenav( $which ) {
+        $description_filter = self::get_description_filter();
+        $page = isset( $_REQUEST['page'] ) ? sanitize_key( wp_unslash( $_REQUEST['page'] ) ) : '';
+        $clear_url = add_query_arg( 'page', $page, admin_url( 'admin.php' ) );
+        ?>
+        <div class="alignleft actions">
+            <label class="screen-reader-text" for="filterbyDescription-<?php echo esc_attr( $which ); ?>">
+                <?php echo esc_html__( 'Filter by description', 'gallery-photo-gallery' ); ?>
+            </label>
+            <select name="filterbyDescription-<?php echo esc_attr( $which ); ?>" id="filterbyDescription-<?php echo esc_attr( $which ); ?>">
+                <option value=""><?php echo esc_html__( 'With/without description', 'gallery-photo-gallery' ); ?></option>
+                <option value="with" <?php selected( $description_filter, 'with' ); ?>><?php echo esc_html__( 'With description', 'gallery-photo-gallery' ); ?></option>
+                <option value="without" <?php selected( $description_filter, 'without' ); ?>><?php echo esc_html__( 'Without description', 'gallery-photo-gallery' ); ?></option>
+            </select>
+            <input type="button" class="description-filter-apply-<?php echo esc_attr( $which ); ?> button action-button" value="<?php echo esc_attr__( 'Filter', 'gallery-photo-gallery' ); ?>">
+            <a class="button action-button" href="<?php echo esc_url( $clear_url ); ?>"><?php echo esc_html__( 'Clear filters', 'gallery-photo-gallery' ); ?></a>
+        </div>
+        <?php
+    }
+
+    /**
      * Returns an associative array containing the bulk action
      *
      * @return array
@@ -476,10 +528,7 @@ class Gpg_Categories_List_Table extends WP_List_Table{
 
         $search = ( isset( $_REQUEST['s'] ) ) ? sanitize_text_field(wp_unslash( $_REQUEST['s']) ) : false;
 
-        $do_search = ( $search ) ? $wpdb->prepare(" title LIKE %s ", '%' . $wpdb->esc_like( $search ) . '%') : '';
-
-
-        $this->items = self::get_image_categories( $per_page, $current_page,$do_search );
+        $this->items = self::get_image_categories( $per_page, $current_page, $search );
 
     }
 

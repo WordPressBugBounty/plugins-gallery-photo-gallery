@@ -447,7 +447,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
                 <option value="without" <?php selected( $description_filter, 'without' ); ?>><?php echo esc_html__( 'Without description', 'gallery-photo-gallery' ); ?></option>
             </select>
             <input type="button" class="description-filter-apply-<?php echo esc_attr( $which ); ?> button action-button" value="<?php echo esc_attr__( 'Filter', 'gallery-photo-gallery' ); ?>">
-            <a class="button" href="<?php echo esc_url( $clear_url ); ?>"><?php echo esc_html__( 'Clear filters', 'gallery-photo-gallery' ); ?></a>
+            <a class="button action-button" href="<?php echo esc_url( $clear_url ); ?>"><?php echo esc_html__( 'Clear filters', 'gallery-photo-gallery' ); ?></a>
         </div>
         <?php
     }

@@ -390,7 +390,7 @@ class Gallery_Photo_Gallery_Admin {
             __('Photo Gallery', 'gallery-photo-gallery'), 
             'manage_options', 
             $this->plugin_name, 
-            array($this, 'display_plugin_setup_page'), AYS_GPG_ADMIN_URL . 'images/icons/icon-gpg-128x128.svg', 6);
+            array($this, 'display_plugin_setup_page'), AYS_GPG_ADMIN_URL . 'images/icons/icon-gpg-128x128.svg', 25.20);
         add_action( "load-$hook_gallery", array( $this, 'screen_option_gallery' ) );
         add_action( "load-$hook_gallery", array( $this, 'add_tabs' ));
         
