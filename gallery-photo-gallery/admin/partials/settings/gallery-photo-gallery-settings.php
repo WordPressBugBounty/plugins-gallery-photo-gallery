@@ -242,6 +242,24 @@ $loader_iamge = "<span class='display_none ays_gpg_loader_box'><img src='". AYS_
                                 <div class="col-sm-12" style="padding:20px;">
                                     <div class="form-group row">
                                         <div class="col-sm-4">
+                                            <label for="ays_gallery_title">
+                                                <?php echo esc_html__( "Show gallery title", 'gallery-photo-gallery' ); ?>
+                                                <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__( "Enter the Gallery ID to display the title of the selected gallery.", 'quiz-maker' ); ?>">
+                                                    <i class="fa fa-info-circle"></i>
+                                                </a>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" id="ays_gallery_title" class="ays-text-input" onclick="this.setSelectionRange(0, this.value.length)" readonly="" value='[ays_gallery_title id="Your_Gallery_ID"]'>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group row" style="padding:0px;margin:0;">
+                                <div class="col-sm-12" style="padding:20px;">
+                                    <div class="form-group row">
+                                        <div class="col-sm-4">
                                             <label for="ays_gallery_images_count">
                                                 <?php echo esc_html__( "Show gallery images count", 'gallery-photo-gallery' ); ?>
                                                 <a class="ays_help" data-toggle="tooltip" title="<?php echo esc_attr__("You need to insert Your Gallery ID in the shortcode. It will show the images count of the particular gallery. If there is no gallery available/found with that particular Gallery ID, the shortcode will be empty.",'gallery-photo-gallery'); ?>">

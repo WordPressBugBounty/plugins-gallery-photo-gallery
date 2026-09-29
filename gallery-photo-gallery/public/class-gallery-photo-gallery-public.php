@@ -3303,7 +3303,9 @@ class Gallery_Photo_Gallery_Public {
     }
 
     private static function ays_gallery_get_user_ip() {
-        $ipaddress = '';
+
+        $ipaddress = false;
+
         if (getenv('HTTP_CLIENT_IP')) {
             $ipaddress = getenv('HTTP_CLIENT_IP');
         } else if (getenv('HTTP_X_FORWARDED_FOR')) {
@@ -3314,13 +3316,18 @@ class Gallery_Photo_Gallery_Public {
             $ipaddress = getenv('HTTP_FORWARDED_FOR');
         } else if (getenv('HTTP_FORWARDED')) {
             $ipaddress = getenv('HTTP_FORWARDED');
-        } else if (getenv('REMOTE_ADDR')) {
-            $ipaddress = getenv('REMOTE_ADDR');
-        } else {
-            $ipaddress = 'UNKNOWN';
         }
 
-        return $ipaddress;
+        if ( $ipaddress !== false && filter_var( $ipaddress, FILTER_VALIDATE_IP ) !== false ) {
+            return $ipaddress;
+        }
+
+        $remote_address = getenv('REMOTE_ADDR');
+        if ( $remote_address !== false && filter_var( $remote_address, FILTER_VALIDATE_IP ) !== false ) {
+            return $remote_address;
+        }
+
+        return 'UNKNOWN';
     }
 
     function ays_gallery_wp_get_attachment_image_attributes($attr) {

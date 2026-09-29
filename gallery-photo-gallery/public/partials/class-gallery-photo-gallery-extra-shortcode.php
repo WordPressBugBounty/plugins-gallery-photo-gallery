@@ -68,6 +68,7 @@ class Ays_Gallery_Extra_Shortcodes_Public
         add_shortcode('ays_gallery_user_email', array($this, 'ays_generate_user_email_method'));
         add_shortcode('ays_gallery_user_nickname', array($this, 'ays_generate_user_nickname_method'));
         add_shortcode('ays_gallery_user_wordpress_roles', array($this, 'ays_generate_user_wordpress_roles_method'));
+        add_shortcode('ays_gallery_title', array($this, 'ays_generate_gallery_title_method'));
     }   
 
     /*
@@ -707,4 +708,68 @@ class Ays_Gallery_Extra_Shortcodes_Public
         Show users wordpress roles | End
     ==========================================
     */
+
+    /*
+    ==========================================
+        Show gallery title | Start
+    ==========================================
+    */
+
+    public function ays_generate_gallery_title_method( $attr ) {
+
+        $id = (isset($attr['id']) && $attr['id'] != '') ? absint( sanitize_text_field($attr['id']) ) : null;
+
+        if (is_null($id) || $id == 0 ) {
+            return "";
+        }
+
+        $unique_id = uniqid();
+        $this->unique_id = $unique_id;
+        $this->unique_id_in_class = $id . "-" . $unique_id;
+
+        $gallery_title = $this->ays_generate_gallery_title_html( $id );
+
+        return str_replace(array("\r\n", "\n", "\r"), "\n", $gallery_title);
+    }
+
+    public function ays_generate_gallery_title_html( $id ) {
+
+        $gallery_data = self::get_gallery_by_id( $id );
+
+        if( is_null( $gallery_data ) || empty( $gallery_data ) ){
+            return "";
+        }
+
+        $gallery_title = (isset($gallery_data['title']) && $gallery_data['title'] != '') ? sanitize_text_field($gallery_data['title']) : "";
+
+        if ( $gallery_title == "" ) {
+            return "";
+        }
+
+        $content_html = array();
+
+        $content_html[] = "<span class='". $this->html_name_prefix ."gallery-title' id='". $this->html_name_prefix ."gallery-title-". $this->unique_id_in_class ."' data-id='". $this->unique_id ."'>";
+            $content_html[] = esc_html( $gallery_title );
+        $content_html[] = "</span>";
+
+        return implode( '' , $content_html);
+    }
+
+    /*
+    ==========================================
+        Show gallery title | End
+    ==========================================
+    */
+
+    public static function get_gallery_by_id($id){
+        global $wpdb;
+
+        $sql = "SELECT *
+                FROM {$wpdb->prefix}ays_gallery
+                WHERE id=" . absint($id);
+
+        $gallery = $wpdb->get_row($sql, 'ARRAY_A');
+
+        return $gallery;
+    }
 }
