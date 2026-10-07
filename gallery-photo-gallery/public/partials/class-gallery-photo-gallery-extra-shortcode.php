@@ -69,6 +69,7 @@ class Ays_Gallery_Extra_Shortcodes_Public
         add_shortcode('ays_gallery_user_nickname', array($this, 'ays_generate_user_nickname_method'));
         add_shortcode('ays_gallery_user_wordpress_roles', array($this, 'ays_generate_user_wordpress_roles_method'));
         add_shortcode('ays_gallery_title', array($this, 'ays_generate_gallery_title_method'));
+        add_shortcode('ays_gallery_description', array($this, 'ays_generate_gallery_description_method'));
     }   
 
     /*
@@ -758,6 +759,58 @@ class Ays_Gallery_Extra_Shortcodes_Public
     /*
     ==========================================
         Show gallery title | End
+    ==========================================
+    */
+
+    /*
+    ==========================================
+        Show gallery description | Start
+    ==========================================
+    */
+
+    public function ays_generate_gallery_description_method( $attr ) {
+
+        $id = (isset($attr['id']) && $attr['id'] != '') ? absint( sanitize_text_field($attr['id']) ) : null;
+
+        if (is_null($id) || $id == 0 ) {
+            return "";
+        }
+
+        $unique_id = uniqid();
+        $this->unique_id = $unique_id;
+        $this->unique_id_in_class = $id . "-" . $unique_id;
+
+        $gallery_title = $this->ays_generate_gallery_description_html( $id );
+
+        return str_replace(array("\r\n", "\n", "\r"), "\n", $gallery_title);
+    }
+
+    public function ays_generate_gallery_description_html( $id ) {
+
+        $gallery_data = self::get_gallery_by_id( $id );
+
+        if( is_null( $gallery_data ) || empty( $gallery_data ) ){
+            return "";
+        }
+
+        $gallery_description = (isset($gallery_data['description']) && $gallery_data['description'] != '') ? sanitize_text_field($gallery_data['description']) : "";
+
+        if ( $gallery_description == "" ) {
+            return "";
+        }
+
+        $content_html = array();
+
+        $content_html[] = "<span class='". $this->html_name_prefix ."gallery-description' id='". $this->html_name_prefix ."gallery-description-". $this->unique_id_in_class ."' data-id='". $this->unique_id ."'>";
+            $content_html[] = esc_html( $gallery_description );
+        $content_html[] = "</span>";
+
+        return implode( '' , $content_html);
+    }
+
+    /*
+    ==========================================
+        Show gallery description | End
     ==========================================
     */
 
