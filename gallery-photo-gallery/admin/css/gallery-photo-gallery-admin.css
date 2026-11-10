@@ -6021,3 +6021,17 @@ div.ays-notice-banner {
 }
 
 /* GPG top banner redesign | End */
+
+/* Gallery categories list table column css */
+.wp-list-table.gallerycategories th.column-items_count,
+.wp-list-table.gallerycategories td.column-items_count {
+    width: 20% ;
+    text-align: center;
+}
+
+@media screen and (max-width: 782px) {
+    .wp-list-table.gallerycategories th.column-items_count,
+    .wp-list-table.gallerycategories td.column-items_count {
+        text-align: left;
+    }
+}

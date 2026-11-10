@@ -367,15 +367,36 @@ class Gallery_Categories_List_Table extends WP_List_Table{
                     </div>                                            
                     <input type="text" class="ays-gpg-shortcode-input" readonly value="'. esc_attr('[ays_gallery_cat id="%s"]').'" />
                 </div>', $item["id"]);      
-    }
+    }    
 
     function column_items_count( $item ) {
         global $wpdb;
 
-        $result = 0;
-        if( isset( $item['id'] ) && absint( sanitize_text_field( $item['id'] ) ) > 0){
-            $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}ays_gallery WHERE gpg_categories_id = " . absint( sanitize_text_field($item['id'] ) );
-            $result = $wpdb->get_var($sql);
+        $result = '';
+
+        if ( isset( $item['id'] ) && absint( $item['id'] ) > 0 ) {
+
+            $id = absint( $item['id'] );
+
+            $sql = $wpdb->prepare(
+                "SELECT COUNT(*)
+                FROM {$wpdb->prefix}ays_gallery
+                WHERE FIND_IN_SET(%d, category_ids)",
+                $id
+            );
+
+            $count = (int) $wpdb->get_var( $sql );
+
+            if ( $count > 0 ) {
+                $result = sprintf(
+                    '<a href="?page=%s&filterby=%d" target="_blank">%d</a>',
+                    'gallery-photo-gallery',
+                    $id,
+                    $count
+                );
+            } else {
+                $result = '0';
+            }
         }
 
         return "<p style='text-align:center;font-size:14px;'>" . $result . "</p>";
@@ -393,6 +414,7 @@ class Gallery_Categories_List_Table extends WP_List_Table{
             'title'         => __( 'Title', 'gallery-photo-gallery' ),
             'description'   => __( 'Description', 'gallery-photo-gallery' ),
             "shortcode"     => __( "Shortcode", 'gallery-photo-gallery' ),
+            'items_count'   => __( 'Galleries Count', 'gallery-photo-gallery' ),
             'id'            => __( 'ID', 'gallery-photo-gallery' ),
         );
 
