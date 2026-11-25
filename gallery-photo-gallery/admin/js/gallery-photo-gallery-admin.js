@@ -357,29 +357,30 @@
             minimumInputLength: 1,
             allowClear: true,
             language: {
-                // You can find all of the options in the language files provided in the
-                // build. They all must be functions that return the string that should be
-                // displayed.
                 searching: function() {
                     return gallery_ajax.searching;
                 },
-                inputTooShort: function () {
+                inputTooShort: function() {
                     return gallery_ajax.pleaseEnterMore;
                 }
             },
             ajax: {
                 url: gallery_ajax.ajax_url,
                 dataType: 'json',
-                data: function (response) {
-                    var checkedUsers = $(document).find('#ays_gallery_create_author').val();
+                data: function(response) {
+                    var checkedUsers = $(document)
+                        .find('#ays_gallery_create_author')
+                        .val();
+
                     return {
                         action: 'ays_gpg_author_user_search',
                         search: response.term,
                         val: checkedUsers,
+                        nonce: gallery_ajax.author_search_nonce
                     };
-                },
+                }
             }
-        });
+        });        
         
         $(document).find('#show_title').on('click', function(){
             if($(document).find('#show_title').prop('checked')){

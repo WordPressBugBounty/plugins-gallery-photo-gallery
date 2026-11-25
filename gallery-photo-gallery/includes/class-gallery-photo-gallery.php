@@ -203,7 +203,6 @@ class Gallery_Photo_Gallery {
         $this->loader->add_action( 'wp_ajax_nopriv_deactivate_plugin_option_pm', $plugin_admin, 'deactivate_plugin_option');
 
         $this->loader->add_action( 'wp_ajax_ays_gpg_author_user_search', $plugin_admin, 'ays_gpg_author_user_search' );
-        $this->loader->add_action( 'wp_ajax_nopriv_ays_gpg_author_user_search', $plugin_admin, 'ays_gpg_author_user_search' );
 
         // Add Settings link to the plugin
         $plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_name . '.php' );

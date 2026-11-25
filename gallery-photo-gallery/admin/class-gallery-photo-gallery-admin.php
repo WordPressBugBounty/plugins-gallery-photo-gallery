@@ -161,20 +161,21 @@ class Gallery_Photo_Gallery_Admin {
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/gallery-photo-gallery-admin.js', array( 'jquery', 'wp-color-picker' ), $this->version, true );
 
         wp_localize_script($this->plugin_name, 'gallery_ajax', array(
-            'ajax_url'           => admin_url('admin-ajax.php'),            
-            'selectUser'         => __( 'Select user', 'gallery-photo-gallery'),
-            'pleaseEnterMore'    => __( "Please enter 1 or more characters", 'gallery-photo-gallery' ),
-            'searching'          => __( "Searching...", 'gallery-photo-gallery' ),
-            'loader_message'     => __('Just a moment...', 'gallery-photo-gallery'),            
-            "emptyEmailError"    => __( 'Email field is empty', 'gallery-photo-gallery'),
-            "invalidEmailError"  => __( 'Invalid Email address', 'gallery-photo-gallery'),           
-            'activated'          => __( "Activated", 'gallery-photo-gallery' ),
-            'errorMsg'           => __( "Error", 'gallery-photo-gallery' ),
-            'loadResource'       => __( "Can't load resource.", 'gallery-photo-gallery' ),
-            'somethingWentWrong' => __( "Maybe something went wrong.", 'gallery-photo-gallery' ),
-            'greateJob'          => __( 'Great job', 'gallery-photo-gallery'),
-            'formMoreDetailed'   => __( 'For more detailed configuration visit', 'gallery-photo-gallery'),
-            'greate'             => __( 'Great!', 'gallery-photo-gallery'),
+            'ajax_url'              => admin_url('admin-ajax.php'),
+            'author_search_nonce'   => wp_create_nonce( 'ays_gpg_author_user_search' ),            
+            'selectUser'            => __( 'Select user', 'gallery-photo-gallery'),
+            'pleaseEnterMore'       => __( "Please enter 1 or more characters", 'gallery-photo-gallery' ),
+            'searching'             => __( "Searching...", 'gallery-photo-gallery' ),
+            'loader_message'        => __('Just a moment...', 'gallery-photo-gallery'),            
+            "emptyEmailError"       => __( 'Email field is empty', 'gallery-photo-gallery'),
+            "invalidEmailError"     => __( 'Invalid Email address', 'gallery-photo-gallery'),           
+            'activated'             => __( "Activated", 'gallery-photo-gallery' ),
+            'errorMsg'              => __( "Error", 'gallery-photo-gallery' ),
+            'loadResource'          => __( "Can't load resource.", 'gallery-photo-gallery' ),
+            'somethingWentWrong'    => __( "Maybe something went wrong.", 'gallery-photo-gallery' ),
+            'greateJob'             => __( 'Great job', 'gallery-photo-gallery'),
+            'formMoreDetailed'      => __( 'For more detailed configuration visit', 'gallery-photo-gallery'),
+            'greate'                => __( 'Great!', 'gallery-photo-gallery'),
         ));
 
         $gpg_banner_date = self::ays_gpg_update_banner_time();
@@ -1111,49 +1112,61 @@ class Gallery_Photo_Gallery_Admin {
     }
 
     public function ays_gpg_author_user_search() {
-        $search = isset($_REQUEST['search']) && $_REQUEST['search'] != '' ? sanitize_text_field( $_REQUEST['search'] ) : null;
-        $checked = isset($_REQUEST['val']) && $_REQUEST['val'] !='' ? sanitize_text_field( $_REQUEST['val'] ) : null;
 
-        $args = 'search=';
-        if($search !== null){
-            $args .= '*';
-            $args .= $search;
-            $args .= '*';
+        // Verify nonce.
+        check_ajax_referer( 'ays_gpg_author_user_search', 'nonce' );
+
+        // Check user permissions.
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_send_json_error( array(
+                'message' => 'Unauthorized'
+            ), 403 );
         }
 
-        $users = get_users($args);
+        $search = isset( $_REQUEST['search'] ) && $_REQUEST['search'] !== ''
+            ? sanitize_text_field( wp_unslash( $_REQUEST['search'] ) )
+            : '';
+
+        $checked = isset( $_REQUEST['val'] )
+            ? $_REQUEST['val']
+            : array();
+
+        if ( ! is_array( $checked ) ) {
+            $checked = array( absint( $checked ) );
+        } else {
+            $checked = array_map( 'absint', $checked );
+        }
+
+        $args = array(
+            'search'         => $search !== '' ? '*' . $search . '*' : '',
+            'search_columns'  => array(
+                'user_login',
+                'user_nicename',
+                'display_name',
+            ),
+            'number'          => 20,
+        );
+
+        $users = get_users( $args );
 
         $content_text = array(
             'results' => array()
         );
 
-        foreach ($users as $key => $value) {
-            if ($checked !== null) {
-                if ( !is_array( $checked ) ) {
-                    $checked2 = $checked;
-                    $checked = array();
-                    $checked[] = absint($checked2);
-                }
-                if (in_array($value->ID, $checked)) {
-                    continue;
-                }else{
-                    $content_text['results'][] = array(
-                        'id' => $value->ID,
-                        'text' => $value->data->display_name,
-                    );
-                }
-            }else{
-                $content_text['results'][] = array(
-                    'id' => $value->ID,
-                    'text' => $value->data->display_name,
-                );
+        foreach ( $users as $user ) {
+
+            if ( in_array( $user->ID, $checked, true ) ) {
+                continue;
             }
+
+            $content_text['results'][] = array(
+                'id'   => $user->ID,
+                'text' => $user->display_name,
+            );
         }
 
-        ob_end_clean();
-        echo json_encode($content_text);
-        wp_die();
-    }
+        wp_send_json( $content_text );
+    }   
 
     public function ays_gallery_generate_message_vars_html( $gallery_message_vars ) {
         $content = array();
